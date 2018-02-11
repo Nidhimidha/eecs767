@@ -90,9 +90,21 @@ class linkedList:
             prev.setNext(cur.getNext())
 
 
-## The crux of this script - generating the Vector Space Model
-class genVSM:
+## Generating the Vector Space Model
+## This class generates the VSM using arrays
+## Expects two data structures from an ingest file, a term index and
+## document key:
+##  index = [ 
+##      { 'term': '/A-Za-z0-9/*', 'tfs': [ /0-9/*, ..., /0-9/* ] },
+##      ...,
+##      { 'term': '/A-Za-z0-9/*', 'tfs': [ /0-9/*, ..., /0-9/* ] },
+##  doc_key = [
+##      { 'name': '/A-Za-z0-9/*', 'path': '/A-Za-z0-9/* },
+##      ...,
+##      { 'name': '/A-Za-z0-9/*', 'path': '/A-Za-z0-9/* },
+class genVSMArray:
 	## Initiliaze the object
+        ## Sorts the index
 	#@timing ## Uncomment to see discrete timing
 	def __init__(self, inFile):
 		## Pull in the data structure(s) from ingest
@@ -242,7 +254,7 @@ def brute_force():
 @timing
 def main():
 	## Execution as an object
-	simpleVSM = genVSM('OUTPUT/ingestOutput.db')
+	simpleVSM = genVSMArray('OUTPUT/ingestOutput.db')
 	simpleVSM.genTFIDF()
 	simpleVSM.normalizeVector()
 	simpleVSM.writeOutput('OUTPUT/processingOutput')
