@@ -1,93 +1,180 @@
-import shelve
-from math import log10, sqrt
-import numpy as np
+import shelve			## For generating datastructure db files
+from math import log10, sqrt	## Doing a little math...
+import numpy as np		## Using numpy arrays for optimized manipulation
+import time			## For Timing
+from functools import wraps	## For Timing
 
-## Brute Force first...
+## A decorator function to time the execution
+def timing(f):
+	@wraps(f)
+	def ft(*args, **kwargs):
+		t0 = time.time()
+		exe = f(*args, **kwargs)
+		t1 = time.time()
+		print ("\t%s Execution Time (sec): %s" %
+			(f.func_name, str(t1-t0)))
+		return exe
+	return ft
 
-## GET THE DATA FROM INGEST
-ingest = shelve.open('OUTPUT/ingestOutput.db')
-index = ingest['index']
-doc_key = ingest['doc_key']
-ingest.close()
+class genVSM:
+	## Initiliaze the object
+	#@timing ## Uncomment to see discrete timing
+	def __init__(self, inFile):
+		## Pull in the data structure(s) from ingest
+		ingest = shelve.open(inFile)
+		self.index = ingest['index']
+		self.doc_key = ingest['doc_key']
+		ingest.close()
 
-##----- BEGIN DEBUG ------##
-#print "DOCUMENT LIBRARY"
-#for i in range(len(doc_key)):
-#	print doc_key[i]
-##----- END DEBUG ------##
+		## Sort the index
+		self.index.sort(key=lambda k: k['term'])
 
-## First sort the index
-index.sort(key=lambda k: k['term'])
+		## Initialize docLength Array (for normalizing weights)
+		self.docLength = np.array([0]*len(self.index[0]['tfs']))
+		
+		## Initialize docVector Array (for storing VSM)
+		self.docVector = np.zeros(shape=(len(self.doc_key),
+			len(self.index)))
 
-## Array for storing the docLength (for normalizing
-docLength = np.array([0]*len(index[0]['tfs']))
+        ## Create tf-idf weight
+	#@timing ## Uncomment to see discrete timing
+	def genTFIDF(self):
+		## - First create the df for each term
+		## Loop through index and construct Vector Space Model
+		for i in range(len(self.index)):
+			# Use numpy array to count non-zero indices in arrays
+			df = (np.array([self.index[i]['tfs']]) != 0).sum(1)
 
-## Array for storing doc VSM
-docVector = np.zeros(shape=(len(doc_key),len(index)))
+			# Calculate idf: log(n/df), where n is length 
+			# of array (# of docs)
+			idf = log10(len(self.index[i]['tfs']) / float(df[0]))
 
-##----- BEGIN DEBUG ------##
-#print "TF-IDF - NOT NORMALIZED"
-##----- END DEBUG ------##
+			# Calculate tf-idf weights (not normalized)
+			# |Wi| = sqrt(sum(squared(idf)))
+			weights = self.index[i]['tfs']
+			w = [float("{0:.3f}".format(sqrt(x*(idf**2)))) 
+				for x in weights]
 
-## Create tf-idf weight
-## - First create the df for each term
-## Loop through index and construct Vector Space Model
-for i in range(len(index)):
-	# Use numpy array to count non-zero indices in arrays
-	df = (np.array([index[i]['tfs']]) != 0).sum(1)
+			# Loop through weights per doc and add to docVector
+			for x in range(len(w)):
+				self.docVector[x][i] = w[x]
 
-	# Calculate idf: log(n/df), where n is length of array (# of docs)
-	idf = log10(len(index[i]['tfs']) / float(df[0]))
+			# calculate the square of each weight (by doc) 
+			# and accumulate for doc length
+			l = np.array([float("{0:.3f}".format(x**2)) 
+				for x in w])
+			self.docLength = self.docLength + l
 
-	# Calculate tf-idf weights (not normalized)
-	# |Wi| = sqrt(sum(squared(idf)))
-	weights = index[i]['tfs']
-	w = [float("{0:.3f}".format(sqrt(x*(idf**2)))) for x in weights]
+			# Place in dictionary (for now)
+			self.index[i]['df'] = df[0]
+			self.index[i]['idf'] = "{0:.3f}".format(idf)
+			self.index[i]['w'] = w
+
+	## Normalize the vectors using docLength - establish unit vectors
+	#@timing ## Uncomment to see discrete timing
+	def normalizeVector(self):
+		## Now finish length of Di (docLength)
+		self.docLength = [float("{0:.3f}".format(sqrt(x))) 
+			for x in self.docLength]
+
+		## Normalize the Document Vector Space Model
+		for x in range(len(self.docVector)):
+			for y in range(len(self.docVector[x])):
+				self.docVector[x][y] /= self.docLength[x]
+				self.docVector[x][y] = float("{0:.3f}".format(
+					self.docVector[x][y]))
+
+	#@timing ## Uncomment to see discrete timing
+	def writeOutput(self, outFile):
+		## Write the Document Vector Space Model (docVector) and
+		## the Document Keystone (doc_key) out to the output file
+		out = shelve.open(outFile)
+		out['docVector'] = self.docVector
+		out['doc_key'] = self.doc_key
+		out.close()
+
+	## For debug
+	def printObject(self, obj):
+		print(obj)
+
+
+
+## Initial Solution space as a function 
+#@timing ## Uncomment to see discrete timing
+def brute_force():
+	## GET THE DATA FROM INGEST
+	ingest = shelve.open('OUTPUT/ingestOutput.db')
+	index = ingest['index']
+	doc_key = ingest['doc_key']
+	ingest.close()
+
+	## First sort the index
+	index.sort(key=lambda k: k['term'])
+
+	## Array for storing the docLength (for normalizing
+	docLength = np.array([0]*len(index[0]['tfs']))
+
+	## Array for storing doc VSM
+	docVector = np.zeros(shape=(len(doc_key),len(index)))
+
+	## Create tf-idf weight
+	## - First create the df for each term
+	## Loop through index and construct Vector Space Model
+	for i in range(len(index)):
+		# Use numpy array to count non-zero indices in arrays
+		df = (np.array([index[i]['tfs']]) != 0).sum(1)
+
+		# Calculate idf: log(n/df), where n is length of array 
+		# (# of docs)
+		idf = log10(len(index[i]['tfs']) / float(df[0]))
+
+		# Calculate tf-idf weights (not normalized)
+		# |Wi| = sqrt(sum(squared(idf)))
+		weights = index[i]['tfs']
+		w = [float("{0:.3f}".format(sqrt(x*(idf**2)))) 
+			for x in weights]
 	
-	# Loop through weights per doc and add to docVector
-	for x in range(len(w)):
-		docVector[x][i] = w[x]
+		# Loop through weights per doc and add to docVector
+		for x in range(len(w)):
+			docVector[x][i] = w[x]
  
-	# calculate the square of each weight (by doc) and accumulate for
-	# doc length
-	l = np.array([float("{0:.3f}".format(x**2)) for x in w])
-	docLength = docLength + l
+		# calculate the square of each weight (by doc) and 
+		# accumulate for
+		# doc length
+		l = np.array([float("{0:.3f}".format(x**2)) for x in w])
+		docLength = docLength + l
 	
-	# Place in dictionary (for now)
-	index[i]['df'] = df[0] 
-	index[i]['idf'] = "{0:.3f}".format(idf) # Round to three digits
-	index[i]['w'] = w
+		# Place in dictionary (for now)
+		index[i]['df'] = df[0] 
+		index[i]['idf'] = "{0:.3f}".format(idf) # Round to three digits
+		index[i]['w'] = w
 	
-	##----- BEGIN DEBUG ------##
-	#print index[i]['term'], index[i]['w']
-	##----- END DEBUG ------##
+	## Now finish length of Di (docLength)
+	docLength = [float("{0:.3f}".format(sqrt(x))) for x in docLength]
 
-## Now finish length of Di (docLength)
-docLength = [float("{0:.3f}".format(sqrt(x))) for x in docLength]
+	## Normalize the Document Vector Space Model
+	for x in range(len(docVector)):
+		for y in range(len(docVector[x])):
+			docVector[x][y] /= docLength[x]
+			docVector[x][y] = float("{0:.3f}".format(
+				docVector[x][y])) 
 
-##----- BEGIN DEBUG ------##
-#print index[i]['term'], index[i]['w']
-#print "DOCUMENT LENGTHS"
-#print docLength
-##----- END DEBUG ------##
+##-----------------------------------------------------------------##
+## For now....
+## Execution from here
+##-----------------------------------------------------------------##
 
-## Normalize the Document Vector Space Model
-for x in range(len(docVector)):
-	for y in range(len(docVector[x])):
-		docVector[x][y] /= docLength[x]
-		docVector[x][y] = float("{0:.3f}".format(docVector[x][y])) 
+@timing
+def main():
+	## Execution as an object
+	simpleVSM = genVSM('OUTPUT/ingestOutput.db')
+	simpleVSM.genTFIDF()
+	simpleVSM.normalizeVector()
+	simpleVSM.writeOutput('OUTPUT/processingOutput')
+	#simpleVSM.printObject(simpleVSM.docVector)
 
-##----- BEGIN DEBUG ------##
-#print "Document Vector Space Model"
-#print docVector
-##----- END DEBUG ------##
+	## Execution as a pure function
+	#brute_force()
 
-## Write the Document Vector Space Model (docVector) and
-## the Document Keystone (doc_key) out to the output file
-out = shelve.open('OUTPUT/processingOutput')
-out['docVector'] = docVector
-out['doc_key'] = doc_key
-out.close()
-
-
-
+if __name__ == "__main__":
+	main()
