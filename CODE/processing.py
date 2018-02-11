@@ -16,6 +16,81 @@ def timing(f):
 		return exe
 	return ft
 
+## A simple one-way linked list
+## A node in the list
+class Node:
+    ## Initialize the node
+    def __init__(self, dName):
+        self.name = dName
+        self.next = None
+
+    ## Get the name parameter - the document name
+    def getName(self):
+        return self.name
+    
+    ## Get the linked node (next)
+    def getNext(self):
+        return self.next
+
+    ## Add a node
+    def setNext(self,n):
+        self.next = n
+
+## The actual linked list
+class linkedList:
+    ## Initialize the head
+    def __init__(self):
+        self.head = None
+
+    ## Check if list is empyt
+    def isEmpty(self):
+        return self.head == None
+
+    ## Add a node to the list
+    def add(self,n):
+        node = Node(n)
+        node.setNext(self.head)
+        self.head = node
+    
+    ## Returns the size of the list
+    ## Checks current linked list - in lieu of just tracking it...
+    def size(self):
+        cur = self.head
+        count = 0
+        while cur != None:
+            count += 1
+            cur = cur.getNext()
+        return count
+    
+    ## Search for a specific node in the list
+    def search(self, name):
+        cur = self.head
+        found = False
+        while cur != None and not found:
+            if cur.getName() == name:
+                found = True
+            else:
+                cur = cur.getNext()
+        return found
+    
+    ## Remove a node from the list
+    def remove(self,name):
+        cur = self.head
+        prev = None
+        found = False
+        while not found:
+            if cur.getData() == name:
+                found = True
+            else:
+                prev = cur
+                cur = cur.getNext()
+        if prev == None:
+            self.head = cur.getNext()
+        else:
+            prev.setNext(cur.getNext())
+
+
+## The crux of this script - generating the Vector Space Model
 class genVSM:
 	## Initiliaze the object
 	#@timing ## Uncomment to see discrete timing
