@@ -359,16 +359,16 @@ def brute_force():
 @timing
 def main():
         ## Execution as an object - result is VSM Doc LL
-#        dLLVSM = genVSMDLL('OUTPUT/ingestOutput.db')
-#        dLLVSM.genTFIDF()
-#        dLLVSM.normalizeVectors()
-#        dLLVSM.writeOutput('OUTPUT/processingOutput')
+        dLLVSM = genVSMDLL('OUTPUT/ingestOutput.db')
+        dLLVSM.genTFIDF()
+        dLLVSM.normalizeVectors()
+        dLLVSM.writeOutput('OUTPUT/processingOutput')
 
         ## Execution as an object - result is VSM array
-        simpleVSM = genVSMArray('OUTPUT/ingestOutput')
-        simpleVSM.genTFIDF()
-        simpleVSM.normalizeVectors()
-        simpleVSM.writeOutput('OUTPUT/processingOutput')
+#        simpleVSM = genVSMArray('OUTPUT/ingestOutput')
+#        simpleVSM.genTFIDF()
+#        simpleVSM.normalizeVectors()
+#        simpleVSM.writeOutput('OUTPUT/processingOutput')
 
         ## Execution as a pure function
 #       brute_force()
