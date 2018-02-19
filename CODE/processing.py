@@ -359,7 +359,7 @@ def brute_force():
 @timing
 def main():
         ## Execution as an object - result is VSM Doc LL
-        dLLVSM = genVSMDLL('OUTPUT/ingestOutput.db')
+        dLLVSM = genVSMDLL('OUTPUT/ingestOutput')
         dLLVSM.genTFIDF()
         dLLVSM.normalizeVectors()
         dLLVSM.writeOutput('OUTPUT/processingOutput')
