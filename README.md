@@ -1,4 +1,8 @@
 EECS 767 Class Project - 
+
+Note: student web -> https://people.eecs.ku.edu/~terrapin/index.html
+Note: eecs ssh: user@cycle2.eecs.ku.edu (could use cycle1-4) [cgi-bin perms are fun...]
+
 This is a semester-long project. You will work in groups of no more than 3. You will need to do a lot of coding. Doing it all by one person will be very difficult.
 
 You can use any programming language and libraries that are included in the default installation of the language. However, you should NOT use any open-source or third party code, except the stop list and the stemmer. You cannot use tools that automatically generate code. You are not allowed to share code.
