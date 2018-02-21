@@ -1,0 +1,17 @@
+29 Jan 2018: First meeting between Nadhi and Ron - discussed separation of functionality and preferred coding language for 
+project. Reviewed language alternatives (java, python, R, etc) - looking for the language with the most to offer natively
+
+01 Feb 2018: Notified professor on formation of group 
+
+05 Feb 2018: First meeting of group as three members, discussed approach to project, discussed initial outline of code 
+(draft created by Blake). Coordinated module responsibilities and discussed I/O between modules. Selected Python for language.
+Started GitHub repository for colaboration environment
+
+<insert entries from GitHub log here>
+
+15 Feb 2018: Notified professor of additional team member and team name: FiniteLoop Squad
+
+<insert entries from GitHub log here>
+
+19 Feb 2018: Met to review initial code stubs and discuss next steps - working to complete simple search to reflect 
+(and be able to check against) steps outlined in class quiz (taking in simple docs and matching with query)
