@@ -63,9 +63,11 @@ print ("Welcome to the EECS767 document parsing program!")
 # store document id, name and path to document in a dictionary called "doc_key"
 try:
    
-    #path=func_get_directory_name()
+    path=func_get_directory_name()
     #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/')
-    path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/few_html/')
+    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/few_html/')
+    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/test_docs/')
+
     print (path) #Debugging
     documents_in_directory = os.listdir(path)
     #print (documents_in_directory) ##Debugging
