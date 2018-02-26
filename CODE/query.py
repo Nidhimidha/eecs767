@@ -30,7 +30,7 @@ class similarity:
 
 
     ## TODO: Need to change the signature of computerSimilarity to accept the normalized query
-    def computerSimilarity(self):
+    def similarity(self):
         indexList = []
         docIndices = []
         query = [0,0,0,0,0,0,0,0,0.602,0,0.125]
@@ -63,7 +63,7 @@ class similarity:
 def main():
 
     queryInstance = similarity('OUTPUT/processingOutput')
-    queryInstance.computerSimilarity()
+    queryInstance.similarity()
     queryInstance.writeOutput('OUTPUT/queryOutput')
 
 if __name__ == "__main__":
