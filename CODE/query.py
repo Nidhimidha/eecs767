@@ -27,9 +27,7 @@ class similarity:
         sim = sim / (self.vectorlength(w1) * self.vectorlength(w2))
         return sim
 
-
-
-    ## TODO: Need to change the signature of computerSimilarity to accept the normalized query
+    ## TODO: Need to change the method signature to accept the normalized query
     def similarity(self):
         indexList = []
         docIndices = []
