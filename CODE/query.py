@@ -6,7 +6,7 @@ class similarity:
 
     def __init__(self, infile):
          # self.docVector = [[0.125,0,0.301,0,0.602,0.301,0.125,0.125,0,0.301,0],[0.125,0.125,0,0.602,0,0,0.125,0.125,1.204,0,0.125],[0.125,0.125,0,0,0,0.301,0.125,0.125,0,0.301,0.125],[0,0.125,0.301,0,0,0,0,0,0,0,0.125]]
-         # self.doc_key = [1,2,3,4,5,6,7,8,9,10,11]
+         # self.doc_key = [1,2,3,4]
          proc = shelve.open(infile)
          self.docVector = proc['docVector']
          self.doc_key = proc['doc_key']
