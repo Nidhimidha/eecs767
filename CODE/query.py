@@ -57,6 +57,11 @@ class similarity:
         # print (rankedOutput) : [[2, 4, 3, 1], [0.8759425974113635, 0.07280193431082146, 0.04990379797919978, 0.0]]
         return rankedOutput
 
+    def writeOutput(self, outFile):
+                out = shelve.open(outFile)
+                out['rankedOutput'] = self.rankedOutput
+                out.close()
+
 
 def main():
 
