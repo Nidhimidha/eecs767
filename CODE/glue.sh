@@ -25,14 +25,14 @@ esac
 
 if [ $diag = true ];
 then
-	python3 -m cProfile ingestTEMPLATE.py > 00ingest.diag
-	python3 -m cProfile processing.py > 00process.diag
-	python3 -m cProfile query.py > 00query.diag
+	python -m cProfile ingestTEMPLATE.py > 00ingest.diag
+	python -m cProfile processing.py > 00process.diag
+	python -m cProfile query.py > 00query.diag
 	echo "Diagnostic Results written to *.diag files"
 else
-	python3 ingestTEMPLATE.py
-	python3 processing.py
-	python3 query.py
+	python ingestTEMPLATE.py
+	python processing.py
+	python query.py
 fi
 
 exit
