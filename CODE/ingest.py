@@ -43,12 +43,26 @@ def func_get_directory_name():
 # This function searches for html tags within documents and removes them prior
 # to tokenization
 
-def func_remove_tags(raw_input):
+def func_tokenize(raw_input):
+    try:
+        stop_words = set(stopwords.words('english'))
+    except:
+        print ('Error creating stop words.  Please verify the stopwords were imported prior to running this program')
+        print ('Run the following commands in a python shell to download the stop words')
+        print ('import nltk')
+        print ('nltk.download("stopwords")')
     try:
         
         tags = re.compile('((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
-        stripped = tags.sub(' ',str(raw_input))
-        return stripped
+        tr = str.maketrans(" ", " ", string.punctuation)#used to strip punctuation
+        stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer
+        
+        line = tags.sub(' ',str(raw_input)) #remove html tags
+        line= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize
+        line=[word for word in line if word not in stop_words] #remove stop words from raw line
+        line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
+ #       line= (line.split())#tokenize
+        return line
     except:
         print ('Error removing html tags')
 
@@ -63,42 +77,26 @@ print ("Welcome to the EECS767 document parsing program!")
 # store document id, name and path to document in a dictionary called "doc_key"
 try:
    
-    path=func_get_directory_name()
+    #path=func_get_directory_name()
     #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/')
-    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/few_html/')
+    path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/few_html/')
     #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/test_docs/')
 
-    print (path) #Debugging
+    #print (path) #Debugging
     documents_in_directory = os.listdir(path)
     #print (documents_in_directory) ##Debugging
     data = []
-    tr = str.maketrans(" ", " ", string.punctuation)#used to strip punctuation
-    #tr = str.maketrans(" ", " ", ",.?!@#$%^&*\(\)\[\]\{\}\|\\\/-+=:;")
-    stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer
-    try:
-        stop_words = set(stopwords.words('english'))
-    except:
-        print ('Error creating stop words.  Please verify the stopwords were imported prior to running this program')
-        print ('Run the following commands in a python shell to download the stop words')
-        print ('import nltk')
-        print ('nltk.download("stopwords")')
     doc_key={}#create dictionary to store document information
     for document_id, filename in enumerate(documents_in_directory):
         if not filename.startswith('.'): #and os.path.isfile(os.path.join(root, filename)):
             doc_key[filename]=[document_id,os.path.abspath(filename)]
             page = urllib.request.urlopen('file://'+path+filename).read() #using urllib as it is required for html docs
-            #print ('file opened')
             print ('Caching document'+ str(document_id))
-            line = func_remove_tags(page) #remove HTML tags from the document
-            #raw= (line.lower().translate(tr)) #remove punctuation
-            #raw= (line.split()) #convert to lower and tokenize
-            raw= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize
-            stopped=[word for word in raw if word not in stop_words] #remove stop words from raw line
-            stemmed_line=[stemmer.stem(term) for term in stopped] #use nltk stemmer to convert to word roots
-            data.append(stemmed_line)# add tokenized document to data array           
+            line = func_tokenize(page) #remove HTML tags from the document
+            data.append(line)# add tokenized document to data array           
             #print (page)
-    print ('Document Key: ')
-    print (doc_key)#test print doc_key
+    #print ('Document Key: ') ##Debugging
+    #print (doc_key)##test print doc_key
 except:
     print ('Error opening file')
     
