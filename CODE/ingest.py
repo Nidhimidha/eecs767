@@ -51,19 +51,29 @@ def func_tokenize(raw_input):
         print ('Run the following commands in a python shell to download the stop words')
         print ('import nltk')
         print ('nltk.download("stopwords")')
-    try:
-        
-        tags = re.compile('((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
+    try:        
+        tags = re.compile('(b\')|((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
         tr = str.maketrans(" ", " ", string.punctuation)#used to strip punctuation
         stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer
-        line=raw_input.decode('ascii')#necessary to remove byte 'b' at beginning of file
-        line = tags.sub(' ',line) #remove html tags
-        line= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize
-        line=[word for word in line if word not in stop_words] #remove stop words from raw line
-        line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
+        try:
+            line = tags.sub(' ',str(raw_input)) #remove html tags
+        except:
+            print ('Error removing html tags', sys.exc_info()[0])
+        try:
+            line= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize
+        except:
+            print ('Error Changing case, removing punctuation and spliting', sys.exc_info()[0])               
+        try:
+            line=[word for word in line if word not in stop_words] #remove stop words from raw line
+        except:
+            print ('Error with stop words', sys.exc_info()[0])           
+        try:
+            line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
+        except:
+            print ('Error with stemming', sys.exc_info()[0])
         return line
     except:
-        print ('Error removing html tags')
+        print ('Error in tokenizer function', sys.exc_info()[0])
 
 
         
@@ -77,8 +87,12 @@ print ("Welcome to the EECS767 document parsing program!")
 try:
    
     #path=func_get_directory_name()
-    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/')
-    path=('C:\\Users\\b589b426\\Documents\\_student\EECS_767\\Project\\test_docs\\')
+    path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/')
+    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/test_docs/')
+    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/test_docs/')
+#
+#    path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/few_html/')
+    #path=('C:\\Users\\b589b426\\Documents\\_student\EECS_767\\Project\\test_docs\\')
     #print (path) #Debugging
     documents_in_directory = os.listdir(path)
     #print (documents_in_directory) ##Debugging
@@ -89,11 +103,14 @@ try:
         if not filename.startswith('.'): #and os.path.isfile(os.path.join(root, filename)):
             #print(filename)#debugging
             doc_key[filename]=[document_id,os.path.abspath(filename)]
-            #page = urllib.request.urlopen('file://'+path+filename).read() #Linux path
-            page = urllib.request.urlopen('file:\\'+path+filename).read() #Windows path
+            page = urllib.request.urlopen('file://'+path+filename).read() #Linux path
+            #page = urllib.request.urlopen('file:\\'+path+filename).read() #Windows path
             print ('Caching document'+ str(document_id))
             line = func_tokenize(page) #remove HTML tags from the document
-            data.append(line)# add tokenized document to data array           
+            try:
+                data.append(line)# add tokenized document to data array
+            except:
+                print ('Error adding line to data', sys.exc_info()[0])
             #print (page)
     #print ('Document Key: ') ##Debugging
     #print (doc_key)##test print doc_key
