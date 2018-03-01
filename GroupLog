@@ -15,3 +15,8 @@ Started GitHub repository for colaboration environment
 
 19 Feb 2018: Met to review initial code stubs and discuss next steps - working to complete simple search to reflect 
 (and be able to check against) steps outlined in class quiz (taking in simple docs and matching with query)
+
+<insert entries from GitHum log here>
+
+26 Feb 2018: Met to go over ingest functionality and output - need to modify processing to accept minor change in ingest
+output format. Discussed front end GUI - coordinated cgi script and environment on EECS peoples server
