@@ -56,12 +56,11 @@ def func_tokenize(raw_input):
         tags = re.compile('((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
         tr = str.maketrans(" ", " ", string.punctuation)#used to strip punctuation
         stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer
-        
-        line = tags.sub(' ',str(raw_input)) #remove html tags
+        line=raw_input.decode('ascii')#necessary to remove byte 'b' at beginning of file
+        line = tags.sub(' ',line) #remove html tags
         line= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize
         line=[word for word in line if word not in stop_words] #remove stop words from raw line
         line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
- #       line= (line.split())#tokenize
         return line
     except:
         print ('Error removing html tags')
@@ -79,18 +78,19 @@ try:
    
     #path=func_get_directory_name()
     #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/')
-    path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/few_html/')
-    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/test_docs/')
-
+    path=('C:\\Users\\b589b426\\Documents\\_student\EECS_767\\Project\\test_docs\\')
     #print (path) #Debugging
     documents_in_directory = os.listdir(path)
     #print (documents_in_directory) ##Debugging
     data = []
     doc_key={}#create dictionary to store document information
     for document_id, filename in enumerate(documents_in_directory):
+        #print(filename)#debugging
         if not filename.startswith('.'): #and os.path.isfile(os.path.join(root, filename)):
+            #print(filename)#debugging
             doc_key[filename]=[document_id,os.path.abspath(filename)]
-            page = urllib.request.urlopen('file://'+path+filename).read() #using urllib as it is required for html docs
+            #page = urllib.request.urlopen('file://'+path+filename).read() #Linux path
+            page = urllib.request.urlopen('file:\\'+path+filename).read() #Windows path
             print ('Caching document'+ str(document_id))
             line = func_tokenize(page) #remove HTML tags from the document
             data.append(line)# add tokenized document to data array           
@@ -132,8 +132,6 @@ try:
         print ('Error printing data to index file')
     try:
         doc_key_out_put_file = open('doc_key.txt','w')
-        #doc_key_out_put_file.write(str(doc_key)) # generating an error with the (r) symbol in the file name
-        #'Wrangell®CSt_Elias_National_Park_and_Preserve.htm'
         print('',doc_key, file=doc_key_out_put_file)
         doc_key_out_put_file.close()
     except:
@@ -142,4 +140,3 @@ except:
     print ('Error writing data to file', sys.exc_info()[0])
 
 print ('Program complete!')
-
