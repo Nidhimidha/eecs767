@@ -21,7 +21,7 @@ import shelve
 #]
 index = [
         { "a": [1,1,1,0] },
-        { "damaged" [1,0,0,1] },
+        { "damaged": [1,0,0,1] },
         { "delivery": [0,1,0,0] },
         { "fire": [1,0,0,0] },
         { "arrived": [0,1,1,1] },
@@ -40,10 +40,10 @@ index = [
 #        { "name": "D4", "path":"loc4" }
 #]
 doc_key = [
-        { "name": "D1", "path":"loc1" },
-        { "name": "D2", "path":"loc2" },
-        { "name": "D3", "path":"loc3" },
-        { "name": "D4", "path":"loc4" }
+        { "D1": ["id1", "loc1"] },
+        { "D2": ["id2", "loc2"] },
+        { "D3": ["id3", "loc3"] },
+        { "D4": ["id4", "loc4"] }
 ]
 
 d = shelve.open('OUTPUT/ingestOutput')

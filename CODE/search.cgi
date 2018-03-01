@@ -1,8 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 import cgi
 import os
 import time
-from http import cookies 
+#from http import cookies 
 #https://docs.python.org/3/library/http.cookies.html
 
 print("Content-type: text/html")
