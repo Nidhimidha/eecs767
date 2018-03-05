@@ -1,5 +1,19 @@
 import shelve
 
+#
+# Proximity
+# { term: [ [ DocID, Prox ], [Doc ID, Prox], ... ],
+#   term: [ [ DocID, Prox ], [Doc ID, Prox], ... ],
+#   ...
+# }
+
+# Process:
+#              Term1               Term2
+# [ [ DocID [ [Prox, Prox, ... ], [Prox, Prox, ... ],
+
+
+
+#
 # From Quizes
 #       D1: Shipment of gold damaged in fire.
 #       D2: Delivery of silver arrived in a silver truck.
