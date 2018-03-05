@@ -1,9 +1,11 @@
 import os
+import json
 import sys
 import io
 import fileinput
 import string
 import urllib #required to open html documents
+import urllib2 #required in python 2.7
 import re #required to remove html tags vie regex
 import codecs #required to open html files
 import nltk #requires python 3.5 or python 2.7 to install
@@ -12,6 +14,7 @@ from nltk.corpus import stopwords #must download stopwords at least once.  This 
                                   #open the python shell and type:
                                   #import nltk
                                   #nltk.download("stopwords")
+from collections import defaultdict #necessary for the proximity data structure                                
 
 #
 # Python LEECS 767 Document Parsing
@@ -34,7 +37,7 @@ from nltk.corpus import stopwords #must download stopwords at least once.  This 
 
 def func_get_directory_name():
     try:
-        directoryName = input ('Please enter a directory containing documents ot index: ')
+        directoryName = raw_input ('Please enter a directory containing documents ot index: ')
         print ('Indexing documents in directory "' +directoryName+'"')
         return directoryName
     except:
@@ -52,15 +55,25 @@ def func_tokenize(raw_input):
         print ('import nltk')
         print ('nltk.download("stopwords")')
     try:        
-        tags = re.compile('(b\')|((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
-        tr = str.maketrans(" ", " ", string.punctuation)#used to strip punctuation
-        stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer
         try:
-            line = tags.sub(' ',str(raw_input)) #remove html tags
+            tags = re.compile('(b\')((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
+            
+        except:
+            print ('Error in regex', sys.exc_info()[0])
+        ### the following section uses Python 3 conventions
+        #try:
+            ##tr = str.maketrans(" ", " ", string.punctuation)#used to strip punctuation ## need to change for python 2   THis is python 3
+        #except:
+            #print ('Error removing punctuation', sys.exc_info()[0])     
+        ### End Python 3 section
+        try:
+            #line = tags.sub(' ',str(raw_input)) #remove html tags ##python 3 code
+            line = re.sub(tags,' ',str(raw_input)) #remove html tags
         except:
             print ('Error removing html tags', sys.exc_info()[0])
         try:
-            line= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize
+            #line= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize this uses python 3 requires uncommenting 
+            line= (line.lower().translate(None, string.punctuation).split())#convert line to lower case, remove punctionation and tokenize #This is Python2 version
         except:
             print ('Error Changing case, removing punctuation and spliting', sys.exc_info()[0])               
         try:
@@ -68,13 +81,34 @@ def func_tokenize(raw_input):
         except:
             print ('Error with stop words', sys.exc_info()[0])           
         try:
-            line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
+            stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer
+            #print (type(term))
+            #if type(term) is unicode:
+                #try:
+                    #print ('term is unicode')
+                #except:
+                    #print ('Error handling unicode for stemmer', sys.exc_info()[0])
+            for term in line:
+                #print (type(term))
+                #trying to write code to deal with unicode characters
+                if type(term) is unicode:
+                    try:
+                        print ('term is unicode')
+                        
+                        line= [stemmer.stem(term.decode('utf-8'))]                        
+                    except:
+                        print ('Error handling unicode for stemmer', sys.exc_info()[0])
+                else:
+                    line=[stemmer.stem(term)]
+                
+            #line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
         except:
             print ('Error with stemming', sys.exc_info()[0])
+            pass
         return line
     except:
         print ('Error in tokenizer function', sys.exc_info()[0])
-
+        pass
 
         
 # Begin program
@@ -103,17 +137,18 @@ try:
         if not filename.startswith('.'): #and os.path.isfile(os.path.join(root, filename)):
             #print(filename)#debugging
             doc_key[filename]=[document_id,os.path.abspath(filename)]
-            page = urllib.request.urlopen('file://'+path+filename).read() #Linux path
-            #page = urllib.request.urlopen('file:\\'+path+filename).read() #Windows path
+            #page = urllib.request.urlopen('file://'+path+filename).read() #Linux path #Python3 version
+            try:
+                page = urllib2.urlopen('file://'+path+filename).read()
+                #page = urllib.request.urlopen('file:\\'+path+filename).read() #Windows path
+            except:
+                print ('Error using urllib to open file', sys.exc_info()[0])
             print ('Caching document'+ str(document_id))
             line = func_tokenize(page) #remove HTML tags from the document
             try:
                 data.append(line)# add tokenized document to data array
             except:
                 print ('Error adding line to data', sys.exc_info()[0])
-            #print (page)
-    #print ('Document Key: ') ##Debugging
-    #print (doc_key)##test print doc_key
 except:
     print ('Error opening file')
     
@@ -122,37 +157,78 @@ except:
 try:
     num_docs=len(data)
     terms={}
+    #from collections import defaultdict
+    #dates_dict = defaultdict(list)
+    #for key, date in cur:
+        #dates_dict[key].append(date)    
+    proximity=defaultdict(list)
     print ('Creating index')
     for document_id, document in enumerate (data):
         print ('Parsing terms for document_id'+ str(document_id))
-        #print ('analyzing document '+str(document_id)) ##Debugging info
-        #print ('document ' + str(document))    ##Debugging info
-        for term in document:                  
+        for term_position, term in enumerate (document):                   
             if term in terms:
-                terms[term][document_id]+=1
+                try:
+                    terms[term][document_id]+=1
+                except:
+                    print ('Error updating term in terms dictionary', sys.exc_info()[0])
+                try:
+                    #print ('debugging proximity dictionary')
+                    #print (proximity[term])
+                    
+                    #assign the current term proximity to a list for appending additional tuples
+                    temp_list=proximity[term]
+                    try:
+                        temp_list.append((document_id,term_position))
+                        #print ('debugging temp list')
+                        #print (temp_list)
+                    except:
+                        print ('Error appending data to temp_list', sys.exc_info()[0])
+                    #change term value to temp list   
+                    proximity[term]=temp_list
+                    #print ('debugging proximity[term] after appending')
+                    #print (proximity[term])
+                except:
+                    print ('Error updating proximity in proximity dictionary', sys.exc_info()[0])
+                    
             else:
-                terms[term]=[0]*num_docs
-                terms[term][document_id]+=1
-    #print ('Terms index: ')
-    #print (terms) #debugging info
+                # Add a new key to the terms dictionary
+                try:
+                    terms[term]=[0]*num_docs
+                    terms[term][document_id]+=1
+                except:
+                    print ('Error adding new term to term dictionary', sys.exc_info()[0])
+                    
+                # Add a new key to the proximity dictionary
+                try:
+                    proximity[term]=[(document_id,term_position)] #store proximity in a separate dictionary, this is a list of a tupple with a list inside it
+                except:
+                    print ('Error adding new proximity to proximity dictionary', sys.exc_info()[0])
 except:       
-  print ('Error updating tf values in terms dictionary')
+    print ('Error updating tf values in terms dictionary', sys.exc_info()[0])
   
 #print term index and doc_key to output file
+#This section has been rewritten to export data via json
+#as this addressed several issues in attempting to convert 
+#values
 try:
     print ('Writing data to files')
     try:
-        index_out_put_file = open('index.txt','w')
-        index_out_put_file.write(str(terms))
-        index_out_put_file.close()
+        with open('index.txt','w') as index_out_put_file:
+            index_out_put_file.write(json.dumps(terms))        
+        
     except:
-        print ('Error printing data to index file')
+        print ('Error printing data to index file', sys.exc_info()[0])
     try:
-        doc_key_out_put_file = open('doc_key.txt','w')
-        print('',doc_key, file=doc_key_out_put_file)
-        doc_key_out_put_file.close()
+        with open('doc_key.txt','w') as doc_key_out_put_file:
+            doc_key_out_put_file.write(json.dumps(doc_key))
     except:
         print ('Error printing data to doc_key file', sys.exc_info()[0])
+    try:
+        with open('proximity.txt','w') as proximity_out_put_file:
+            proximity_out_put_file.write(json.dumps(proximity))
+    except:
+        print ('Error printing data to doc_key file', sys.exc_info()[0])        
+        
 except:
     print ('Error writing data to file', sys.exc_info()[0])
 
