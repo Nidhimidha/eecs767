@@ -1,5 +1,6 @@
 import os
 import json
+import shelve
 import sys
 import io
 import fileinput
@@ -110,6 +111,32 @@ def func_tokenize(raw_input):
         print ('Error in tokenizer function', sys.exc_info()[0])
         pass
 
+# This function writes data to text files via json
+
+
+def func_json_out(terms,doc_key,proximity):
+    try:
+        print ('Exporting JSON data to text files')
+        try:
+            with open('index.txt','w') as index_out_put_file:
+                index_out_put_file.write(json.dumps(terms))        
+            
+        except:
+            print ('Error printing data to index file', sys.exc_info()[0])
+        try:
+            with open('doc_key.txt','w') as doc_key_out_put_file:
+                doc_key_out_put_file.write(json.dumps(doc_key))
+        except:
+            print ('Error printing data to doc_key file', sys.exc_info()[0])
+        try:
+            with open('proximity.txt','w') as proximity_out_put_file:
+                proximity_out_put_file.write(json.dumps(proximity))
+        except:
+            print ('Error printing data to doc_key file', sys.exc_info()[0])  
+        #export data via shelve
+    except:
+        print ('Error with func_json_out', sys.exc_info()[0])
+        
         
 # Begin program
 # This section of code will provide a brief introductory message and instructions of using the program
@@ -211,23 +238,20 @@ except:
 #as this addressed several issues in attempting to convert 
 #values
 try:
-    print ('Writing data to files')
-    try:
-        with open('index.txt','w') as index_out_put_file:
-            index_out_put_file.write(json.dumps(terms))        
-        
+    
+    ## the following function is optional and outputs data to .txt files via JSON
+    ## this may assist in troubleshooting
+    #func_json_out(terms,doc_key,proximity)
+    
+    print ('Exporting data to shelf .db file')
+    try:   
+        d = shelve.open('OUTPUT/ingestOutput')
+        d['index'] = terms
+        d['doc_key'] = doc_key
+        d['proximity'] = proximity
+        d.close()   
     except:
-        print ('Error printing data to index file', sys.exc_info()[0])
-    try:
-        with open('doc_key.txt','w') as doc_key_out_put_file:
-            doc_key_out_put_file.write(json.dumps(doc_key))
-    except:
-        print ('Error printing data to doc_key file', sys.exc_info()[0])
-    try:
-        with open('proximity.txt','w') as proximity_out_put_file:
-            proximity_out_put_file.write(json.dumps(proximity))
-    except:
-        print ('Error printing data to doc_key file', sys.exc_info()[0])        
+        print ('Error exporting data via shelve', sys.exc_info()[0]) 
         
 except:
     print ('Error writing data to file', sys.exc_info()[0])
