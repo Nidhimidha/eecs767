@@ -31,6 +31,18 @@ from collections import defaultdict #necessary for the proximity data structure
 # The frequency of each term in a document is stored as an array
 # that is then added to a dictionary of terms
 
+
+#
+# Variables
+#
+
+
+path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\docsnew\\')
+
+
+
+
+
  
 #
 #    Function definitions
@@ -60,27 +72,32 @@ def func_tokenize(raw_input):
             tags = re.compile('(b\')((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
             
         except:
-            print ('Error in regex', sys.exc_info()[0])
+            print ('Error in regex', sys.exc_info()[0], sys.exc_info()[1])
         ### the following section uses Python 3 conventions
         #try:
             ##tr = str.maketrans(" ", " ", string.punctuation)#used to strip punctuation ## need to change for python 2   THis is python 3
         #except:
             #print ('Error removing punctuation', sys.exc_info()[0])     
         ### End Python 3 section
+        #strip unicode from string
+        try:
+            raw_input = (raw_input.decode('unicode_escape').encode('ascii','ignore')) ##
+        except:
+            print ('Error removing unicode characters from line var', sys.exc_info()[0], sys.exc_info()[1])
         try:
             #line = tags.sub(' ',str(raw_input)) #remove html tags ##python 3 code
             line = re.sub(tags,' ',str(raw_input)) #remove html tags
         except:
-            print ('Error removing html tags', sys.exc_info()[0])
+            print ('Error removing html tags', sys.exc_info()[0], sys.exc_info()[1])
         try:
             #line= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize this uses python 3 requires uncommenting 
             line= (line.lower().translate(None, string.punctuation).split())#convert line to lower case, remove punctionation and tokenize #This is Python2 version
         except:
-            print ('Error Changing case, removing punctuation and spliting', sys.exc_info()[0])               
+            print ('Error Changing case, removing punctuation and spliting', sys.exc_info()[0], sys.exc_info()[1])               
         try:
             line=[word for word in line if word not in stop_words] #remove stop words from raw line
         except:
-            print ('Error with stop words', sys.exc_info()[0])           
+            print ('Error with stop words', sys.exc_info()[0], sys.exc_info()[1])           
         try:
             stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer
             #print (type(term))
@@ -89,26 +106,26 @@ def func_tokenize(raw_input):
                     #print ('term is unicode')
                 #except:
                     #print ('Error handling unicode for stemmer', sys.exc_info()[0])
-            for term in line:
-                #print (type(term))
-                #trying to write code to deal with unicode characters
-                if type(term) is unicode:
-                    try:
-                        print ('term is unicode')
-                        
-                        line= [stemmer.stem(term.decode('utf-8'))]                        
-                    except:
-                        print ('Error handling unicode for stemmer', sys.exc_info()[0])
-                else:
-                    line=[stemmer.stem(term)]
+##            for term in line:
+##                #print (type(term))
+##                #trying to write code to deal with unicode characters
+##                if type(term) is unicode:
+##                    try:
+##                        print ('term is unicode')
+##                        
+##                        line= [stemmer.stem(term.decode('utf-8'))]                        
+##                    except:
+##                        print ('Error handling unicode for stemmer', sys.exc_info()[0], sys.exc_info()[1])
+##                else:
+##                    line=[stemmer.stem(term)]
                 
-            #line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
+            line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
         except:
-            print ('Error with stemming', sys.exc_info()[0])
+            print ('Error with stemming', sys.exc_info()[0], sys.exc_info()[1])
             pass
         return line
     except:
-        print ('Error in tokenizer function', sys.exc_info()[0])
+        print ('Error in tokenizer function', sys.exc_info()[0], sys.exc_info()[1])
         pass
 
 # This function writes data to text files via json
@@ -122,20 +139,20 @@ def func_json_out(terms,doc_key,proximity):
                 index_out_put_file.write(json.dumps(terms))        
             
         except:
-            print ('Error printing data to index file', sys.exc_info()[0])
+            print ('Error printing data to index file', sys.exc_info()[0], sys.exc_info()[1])
         try:
             with open('doc_key.txt','w') as doc_key_out_put_file:
                 doc_key_out_put_file.write(json.dumps(doc_key))
         except:
-            print ('Error printing data to doc_key file', sys.exc_info()[0])
+            print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])
         try:
             with open('proximity.txt','w') as proximity_out_put_file:
                 proximity_out_put_file.write(json.dumps(proximity))
         except:
-            print ('Error printing data to doc_key file', sys.exc_info()[0])  
+            print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])  
         #export data via shelve
     except:
-        print ('Error with func_json_out', sys.exc_info()[0])
+        print ('Error with func_json_out', sys.exc_info()[0], sys.exc_info()[1])
         
         
 # Begin program
@@ -148,12 +165,11 @@ print ("Welcome to the EECS767 document parsing program!")
 try:
    
     #path=func_get_directory_name()
-    path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/')
     #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/test_docs/')
-    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/test_docs/')
-#
-#    path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/few_html/')
-    #path=('C:\\Users\\b589b426\\Documents\\_student\EECS_767\\Project\\test_docs\\')
+    #path=('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\test_docs\\')
+    #path='/cached_documents/'
+    #path=('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\cached_docs\\')
+    #path=('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\docsnew\\')
     #print (path) #Debugging
     documents_in_directory = os.listdir(path)
     #print (documents_in_directory) ##Debugging
@@ -166,16 +182,17 @@ try:
             doc_key[filename]=[document_id,os.path.abspath(filename)]
             #page = urllib.request.urlopen('file://'+path+filename).read() #Linux path #Python3 version
             try:
-                page = urllib2.urlopen('file://'+path+filename).read()
+                #page = urllib2.urlopen('file://'+path+filename).read()##linux path
+                page = urllib2.urlopen('file:\\'+path+filename).read()##windows path
                 #page = urllib.request.urlopen('file:\\'+path+filename).read() #Windows path
             except:
-                print ('Error using urllib to open file', sys.exc_info()[0])
+                print ('Error using urllib to open file', sys.exc_info()[0], sys.exc_info()[1])
             print ('Caching document'+ str(document_id))
             line = func_tokenize(page) #remove HTML tags from the document
             try:
                 data.append(line)# add tokenized document to data array
             except:
-                print ('Error adding line to data', sys.exc_info()[0])
+                print ('Error adding line to data', sys.exc_info()[0], sys.exc_info()[1])
 except:
     print ('Error opening file')
     
@@ -197,7 +214,7 @@ try:
                 try:
                     terms[term][document_id]+=1
                 except:
-                    print ('Error updating term in terms dictionary', sys.exc_info()[0])
+                    print ('Error updating term in terms dictionary', sys.exc_info()[0], sys.exc_info()[1])
                 try:
                     #print ('debugging proximity dictionary')
                     #print (proximity[term])
@@ -209,13 +226,13 @@ try:
                         #print ('debugging temp list')
                         #print (temp_list)
                     except:
-                        print ('Error appending data to temp_list', sys.exc_info()[0])
+                        print ('Error appending data to temp_list', sys.exc_info()[0], sys.exc_info()[1])
                     #change term value to temp list   
                     proximity[term]=temp_list
                     #print ('debugging proximity[term] after appending')
                     #print (proximity[term])
                 except:
-                    print ('Error updating proximity in proximity dictionary', sys.exc_info()[0])
+                    print ('Error updating proximity in proximity dictionary', sys.exc_info()[0], sys.exc_info()[1])
                     
             else:
                 # Add a new key to the terms dictionary
@@ -223,15 +240,15 @@ try:
                     terms[term]=[0]*num_docs
                     terms[term][document_id]+=1
                 except:
-                    print ('Error adding new term to term dictionary', sys.exc_info()[0])
+                    print ('Error adding new term to term dictionary', sys.exc_info()[0], sys.exc_info()[1])
                     
                 # Add a new key to the proximity dictionary
                 try:
                     proximity[term]=[(document_id,term_position)] #store proximity in a separate dictionary, this is a list of a tupple with a list inside it
                 except:
-                    print ('Error adding new proximity to proximity dictionary', sys.exc_info()[0])
+                    print ('Error adding new proximity to proximity dictionary', sys.exc_info()[0], sys.exc_info()[1])
 except:       
-    print ('Error updating tf values in terms dictionary', sys.exc_info()[0])
+    print ('Error updating tf values in terms dictionary', sys.exc_info()[0], sys.exc_info()[1])
   
 #print term index and doc_key to output file
 #This section has been rewritten to export data via json
@@ -241,7 +258,7 @@ try:
     
     ## the following function is optional and outputs data to .txt files via JSON
     ## this may assist in troubleshooting
-    #func_json_out(terms,doc_key,proximity)
+    func_json_out(terms,doc_key,proximity)
     
     print ('Exporting data to shelf .db file')
     try:   
@@ -251,9 +268,9 @@ try:
         d['proximity'] = proximity
         d.close()   
     except:
-        print ('Error exporting data via shelve', sys.exc_info()[0]) 
+        print ('Error exporting data via shelve', sys.exc_info()[0], sys.exc_info()[1]) 
         
 except:
-    print ('Error writing data to file', sys.exc_info()[0])
+    print ('Error writing data to file', sys.exc_info()[0], sys.exc_info()[1])
 
 print ('Program complete!')
