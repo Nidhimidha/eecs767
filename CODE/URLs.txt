@@ -1,0 +1,17 @@
+https://www.rfc-editor.org/rfc-index.html
+https://standards.gov/sibr/query/index.cfm?fuseaction=rsibr.regulatory_sibr_all
+https://www.iso.org/standards.html
+https://www.loc.gov/
+https://www.ncaa.com/march-madness
+https://www.nasa.gov/
+https://www.uspto.gov/
+https://patentscope.wipo.int/search/en/sequences.jsf
+http://patentsgazette.uspto.gov/week06/OG/patenteeByName.html
+http://patentsgazette.uspto.gov/week06/OG/patenteeByType.html
+http://patentsgazette.uspto.gov/week06/OG/Cpc-a.html
+https://www.epo.org/index.html
+https://www.ama-assn.org/
+http://www.dcc.ac.uk/resources/metadata-standards/list
+https://www.nist.gov/
+https://www.ncdc.noaa.gov/cdo-web/
+
