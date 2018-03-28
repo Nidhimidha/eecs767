@@ -60,3 +60,10 @@ To validate dependencies (other than nltk, should be native)
         import re
 
 
+To Run:
+        python ingest.py
+        python processing.py
+
+To Validate Database(s)
+        ./seeShelve.py
+
