@@ -4,7 +4,7 @@ import time                     ## For Timing
 from functools import wraps     ## For Timing
 
 inFile = 'OUTPUT/ingestOutput'
-outFile = 'OUTPUT/processingOutput'
+outFile = 'OUTPUT/processingOutput.db'
 
 ##-------------------------------------------------------------------------##
 ## INPUT
@@ -108,8 +108,8 @@ class genVSMArray:
                 self.docLength = [0]*len(self.index[0][w])
                 
                 ## Initialize docVector Array (for storing VSM)
-                self.docVector = [ [0]*len(self.index) for _ 
-                        in range(len(self.doc_key)) ]
+                self.docVector = [ [0]*len(self.index[0]) for _ 
+                        in range(len(self.doc_key[0])) ]
 
                 ## Restructure proximity and sort
                 self.prox = []
@@ -170,7 +170,10 @@ class genVSMArray:
                 ## Normalize the Document Vector Space Model
                 for x in range(len(self.docVector)):
                         for y in range(len(self.docVector[x])):
-                                self.docVector[x][y] /= self.docLength[x]
+                                if self.docLength(x) == 0:
+                                        self.docVector[x][y] = 0
+                                else:
+                                        self.docVector[x][y] /= self.docLength[x]
                                 self.docVector[x][y] = float("{0:.3f}".format(
                                         self.docVector[x][y]))
 
