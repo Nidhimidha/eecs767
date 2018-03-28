@@ -1,4 +1,6 @@
 import os
+import time
+from functools import wraps
 import json
 import shelve
 import sys
@@ -32,22 +34,41 @@ from collections import defaultdict #necessary for the proximity data structure
 # that is then added to a dictionary of terms
 
 
-#
+#-------------------------------------------------------------------------
 # Variables
 #
 
-
-path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\docsnew\\')
-
+#--------------------------------------------------------------------------
 
 
+file_format='file://' #linux format
+path = ('/Users/terrapin/Documents/GitHub/eecs767/CODE/INPUT/docsnew/') ##linux Prod
 
 
- 
+#file_format='file:\\' #windows format
+#path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\docsnew\\')## windows
+#path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\test\\')
+
+
+
+#-------------------------------------------------------------------------------
 #
 #    Function definitions
-#    This function queries the user to input a directory path to search
+#-------------------------------------------------------------------------------
+# This function adds timing data to program execution
+def timing(f):
+        @wraps(f)
+        def ft(*args, **kwargs):
+                t0 = time.time()
+                exe = f(*args, **kwargs)
+                t1 = time.time()
+                print ("\t%s Execution Time (sec): %s" %
+                        (f.__name__, str(t1-t0)))
+                return exe
+        return ft
 
+#    This function queries the user to input a directory path to search
+@timing #comment out to remove timing
 def func_get_directory_name():
     try:
         directoryName = raw_input ('Please enter a directory containing documents ot index: ')
@@ -56,9 +77,12 @@ def func_get_directory_name():
     except:
         print ('Error accessing directory')
 
+
+
 # This function searches for html tags within documents and removes them prior
 # to tokenization
 
+@timing #comment out to remove timing
 def func_tokenize(raw_input):
     try:
         stop_words = set(stopwords.words('english'))
@@ -69,8 +93,10 @@ def func_tokenize(raw_input):
         print ('nltk.download("stopwords")')
     try:        
         try:
-            tags = re.compile('(b\')((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
-            
+            #tags = re.compile('(b\')((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
+            #tags = re.compile('(b\')((<script.*?>).*?(</script>))|((<style.*?>).*?(</style>))|(<.*?>)|(<.*?/>)|(</.*?>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
+            #tags = re.compile('(<script>.*?</script>)|(<noscript>.*?</noscript>)|(<!--.*?-->)|(<.*?>)|(<.*?>\w)',re.DOTALL)
+            tags = re.compile('(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)|(<.*?>)',re.DOTALL)
         except:
             print ('Error in regex', sys.exc_info()[0], sys.exc_info()[1])
         ### the following section uses Python 3 conventions
@@ -90,8 +116,15 @@ def func_tokenize(raw_input):
         except:
             print ('Error removing html tags', sys.exc_info()[0], sys.exc_info()[1])
         try:
+            
             #line= (line.lower().translate(tr).split())#convert line to lower case, remove punctionation and tokenize this uses python 3 requires uncommenting 
-            line= (line.lower().translate(None, string.punctuation).split())#convert line to lower case, remove punctionation and tokenize #This is Python2 version
+            #line= (line.lower().translate(None, string.punctuation).split())#convert line to lower case, remove punctionation and tokenize #This is Python2 version
+            #right_num_spaces=" "*256
+            punctuation =re.compile('['+string.punctuation+']')
+            line= re.sub(punctuation,' ',line)#remove punctuation with regex but replace with a space to preserve words
+            line=line.lower().split()#convert to lowercase and split into words
+           
+            
         except:
             print ('Error Changing case, removing punctuation and spliting', sys.exc_info()[0], sys.exc_info()[1])               
         try:
@@ -99,26 +132,7 @@ def func_tokenize(raw_input):
         except:
             print ('Error with stop words', sys.exc_info()[0], sys.exc_info()[1])           
         try:
-            stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer
-            #print (type(term))
-            #if type(term) is unicode:
-                #try:
-                    #print ('term is unicode')
-                #except:
-                    #print ('Error handling unicode for stemmer', sys.exc_info()[0])
-##            for term in line:
-##                #print (type(term))
-##                #trying to write code to deal with unicode characters
-##                if type(term) is unicode:
-##                    try:
-##                        print ('term is unicode')
-##                        
-##                        line= [stemmer.stem(term.decode('utf-8'))]                        
-##                    except:
-##                        print ('Error handling unicode for stemmer', sys.exc_info()[0], sys.exc_info()[1])
-##                else:
-##                    line=[stemmer.stem(term)]
-                
+            stemmer = PorterStemmer() #create a stemmer with the nltk porter stemmer               
             line=[stemmer.stem(term) for term in line] #use nltk stemmer to convert to word roots
         except:
             print ('Error with stemming', sys.exc_info()[0], sys.exc_info()[1])
@@ -128,149 +142,171 @@ def func_tokenize(raw_input):
         print ('Error in tokenizer function', sys.exc_info()[0], sys.exc_info()[1])
         pass
 
-# This function writes data to text files via json
-
-
-def func_json_out(terms,doc_key,proximity):
-    try:
-        print ('Exporting JSON data to text files')
-        try:
-            with open('index.txt','w') as index_out_put_file:
-                index_out_put_file.write(json.dumps(terms))        
-            
-        except:
-            print ('Error printing data to index file', sys.exc_info()[0], sys.exc_info()[1])
-        try:
-            with open('doc_key.txt','w') as doc_key_out_put_file:
-                doc_key_out_put_file.write(json.dumps(doc_key))
-        except:
-            print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])
-        try:
-            with open('proximity.txt','w') as proximity_out_put_file:
-                proximity_out_put_file.write(json.dumps(proximity))
-        except:
-            print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])  
-        #export data via shelve
-    except:
-        print ('Error with func_json_out', sys.exc_info()[0], sys.exc_info()[1])
-        
-        
-# Begin program
-# This section of code will provide a brief introductory message and instructions of using the program
-print ("Welcome to the EECS767 document parsing program!")
-
-#Open all files in the directory provided by the func_get_directory_name() funciton
-# store each document as row within a table called "data"
-# store document id, name and path to document in a dictionary called "doc_key"
-try:
-   
-    #path=func_get_directory_name()
-    #path=str('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/test_docs/')
-    #path=('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\test_docs\\')
-    #path='/cached_documents/'
-    #path=('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\cached_docs\\')
-    #path=('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\docsnew\\')
-    #print (path) #Debugging
-    documents_in_directory = os.listdir(path)
-    #print (documents_in_directory) ##Debugging
-    data = []
-    doc_key={}#create dictionary to store document information
-    for document_id, filename in enumerate(documents_in_directory):
-        #print(filename)#debugging
-        if not filename.startswith('.'): #and os.path.isfile(os.path.join(root, filename)):
-            #print(filename)#debugging
-            doc_key[filename]=[document_id,os.path.abspath(filename)]
-            #page = urllib.request.urlopen('file://'+path+filename).read() #Linux path #Python3 version
-            try:
-                #page = urllib2.urlopen('file://'+path+filename).read()##linux path
-                page = urllib2.urlopen('file:\\'+path+filename).read()##windows path
-                #page = urllib.request.urlopen('file:\\'+path+filename).read() #Windows path
-            except:
-                print ('Error using urllib to open file', sys.exc_info()[0], sys.exc_info()[1])
-            print ('Caching document'+ str(document_id))
-            line = func_tokenize(page) #remove HTML tags from the document
-            try:
-                data.append(line)# add tokenized document to data array
-            except:
-                print ('Error adding line to data', sys.exc_info()[0], sys.exc_info()[1])
-except:
-    print ('Error opening file')
     
-#Iterate through each document (row in data) and append term frequemcy
-#to the document position in the terms dictionary  
-try:
-    num_docs=len(data)
-    terms={}
-    #from collections import defaultdict
-    #dates_dict = defaultdict(list)
-    #for key, date in cur:
-        #dates_dict[key].append(date)    
-    proximity=defaultdict(list)
-    print ('Creating index')
-    for document_id, document in enumerate (data):
+
+# ----------------------------------------------------------------
+# Class used to store values and functions used by main
+# ----------------------------------------------------------------
+
+class IndexValues(object):
+    def __init__(self, data, doc_key, terms, proximity):
+        self.data = data #array to store raw input from file
+        self.doc_key = doc_key #dictionary to store document information
+        self.terms=terms #dictionary to store terms and their frequency
+        self.proximity=proximity # dictionary to store term location within documents
+
+    # This function parses documents to generate term frequency and term proximity
+    # This function calls the parsing document function
+    @timing #comment out to remove timing
+    def func_create_index(self):   
+        #Iterate through each document (row in data) and append term frequemcy
+        #to the document position in the terms dictionary  
+        try:
+            num_docs=len(self.data)#may not be necessary
+            print ('Creating index')
+            for document_id, document in enumerate (self.data):
+                self.func_parse_document(num_docs,document_id,document)
+        except:       
+            print ('Error updating tf values in terms dictionary', sys.exc_info()[0], sys.exc_info()[1])
+        #return index_data()
+            
+    @timing #comment out to remove timing
+    #def func_parse_document(num_docs,document_id,document):
+    #def func_parse_document(terms,num_docs,proximity,document_id,document):
+    #def func_parse_document(index_data,num_docs,document_id,document):
+    def func_parse_document(self,num_docs,document_id,document):
         print ('Parsing terms for document_id'+ str(document_id))
+        #terms=getattr(index_data,terms)
+        #proximity=getattr(index_data,proximity)
         for term_position, term in enumerate (document):                   
-            if term in terms:
+            if term in self.terms:
                 try:
-                    terms[term][document_id]+=1
+                    #terms[term][document_id]+=1
+                    self.terms[term][document_id]+=1
                 except:
                     print ('Error updating term in terms dictionary', sys.exc_info()[0], sys.exc_info()[1])
-                try:
-                    #print ('debugging proximity dictionary')
-                    #print (proximity[term])
-                    
+                try:                   
                     #assign the current term proximity to a list for appending additional tuples
-                    temp_list=proximity[term]
+                    temp_list=self.proximity[term]
                     try:
                         temp_list.append((document_id,term_position))
                         #print ('debugging temp list')
                         #print (temp_list)
+                        #change term value to temp list   
+                        #proximity[term]=temp_list
+                        #setattr(index_data,proximity[term],temp_list)
+                        self.proximity[term]=temp_list
                     except:
                         print ('Error appending data to temp_list', sys.exc_info()[0], sys.exc_info()[1])
-                    #change term value to temp list   
-                    proximity[term]=temp_list
-                    #print ('debugging proximity[term] after appending')
-                    #print (proximity[term])
+                   
                 except:
                     print ('Error updating proximity in proximity dictionary', sys.exc_info()[0], sys.exc_info()[1])
                     
             else:
                 # Add a new key to the terms dictionary
                 try:
-                    terms[term]=[0]*num_docs
-                    terms[term][document_id]+=1
+                    self.terms[term]=[0]*num_docs
+                    #setattr(index_data,terms[term],terms)
+                    self.terms[term][document_id]+=1
+                    #setattr(index_data,terms[term],terms)
                 except:
                     print ('Error adding new term to term dictionary', sys.exc_info()[0], sys.exc_info()[1])
                     
                 # Add a new key to the proximity dictionary
                 try:
-                    proximity[term]=[(document_id,term_position)] #store proximity in a separate dictionary, this is a list of a tupple with a list inside it
+                    self.proximity[term]=[(document_id,term_position)] #store proximity in a separate dictionary, this is a list of a tupple with a list inside it
+                   
                 except:
                     print ('Error adding new proximity to proximity dictionary', sys.exc_info()[0], sys.exc_info()[1])
-except:       
-    print ('Error updating tf values in terms dictionary', sys.exc_info()[0], sys.exc_info()[1])
-  
-#print term index and doc_key to output file
-#This section has been rewritten to export data via json
-#as this addressed several issues in attempting to convert 
-#values
-try:
-    
-    ## the following function is optional and outputs data to .txt files via JSON
-    ## this may assist in troubleshooting
-    func_json_out(terms,doc_key,proximity)
-    
-    print ('Exporting data to shelf .db file')
-    try:   
-        d = shelve.open('OUTPUT/ingestOutput')
-        d['index'] = terms
-        d['doc_key'] = doc_key
-        d['proximity'] = proximity
-        d.close()   
-    except:
-        print ('Error exporting data via shelve', sys.exc_info()[0], sys.exc_info()[1]) 
-        
-except:
-    print ('Error writing data to file', sys.exc_info()[0], sys.exc_info()[1])
 
-print ('Program complete!')
+    # This function writes data to text files via json
+    @timing #comment out to remove timing
+    def func_json_out(self):
+        try:
+            print ('Exporting JSON data to text files')
+            try:
+                with open('index.txt','w') as index_out_put_file:
+                    index_out_put_file.write(json.dumps(self.terms))        
+                
+            except:
+                print ('Error printing data to index file', sys.exc_info()[0], sys.exc_info()[1])
+            try:
+                with open('doc_key.txt','w') as doc_key_out_put_file:
+                    doc_key_out_put_file.write(json.dumps(self.doc_key))
+            except:
+                print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])
+            try:
+                with open('proximity.txt','w') as proximity_out_put_file:
+                    proximity_out_put_file.write(json.dumps(self.proximity))
+            except:
+                print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])  
+            #export data via shelve
+        except:
+            print ('Error with func_json_out', sys.exc_info()[0], sys.exc_info()[1])
+            
+    @timing #comment out to remove timing        
+    def func_export_data_via_shelve(self):    
+        try:           
+            print ('Exporting data to shelf .db file')
+            try:   
+                d = shelve.open('OUTPUT/ingestOutput.db')
+                d['index'] = [self.terms]
+                d['doc_key'] = [self.doc_key]
+                d['proximity'] = self.proximity ## may be wrong without []
+                d.close()   
+            except:
+                print ('Error exporting data via shelve', sys.exc_info()[0], sys.exc_info()[1]) 
+                
+        except:
+            print ('Error writing data to file', sys.exc_info()[0], sys.exc_info()[1])
+
+    #Open all files in the directory provided by the func_get_directory_name() funciton
+    # store each document as row within a table called "data"
+    # store document id, name and path to document in a dictionary called "doc_key"
+    @timing #comment out to remove timing  
+    def func_open_files(self,path):
+        try:
+            print ('Opening documents in '+str(path))
+            documents_in_directory = os.listdir(path)
+            #print (documents_in_directory) ##Debugging
+            #data = []
+            #doc_key={}#create dictionary to store document information
+            for document_id, filename in enumerate(documents_in_directory):
+                #def func_open_document(doc_key
+                print(filename)#debugging
+                if not filename.startswith('.'): 
+                    try:
+                        self.doc_key[filename]=[document_id,os.path.abspath(filename)]
+                    except:
+                        print ('Error appednding document info to doc_key', sys.exc_info()[0], sys.exc_info()[1])
+                    try:
+                        page = urllib2.urlopen(file_format+path+filename).read()##linux path
+                        #page = urllib2.urlopen(file_format+path+filename).read()##windows path
+                    except:
+                        print ('Error using urllib to open file', sys.exc_info()[0], sys.exc_info()[1])
+                    print ('Caching document'+ str(document_id))
+                    line = func_tokenize(page) #remove HTML tags from the document
+                    try:
+                        self.data.append(line)
+
+                    except:
+                        print ('Error adding line to data', sys.exc_info()[0], sys.exc_info()[1])
+        except:
+            print ('Error opening file', sys.exc_info()[0], sys.exc_info()[1])
+ 
+#-------------------------------------------------------------
+# The Main Program
+#
+#----------------------------------------------------------
+
+@timing #comment out to remove timing
+def main():
+    print ("Welcome to the EECS767 document parsing program!")
+    index_data=IndexValues([],{},{},defaultdict(list))
+    index_data.func_open_files(path)   
+    index_data.func_create_index() 
+    #index_data.func_json_out()#May be useful for debugging
+    index_data.func_export_data_via_shelve()
+    print ('Program complete!')
+if __name__ == "__main__":    
+    main()
