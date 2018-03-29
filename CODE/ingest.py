@@ -42,9 +42,9 @@ from collections import defaultdict #necessary for the proximity data structure
 
 
 file_format='file://' #linux format
-path = ('/Users/terrapin/Documents/GitHub/eecs767/CODE/INPUT/docsnew/') ##linux Prod
-
-
+#path = ('/Users/terrapin/Documents/GitHub/eecs767/CODE/INPUT/docsnew/') ##linux Prod
+path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/') ##Blake's MAC
+#path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/cached_docs/') ##Blake's MAC
 #file_format='file:\\' #windows format
 #path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\docsnew\\')## windows
 #path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\test\\')
@@ -68,7 +68,7 @@ def timing(f):
         return ft
 
 #    This function queries the user to input a directory path to search
-@timing #comment out to remove timing
+#@timing #comment out to remove timing
 def func_get_directory_name():
     try:
         directoryName = raw_input ('Please enter a directory containing documents ot index: ')
@@ -82,7 +82,7 @@ def func_get_directory_name():
 # This function searches for html tags within documents and removes them prior
 # to tokenization
 
-@timing #comment out to remove timing
+#@timing #comment out to remove timing
 def func_tokenize(raw_input):
     try:
         stop_words = set(stopwords.words('english'))
@@ -149,15 +149,16 @@ def func_tokenize(raw_input):
 # ----------------------------------------------------------------
 
 class IndexValues(object):
-    def __init__(self, data, doc_key, terms, proximity):
+    def __init__(self, data, doc_key, terms, proximity,download_manifest):
         self.data = data #array to store raw input from file
         self.doc_key = doc_key #dictionary to store document information
         self.terms=terms #dictionary to store terms and their frequency
         self.proximity=proximity # dictionary to store term location within documents
+        self.download_manifest=download_manifest#this should be a dictionary stored in an external .db file
 
     # This function parses documents to generate term frequency and term proximity
     # This function calls the parsing document function
-    @timing #comment out to remove timing
+    #@timing #comment out to remove timing
     def func_create_index(self):   
         #Iterate through each document (row in data) and append term frequemcy
         #to the document position in the terms dictionary  
@@ -170,7 +171,7 @@ class IndexValues(object):
             print ('Error updating tf values in terms dictionary', sys.exc_info()[0], sys.exc_info()[1])
         #return index_data()
             
-    @timing #comment out to remove timing
+    #@timing #comment out to remove timing
     #def func_parse_document(num_docs,document_id,document):
     #def func_parse_document(terms,num_docs,proximity,document_id,document):
     #def func_parse_document(index_data,num_docs,document_id,document):
@@ -220,7 +221,7 @@ class IndexValues(object):
                     print ('Error adding new proximity to proximity dictionary', sys.exc_info()[0], sys.exc_info()[1])
 
     # This function writes data to text files via json
-    @timing #comment out to remove timing
+    #@timing #comment out to remove timing
     def func_json_out(self):
         try:
             print ('Exporting JSON data to text files')
@@ -244,14 +245,14 @@ class IndexValues(object):
         except:
             print ('Error with func_json_out', sys.exc_info()[0], sys.exc_info()[1])
             
-    @timing #comment out to remove timing        
+    #@timing #comment out to remove timing        
     def func_export_data_via_shelve(self):    
         try:           
             print ('Exporting data to shelf .db file')
             try:   
-                d = shelve.open('OUTPUT/ingestOutput.db')
-                d['index'] = [self.terms]
-                d['doc_key'] = [self.doc_key]
+                d = shelve.open('OUTPUT/ingestOutput')
+                d['index'] = self.terms
+                d['doc_key'] = self.doc_key
                 d['proximity'] = self.proximity ## may be wrong without []
                 d.close()   
             except:
@@ -259,11 +260,21 @@ class IndexValues(object):
                 
         except:
             print ('Error writing data to file', sys.exc_info()[0], sys.exc_info()[1])
+    #@timing #comment out to remove timing
+    def func_read_download_manifest(self,path):
+        try: 
+            #with open(path+"download_manifest.txt", "r") as download_manifest_file:
+                #manifest=download_manifest_file.readline() 
+                #file_url=
+                download_shelf_file = shelve.open(path+'download_manifest.db')
+                self.download_manifest = download_shelf_file['manifest']                
+        except:
+            print ('Error opening download manifest', sys.exc_info()[0], sys.exc_info()[1])      
 
     #Open all files in the directory provided by the func_get_directory_name() funciton
     # store each document as row within a table called "data"
     # store document id, name and path to document in a dictionary called "doc_key"
-    @timing #comment out to remove timing  
+    #@timing #comment out to remove timing  
     def func_open_files(self,path):
         try:
             print ('Opening documents in '+str(path))
@@ -275,22 +286,27 @@ class IndexValues(object):
                 #def func_open_document(doc_key
                 print(filename)#debugging
                 if not filename.startswith('.'): 
-                    try:
-                        self.doc_key[filename]=[document_id,os.path.abspath(filename)]
-                    except:
-                        print ('Error appednding document info to doc_key', sys.exc_info()[0], sys.exc_info()[1])
-                    try:
-                        page = urllib2.urlopen(file_format+path+filename).read()##linux path
-                        #page = urllib2.urlopen(file_format+path+filename).read()##windows path
-                    except:
-                        print ('Error using urllib to open file', sys.exc_info()[0], sys.exc_info()[1])
-                    print ('Caching document'+ str(document_id))
-                    line = func_tokenize(page) #remove HTML tags from the document
-                    try:
-                        self.data.append(line)
-
-                    except:
-                        print ('Error adding line to data', sys.exc_info()[0], sys.exc_info()[1])
+                        #------------------
+                        #---------------- need to fix tests for manifest file which doesnt exist yet
+                        try:
+                                if self.download_manifest:
+                                        self.doc_key[filename]=[document_id,os.path.abspath(filename),str(self.download_manifest[filename])]
+                                else:
+                                        self.doc_key[filename]=[document_id,os.path.abspath(filename),"no_url"]
+                        except:
+                            print ('Error appednding document info to doc_key', sys.exc_info()[0], sys.exc_info()[1])
+                        try:
+                            page = urllib2.urlopen(file_format+path+filename).read()##linux path
+                            #page = urllib2.urlopen(file_format+path+filename).read()##windows path
+                        except:
+                            print ('Error using urllib to open file', sys.exc_info()[0], sys.exc_info()[1])
+                        print ('Caching document'+ str(document_id))
+                        line = func_tokenize(page) #remove HTML tags from the document
+                        try:
+                            self.data.append(line)
+        
+                        except:
+                            print ('Error adding line to data', sys.exc_info()[0], sys.exc_info()[1])
         except:
             print ('Error opening file', sys.exc_info()[0], sys.exc_info()[1])
  
@@ -302,10 +318,11 @@ class IndexValues(object):
 @timing #comment out to remove timing
 def main():
     print ("Welcome to the EECS767 document parsing program!")
-    index_data=IndexValues([],{},{},defaultdict(list))
+    index_data=IndexValues([],{},{},defaultdict(list),{})
+    index_data.func_read_download_manifest(path)
     index_data.func_open_files(path)   
     index_data.func_create_index() 
-    #index_data.func_json_out()#May be useful for debugging
+    index_data.func_json_out()#May be useful for debugging
     index_data.func_export_data_via_shelve()
     print ('Program complete!')
 if __name__ == "__main__":    
