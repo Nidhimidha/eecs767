@@ -104,9 +104,10 @@ def timing(f):
 
 
 class WebCrawler(object):
-        def __init__(self, url_downloaded_queue, need_to_download_queue):
+        def __init__(self, url_downloaded_queue, need_to_download_queue, download_manifest):
                 self.url_downloaded_queue=url_downloaded_queue
-                self.need_to_download_queue=need_to_download_queue        
+                self.need_to_download_queue=need_to_download_queue
+                self.download_manifest=download_manifest
         
         
         #@timing #comment out to remove timing
@@ -157,9 +158,37 @@ class WebCrawler(object):
                                         self.need_to_download_queue.remove(passed_url)
                         except:
                                 print ('Error removing url from need_to_download_queue', sys.exc_info()[0], sys.exc_info()[1])
+                        ##Create a file to map URL to filename
+                        try:
+                                self.download_manifest[str(stripped_url+'.htm')]=str(passed_url)
+                                #self.download_manifest[filename]=str(passed_url)
+                                self.func_export_download_manifest_with_shelve()
+                        except:
+                                print ('Error adding url to download_manifest', sys.exc_info()[0], sys.exc_info()[1]) 
+                                
+                        #try:
+                                #download_manifest = str(cached_doc_path+'download_manifest.txt')
+                                #f= open(download_manifest, "a")
+                                #f.write(str('filename:'+stripped_url+' url:'+passed_url+'\n'))
+                                #f.close
+                        #except:
+                                #print ('Error writing to file to store url and filename', sys.exc_info()[0], sys.exc_info()[1])    
+        
+                                
                 except:
                         print ('Error writing webpage to local file', sys.exc_info()[0], sys.exc_info()[1])
                 return page
+        
+        #@timing #comment out to remove timing        
+        def func_export_download_manifest_with_shelve(self):              
+                print ('Exporting manifest to shelf .db file')
+                try:   
+                    d = shelve.open(cached_doc_path+'/download_manifest')
+                    d['manifest'] = self.download_manifest
+                    d.close()   
+                except:
+                    print ('Error exporting data via shelve', sys.exc_info()[0], sys.exc_info()[1])                                 
+        
         
         def func_get_robots_txt(self):
                 try:
@@ -262,7 +291,7 @@ class WebCrawler(object):
 @timing #comment out to remove timing
 def main():
         print ("Welcome to the EECS767 web crawling program!")
-        crawler=WebCrawler([],[])
+        crawler=WebCrawler([],[],{})
         #crawler.func_get_robots_txt()
         
         crawler.func_find_urls_on_page(crawler.func_download_page(url))
@@ -286,7 +315,7 @@ def main():
                                 print('Error calling func_find_urls_on_page in loop', sys.exc_info()[0], sys.exc_info()[1])
                         time.sleep(1)    
     
-    
+        crawler.func_export_download_manifest_with_shelve()
         print ('Program complete!')
 if __name__ == "__main__":    
         main()
