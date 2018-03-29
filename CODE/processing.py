@@ -7,69 +7,6 @@ inFile = 'OUTPUT/ingestOutput'
 outFile = 'OUTPUT/processingOutput.db'
 
 ##-------------------------------------------------------------------------##
-## INPUT
-## Processing Component of Search Engine Space (follows ingest - preceeds
-## Query execution
-##-------------------------------------------------------------------------##
-## index = [
-##       { Term1: [tf1, tf2, ..., tfn] },
-##       { Term2: [tf1, tf2, ..., tfn] },
-##       ...,
-##       { Termm: [tf1, tf2, ..., tfn] }
-## ]
-## doc_key = [
-##       { DocName1: [DocID1, DocLocation1] },
-##       { DocName2: [DocID2, DocLocation2] },
-##       ...,
-##       { DocNamen: [DocIDn, DocLocationn] }
-## ]
-## proximity = {
-##       Term1: [ [DocID, Prox], [DocID, Prox], ..., [DocID, Prox] ],
-##       Term2: [ [DocID, Prox], [DocID, Prox], ..., [DocID, Prox] ],
-##       ...,
-##       Termm: [ [DocID, Prox], [DocID, Prox], ..., [DocID, Prox] ]
-## }
-##-------------------------------------------------------------------------##
-## OUTPUT
-##-------------------------------------------------------------------------##
-## doc_key = [
-##      { DocName1: [DocID1, DocLocation1] },
-##      { DocName2: [DocID2, DocLocation2] },
-##      ...,
-##      { DocNamen: [DocIDn, DocLocationn] }
-## ]
-## docVector = [
-##      [WT1,D1, WT1,D2, ..., WT1,Dn],
-##      [WT2,D1, WT2,D2, ..., WT2,Dn],
-##      ...,
-##      [WTm,D1, WTm,D2, ..., WTm,Dn]
-## ]
-## proxVector = [
-##      [ [P1T1,D1, P2T1,D1, ..., PiT1D1], 
-##        [P1T1,D2, P2T1,D2, ..., PiT1D2],
-##        ..., 
-##        [P1T1,Dn, P2T1,Dn, ..., PiT1Dn] ],
-##      [ [P1T2,D1, P2T2,D1, ..., PiT2D1], 
-##        [P1T2,D2, P2T2,D2, ..., PiT2D2], 
-##        ..., 
-##        [P1T2,Dn, P2T2,Dn, ..., PiT2Dn] ],
-##      ...,
-##      [ [P1Tm,D1, P2Tm,D1, ..., PiTmD1], 
-##        [P1Tm,D2, P2Tm,D2, ..., PiTmD2], 
-##        ..., 
-##        [P1Tm,Dn, P2Tm,Dn, ..., PiTmDn] ]
-## ] 
-## termIndex = {
-##      Term1: i1,
-##      Term2: i2,
-##      ...,
-##      Termm: im
-## }
-##-------------------------------------------------------------------------##
-
-##-------------------------------------------------------------------------##
-
-##-------------------------------------------------------------------------##
 ## TIMING - DIAGNOSTICS
 ##-------------------------------------------------------------------------##
 ## A decorator function to time the execution
@@ -100,16 +37,42 @@ class genVSMArray:
                 self.proximity = ingest['proximity']
                 ingest.close()
 
+		
                 ## Sort the index and proximity (need to match)
-                self.index.sort(key=lambda k: k.keys()[0])
+		## Need to modify from
+		## { term : [counts], ...
+		## to
+		## [ {term : [counts] }, ...
+		mylist = sorted(self.index.iterkeys())
+		tempIndex = []
+		for x in mylist:
+			tempIndex.append( { x : self.index[x] } )
+		self.index = tempIndex
+
+                #self.index.sort(key=lambda k: k.keys())
+		#sorted(self.index.iterkeys())
 
                 ## Initialize docLength Array (for normalizing weights)
-                w = self.index[0].keys()[0]
+                #w = self.index[0].keys()[0]
+                #w = self.index.keys()[0]
+		w = mylist[0]
                 self.docLength = [0]*len(self.index[0][w])
                 
+		## Need to modify the doc_key from
+		## { doc_name : [doc_id, loc], ...
+		## to
+		## [ { doc_name : [doc_id, loc] }, ...
+		## Using the doc id as the index into the array
+		tempDocs = [{}]*len(self.doc_key)
+		for x in self.doc_key:
+			tempDocs[self.doc_key[x][0]] = { x : self.doc_key[x] }
+		self.doc_key = tempDocs
+
                 ## Initialize docVector Array (for storing VSM)
-                self.docVector = [ [0]*len(self.index[0]) for _ 
-                        in range(len(self.doc_key[0])) ]
+                self.docVector = [ [0]*len(self.index) for _ 
+                        in range(len(self.doc_key)) ]
+                #self.docVector = [ [0]*len(self.index[0]) for _ 
+                #        in range(len(self.doc_key[0])) ]
 
                 ## Restructure proximity and sort
                 self.prox = []
@@ -170,18 +133,19 @@ class genVSMArray:
                 ## Normalize the Document Vector Space Model
                 for x in range(len(self.docVector)):
                         for y in range(len(self.docVector[x])):
-                                if self.docLength(x) == 0:
-                                        self.docVector[x][y] = 0
-                                else:
-                                        self.docVector[x][y] /= self.docLength[x]
-                                self.docVector[x][y] = float("{0:.3f}".format(
+				if self.docLength[x] == 0:
+					self.docVector[x][y] = 0
+				else:
+                                	self.docVector[x][y] /= self.docLength[x]
+                                
+				self.docVector[x][y] = float("{0:.3f}".format(
                                         self.docVector[x][y]))
 
         ## Create the proximity and term index
         def genProx(self):
                 ## Go through each document
                 for d in range(len(self.doc_key)):
-                        doc = self.doc_key[d].keys()[0]
+                        #doc = self.doc_key[d].keys()[0]
                         ## Go through each term
                         for t in range(len(self.prox)):
                                 term = self.prox[t].keys()[0]
@@ -193,11 +157,12 @@ class genVSMArray:
                                         self.termIndex[term] = t
 
                                 ## Go through each tuple
-                                for tuple in self.prox[t][term]:
+                                for mytuple in self.prox[t][term]:
                                         ## if tuple[0] = d, then append prox
                                         ## for this word
-                                        if tuple[0] == doc:
-                                                self.proxVector[d][t].append(tuple[1])
+                                        #if mytuple[0] == doc:
+                                        if mytuple[0] == d:
+                                                self.proxVector[d][t].append(mytuple[1])
 
         #@timing ## Uncomment to see discrete timing
         def writeOutput(self, outFile):
