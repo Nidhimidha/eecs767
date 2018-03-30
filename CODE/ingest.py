@@ -45,8 +45,11 @@ file_format='file://' #linux format
 path = ('/Users/terrapin/Documents/GitHub/eecs767/CODE/INPUT/docsnew/') ##linux Prod
 #path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/') ##Blake's MAC
 #path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/cached_docs/') ##Blake's MAC
+
 #file_format='file:\\' #windows format
 #path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\docsnew\\')## windows
+#path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\cached_docs\\')## windows
+
 #path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\test\\')
 
 
@@ -96,7 +99,9 @@ def func_tokenize(raw_input):
             #tags = re.compile('(b\')((\<script.*?\>).*?(\<\/script\>))|((\<style.*?\>).*?(\<\/style\>))|(\<.*?\>)|(\<.*?\/\>)|(\<\/.*?\>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
             #tags = re.compile('(b\')((<script.*?>).*?(</script>))|((<style.*?>).*?(</style>))|(<.*?>)|(<.*?/>)|(</.*?>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
             #tags = re.compile('(<script>.*?</script>)|(<noscript>.*?</noscript>)|(<!--.*?-->)|(<.*?>)|(<.*?>\w)',re.DOTALL)
-            tags = re.compile('(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)|(<.*?>)',re.DOTALL)
+            #tags = re.compile('(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)|(<.*?>)|((\\u[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ]+)*)',re.DOTALL)
+            tags = re.compile('(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)',re.DOTALL)
+
         except:
             print ('Error in regex', sys.exc_info()[0], sys.exc_info()[1])
         ### the following section uses Python 3 conventions
@@ -250,7 +255,7 @@ class IndexValues(object):
         try:           
             print ('Exporting data to shelf .db file')
             try:   
-                d = shelve.open('OUTPUT/ingestOutput')
+                d = shelve.open('OUTPUT/ingestOutput.db')
                 d['index'] = self.terms
                 d['doc_key'] = self.doc_key
                 d['proximity'] = self.proximity ## may be wrong without []
@@ -285,7 +290,7 @@ class IndexValues(object):
             for document_id, filename in enumerate(documents_in_directory):
                 #def func_open_document(doc_key
                 print(filename)#debugging
-                if not filename.startswith('.'): 
+                if not (filename.startswith('.') or filename.endswith('.db')):# added exclusion for .db file to prevent parsing the manifest file 
                         #------------------
                         #---------------- need to fix tests for manifest file which doesnt exist yet
                         try:
