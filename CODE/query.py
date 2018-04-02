@@ -3,7 +3,6 @@ import math
 from math import log10, sqrt
 import ingest
 from ingest import *
-# from itertools import islice
 import re
 
 
@@ -63,7 +62,9 @@ class similarity:
     def __init__(self, infile, infile1):
         proc = shelve.open(infile)
         self.docVector = proc['docVector']
+        print(self.docVector)
         self.doc_key = proc['doc_key']
+        print(self.doc_key)
         self.proxVector = proc['proxVector']
         self.termIndex = proc['termIndex']
         proc.close()
@@ -76,8 +77,13 @@ class similarity:
     def tokenizeQuery(self, query):
         return func_tokenize(query)
 
-    def findWholeWord(self, w):
-        return re.compile(r'\b({0})\b'.format(w), flags=re.IGNORECASE).search
+    def findWholeWord(self, word, query):
+        pattern = re.compile(r'\b({0})\b'.format(word), flags=re.IGNORECASE)
+        if pattern.search(query):
+            return True
+        else:
+            return False
+
 
     def normalizeQuery(self, query):
         for i in range(len(self.index)):
@@ -92,7 +98,7 @@ class similarity:
 
         for i in range(len(self.index)):
             word = list(self.index[i])[0]
-            if self.findWholeWord(word)(query):
+            if self.findWholeWord(word,query):
                 df = len(list(filter(None, self.index[i][word])))
                 idf = log10(len(self.index[i][word]) / float(df))
                 idf = float("{0:.4f}".format(idf))
@@ -104,9 +110,9 @@ class similarity:
         for i in range(len(self.weightedQuery)):
             sumOfSquares += self.weightedQuery[i] * self.weightedQuery[i]
         length = sqrt(sumOfSquares)
-        queryVector = [float("{0:.4f}".format(self.weightedQuery[i] / length))
+        self.queryVector = [float("{0:.4f}".format(self.weightedQuery[i] / length))
                        for i in range(len(self.weightedQuery))]
-        return queryVector
+        return self.queryVector
 
     def vectorlength(self, vec):
         length = float(0)
@@ -145,11 +151,6 @@ class similarity:
         similarityVector.reverse()
         self.rankedOutput.append(docIndices)
         self.rankedOutput.append(similarityVector)
-        self.sliced = [self.rankedOutput[i][0:3] for i in range(0, 1)]
-        # for item in self.sliced:
-        # print("sliced output is")
-        # print(item)
-        return self.rankedOutput
 
     def proximity(self, tokenizedQuery):
         query = tokenizedQuery.split()
@@ -175,21 +176,35 @@ class similarity:
                 for term in self.termIndex:
                     if query[i].__eq__(term):
                         count = count + 1
-        return self.rankedOutput
 
     def writeOutput(self, outFile):
         out = shelve.open(outFile)
+        print(self.rankedOutput)
         out['rankedOutput'] = self.rankedOutput
+        print(self.queryVector)
+        out['queryVector'] = self.queryVector
         out.close()
+
+
+    def showResult(self):
+        ranks = []
+        self.sliced = [self.rankedOutput[i][0:10] for i in range(0, 1)]
+        for m in range(len(self.sliced[0])):
+            ranks.append(m)
+
+        self.sliced.append(ranks)
+        print(self.sliced)
+        return self.sliced
 
 
 def main():
     queryInstance = similarity('OUTPUT/processingOutput', 'OUTPUT/ingestOutput')
-    #TODO: get the query from cgi
+    # TODO: get the query from cgi
     tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
     normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
     queryInstance.similarity(normalizedQuery)
     queryInstance.proximity(tokenizedQuery)
+    queryInstance.showResult()
     queryInstance.writeOutput('OUTPUT/queryOutput')
 
 
