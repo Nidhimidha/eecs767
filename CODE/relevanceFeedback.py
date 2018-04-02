@@ -45,7 +45,6 @@ class relevance:
         proc.close()
         query = shelve.open(infile1)
         self.queryVector = query['queryVector']
-        self.queryVector = [0.0, 0.5774, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5774, 0.0, 0.0, 0.5774]
         query.close()
 
     ## On click of Refine Search Button
