@@ -197,6 +197,24 @@ class similarity:
         return self.sliced
 
 
+    def relevanceFeedback(self,relevantDoc):
+        query = shelve.open('OUTPUT/queryOutput')
+        self.queryVector = query['queryVector']
+        query.close()
+        a = 0.5
+        b = 0.5
+        docVectorIndices = []
+        docVectorIndices.append(int(relevantDoc[1:]) - 1)
+        relevantDocVectors = [self.docVector[i] for i in docVectorIndices]
+        totalReleVec = [sum(i) for i in zip(*relevantDocVectors)]
+        newReleVec = [j * b for j in totalReleVec]
+        updatedQuery = [i * a for i in self.queryVector]
+        newQ = [sum(x) for x in zip(updatedQuery, newReleVec)]
+        self.similarity(newQ)
+        self.writeOutput('OUTPUT/queryOutput')
+        return self.showResult()
+
+
 def main():
     queryInstance = similarity('OUTPUT/processingOutput', 'OUTPUT/ingestOutput')
     # TODO: get the query from cgi
@@ -207,6 +225,8 @@ def main():
     queryInstance.showResult()
     queryInstance.writeOutput('OUTPUT/queryOutput')
 
+    # TODO: get the relevant doc from cgi
+    newResult = queryInstance.relevanceFeedback('D2')
 
 if __name__ == "__main__":
     main()
