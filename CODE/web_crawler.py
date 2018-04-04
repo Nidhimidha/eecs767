@@ -2,6 +2,7 @@ import os
 import time #used to delay processing
 from functools import wraps #used to create timing wrapper 
 import json
+import threading #required for multi-threading
 import shelve
 import sys
 import io
@@ -38,7 +39,7 @@ from collections import defaultdict #necessary for the proximity data structure
 
 # the URL seed is the root of all pages to be downloaded
 
-url_seed = 'http://www.oldbaileyonline.org/'
+#url_seed = 'http://www.oldbaileyonline.org/'
 #url_seed='http://www.espn.com'
 #url_seed='https://www.nist.gov/'
 url_seed='https://www.iso.org'
@@ -47,7 +48,7 @@ url_seed='https://www.iso.org'
 
 #url= 'http://www.oldbaileyonline.org/browse.jsp?id=t17800628-33&div=t17800628-33'
 #url='https://www.nist.gov/'
-url= 'http://www.oldbaileyonline.org/'
+#url= 'http://www.oldbaileyonline.org/'
 #url='http://www.espn.com/'
 #https://www.rfc-editor.org/rfc-index.html
 #https://standards.gov/sibr/query/index.cfm?fuseaction=rsibr.regulatory_sibr_all
@@ -90,6 +91,26 @@ def timing(f):
                 return exe
         return ft
 
+
+
+#This function is used to integrate with threading and
+# call the webcrawler.func_download_page() function
+#
+def download_page_thread(url_to_download,crawler):
+        print ('downloading:')
+        print (url_to_download)
+        try:
+                downloaded=crawler.func_download_page(url_to_download)
+        except:
+                print('Error calling func_download_page in loop', sys.exc_info()[0], sys.exc_info()[1])
+        try:
+                if downloaded:#check if a file was downloaded.  Will be none for bad urls
+                        crawler.func_find_urls_on_page(downloaded)
+        except:
+                print('Error calling func_find_urls_on_page in loop', sys.exc_info()[0], sys.exc_info()[1])
+        time.sleep(1)  
+
+
 #--------End --Global Functions ---------------------------------------------------
 #---------------------------------------------------------------------------
 
@@ -107,13 +128,13 @@ class WebCrawler(object):
         def __init__(self, url_downloaded_queue, need_to_download_queue, download_manifest):
                 self.url_downloaded_queue=url_downloaded_queue
                 self.need_to_download_queue=need_to_download_queue
-                self.download_manifest=download_manifest
-        
-        
+                self.download_manifest=download_manifest  
+             
         #@timing #comment out to remove timing
         def func_download_page(self,passed_url):
         # open the URL
                 try:
+                        
                         page = urllib2.urlopen(passed_url).read()
                 except:
                         print ('Error using urllib to read webpage at url', sys.exc_info()[0], sys.exc_info()[1])
@@ -273,6 +294,8 @@ class WebCrawler(object):
                 except:
                         print ('Error finding urls', sys.exc_info()[0], sys.exc_info()[1])
 
+          
+
 
 # Begin program
 
@@ -300,24 +323,13 @@ def main():
         print ('Urls that have been downloaded:')
         print (crawler.url_downloaded_queue)
         #Process urls in url_to_download queue
+        
+        
         while crawler.need_to_download_queue:
                 for url_to_download in crawler.need_to_download_queue:
-                        print ('downloading:')
-                        print (url_to_download)
-                        try:
-                                downloaded=crawler.func_download_page(url_to_download)
-                        except:
-                                print('Error calling func_download_page in loop', sys.exc_info()[0], sys.exc_info()[1])
-                        try:
-                                if downloaded:#check if a file was downloaded.  Will be none for bad urls
-                                        crawler.func_find_urls_on_page(downloaded)
-                        except:
-                                print('Error calling func_find_urls_on_page in loop', sys.exc_info()[0], sys.exc_info()[1])
-                        time.sleep(1)    
-    
+                        #create a new thread for each URL
+                        thread=threading.Thread(target=download_page_thread(url_to_download,crawler))       
         crawler.func_export_download_manifest_with_shelve()
         print ('Program complete!')
 if __name__ == "__main__":    
         main()
-
-
