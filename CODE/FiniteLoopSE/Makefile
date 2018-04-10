@@ -11,7 +11,8 @@ CGIDIR=cgi-bin
 DURATION=1m
 
 ## The base path variable in ingest.py
-INGPATH=$(LOC)/cached_docs/
+#INGPATH=$(LOC)/cached_docs/
+INGPATH=$(LOC)/control/
 
 ## Directory structure
 ##	Makefile
@@ -24,7 +25,6 @@ INGPATH=$(LOC)/cached_docs/
 ##		ingest.py
 ##		processing.py
 ##		query.py
-##		relevanceFeedback.py
 ##		seeShelve.py
 ##		web_crawler.py
 
@@ -38,6 +38,8 @@ help:
 	@echo "		perform ingest of corpus"
 	@echo "make process"
 	@echo "		perform processing of corpus"
+	@echo "make query"
+	@echo "         run the query module - for testing purposes"
 	@echo "make webprep"
 	@echo "		transfer files to web directory and update permissions"
 	@echo "		(permissions set for chroot webserver environment)"
@@ -102,8 +104,16 @@ process: src/processing.py OUTPUT cached_docs
 		mv OUTPUT/processingOutput OUTPUT/processingOutput.db; \
 	fi
 
+## Test query
+query: src/query.py src/ingest.py OUTPUT/processingOutput.db
+	## Make sure processingOutput has .db too
+	if [ -f OUTPUT/processingOutput ]; then \
+		mv OUTPUT/processingOutput OUTPUT/processingOutput.db; \
+	fi
+	$(PYTHON) src/query.py OUTPUT/processingOutput.db OUTPUT/ingesOutput.db
+
 ## Prepare for web
-webprep: src/query.py src/relevanceFeedback.py OUTPUT/processingOutput.db index.html cgi-bin/search.cgi
+webprep: src/query.py OUTPUT/processingOutput.db index.html cgi-bin/search.cgi
 	## Copy the data into the public_html area
 	cp index.html $(WEBDIR)
 	if [ ! -d $(WEBDIR)/$(CGIDIR) ];then \
@@ -111,7 +121,6 @@ webprep: src/query.py src/relevanceFeedback.py OUTPUT/processingOutput.db index.
 		chmod 755 $(WEBDIR)/$(CGIDIR) \
 	fi
 	cp cgi-bin/search.cgi $(WEBDIR)/$(CGIDIR)
-	cp src/query.py src/relevanceFeedback.py src/ingest.py $(WEBDIR)/$(CGIDIR)
 	cp OUTPUT/processingOutput.db $(WEBDIR)/$(CGIDIR)
 	chmod 744 $(WEBDIR)/$(CGIDIR)/search.cgi
 		
@@ -142,9 +151,6 @@ clean: OUTPUT cached_docs $(WEBDIR) $(WEBDIR)/$(CGIDIR)
 	fi
 	if [ -f $(WEBDIR)/$(CGIDIR)/ingest.py ];then \
 		rm -f $(WEBDIR)/$(CGIDIR)/ingest.py
-	fi
-	if [ -f $(WEBDIR)/$(CGIDIR)/relevanceFeedback.py ];then \
-		rm -f $(WEBDIR)/$(CGIDIR)/relevanceFeedback.py
 	fi
 	if [ -f $(WEBDIR)/$(CGIDIR)/processingOutput.db ];then \
 		rm -f $(WEBDIR)/$(CGIDIR)/processingOutput.db
