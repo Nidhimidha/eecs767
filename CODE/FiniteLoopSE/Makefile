@@ -1,4 +1,4 @@
-.PHONY: help prepenv crawl ingest process webprep seedata test 
+.PHONY: help prepenv crawl ingest process query webprep seedata test 
 
 PIP=pip2.7
 PYTHON=python
@@ -11,16 +11,26 @@ CGIDIR=cgi-bin
 DURATION=1m
 
 ## The base path variable in ingest.py
-#INGPATH=$(LOC)/cached_docs/
-INGPATH=$(LOC)/control/
+#INGPATH=$(LOC)/INPUT/cached_docs/
+INGPATH=$(LOC)/INPUT/control/
+OUTPATH=$(LOC)/OUTPUT/
 
 ## Directory structure
 ##	Makefile
-##	cached_docs
 ##	cgi-bin
 ##		search.cgi
 ##	index.html
+##      INPUT
+##	        cached_docs
+##                      *.htm(l)
+##              control
+##                      *.txt
+##              docsnew
+##                      *.htm(l)
+##              docsnew.zip
 ##	OUTPUT
+##              ingestOutput.db
+##              processingOutput.db
 ##	src
 ##		ingest.py
 ##		processing.py
@@ -62,7 +72,7 @@ prepenv:
 		from collections import defaultdict;"
 		
 ## Keep in mind - the crawler will run for the DURATION specified above...
-crawl: src/web_crawler.py cached_docs
+crawl: src/web_crawler.py $(INGPATH)
 	## It will claim failure... but only because I've killed it with the
 	## timeout
 	timeout $(DURATION) $(PYTHON) src/web_crawler.py
@@ -78,68 +88,65 @@ crawl: src/web_crawler.py cached_docs
 ## # index_data.func_json_out()#May be useful for debugging
 
 ## Ingest the data - prepare for the processing module
-ingest: src/ingest.py OUTPUT cached_docs
+ingest: src/ingest.py $(INGPATH) $(OUTPATH)
 	## Need to make sure that OUTPUT has download_manifest.db
 	## Depending on python version (minor), may have been created
 	## without .db extension
-	if [ -f cached_docs/download_manifest ];then \
-		mv cached_docs/download_manifest cached_docs/download_manifest.db; \
+	if [ -f $(INGPATH)download_manifest ];then \
+		mv $(INGPATH)download_manifest $(INGPATH)download_manifest.db; \
 	fi
 
 	$(PYTHON) src/ingest.py "$(INGPATH)"
 
-## Process the data - prepare for the query module
-process: src/processing.py OUTPUT cached_docs
 	## Need to make sure that OUTPUT has ingestOutput.db
 	## Depending on python version (minor), may have been created
 	## without .db extension
-	if [ -f OUTPUT/ingestOutput ];then \
-		mv OUTPUT/ingestOutput OUTPUT/ingestOutput.db; \
+	if [ -f $(OUTPATH)ingestOutput ];then \
+		mv $(OUTPATH)ingestOutput $(OUTPATH)ingestOutput.db; \
 	fi
 
+## Process the data - prepare for the query module
+process: src/processing.py $(OUTPATH)ingestOutput.db
 	$(PYTHON) src/processing.py
 
 	## Make sure processingOutput has .db too
-	if [ -f OUTPUT/processingOutput ]; then \
-		mv OUTPUT/processingOutput OUTPUT/processingOutput.db; \
+	if [ -f $(OUTPATH)processingOutput ]; then \
+		mv $(OUTPATH)processingOutput $(OUTPATH)processingOutput.db; \
 	fi
 
 ## Test query
-query: src/query.py src/ingest.py OUTPUT/processingOutput.db
-	## Make sure processingOutput has .db too
-	if [ -f OUTPUT/processingOutput ]; then \
-		mv OUTPUT/processingOutput OUTPUT/processingOutput.db; \
-	fi
-	$(PYTHON) src/query.py OUTPUT/processingOutput.db OUTPUT/ingesOutput.db
+query: src/query.py src/ingest.py $(OUTPATH)processingOutput.db
+	$(PYTHON) src/query.py $(OUTPATH)processingOutput.db \
+                $(OUTPATH)ingesOutput.db
 
 ## Prepare for web
-webprep: src/query.py OUTPUT/processingOutput.db index.html cgi-bin/search.cgi
+webprep: src/query.py $(OUTPATH)processingOutput.db index.html $(CGIDIR)/search.cgi
 	## Copy the data into the public_html area
 	cp index.html $(WEBDIR)
 	if [ ! -d $(WEBDIR)/$(CGIDIR) ];then \
 		mkdir $(WEBDIR)/$(CGIDIR) \
 		chmod 755 $(WEBDIR)/$(CGIDIR) \
 	fi
-	cp cgi-bin/search.cgi $(WEBDIR)/$(CGIDIR)
-	cp OUTPUT/processingOutput.db $(WEBDIR)/$(CGIDIR)
+	cp $(CGIDIR)/search.cgi $(WEBDIR)/$(CGIDIR)
+	cp $(OUTPATH)processingOutput.db $(WEBDIR)/$(CGIDIR)
 	chmod 744 $(WEBDIR)/$(CGIDIR)/search.cgi
 		
 ## Use seeShelve.py to see the contents of the shelve
 ## database files
-seedata: OUTPUT src/seeShelve.py
+seedata: $(OUTPATH) src/seeShelve.py
 	$(PYTHON) src/seeShelve.py
 
 ## Detailed timing runs
-test: src/ingest.py src/processing.py OUTPUT src/cached_docs
+test: src/ingest.py src/processing.py $(OUTPATH) src/cached_docs
 	$(PYTHON) -m cProfile src/ingest.py > 00ingest.timing
 	$(PYTHON) -m cProfile src/processing.py > 00 processing.py
 
 ## Clean up... the only thing we want to leave behind is the
 ## CGIDIR... mainly because we don't know if we created it or
 ## if it was already there....
-clean: OUTPUT cached_docs $(WEBDIR) $(WEBDIR)/$(CGIDIR)
-	rm -f OUTPUT/*
-	rm -f cached_docs/*
+clean: $(INGPATH) $(WEBDIR) $(WEBDIR)/$(CGIDIR)
+	rm -f $(OUTPATH)*
+	rm -f $(INGPATH)*
 	if [ -f $(WEBDIR)/index.html ];then \
 		rm -f $(WEBDIR)/index.html \
 	fi
@@ -151,7 +158,4 @@ clean: OUTPUT cached_docs $(WEBDIR) $(WEBDIR)/$(CGIDIR)
 	fi
 	if [ -f $(WEBDIR)/$(CGIDIR)/ingest.py ];then \
 		rm -f $(WEBDIR)/$(CGIDIR)/ingest.py
-	fi
-	if [ -f $(WEBDIR)/$(CGIDIR)/processingOutput.db ];then \
-		rm -f $(WEBDIR)/$(CGIDIR)/processingOutput.db
 	fi

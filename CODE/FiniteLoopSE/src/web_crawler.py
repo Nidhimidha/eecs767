@@ -237,7 +237,7 @@ class WebCrawler(object):
                     
                                 hyperlink_match = re.compile('(href=".*?")',re.DOTALL)#how to tell if a link
                                 #hyperlink_match = re.compile('(?:href=")(.*?)(?:".*?)',re.DOTALL)#how to tell if a link
-                                hyperlink_ignore = re.compile('(.*?.css.*?)|(.*?javascript.*?)|(.*?#.*?)|(.*?mailto.*?)|(.*?.jpg)|(.*?.png)|(.*?.amp)|(.*?.bmp)|(.*?.mp3)|(.*?.mp4)|(.*?.avi)|(.*?.gif)|(.*?.pdf)',re.DOTALL)#links to ignore, such as .css
+                                hyperlink_ignore = re.compile('(.*?.css.*?)|(.*?javascript.*?)|(.*?#.*?)|(.*?mailto.*?)|(.*?.pps)|(.*?.xps)|(.*?.pub)|(.*?.docb)|(.*?.dotm)|(.*?.dotx)|(.*?.docm)|(.*?.xlsx)|(.*?.xls)|(.*?.xlm)|(.*?.xlt)|(.*?.xltx)|(.*?.doc)|(.*?.docx)|(.*?.ppt)|(.*?.pptx)|(.*?.jpg)|(.*?.png)|(.*?.amp)|(.*?.bmp)|(.*?.mp3)|(.*?.mp4)|(.*?.avi)|(.*?.gif)|(.*?.pdf)',re.DOTALL)#links to ignore, such as .css
                                 #hyperlink_clean = re.compile('(href=")|(".*?$)|(>.*?)|(<.*?)|(.*?\s+.*?)',re.DOTALL)
                                 hyperlink_clean = re.compile('(href=")|(".*?$)',re.DOTALL)#sanitize href and root links
                                 for word in words:
@@ -328,7 +328,8 @@ def main():
         while crawler.need_to_download_queue:
                 for url_to_download in crawler.need_to_download_queue:
                         #create a new thread for each URL
-                        thread=threading.Thread(target=download_page_thread(url_to_download,crawler))       
+                        thread=threading.Thread(target=download_page_thread(url_to_download,crawler))
+                        thread.start()
         crawler.func_export_download_manifest_with_shelve()
         print ('Program complete!')
 if __name__ == "__main__":    
