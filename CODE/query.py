@@ -150,7 +150,7 @@ class similarity:
             count = 0
             for i in range(len(query)):
                 for term in self.termIndex:
-                    print term, "::", query[i]
+                    #print term, "::", query[i]
                     if query[i] == term:
                         self.index1 = self.termIndex[term][1]
                         count = count + 1
@@ -166,7 +166,7 @@ class similarity:
                 if val1 and val2:
                         if not val1.__contains__(",") and not val2.__contains__(","):
                             value = int(val1) - int(val2)
-                            print "Gap between is",value
+                            #print "Gap between is",value
                             self.result.append(abs(value))
 
                 for term in self.termIndex:
