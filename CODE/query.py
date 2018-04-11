@@ -1,8 +1,8 @@
 import shelve
 import math
 from math import log10, sqrt
-#import ingest
-#from ingest import *
+import ingest
+from ingest import *
 import re
 
 
@@ -172,13 +172,13 @@ class similarity:
                 for term in self.termIndex:
                     if query[i] == term:
                         count = count + 1
-                print k, "::", count
+                #print k, "::", count
 
     def writeOutput(self, outFile):
         out = shelve.open(outFile)
-        print(self.rankedOutput)
+        #print(self.rankedOutput)
         out['rankedOutput'] = self.rankedOutput
-        print(self.queryVector)
+        #print(self.queryVector)
         out['queryVector'] = self.queryVector
         out.close()
 
@@ -190,8 +190,8 @@ class similarity:
             ranks.append(m)
 
         self.sliced.append(ranks)
-        print("self.sliced")
-        print(self.sliced)
+        #print("self.sliced")
+        #print(self.sliced)
         return self.sliced
 
 
