@@ -42,9 +42,13 @@ from collections import defaultdict #necessary for the proximity data structure
 
 
 file_format='file://' #linux format
-path = ('/Users/terrapin/Documents/GitHub/eecs767/CODE/INPUT/docsnew/') ##linux Prod
+#path = ('/Users/terrapin/Documents/GitHub/eecs767/CODE/INPUT/docsnew/') ##linux Prod
+
 #path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/') ##Blake's MAC
 #path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/cached_docs/') ##Blake's MAC
+path = ('/home/splunk/Documents/EECS_767/Project/cached_docs/')
+#path = ('/home/splunk/Documents/EECS_767/Project/_medium_doc_sample/')
+#path = ('/home/splunk/Documents/EECS_767/Project/_large_doc_sample/')
 
 #file_format='file:\\' #windows format
 #path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\docsnew\\')## windows
@@ -52,7 +56,8 @@ path = ('/Users/terrapin/Documents/GitHub/eecs767/CODE/INPUT/docsnew/') ##linux 
 
 #path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\test\\')
 
-
+if(len(sys.argv)>1):
+	path=sys.argv[1]
 
 #-------------------------------------------------------------------------------
 #
@@ -331,4 +336,4 @@ def main():
     index_data.func_export_data_via_shelve()
     print ('Program complete!')
 if __name__ == "__main__":    
-    main()
+	main()
