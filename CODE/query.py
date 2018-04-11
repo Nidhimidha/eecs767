@@ -1,8 +1,8 @@
 import shelve
 import math
 from math import log10, sqrt
-import ingest
-from ingest import *
+#import ingest
+#from ingest import *
 import re
 
 
@@ -53,59 +53,51 @@ import re
 ## results = [
 ##      [ DocName1, DocLocation1, Rank1, Summary1],
 ##      [ DocName2, DocLocation2, Rank2, Summary2],
-##      …,
+##      ...,
 ##      [ DocNamen, DocLocationn, Rankn, Summaryn]
 ##  ]
 
 class similarity:
 
-    def __init__(self, infile, infile1):
+    def __init__(self, infile):
         proc = shelve.open(infile)
         self.docVector = proc['docVector']
-        print(self.docVector)
         self.doc_key = proc['doc_key']
-        print(self.doc_key)
         self.proxVector = proc['proxVector']
         self.termIndex = proc['termIndex']
+        #print("self.docVector")
+        #print(self.docVector)
+        #print("self.doc_key")
+        #print(self.doc_key)
+        #print("self.proxVector")
+        #print(self.proxVector)
+        #print("self.termIndex")
+        #print(self.termIndex)
         proc.close()
-        ingest = shelve.open(infile1)
-        self.index = ingest['index']
-        ingest.close
         self.result = []
         self.weightedQuery = []
 
-    def tokenizeQuery(self, query):
-        return func_tokenize(query)
+    #def tokenizeQuery(self, query):
+        #return func_tokenize(query)
 
     def findWholeWord(self, word, query):
         pattern = re.compile(r'\b({0})\b'.format(word), flags=re.IGNORECASE)
-        if pattern.search(query):
-            return True
-        else:
-            return False
+        for x in query:
+                if pattern.search(x):
+                    return True
 
 
     def normalizeQuery(self, query):
-        for i in range(len(self.index)):
-            for key, value in self.index[i].items():
-                for val in range(len(value)):
-                    if value[val] > 1:
-                        value[val] = 1
-                    self.index[i][key] = value
-        self.index.sort(key=lambda k: list(k)[0])
 
-        self.weightedQuery = [0] * len(self.index)
+        self.weightedQuery = [0] * len(self.termIndex)
 
-        for i in range(len(self.index)):
-            word = list(self.index[i])[0]
-            if self.findWholeWord(word,query):
-                df = len(list(filter(None, self.index[i][word])))
-                idf = log10(len(self.index[i][word]) / float(df))
-                idf = float("{0:.4f}".format(idf))
+        for k in self.termIndex:
+            if self.findWholeWord(k,query):
+		        idf = self.termIndex[k][0]
             else:
                 idf = 0
 
-            self.weightedQuery[i] = idf
+            self.weightedQuery[self.termIndex[k][1]] = idf
         sumOfSquares = 0
         for i in range(len(self.weightedQuery)):
             sumOfSquares += self.weightedQuery[i] * self.weightedQuery[i]
@@ -152,30 +144,35 @@ class similarity:
         self.rankedOutput.append(docIndices)
         self.rankedOutput.append(similarityVector)
 
-    def proximity(self, tokenizedQuery):
-        query = tokenizedQuery.split()
+    def proximity(self, query):
 
         for k in range(len(self.proxVector)):
             count = 0
             for i in range(len(query)):
-                for j in range(i + 1, len(query)):
-                    for term in self.termIndex:
-                        if query[i].__eq__(term):
-                            self.index1 = self.termIndex[term]
-                            count = count + 1
+                for term in self.termIndex:
+                    print term, "::", query[i]
+                    if query[i] == term:
+                        self.index1 = self.termIndex[term][1]
+                        count = count + 1
+                    if i != (len(query)-1):
+                        if query[i+1] == term:
+                            self.index2 = self.termIndex[term][1]
 
-                        if query[j].__eq__(term):
-                            self.index2 = self.termIndex[term]
-                    val1 = str(self.proxVector[k][self.index1]).replace("[", "").replace("]", "")
-                    val2 = str(self.proxVector[k][self.index2]).replace("[", "").replace("]", "")
-                    if val1 and val2:
+                #print query[i], "::", self.index1
+                #print query[i+1], "::", self.index2
+
+                val1 = str(self.proxVector[k][self.index1]).replace("[", "").replace("]", "")
+                val2 = str(self.proxVector[k][self.index2]).replace("[", "").replace("]", "")
+                if val1 and val2:
                         if not val1.__contains__(",") and not val2.__contains__(","):
                             value = int(val1) - int(val2)
+                            print "Gap between is",value
                             self.result.append(abs(value))
-                    break
+
                 for term in self.termIndex:
-                    if query[i].__eq__(term):
+                    if query[i] == term:
                         count = count + 1
+                print k, "::", count
 
     def writeOutput(self, outFile):
         out = shelve.open(outFile)
@@ -193,6 +190,7 @@ class similarity:
             ranks.append(m)
 
         self.sliced.append(ranks)
+        print("self.sliced")
         print(self.sliced)
         return self.sliced
 
@@ -216,12 +214,12 @@ class similarity:
 
 
 def main():
-    queryInstance = similarity('OUTPUT/processingOutput', 'OUTPUT/ingestOutput')
+    queryInstance = similarity('OUTPUT/processingOutput.db')
     # TODO: get the query from cgi
-    tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
-    normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
+    #tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
+    normalizedQuery = queryInstance.normalizeQuery(["truck", "arriv"])
     queryInstance.similarity(normalizedQuery)
-    queryInstance.proximity(tokenizedQuery)
+    queryInstance.proximity(["truck", "arriv"])
     queryInstance.showResult()
     queryInstance.writeOutput('OUTPUT/queryOutput')
 
