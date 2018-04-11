@@ -3,7 +3,7 @@ from math import log10, sqrt	## Doing a little math...
 import time			## For Timing
 from functools import wraps	## For Timing
 
-inFile = 'OUTPUT/ingestOutput'
+inFile = 'OUTPUT/ingestOutput.db'
 outFile = 'OUTPUT/processingOutput.db'
 
 ##-------------------------------------------------------------------------##
