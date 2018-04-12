@@ -132,11 +132,18 @@ test: src/ingest.py src/processing.py $(OUTPATH) src/cached_docs
 ## if it was already there....
 clean: $(WEBDIR) $(WEBDIR)/$(CGIDIR)
 	## Systematically clean up after ourselves
+	## Clean the web area
 	rm -f $(WEBDIR)/search.html 
 	rm -f $(WEBDIR)/$(CGIDIR)/search.cgi 
 	rm -f $(WEBDIR)/$(CGIDIR)/query.py 
 	rm -f $(WEBDIR)/$(CGIDIR)/ingest.py 
 	rm -f $(WEBDIR)/$(CGIDIR)/processingOutput.db 
 	rm -rf $(WEBDIR)/$(CGIDIR)/__pycache__ 
+	## Clean our own house
+	rm -f $(CGIDIR)/query.py 
+	rm -f $(CGIDIR)/ingest.py 
+	rm -f $(CGIDIR)/ingest.pyc 
+	rm -f $(CGIDIR)/processingOutput.db 
+	rm -rf $(CGIDIR)/__pycache__ 
 	rm -f src/ingest.pyc 
 	rm -rf src/__pycache__ 
