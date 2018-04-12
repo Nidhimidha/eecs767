@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20170405">
+    
+
+    <title>ISO/CASCO - Comité pour l&#039;évaluation de la conformité</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      // datatable-meetings initialization
+      $('table#datatable-meetings').DataTable({
+        "destroy": true,
+        "paging": false,
+        "info": false,
+        "searching": false,
+        "columns": [
+          null,
+          null,
+          null,
+          null,
+          { "orderable": false } /* cannot sort by note */
+        ]
+      });
+
+      // Tooltip initialization
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+
+      // Popover initialization
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+
+    });
+
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/committee/54998.html">English</a></li><li><a href="/ru/committee/54998.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover inPath firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren inPath active firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    
+
+<div class="container main">
+  <div class="row row-top row-light">
+    <div class="col-md-12">
+    <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/developing-standards.html">
+                Participer
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/who-develops-standards.html">
+                Qui élabore les normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/technical-committees.html">
+                Comités techniques
+              </a>
+            
+        </li>
+      <li>ISO/CASCO</li>
+  </ol>
+
+</div>
+      <div class="page-header heading-condensed">
+        <h1>
+          <strong>ISO/CASCO</strong>
+          
+        </h1>
+        <h2>Comité pour l'évaluation de la conformité</h2>
+      </div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="col-md-7">
+      
+
+<h3>Informations</h3>
+<ul class="refine">
+  
+  <li>
+    
+    <div itemscope itemtype="http://schema.org/Person">
+      <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Secrétaire</span>:</div>
+      <div class="entry-name entry-block" itemprop="name"><a href="mailto:maccurtain@iso.org">Mr Sean MacCurtain</a></div>
+    </div>
+  </li>
+  
+    <li>
+    
+    <div itemscope itemtype="http://schema.org/Person">
+      <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Président(e)&nbsp;(jusqu'à fin&nbsp;2021)</span>:</div>
+      <div class="entry-name entry-block" itemprop="name">Mr Frank Makamo</div>
+    </div>
+
+    
+  </li>
+  
+  <li>
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Responsable de programmes techniques ISO <span class="glyphicon glyphicon-info-sign text-muted" data-toggle="popover" data-trigger="click hover" data-placement="top" data-html="true" data-content="<small>Le responsable ISO de programmes techniques (TPM) est le point de contact principal du Secrétariat central de l'ISO pour les comités techniques. Il/elle supervise les programmes de travail d'un portefeuille de comités dans des secteurs connexes et fournit au leadership de ces comités des conseils, du soutien et de la formation. L'identification, l’élaboration et la progression de nouvelles possibilités de normalisation dans le cadre de son domaine d'action fait aussi partie du rôle, comme la promotion de la marque ISO au sein de son/ses secteur(s).</small>" data-original-title="Responsable de programmes techniques ISO (TPM)"></span></span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:maccurtain@iso.org">Mr Sean MacCurtain</a></div>
+      </div>
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Responsable de programmes éditoriaux ISO <span class="glyphicon glyphicon-info-sign text-muted" data-toggle="popover" data-trigger="click hover" data-placement="top" data-html="true" data-content="<small>Le responsable ISO de programmes éditoriaux (EPM) est le point de contact principal du Secrétariat central de l'ISO pour les questions liées à la rédaction ou à la revue de normes. Les EPMs sont responsables de la gestion générale de l’élaboration éditoriale des projets appartenant à des comités qui leur sont assignés et ils veillent à maintenir le plus haut degré de qualité de ces documents, à les publier en temps opportun et à suivre les règles et politiques de rédaction de l’ISO.</small>" data-original-title="Responsable ISO de programmes éditoriaux (EPM)"></span></span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:stanton@iso.org">Mr Brian Stanton</a></div>
+      </div>
+    
+  </li>
+  
+  <li>
+    Date de création: 1970
+  </li>
+  
+</ul>
+
+
+  <h3>Domaine des travaux</h3>
+  
+      <p><i>Membres</i> <p>La participation au CASCO est ouverte aux comités membres intéressés en qualité de membres participants (P) ou de membres observateurs (O) et aux membres correspondants intéressés en qualité de membres observateurs (O).</p> <p><i>Mandat</i></p> <ul> <li>Étudier les moyens d'évaluer la conformité aux normes ou aux autres spécifications techniques appropriées des produits, processus, services et systèmes de management.</li> <li>Élaborer des guides internationaux et des Normes internationales relatifs à la pratique des essais, du contrôle et de la certification des produits, processus et services, ainsi qu'à l'évaluation des systèmes de management, laboratoires d'essais, organismes de contrôle, organismes de certification, organisme d'accréditation et à leur fonctionnement et leur acceptation.</li> <li>Promouvoir la reconnaissance et l'acceptation mutuelles des systèmes nationaux et régionaux d'évaluation de la conformité, ainsi que l'emploi approprié des Normes internationales pour les essais, le contrôle, la certification, l'évaluation et pour d'autres fins connexes.</li> </ul> <p>Des informations complémentaires sur le CASCO et les activités connexes de l'ISO peuvent être consultées dans la section <a href="http://www.iso.org/iso/fr/resources/conformity_assessment.htm">Ressources utiles - Evaluation de la conformité
+ </a><p></p>
+    
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      
+
+<div class="well">
+  <h3>Liens utiles</h3>
+  <ul class="refine">
+    
+    <li>
+      <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+        <div class="entry-name entry-title">
+          <a href="/fr/contents/data/committee/05/49/54998/x/catalogue/p/0/u/1/w/0/d/0" title="ISO/CASCO Work programme" itemprop="url"><span class="glyphicon glyphicon-link"></span><span itemprop="name">Programme technique</span></a>
+        </div>
+        <div class="entry-summary" itemprop="description">Projets de travail et nouveaux projets préliminaires</div>
+      </div>
+    </li>
+    
+      <li>
+        <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+          <div class="entry-name entry-title">
+            <a href="http://isotc.iso.org/livelink/livelink?func=ll&objAction=browse&objId=8853493" title="Working area" target="_blank" itemprop="url"><span class="glyphicon glyphicon-new-window"></span><span itemprop="name">Espace de travail</span></a>
+          </div>
+          <div class="entry-summary" itemprop="description">sur ISOTC et le dossier "Public information"</div>
+        </div>
+      </li>
+    
+  </ul>
+</div>
+<div class="highlight-box clearfix">
+
+  <figure class="img-top">
+    <a href="/fr/casco.html"  title="CASCO">
+    <img src="/files/live/sites/isoorg/files/standards/conformity_assessment/casco/img/blurred-business-success.jpg/thumbnails/1200x300"
+         alt="Document and pen on the desk, silhouettes of business people shaking hands in the background"  title="Blurred business success" />
+    </a>
+  </figure>
+
+  <div class="box-text clearfix">
+  
+    <div class="entry-content">
+      
+        <h5 class="entry-name">
+          <a href="/fr/casco.html" title="CASCO" >CASCO</a>
+        </h5>
+      
+        <div class="entry-summary">
+          Le CASCO est le comité de l’ISO qui traite des questions d’évaluation de la conformité.
+        </div>
+      
+    </div>
+  </div><!-- close of box-text-->
+</div><!-- close of highlightbox--><div class="clear"></div>
+    </div>
+  </div>
+  
+
+<div class="row row-middle text-center">
+  
+    <div class="col-md-3 col-sm-6">
+      <div class="well">
+        <div class="statistic">
+          <span class="number small"><a href="/fr/contents/data/committee/05/49/54998/x/catalogue/p/1/u/0/w/0/d/0">31</a></span>
+          <h4>Normes ISO publiées<span class="small">&nbsp;*</span></h4>
+          
+              <p>sous la responsabilité directe du&nbsp;ISO/CASCO</p>
+            
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3 col-sm-6">
+      <div class="well">
+        <div class="statistic">
+          <span class="number small"><a href="/fr/contents/data/committee/05/49/54998/x/catalogue/p/0/u/1/w/0/d/0">6</a></span>
+          <h4>Projets de normes ISO<span class="small">&nbsp;*</span></h4>
+          
+              <p>sous la responsabilité directe du&nbsp;ISO/CASCO</p>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="clearfix visible-sm"></div>
+  
+  <div class="col-md-3 col-sm-6">
+    <div class="well">
+      <div class="statistic">
+        <span class="number small"><a href="?view=participation">104</a></span>
+        <h4>Membres participants</h4>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-3 col-sm-6">
+    <div class="well">
+      <div class="statistic">
+        <span class="number small"><a href="?view=participation">34</a></span>
+        <h4>Membres observateurs</h4>
+      </div>
+    </div>
+  </div>
+  
+    <div class="col-md-12"><p class="text-muted small align-left">* ce nombre inclut les mises à jour</p></div>
+  
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <!-- Nav tabs -->
+    
+    <ul class="nav nav-tabs" role="tablist">
+      
+        <li role="presentation" class="active"><a href="#structure" aria-controls="structure" role="tab" data-toggle="tab"><h3>Structure</h3></a></li>
+      
+        <li role="presentation" class=""><a href="#liaisons" aria-controls="liaisons" role="tab" data-toggle="tab"><h3>Liaisons</h3></a></li>
+      
+        <li role="presentation" class=""><a href="#meetings" aria-controls="meetings" role="tab" data-toggle="tab"><h3>Réunions</h3></a></li>
+      
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      
+        <div role="tabpanel" class="tab-pane active" id="structure">
+          <div class="row">
+            <div class="col-md-12">
+              <table id="datatable-structure" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:200px;">Référence</th>
+                  <th>Titre</th>
+                  <th style="width:100px;">Type</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/CPC" data-title="Référence">ISO/CASCO/CPC
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Frank Makamo</strong>&#32;(jusqu'à fin &#32;2018)
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Chairman's Policy and Coordination Group</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/IAF/ILAC JSG" data-title="Référence">ISO/CASCO/IAF/ILAC JSG
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Jianhua Xiao</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Groupe de stratégie conjoint IAF-ILAC-ISO</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/JWG 048" data-title="Référence">ISO/CASCO/JWG 48
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>Les animateurs,&#32;
+                                <strong>Mr Alister Dalrymple</strong>&#32;(jusqu'à fin &#32;2018),&#32;
+                                <strong>Mme Catherine Montagnon</strong>&#32;(jusqu'à fin &#32;2018)
+                                  &#32;peuvent être contactés par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">GT mixte ISO/CASCO - ISO/PC 283: ISO/IEC TS 17021-10 Exigences de compétence pour l'audit et la certification des systèmes de management de la santé et de la sécurité au travail</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/JWG 050" data-title="Référence">ISO/CASCO/JWG 50
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Shanfeng Dong</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Joint ISO/CASCO-ISO/ TC268 WG: ISO/IEC 17021-8</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/JWG 051" data-title="Référence">ISO/CASCO/JWG 51
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr David O'Brien</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Joint ISO/CASCO – ISO/TC267 WG – ISO/IEC 17021-11</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/STAR" data-title="Référence">ISO/CASCO/STAR
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Ms Chantal Guay</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Strategic Alliance and Regulatory group</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/STTF" data-title="Référence">ISO/CASCO/STTF
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Ms Pilar Perez Paradelo</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Groupe d'étude pour les traductions espagnoles</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/TIG" data-title="Référence">ISO/CASCO/TIG
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Graeme Drake</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Technical Interface Group</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/WG 023" data-title="Référence">ISO/CASCO/WG 23
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Dr Cynthia Woodley</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Revision of the common elements in CASCO standards</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/WG 036" data-title="Référence">ISO/CASCO/WG 36
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Alister Dalrymple</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">GT mixte ISO/CASCO - ISO/TC 34/SC 17: révision de ISO TS 22003</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/WG 046" data-title="Référence">ISO/CASCO/WG 46
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mrs Dr Stefanie Vehring</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Validation et vérification</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/WG 049" data-title="Référence">ISO/CASCO/WG 49
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Dr Cynthia Woodley</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Revision of ISO/IEC 17000 - Conformity assessment - Vocabulary and general principles</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/WG 052" data-title="Référence">ISO/CASCO/WG 52
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Dipl.-Ing., Dipl-Wirtsch.-Ing Christian Priller</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Guidelines et exemples d'un système de certification pour les processus</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO/WG 053" data-title="Référence">ISO/CASCO/WG 53
+                        </td>
+                        <td data-title="Titre">Ethical claims - Labels and supporting information</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+
+              
+                <hr />
+                <h5>Groupes de travail mixtes dont la responsabilité incombe à un autre comité</h5>
+                <table id="datatable-jointWG" class="table table-striped responsive-table">
+                  <thead>
+                  <tr>
+                    <th style="width:250px;">Référence</th>
+                    <th>Titre</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td data-sort="ISO/COPOLCO/JWG 049" data-title="Référence">ISO/COPOLCO/JWG 49</td>
+                      <td data-title="Titre">Joint COPOLCO - CASCO WG: etiquetage ethique</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ISO/PC 302/JWG 001" data-title="Référence">ISO/PC 302/JWG 1</td>
+                      <td data-title="Titre">GT mixte ISO/PC 302 - ISO/CASCO: Révision de l'ISO 19011: 2011</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ISO/TC 207/~SC 007/WG 006" data-title="Référence">ISO/TC 207/SC 7/WG 6</td>
+                      <td data-title="Titre">Groupe de travail mixte TC 207/SC 7 - CASCO WG: Vérification et validation des informations environnementales</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              
+            </div>
+          </div>
+        </div>
+      
+      <div role="tabpanel" class="tab-pane " id="liaisons">
+        
+          <div class="row row-top">
+            <div class="col-md-12">
+              <h5>Comités en liaison vers le&nbsp;ISO/CASCO</h5>
+              <p class="help-block">Les Comités ci-dessous peuvent accéder aux documents du&nbsp;ISO/CASCO :</p>
+              <table id="datatable-LIA_I_R_CC" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:250px;">Référence</th>
+                  <th>Titre</th>
+                  <th style="width:110px;">ISO/CEI</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="IEC/CAB" data-title="Référence">IEC/CAB</td>
+                      
+                    <td data-title="Titre">CAB</td>
+                    <td data-title="ISO/CEI">IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO" data-title="Référence"><a href="/fr/committee/55000.html">ISO/COPOLCO</a></td>
+                      
+                    <td data-title="Titre">Comité pour la politique en matière de consommation</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/DEVCO" data-title="Référence"><a href="/fr/committee/55004.html">ISO/DEVCO</a></td>
+                      
+                    <td data-title="Titre">Comité pour les questions relatives aux pays en développement</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 007" data-title="Référence"><a href="/fr/committee/45086.html">ISO/IEC JTC 1/SC 7</a></td>
+                      
+                    <td data-title="Titre">Ingénierie du logiciel et des systèmes</td>
+                    <td data-title="ISO/CEI">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 027" data-title="Référence"><a href="/fr/committee/45306.html">ISO/IEC JTC 1/SC 27</a></td>
+                      
+                    <td data-title="Titre">Techniques de sécurité des technologies de l'information</td>
+                    <td data-title="ISO/CEI">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/PC 302" data-title="Référence"><a href="/fr/committee/6077030.html">ISO/PC 302</a></td>
+                      
+                    <td data-title="Titre">Lignes directrices pour l'audit des systèmes de management</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/REMCO" data-title="Référence"><a href="/fr/committee/55002.html">ISO/REMCO</a></td>
+                      
+                    <td data-title="Titre">Comité pour les matériaux de référence</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 020/~SC 013" data-title="Référence"><a href="/fr/committee/46612.html">ISO/TC 20/SC 13</a></td>
+                      
+                    <td data-title="Titre">Systèmes de transfert des informations et données spatiales</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 034" data-title="Référence"><a href="/fr/committee/47858.html">ISO/TC 34</a></td>
+                      
+                    <td data-title="Titre">Produits alimentaires</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 034/~SC 017" data-title="Référence"><a href="/fr/committee/583916.html">ISO/TC 34/SC 17</a></td>
+                      
+                    <td data-title="Titre">Systèmes de management pour la sécurité des denrées alimentaires</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 034/~SC 018" data-title="Référence"><a href="/fr/committee/5100987.html">ISO/TC 34/SC 18</a></td>
+                      
+                    <td data-title="Titre">Cacao</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 046/~SC 011" data-title="Référence"><a href="/fr/committee/48856.html">ISO/TC 46/SC 11</a></td>
+                      
+                    <td data-title="Titre">Archives/Gestion des documents d'activité</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 069" data-title="Référence"><a href="/fr/committee/49742.html">ISO/TC 69</a></td>
+                      
+                    <td data-title="Titre">Application des méthodes statistiques</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 085" data-title="Référence"><a href="/fr/committee/50266.html">ISO/TC 85</a></td>
+                      
+                    <td data-title="Titre">Énergie nucléaire, technologies nucléaires, et radioprotection</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 108/~SC 005" data-title="Référence"><a href="/fr/committee/51538.html">ISO/TC 108/SC 5</a></td>
+                      
+                    <td data-title="Titre">Surveillance et diagnostic des systèmes de machines</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 135" data-title="Référence"><a href="/fr/committee/52398.html">ISO/TC 135</a></td>
+                      
+                    <td data-title="Titre">Essais non destructifs</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 135/~SC 007" data-title="Référence"><a href="/fr/committee/52432.html">ISO/TC 135/SC 7</a></td>
+                      
+                    <td data-title="Titre">Niveau de compétence du personnel</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 146/~SC 004" data-title="Référence"><a href="/fr/committee/52792.html">ISO/TC 146/SC 4</a></td>
+                      
+                    <td data-title="Titre">Aspects généraux</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 176" data-title="Référence"><a href="/fr/committee/53882.html">ISO/TC 176</a></td>
+                      
+                    <td data-title="Titre">Management et assurance de la qualité</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 176/~SC 001" data-title="Référence"><a href="/fr/committee/53888.html">ISO/TC 176/SC 1</a></td>
+                      
+                    <td data-title="Titre">Concepts et terminologie</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 176/~SC 002" data-title="Référence"><a href="/fr/committee/53896.html">ISO/TC 176/SC 2</a></td>
+                      
+                    <td data-title="Titre">Systèmes qualité</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 176/~SC 003" data-title="Référence"><a href="/fr/committee/53934.html">ISO/TC 176/SC 3</a></td>
+                      
+                    <td data-title="Titre">Techniques de soutien</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207" data-title="Référence"><a href="/fr/committee/54808.html">ISO/TC 207</a></td>
+                      
+                    <td data-title="Titre">Management environnemental</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 001" data-title="Référence"><a href="/fr/committee/54818.html">ISO/TC 207/SC 1</a></td>
+                      
+                    <td data-title="Titre">Systèmes de management environnemental</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 002" data-title="Référence"><a href="/fr/committee/54824.html">ISO/TC 207/SC 2</a></td>
+                      
+                    <td data-title="Titre">Audit d'environnement et investigations environnementales associées</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 003" data-title="Référence"><a href="/fr/committee/54836.html">ISO/TC 207/SC 3</a></td>
+                      
+                    <td data-title="Titre">Étiquetage environnemental</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 007" data-title="Référence"><a href="/fr/committee/546318.html">ISO/TC 207/SC 7</a></td>
+                      
+                    <td data-title="Titre">Gestion des gaz à effet de serre et activités associées</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 210" data-title="Référence"><a href="/fr/committee/54892.html">ISO/TC 210</a></td>
+                      
+                    <td data-title="Titre">Management de la qualité et aspects généraux correspondants des dispositifs médicaux</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 212" data-title="Référence"><a href="/fr/committee/54916.html">ISO/TC 212</a></td>
+                      
+                    <td data-title="Titre">Laboratoires d'analyses de biologie médicale et systèmes de diagnostic in vitro</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 241" data-title="Référence"><a href="/fr/committee/558313.html">ISO/TC 241</a></td>
+                      
+                    <td data-title="Titre">Systèmes de management de la sécurité du trafic routier</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 251" data-title="Référence"><a href="/fr/committee/604321.html">ISO/TC 251</a></td>
+                      
+                    <td data-title="Titre">Gestion des actifs</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 268" data-title="Référence"><a href="/fr/committee/656906.html">ISO/TC 268</a></td>
+                      
+                    <td data-title="Titre">Aménagement durable des villes et des collectivités</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 272" data-title="Référence"><a href="/fr/committee/4395817.html">ISO/TC 272</a></td>
+                      
+                    <td data-title="Titre">Criminalistique</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 276" data-title="Référence"><a href="/fr/committee/4514241.html">ISO/TC 276</a></td>
+                      
+                    <td data-title="Titre">Biotechnologie</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 292" data-title="Référence"><a href="/fr/committee/5259148.html">ISO/TC 292</a></td>
+                      
+                    <td data-title="Titre">Sécurité et résilience</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 304" data-title="Référence"><a href="/fr/committee/6131376.html">ISO/TC 304</a></td>
+                      
+                    <td data-title="Titre">Administration de la santé</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 309" data-title="Référence"><a href="/fr/committee/6266703.html">ISO/TC 309</a></td>
+                      
+                    <td data-title="Titre">Gouvernance des organisations</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+          <div class="row row-topline row-middle">
+            
+            <div class="col-md-12">
+              <h5>Comités en liaison depuis le&nbsp;ISO/CASCO</h5>
+              <p class="help-block">ISO/CASCO&nbsp;peut accéder aux documents des Comités ci-dessous : :</p>
+              <table id="datatable-LIA_I_CC" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:250px;">Référence</th>
+                  <th>Titre</th>
+                  <th style="width:110px;">ISO/CEI</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 007" data-title="Référence"><a href="/fr/committee/45086.html">ISO/IEC JTC 1/SC 7</a></td>
+                      
+                    <td data-title="Titre">Ingénierie du logiciel et des systèmes</td>
+                    <td data-title="ISO/CEI">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 027" data-title="Référence"><a href="/fr/committee/45306.html">ISO/IEC JTC 1/SC 27</a></td>
+                      
+                    <td data-title="Titre">Techniques de sécurité des technologies de l'information</td>
+                    <td data-title="ISO/CEI">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/PC 283" data-title="Référence"><a href="/fr/committee/4857129.html">ISO/PC 283</a></td>
+                      
+                    <td data-title="Titre">Systèmes de management de la santé et de la sécurité au travail</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/PC 302" data-title="Référence"><a href="/fr/committee/6077030.html">ISO/PC 302</a></td>
+                      
+                    <td data-title="Titre">Lignes directrices pour l'audit des systèmes de management</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/REMCO" data-title="Référence"><a href="/fr/committee/55002.html">ISO/REMCO</a></td>
+                      
+                    <td data-title="Titre">Comité pour les matériaux de référence</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 006" data-title="Référence"><a href="/fr/committee/45674.html">ISO/TC 6</a></td>
+                      
+                    <td data-title="Titre">Papiers, cartons et pâtes</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 034/~SC 016" data-title="Référence"><a href="/fr/committee/560239.html">ISO/TC 34/SC 16</a></td>
+                      
+                    <td data-title="Titre">Méthodes horizontales pour l'analyse moléculaire de biomarqueurs</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 034/~SC 017" data-title="Référence"><a href="/fr/committee/583916.html">ISO/TC 34/SC 17</a></td>
+                      
+                    <td data-title="Titre">Systèmes de management pour la sécurité des denrées alimentaires</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 034/~SC 018" data-title="Référence"><a href="/fr/committee/5100987.html">ISO/TC 34/SC 18</a></td>
+                      
+                    <td data-title="Titre">Cacao</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 046/~SC 011" data-title="Référence"><a href="/fr/committee/48856.html">ISO/TC 46/SC 11</a></td>
+                      
+                    <td data-title="Titre">Archives/Gestion des documents d'activité</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 069" data-title="Référence"><a href="/fr/committee/49742.html">ISO/TC 69</a></td>
+                      
+                    <td data-title="Titre">Application des méthodes statistiques</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 085" data-title="Référence"><a href="/fr/committee/50266.html">ISO/TC 85</a></td>
+                      
+                    <td data-title="Titre">Énergie nucléaire, technologies nucléaires, et radioprotection</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 108/~SC 005" data-title="Référence"><a href="/fr/committee/51538.html">ISO/TC 108/SC 5</a></td>
+                      
+                    <td data-title="Titre">Surveillance et diagnostic des systèmes de machines</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 135" data-title="Référence"><a href="/fr/committee/52398.html">ISO/TC 135</a></td>
+                      
+                    <td data-title="Titre">Essais non destructifs</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 135/~SC 007" data-title="Référence"><a href="/fr/committee/52432.html">ISO/TC 135/SC 7</a></td>
+                      
+                    <td data-title="Titre">Niveau de compétence du personnel</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 176" data-title="Référence"><a href="/fr/committee/53882.html">ISO/TC 176</a></td>
+                      
+                    <td data-title="Titre">Management et assurance de la qualité</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 176/~SC 001" data-title="Référence"><a href="/fr/committee/53888.html">ISO/TC 176/SC 1</a></td>
+                      
+                    <td data-title="Titre">Concepts et terminologie</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 176/~SC 002" data-title="Référence"><a href="/fr/committee/53896.html">ISO/TC 176/SC 2</a></td>
+                      
+                    <td data-title="Titre">Systèmes qualité</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 176/~SC 003" data-title="Référence"><a href="/fr/committee/53934.html">ISO/TC 176/SC 3</a></td>
+                      
+                    <td data-title="Titre">Techniques de soutien</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207" data-title="Référence"><a href="/fr/committee/54808.html">ISO/TC 207</a></td>
+                      
+                    <td data-title="Titre">Management environnemental</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 001" data-title="Référence"><a href="/fr/committee/54818.html">ISO/TC 207/SC 1</a></td>
+                      
+                    <td data-title="Titre">Systèmes de management environnemental</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 002" data-title="Référence"><a href="/fr/committee/54824.html">ISO/TC 207/SC 2</a></td>
+                      
+                    <td data-title="Titre">Audit d'environnement et investigations environnementales associées</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 003" data-title="Référence"><a href="/fr/committee/54836.html">ISO/TC 207/SC 3</a></td>
+                      
+                    <td data-title="Titre">Étiquetage environnemental</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 004" data-title="Référence"><a href="/fr/committee/54846.html">ISO/TC 207/SC 4</a></td>
+                      
+                    <td data-title="Titre">Évaluation de la performance environnementale</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 207/~SC 007" data-title="Référence"><a href="/fr/committee/546318.html">ISO/TC 207/SC 7</a></td>
+                      
+                    <td data-title="Titre">Gestion des gaz à effet de serre et activités associées</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 210" data-title="Référence"><a href="/fr/committee/54892.html">ISO/TC 210</a></td>
+                      
+                    <td data-title="Titre">Management de la qualité et aspects généraux correspondants des dispositifs médicaux</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 212" data-title="Référence"><a href="/fr/committee/54916.html">ISO/TC 212</a></td>
+                      
+                    <td data-title="Titre">Laboratoires d'analyses de biologie médicale et systèmes de diagnostic in vitro</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 268" data-title="Référence"><a href="/fr/committee/656906.html">ISO/TC 268</a></td>
+                      
+                    <td data-title="Titre">Aménagement durable des villes et des collectivités</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 272" data-title="Référence"><a href="/fr/committee/4395817.html">ISO/TC 272</a></td>
+                      
+                    <td data-title="Titre">Criminalistique</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 276" data-title="Référence"><a href="/fr/committee/4514241.html">ISO/TC 276</a></td>
+                      
+                    <td data-title="Titre">Biotechnologie</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 292" data-title="Référence"><a href="/fr/committee/5259148.html">ISO/TC 292</a></td>
+                      
+                    <td data-title="Titre">Sécurité et résilience</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 304" data-title="Référence"><a href="/fr/committee/6131376.html">ISO/TC 304</a></td>
+                      
+                    <td data-title="Titre">Administration de la santé</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 309" data-title="Référence"><a href="/fr/committee/6266703.html">ISO/TC 309</a></td>
+                      
+                    <td data-title="Titre">Gouvernance des organisations</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+          <div class="row row-topline row-middle">
+            
+            <div class="col-md-12">
+              
+                <h5>Organisations en liaison (Catégories A et B)</h5>
+                <table id="datatable-LIA_I_CC" class="table table-striped responsive-table">
+                  <thead>
+                  <tr>
+                    <th style="width:250px;">Sigle</th>
+                    <th>Titre</th>
+                    <th style="width:110px;">Catégorie</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td data-sort="bipm" data-title="Sigle"><a href="/fr/organization/8816.html">BIPM</a></td>
+                      <td data-title="Titre">International Bureau of Weights and Measures</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="cac" data-title="Sigle"><a href="/fr/organization/8831.html">CAC</a></td>
+                      <td data-title="Titre">Codex Alimentarius Commission</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ceoc" data-title="Sigle"><a href="/fr/organization/8898.html">CEOC</a></td>
+                      <td data-title="Titre">International Confederation of Inspection and Certification Organisations</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="efac" data-title="Sigle"><a href="/fr/organization/623783.html">EFAC</a></td>
+                      <td data-title="Titre">European Federation of Associations of Certification bodies</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="eoq" data-title="Sigle"><a href="/fr/organization/9036.html">EOQ</a></td>
+                      <td data-title="Titre">European Organization for Quality</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="eurolab" data-title="Sigle"><a href="/fr/organization/570464.html">EUROLAB</a></td>
+                      <td data-title="Titre">EUROLAB</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="iaf" data-title="Sigle"><a href="/fr/organization/10147.html">IAF</a></td>
+                      <td data-title="Titre">International Accreditation Forum, Inc.</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ifan" data-title="Sigle"><a href="/fr/organization/341009.html">IFAN</a></td>
+                      <td data-title="Titre">International Federation of Standards Users</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ifia" data-title="Sigle"><a href="/fr/organization/9863.html">IFIA</a></td>
+                      <td data-title="Titre">International Federation of Inspection Agencies</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="iioc" data-title="Sigle"><a href="/fr/organization/534768.html">IIOC</a></td>
+                      <td data-title="Titre">Independant International Organization for Certification</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ilac" data-title="Sigle"><a href="/fr/organization/9452.html">ILAC</a></td>
+                      <td data-title="Titre">International Laboratory Accreditation Cooperation</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="inlac" data-title="Sigle"><a href="/fr/organization/10073.html">INLAC</a></td>
+                      <td data-title="Titre">Latinoamerican Institute for Quality Assurance</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ipc" data-title="Sigle"><a href="/fr/organization/14905.html">IPC</a></td>
+                      <td data-title="Titre">International Personnel Certification Association (IPC)</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="iqnet" data-title="Sigle"><a href="/fr/organization/14677.html">IQNet</a></td>
+                      <td data-title="Titre">IQNet Association - The International Certification Network</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="iseal alliance" data-title="Sigle"><a href="/fr/organization/542904.html">ISEAL Alliance</a></td>
+                      <td data-title="Titre">ISEAL Alliance</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="itu" data-title="Sigle"><a href="/fr/organization/9657.html">ITU</a></td>
+                      <td data-title="Titre">International Telecommunication Union</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ncsli" data-title="Sigle"><a href="/fr/organization/5458336.html">NCSLI</a></td>
+                      <td data-title="Titre">NCSL International</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="oie" data-title="Sigle"><a href="/fr/organization/9456.html">OIE</a></td>
+                      <td data-title="Titre">World Organization for Animal Health (OIE)</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="oiml" data-title="Sigle"><a href="/fr/organization/9698.html">OIML</a></td>
+                      <td data-title="Titre">International Organization of Legal Metrology</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="quest forum" data-title="Sigle"><a href="/fr/organization/10172.html">QuEST Forum</a></td>
+                      <td data-title="Titre">Quality Excellence for Suppliers of Telecommunications (QuEST Forum)</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="uili" data-title="Sigle"><a href="/fr/organization/289098.html">UILI</a></td>
+                      <td data-title="Titre">Union Internationale des Laboratoires Indépendants (UILI)</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="unfccc" data-title="Sigle"><a href="/fr/organization/537132.html">UNFCCC</a></td>
+                      <td data-title="Titre">United Nations Framework Convention on Climate Change</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              
+              <br/>
+              
+                <h5>Organisations en liaison (Catégories C et D)</h5>
+                <p class="help-block">Les liaisons C et D participent au niveau des groupes de travail</p>
+                <table id="datatable-LIA_I_CC" class="table table-striped responsive-table">
+                  <thead>
+                  <tr>
+                    <th style="width:250px;">Sigle</th>
+                    <th>Titre</th>
+                    <th style="width:110px;">Catégorie</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td data-sort="fssc 22000" data-title="Sigle"><a href="/fr/organization/6278025.html">FSSC 22000</a></td>
+                      <td data-title="Titre">Food Safety System Certification 22000</td>
+                      <td data-title="Catégorie">D</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              
+            </div>
+          </div>
+        
+      </div>
+
+      
+          <div role="tabpanel" class="tab-pane " id="meetings">
+            
+                <table id="datatable-meetings" class="table table-striped responsive-table">
+                  <thead>
+                  <tr>
+                    <th class="col-md-1">Date</th>
+                    <th class="col-md-3">Mois</th>
+                    <th class="col-md-4">Lieu</th>
+                    <th class="col-md-3">TC/SC</th>
+                    <th class="col-md-1">Note</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td data-sort="201804250001020180426" data-title="Date">25-26</td>
+                      <td data-sort="201804250001020180426" data-title="Mois">Avril 2018</td>
+                      <td data-title="Lieu">Mexico City (Mexique)</td>
+                      <td data-sort="ISO/CASCO" data-title="TC/SC">
+                        ISO/CASCO
+                      </td>
+                      <td data-title="Note">
+                        
+                            &nbsp;
+                          
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+                <hr />
+                <p class="help-block small text-right">
+                  * Information définitive mais réunion pas encore convoquée<br/>
+                  ** Provisoire<br/>
+                </p>
+              
+          </div>
+        
+    </div>
+  </div>
+</div>
+
+</div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/developing-standards.html">
+                Participer
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/who-develops-standards.html">
+                Qui élabore les normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/technical-committees.html">
+                Comités techniques
+              </a>
+            
+        </li>
+      <li>ISO/CASCO</li>
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren inPath firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

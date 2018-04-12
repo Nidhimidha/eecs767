@@ -70,7 +70,7 @@ url='https://www.iso.org/standards.html'
 #cached_doc_path ='C:\Users\b589b426\Documents\_student\EECS_767\Project\cached_docs'
 
 #this is the relative path to the directory where pages will be downloaded to
-cached_doc_path = 'INPUT/cached_docs/'
+cached_doc_path = 'cached_docs/'
 #--------End --Variables ---------------------------------------------------
 #---------------------------------------------------------------------------
 
@@ -237,7 +237,7 @@ class WebCrawler(object):
                     
                                 hyperlink_match = re.compile('(href=".*?")',re.DOTALL)#how to tell if a link
                                 #hyperlink_match = re.compile('(?:href=")(.*?)(?:".*?)',re.DOTALL)#how to tell if a link
-                                hyperlink_ignore = re.compile('(/files/live/sites/isoorg/files/_noindex.*?)|(.*?/fr/search/.*?)|(.*?/ru/search/.*?)|(.*?/search/.*?)|(.*?/advanced-search/.*?)|(.*?/fr/advanced-search/.*?)|(.*?/ru/advanced-search/.*?)|(.*?/em.*?)|(.*?.css.*?)|(.*?javascript.*?)|(.*?#.*?)|(.*?mailto.*?)|(.*?.pps)|(.*?.xps)|(.*?.pub)|(.*?.docb)|(.*?.dotm)|(.*?.dotx)|(.*?.docm)|(.*?.xlsx)|(.*?.xls)|(.*?.xlm)|(.*?.xlt)|(.*?.xltx)|(.*?.doc)|(.*?.docx)|(.*?.ppt)|(.*?.pptx)|(.*?.jpg)|(.*?.png)|(.*?.amp)|(.*?.bmp)|(.*?.mp3)|(.*?.mp4)|(.*?.avi)|(.*?.gif)|(.*?.rss)|(.*?.pdf)',re.IGNORECASE)#links to ignore, such as .css
+                                hyperlink_ignore = re.compile('(.*?.css.*?)|(.*?javascript.*?)|(.*?#.*?)|(.*?mailto.*?)|(.*?.pps)|(.*?.xps)|(.*?.pub)|(.*?.docb)|(.*?.dotm)|(.*?.dotx)|(.*?.docm)|(.*?.xlsx)|(.*?.xls)|(.*?.xlm)|(.*?.xlt)|(.*?.xltx)|(.*?.doc)|(.*?.docx)|(.*?.ppt)|(.*?.pptx)|(.*?.jpg)|(.*?.png)|(.*?.amp)|(.*?.bmp)|(.*?.mp3)|(.*?.mp4)|(.*?.avi)|(.*?.gif)|(.*?.pdf)',re.DOTALL)#links to ignore, such as .css
                                 #hyperlink_clean = re.compile('(href=")|(".*?$)|(>.*?)|(<.*?)|(.*?\s+.*?)',re.DOTALL)
                                 hyperlink_clean = re.compile('(href=")|(".*?$)',re.DOTALL)#sanitize href and root links
                                 for word in words:

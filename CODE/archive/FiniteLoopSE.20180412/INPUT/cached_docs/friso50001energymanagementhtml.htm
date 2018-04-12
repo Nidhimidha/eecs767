@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20180109">
+    
+      <meta name="description" content="La norme internationale conçue pour aider les organisations à améliorer leurs performances énergétiques." />
+    
+
+    <title>ISO 50001 Management de l&#039;énergie</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/iso-50001-energy-management.html">English</a></li><li><a href="/ru/iso-50001-energy-management.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown inPath open firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren inPath"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="container main">
+<div class="row row-top row-no-padding">
+<div id="carousel-9f6d2e14-303a-447c-b559-f0c35c27402a" class="carousel full-width slide carousel-fade" data-ride="carousel" data-interval="8000">
+
+  
+  <div class="carousel-inner">
+    <div class="item active">
+      <figure>
+        
+        <img src='/files/live/sites/isoorg/files/standards/popular_standards/iso_50001_energy_management/img/future-electrical-production.jpg/thumbnails/1200x300' alt='workers at a renewable energy plan,  asian engineers  working in  solar power station.' class="width-100pct"/>
+      </figure>
+      
+    </div>
+  </div>
+
+  
+</div><div class="clear"></div><div class="clear"></div>
+    </div><div class="row row-top row-light">
+<div class="col-md-12"><div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/standards.html">
+                Normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/popular-standards.html">
+                Les normes les plus connues
+              </a>
+            
+        </li>
+      
+        <li>
+          ISO 50001 Management de l&#039;énergie
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div><h1>ISO 50001 &ndash; Management de l&#39;&eacute;nergie</h1><div class="clear"></div><div class="clear"></div></div><div class="col-md-7"><p>Une gestion efficace de l&#39;&eacute;nergie aide les organismes &agrave; r&eacute;aliser des &eacute;conomies, &agrave; r&eacute;duire leur consommation d&#39;&eacute;nergie et &agrave; faire face au r&eacute;chauffement climatique. ISO 50001 guide les organismes, quel que soit leur secteur d&#39;activit&eacute;, dans la mise en &oelig;uvre d&#39;un syst&egrave;me de management de l&#39;&eacute;nergie qui leur permettra de faire un meilleur usage de l&#39;&eacute;nergie.</p><figure class="image frame width-500"><a class="fancybox fancybox.iframe glyphicon-play-circle" href="https://www.youtube.com/embed/1xfCvHLFAfE?fs=1&amp;autoplay=1&amp;rel=0" title="Better Energy Management with ISO 50001"><img alt="Better energy management with ISO 50001" height="443" src="/files/live/sites/isoorg/files/standards/standards_in_action/energy_efficency_and_renewables/img/Energy_50001_Screen.PNG/thumbnails/800" width="800" /></a>
+
+<figcaption>ISO and energy management (<em>en anglais</em>)</figcaption>
+</figure><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><ul class="refine"><li><div class="clearfix icon">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/management-system-standards.html" title="Normes de systèmes de management" ><span class="glyphicon glyphicon-link"></span>Normes de systèmes de management</a>
+  </div>
+
+  <div class="entry-summary">
+      Ces normes donnent un modèle à suivre pour mettre en place et utiliser un système de management. Apprenez-en plus sur leur fonctionnement et leur application.
+  </div>
+
+</div></li></ul><div class="well glyphicon-eye-open">
+  <h3>Pr&eacute;visualiser nos normes</h3><p><a class="glyphicon-eye-open" href="https://www.iso.org/obp/ui/fr/#iso:std:iso:50001:ed-1:v1:fr" target="_blank">ISO 50001:2011</a></p>
+</div><div class="well glyphicon-shopping-cart">
+  <h3>ISO Store</h3><ul class="refine"><li><div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/51297.html" title="ISO 50001:2011" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 50001:2011</a>
+  </div>
+
+  <div class="entry-summary">
+      <div class='mainTitle'>Systèmes de management de l'énergie</div><div class='text-help'>Exigences et recommandations de mise en oeuvre</div>
+  </div>
+
+</div></li><li><div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/60088.html" title="ISO 50002:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 50002:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      <div class='mainTitle'>Audits énergétiques</div><div class='text-help'>Exigences et recommandations de mise en oeuvre</div>
+  </div>
+
+</div></li><li><div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/60089.html" title="ISO 50003:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 50003:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      <div class='mainTitle'>Systèmes de management de l'énergie</div><div class='text-help'>Exigences pour les organismes procédant à l'audit et à la certification de systèmes de management de l'énergie</div>
+  </div>
+
+</div></li></ul><p><strong>Visitez l&#39;<a href="/fr/store.html" title="ISO Store">ISO Store</a>&nbsp;pour acheter davantage de normes</strong></p>
+</div><div class="clear"></div><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><div class="row">
+<div class="col-md-12"><div class="clear"></div></div><div class="col-md-7"><h2>ISO 50001:2011 &ndash; Syst&egrave;mes de management de l&#39;&eacute;nergie</h2>
+
+<p>ISO 50001 se fonde sur l&#39;am&eacute;lioration continue &ndash; un mod&egrave;le de syst&egrave;me de management que l&#39;on retrouve dans d&#39;autres normes bien connues, dont ISO 9001 et ISO 14001. Ainsi, il est plus facile pour un organisme, d&#39;int&eacute;grer le management de l&#39;&eacute;nergie &agrave; l&#39;ensemble des efforts qu&#39;il met en &oelig;uvre pour am&eacute;liorer son management de la qualit&eacute; et son management environnemental.</p>
+
+<p>ISO 50001:2011 d&eacute;finit un cadre d&rsquo;exigences pour que les organismes puissent :</p>
+
+<ul>
+	<li>&Eacute;laborer une politique pour une utilisation plus efficace de l&rsquo;&eacute;nergie</li>
+	<li>Fixer des cibles et des objectifs pour mettre en oeuvre la politique</li>
+	<li>S&rsquo;appuyer sur des donn&eacute;es pour mieux cerner l&rsquo;usage et la consommation &eacute;nerg&eacute;tiques et prendre des d&eacute;cisions y relatives</li>
+	<li>Mesurer les r&eacute;sultats</li>
+	<li>Examiner l&rsquo;efficacit&eacute; de la politique</li>
+	<li>Am&eacute;liorer en continu le management de l&rsquo;&eacute;nergie.</li>
+</ul><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><div class="media">
+
+  <figure class="media-left">
+    <a href="/fr/publication/PUB100400.html"  title="ISO 50001 - Systèmes de management de l'énergie">
+    <img src="https://www.iso.org/obp/graphics/pub/f46ec563-6163-4901-ab30-23377effb5f6_4ee54c688a55a081ddb1acbafcf0408b.jpg" class="media-object width-100 shadow"
+         alt="Page de couverture: ISO 50001 - Systèmes de management de l'énergie"  title="ISO 50001 - Systèmes de management de l'énergie" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/publication/PUB100400.html" title="ISO 50001 - Systèmes de management de l'énergie" >ISO 50001 - Systèmes de management de l'énergie</a>
+        </h6>
+      
+        <div class="entry-summary">
+          Sachez en plus sur cette norme conçue pour aider les organisations à améliorer leurs performances énergétiques.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="media">
+
+  <figure class="media-left">
+    <a href="/fr/publication/PUB100360.html"  title="ISO 50001 - Systèmes de gestion de l'énergie - Guide pratique pour les PME">
+    <img src="https://www.iso.org/obp/graphics/pub/9388cbbb-b9ef-4882-84a3-1d4281850368_947705d8176fefde138185797775ab5c.jpg" class="media-object width-100 shadow"
+         alt="Page de couverture: ISO 50001 - Systèmes de gestion de l'énergie - Guide pratique pour les PME"  title="ISO 50001 - Systèmes de gestion de l'énergie - Guide pratique pour les PME" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/publication/PUB100360.html" title="ISO 50001 - Systèmes de gestion de l'énergie - Guide pratique pour les PME" >ISO 50001 - Systèmes de gestion de l'énergie - Guide pratique pour les PME</a>
+        </h6>
+      
+        <div class="entry-summary">
+          Ce manuel, conçu pour être utilisé de pair avec ISO 50001, fournit des exemples et des conseils concrets aux PME pour la mise en oeuvre de mesures d'efficacité énergétique
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="clear"></div><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><div class="row row-topline">
+<div class="col-md-8"><h3 style="font-family: MetaWebPro, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); margin-top: 1em;">Certification selon ISO 50001</h3>
+
+<p>Comme pour les autres normes ISO de syst&egrave;mes de management, la certification selon ISO&nbsp;50001 est une possibilit&eacute;, mais pas une obligation. Certains utilisateurs d&eacute;cident de mettre en &oelig;uvre la norme simplement pour les avantages directs qu&#39;elle procure. D&#39;autres font le choix de la certification pour prouver &agrave; des tiers qu&#39;ils mettent en &oelig;uvre un syst&egrave;me de management de l&#39;&eacute;nergie. L&#39;ISO ne fournit pas de services de certification.</p>
+
+<p>En savoir plus sur&nbsp;<a href="/fr/certification.html" title="Certification">la certification selon les normes de syst&egrave;mes de management</a>.</p><div class="clear"></div></div>
+        <div class="col-md-4"></div>
+    </div><div class="clear"></div><div class="clear"></div>
+    </div><div class="container main news">
+<div class="row">
+<div class="col-md-12"><h3>Articles utiles</h3><div class="clear"></div><div class="clear"></div></div><div class="col-md-4"><article class="hentry clearfix">
+  <div class="entry-container">
+    <header class="entry-header">
+      
+        <figure class="width-100pct">
+          <a href="/fr/news/ref2248.html">
+            <img src='/files/live/sites/isoorg/files/news/News_archive/2017/11/Ref2248/Ref2248.jpg/thumbnails/1200x300' alt='Révision d’ISO 50001 : approbation du Projet de Norme internationale'/>
+          </a>
+        </figure>
+      
+      <h5 class='entry-title'><a href='/fr/news/ref2248.html'>Révision d’ISO 50001 : approbation du Projet de Norme internationale</a></h5>
+      <div class="entry-description small clearfix">
+        
+          <p class="author">
+            Par <span class="fn text-muted">Barnaby Lewis</span>
+          </p>
+        
+      </div>
+    </header>
+    
+      <div class="entry-content">
+        <p>Depuis 2011, ISO 50001 aide les organismes &agrave; adopter une d&eacute;marche m&eacute;thodique d&rsquo;am&eacute;lioration continue de leur performance &eacute;nerg&eacute;tique, notamment en termes d&rsquo;efficacit&eacute;, d&rsquo;usage et de consommation &eacute;nerg&eacute;tiques.</p>
+
+      </div>
+    
+  </div>
+</article><div class="clear"></div><div class="clear"></div></div>
+        <div class="col-md-4"><article class="hentry clearfix">
+  <div class="entry-container">
+    <header class="entry-header">
+      
+        <figure class="width-100pct">
+          <a href="/fr/news/ref2193.html">
+            <img src='/files/live/sites/isoorg/files/news/News_archive/2017/06/Ref2193/Ref2193_wind_turbine.jpg/thumbnails/1200x300' alt='ISO 50001 mise en avant par la CEM comme un outil essentiel dans l’action en faveur du climat'/>
+          </a>
+        </figure>
+      
+      <h5 class='entry-title'><a href='/fr/news/ref2193.html'>ISO 50001 mise en avant par la CEM comme un outil essentiel dans l’action en faveur du climat</a></h5>
+      <div class="entry-description small clearfix">
+        
+          <p class="author">
+            Par <span class="fn text-muted">Elizabeth Gasiorowski-Denis</span>
+          </p>
+        
+      </div>
+    </header>
+    
+      <div class="entry-content">
+        <p>L&rsquo;&eacute;nergie est l&rsquo;un des d&eacute;fis majeurs auxquels est confront&eacute;e la communaut&eacute; internationale. La r&eacute;vision d&rsquo;ISO&nbsp;50001 sur les syst&egrave;mes de management de l&rsquo;&eacute;nergie a r&eacute;cemment b&eacute;n&eacute;fici&eacute; d&rsquo;un coup de pouce d&eacute;terminant lors de la Conf&eacute;rence minist&eacute;rielle sur l&rsquo;&eacute;nergie propre (<a href="http://www.cleanenergyministerial.org/" target="_blank" title="Clean Energy Ministerial">CEM8</a>), un forum mondial de haut niveau destin&eacute; &agrave; faire progresser les &eacute;nergies propres au niveau international.</p>
+
+      </div>
+    
+  </div>
+</article><div class="clear"></div><div class="clear"></div></div>
+        <div class="col-md-4"><article class="hentry clearfix">
+  <div class="entry-container">
+    <header class="entry-header">
+      
+        <figure class="width-100pct">
+          <a href="/fr/news/2017/01/Ref2157.html">
+            <img src='/files/live/sites/isoorg/files/archive/Ref2157/img_ref2157_01.jpg/thumbnails/1200x300' alt='Lʼhistoire dʼun rêve : Solar Impulse'/>
+          </a>
+        </figure>
+      
+      <h5 class='entry-title'><a href='/fr/news/2017/01/Ref2157.html'>Lʼhistoire dʼun rêve : Solar Impulse</a></h5>
+      <div class="entry-description small clearfix">
+        
+      </div>
+    </header>
+    
+      <div class="entry-content">
+        <p>Solar Impulse est entré dans lʼhistoire en bouclant le premier tour du monde aérien sans carburant. Dʼimportants progrès ont récemment été réalisés dans le domaine des avions électriques et, avec des modèles expérimentaux de ce type, la technologie de propulsion électrique sera un jour applicable à lʼaviation. Ce nʼest quʼune question de temps.</p>
+      </div>
+    
+  </div>
+</article><div class="clear"></div><div class="clear"></div></div><div class="clear"></div>
+    </div><div class="clear"></div>
+    </div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/standards.html">
+                Normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/popular-standards.html">
+                Les normes les plus connues
+              </a>
+            
+        </li>
+      
+        <li>
+          ISO 50001 Management de l&#039;énergie
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover inPath firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren inPath"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

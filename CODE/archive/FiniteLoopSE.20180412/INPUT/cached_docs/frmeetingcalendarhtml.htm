@@ -1,0 +1,4148 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20170829">
+    
+      <meta name="description" content="Découverte des processus et des comités œuvrant à l’élaboration des normes." />
+    
+
+    <title>Calendrier des réunions</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      // datatable-meetings initialization
+      $('table#datatable-meetings').DataTable({
+        "destroy": true,
+        "paging": false,
+        "info": false,
+        "searching": false,
+        "columns": [
+          null,
+          null,
+          null,
+          null,
+          { "orderable": false } /* cannot sort by note */
+         ]
+      });
+
+      // Tooltip initialization
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+    });
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/meeting-calendar.html">English</a></li><li><a href="/ru/meeting-calendar.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover inPath firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="container main">
+<div class="row row-top row-no-padding">
+<div class="clear"></div>
+    </div><div class="row row-top row-light">
+<div class="col-md-12"><div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/developing-standards.html">
+                Participer
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/who-develops-standards.html">
+                Qui élabore les normes
+              </a>
+            
+        </li>
+      
+        <li>
+          Calendrier des réunions
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div><h1>Calendrier des r&eacute;unions</h1><div class="clear"></div><div class="clear"></div></div><div class="col-md-7"><p>Davantage d&#39;informations concernant les r&eacute;unions sont disponibles sur la page <a href="https://sd.iso.org/meetings/all" target="_blank" title="ISO meeting management">ISO Meetings</a>.<br />
+<em>Veuillez noter qu&#39; il vous sera propos&eacute; de vous connecter.</em></p><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><table id="datatable-meetings" class="table table-striped responsive-table">
+  <thead>
+    <tr>
+      <th class="col-md-1">Date</th>
+      <th class="col-md-3">Mois</th>
+      <th class="col-md-4">Lieu</th>
+      <th class="col-md-3">TC/SC</th>
+      <th class="col-md-1">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      <tr>
+        <td data-sort="201806180001020180622" data-title="Date">18-22</td>
+        <td data-sort="201806180001020180622" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Munhwa-dong (Corée, République de)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 036" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45392.html#meetings" title="ISO/IEC JTC 1/SC 36">ISO/IEC JTC 1/SC 36</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804090001020180413" data-title="Date">9-13</td>
+        <td data-sort="201804090001020180413" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Atlanta (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 094/~SC 013" data-title="TC/SC"><a href="/fr/contents/data/committee/05/06/50626.html#meetings" title="ISO/TC 94/SC 13">ISO/TC 94/SC 13</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180517" data-title="Date">14-17</td>
+        <td data-sort="201805140001020180517" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Verona (Italie)</td>
+        
+        <td data-sort="ISO/TC 161" data-title="TC/SC"><a href="/fr/contents/data/committee/05/34/53436.html#meetings" title="ISO/TC 161">ISO/TC 161</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810310011020181029" data-title="Date">29-2</td>
+        <td data-sort="201810310011020181029" data-title="Mois">Octobre-Novembre 2018</td>
+        <td data-title="Lieu">Hangzhou (Chine)</td>
+        
+        <td data-sort="ISO/TC 045" data-title="TC/SC"><a href="/fr/contents/data/committee/04/86/48668.html#meetings" title="ISO/TC 45">ISO/TC 45</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809300010000000000" data-title="Date"></td>
+        <td data-sort="201809300010000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Japon</td>
+        
+        <td data-sort="ISO/TC 061" data-title="TC/SC"><a href="/fr/contents/data/committee/04/92/49256.html#meetings" title="ISO/TC 61">ISO/TC 61</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201812310040000000000" data-title="Date"></td>
+        <td data-sort="201812310040000000000" data-title="Mois">2018</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 024" data-title="TC/SC"><a href="/fr/contents/data/committee/04/52/45252.html#meetings" title="ISO/IEC JTC 1/SC 24">ISO/IEC JTC 1/SC 24</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201912310040000000000" data-title="Date"></td>
+        <td data-sort="201912310040000000000" data-title="Mois">2019</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 024" data-title="TC/SC"><a href="/fr/contents/data/committee/04/52/45252.html#meetings" title="ISO/IEC JTC 1/SC 24">ISO/IEC JTC 1/SC 24</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="202012310040000000000" data-title="Date"></td>
+        <td data-sort="202012310040000000000" data-title="Mois">2020</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 024" data-title="TC/SC"><a href="/fr/contents/data/committee/04/52/45252.html#meetings" title="ISO/IEC JTC 1/SC 24">ISO/IEC JTC 1/SC 24</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810080001020181012" data-title="Date">8-12</td>
+        <td data-sort="201810080001020181012" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Delft (Pays-Bas)</td>
+        
+        <td data-sort="ISO/TC 092" data-title="TC/SC"><a href="/fr/contents/data/committee/05/04/50492.html#meetings" title="ISO/TC 92">ISO/TC 92</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807310012000000000" data-title="Date"></td>
+        <td data-sort="201807310012000000000" data-title="Mois">Juillet-Septembre 2018</td>
+        <td data-title="Lieu">Japon</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 035" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45382.html#meetings" title="ISO/IEC JTC 1/SC 35">ISO/IEC JTC 1/SC 35</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805060001020180511" data-title="Date">6-11</td>
+        <td data-sort="201805060001020180511" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Buenos Aires (Argentine)</td>
+        
+        <td data-sort="ISO/TC 228" data-title="TC/SC"><a href="/fr/contents/data/committee/37/53/375396.html#meetings" title="ISO/TC 228">ISO/TC 228</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807310012000000000" data-title="Date"></td>
+        <td data-sort="201807310012000000000" data-title="Mois">Juillet-Septembre 2018</td>
+        <td data-title="Lieu">Sao Paulo (Brésil)</td>
+        
+        <td data-sort="ISO/TC 135" data-title="TC/SC"><a href="/fr/contents/data/committee/05/23/52398.html#meetings" title="ISO/TC 135">ISO/TC 135</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810080001020181012" data-title="Date">8-12</td>
+        <td data-sort="201810080001020181012" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Stavanger (Norvège)</td>
+        
+        <td data-sort="ISO/TC 292" data-title="TC/SC"><a href="/fr/contents/data/committee/52/59/5259148.html#meetings" title="ISO/TC 292">ISO/TC 292</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806220001020180629" data-title="Date">22-29</td>
+        <td data-sort="201806220001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Zhuhai (Chine)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 028" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45314.html#meetings" title="ISO/IEC JTC 1/SC 28">ISO/IEC JTC 1/SC 28</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201906300010000000000" data-title="Date"></td>
+        <td data-sort="201906300010000000000" data-title="Mois">Juin 2019</td>
+        <td data-title="Lieu">Beijing (Chine)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 036" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45392.html#meetings" title="ISO/IEC JTC 1/SC 36">ISO/IEC JTC 1/SC 36</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806030001020180608" data-title="Date">3-8</td>
+        <td data-sort="201806030001020180608" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">江東区 (Japon)</td>
+        
+        <td data-sort="ISO/TC 094/~SC 014" data-title="TC/SC"><a href="/fr/contents/data/committee/29/98/299803.html#meetings" title="ISO/TC 94/SC 14">ISO/TC 94/SC 14</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806160000000000000" data-title="Date">16</td>
+        <td data-sort="201806160000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Beijing (Chine)</td>
+        
+        <td data-sort="ISO/TC 276" data-title="TC/SC"><a href="/fr/contents/data/committee/45/14/4514241.html#meetings" title="ISO/TC 276">ISO/TC 276</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809170001020180918" data-title="Date">17-18</td>
+        <td data-sort="201809170001020180918" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Houston (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 067/~SC 007" data-title="TC/SC"><a href="/fr/contents/data/committee/04/96/49622.html#meetings" title="ISO/TC 67/SC 7">ISO/TC 67/SC 7</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809100001020180911" data-title="Date">10-11</td>
+        <td data-sort="201809100001020180911" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Toronto (Canada)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 022" data-title="TC/SC"><a href="/fr/contents/data/committee/04/52/45202.html#meetings" title="ISO/IEC JTC 1/SC 22">ISO/IEC JTC 1/SC 22</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Seoul (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 006" data-title="TC/SC"><a href="/fr/contents/data/committee/04/56/45674.html#meetings" title="ISO/TC 6">ISO/TC 6</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810210001020181027" data-title="Date">21-27</td>
+        <td data-sort="201810210001020181027" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Haidian Qu (Chine)</td>
+        
+        <td data-sort="ISO/TC 059" data-title="TC/SC"><a href="/fr/contents/data/committee/04/90/49070.html#meetings" title="ISO/TC 59">ISO/TC 59</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809200001020180922" data-title="Date">20-22</td>
+        <td data-sort="201809200001020180922" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Playa del Carmen (Mexique)</td>
+        
+        <td data-sort="ISO/TC 201" data-title="TC/SC"><a href="/fr/contents/data/committee/05/46/54618.html#meetings" title="ISO/TC 201">ISO/TC 201</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810010001020181002" data-title="Date">1-2</td>
+        <td data-sort="201810010001020181002" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">The Hague (Pays-Bas)</td>
+        
+        <td data-sort="ISO/TC 209" data-title="TC/SC"><a href="/fr/contents/data/committee/05/48/54874.html#meetings" title="ISO/TC 209">ISO/TC 209</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809250001020180926" data-title="Date">25-26</td>
+        <td data-sort="201809250001020180926" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Vienna (Autriche)</td>
+        
+        <td data-sort="ISO/TC 005" data-title="TC/SC"><a href="/fr/contents/data/committee/04/55/45592.html#meetings" title="ISO/TC 5">ISO/TC 5</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181019" data-title="Date">15-19</td>
+        <td data-sort="201810150001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Washington (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 034" data-title="TC/SC"><a href="/fr/contents/data/committee/04/78/47858.html#meetings" title="ISO/TC 34">ISO/TC 34</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809260001020180928" data-title="Date">26-28</td>
+        <td data-sort="201809260001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Geneva (Suisse)</td>
+        
+        <td data-sort="ISO/GA" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54992.html#meetings" title="ISO/GA">ISO/GA</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806250001020180629" data-title="Date">25-29</td>
+        <td data-sort="201806250001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Hamilton (Canada)</td>
+        
+        <td data-sort="ISO/TC 023/~SC 006" data-title="TC/SC"><a href="/fr/contents/data/committee/04/70/47056.html#meetings" title="ISO/TC 23/SC 6">ISO/TC 23/SC 6</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201709190000000000000" data-title="Date">19</td>
+        <td data-sort="201709190000000000000" data-title="Mois">Septembre 2017</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/DEVCO" data-title="TC/SC"><a href="/fr/contents/data/committee/05/50/55004.html#meetings" title="ISO/DEVCO">ISO/DEVCO</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310011020180528" data-title="Date">28-8</td>
+        <td data-sort="201805310011020180528" data-title="Mois">Mai-Juin 2018</td>
+        <td data-title="Lieu">Shimogyō-ku (Japon)</td>
+        
+        <td data-sort="ISO/TC 299" data-title="TC/SC"><a href="/fr/contents/data/committee/59/15/5915511.html#meetings" title="ISO/TC 299">ISO/TC 299</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201905130001020190517" data-title="Date">13-17</td>
+        <td data-sort="201905130001020190517" data-title="Mois">Mai 2019</td>
+        <td data-title="Lieu">Kōbe-shi (Japon)</td>
+        
+        <td data-sort="ISO/TC 121" data-title="TC/SC"><a href="/fr/contents/data/committee/05/19/51984.html#meetings" title="ISO/TC 121">ISO/TC 121</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810250001020181026" data-title="Date">25-26</td>
+        <td data-sort="201810250001020181026" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Nishi-ku (Japon)</td>
+        
+        <td data-sort="ISO/TC 017" data-title="TC/SC"><a href="/fr/contents/data/committee/04/62/46232.html#meetings" title="ISO/TC 17">ISO/TC 17</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805280001020180531" data-title="Date">28-31</td>
+        <td data-sort="201805280001020180531" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Bordeaux (France)</td>
+        
+        <td data-sort="ISO/TC 126" data-title="TC/SC"><a href="/fr/contents/data/committee/05/21/52158.html#meetings" title="ISO/TC 126">ISO/TC 126</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201912310040000000000" data-title="Date"></td>
+        <td data-sort="201912310040000000000" data-title="Mois">2019</td>
+        <td data-title="Lieu">Corée, République de</td>
+        
+        <td data-sort="ISO/TC 107" data-title="TC/SC"><a href="/fr/contents/data/committee/05/13/51358.html#meetings" title="ISO/TC 107">ISO/TC 107</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811050001020181109" data-title="Date">5-9</td>
+        <td data-sort="201811050001020181109" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Stockholm (Suède)</td>
+        
+        <td data-sort="ISO/IEC JTC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/04/50/45020.html#meetings" title="ISO/IEC JTC 1">ISO/IEC JTC 1</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201902110001020190215" data-title="Date">11-15</td>
+        <td data-sort="201902110001020190215" data-title="Mois">Février 2019</td>
+        <td data-title="Lieu">Milano (Italie)</td>
+        
+        <td data-sort="ISO/TC 058/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/04/90/49062.html#meetings" title="ISO/TC 58/SC 4">ISO/TC 58/SC 4</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807100001020180713" data-title="Date">10-13</td>
+        <td data-sort="201807100001020180713" data-title="Mois">Juillet 2018</td>
+        <td data-title="Lieu">Ottawa (Canada)</td>
+        
+        <td data-sort="ISO/REMCO" data-title="TC/SC"><a href="/fr/contents/data/committee/05/50/55002.html#meetings" title="ISO/REMCO">ISO/REMCO</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805050001020180510" data-title="Date">5-10</td>
+        <td data-sort="201805050001020180510" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Nairobi (Kenya)</td>
+        
+        <td data-sort="ISO/TC 173" data-title="TC/SC"><a href="/fr/contents/data/committee/05/37/53782.html#meetings" title="ISO/TC 173">ISO/TC 173</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804300011020180430" data-title="Date">30-4</td>
+        <td data-sort="201804300011020180430" data-title="Mois">Avril-Mai 2018</td>
+        <td data-title="Lieu">Maringá (Brésil)</td>
+        
+        <td data-sort="ISO/TC 215" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54960.html#meetings" title="ISO/TC 215">ISO/TC 215</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201904130001020190417" data-title="Date">13-17</td>
+        <td data-sort="201904130001020190417" data-title="Mois">Avril 2019</td>
+        <td data-title="Lieu">Gothenburg (Suède)</td>
+        
+        <td data-sort="ISO/TC 215" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54960.html#meetings" title="ISO/TC 215">ISO/TC 215</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201910310012000000000" data-title="Date"></td>
+        <td data-sort="201910310012000000000" data-title="Mois">Octobre-Novembre 2019</td>
+        <td data-title="Lieu">Daegu (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 215" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54960.html#meetings" title="ISO/TC 215">ISO/TC 215</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310011020180528" data-title="Date">28-1</td>
+        <td data-sort="201805310011020180528" data-title="Mois">Mai-Juin 2018</td>
+        <td data-title="Lieu">Stockholm (Suède)</td>
+        
+        <td data-sort="ISO/TC 272" data-title="TC/SC"><a href="/fr/contents/data/committee/43/95/4395817.html#meetings" title="ISO/TC 272">ISO/TC 272</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811190001020181123" data-title="Date">19-23</td>
+        <td data-sort="201811190001020181123" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Mexico City (Mexique)</td>
+        
+        <td data-sort="ISO/TC 272" data-title="TC/SC"><a href="/fr/contents/data/committee/43/95/4395817.html#meetings" title="ISO/TC 272">ISO/TC 272</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804160001020180417" data-title="Date">16-17</td>
+        <td data-sort="201804160001020180417" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Darmstadt (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 117" data-title="TC/SC"><a href="/fr/contents/data/committee/05/18/51820.html#meetings" title="ISO/TC 117">ISO/TC 117</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804240001020180426" data-title="Date">24-26</td>
+        <td data-sort="201804240001020180426" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Jinan Shi (Chine)</td>
+        
+        <td data-sort="ISO/TC 076" data-title="TC/SC"><a href="/fr/contents/data/committee/05/00/50044.html#meetings" title="ISO/TC 76">ISO/TC 76</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201903180000000000000" data-title="Date">18</td>
+        <td data-sort="201903180000000000000" data-title="Mois">Mars 2019</td>
+        <td data-title="Lieu">Senlis (France)</td>
+        
+        <td data-sort="ISO/TC 060" data-title="TC/SC"><a href="/fr/contents/data/committee/04/92/49212.html#meetings" title="ISO/TC 60">ISO/TC 60</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806140001020180615" data-title="Date">14-15</td>
+        <td data-sort="201806140001020180615" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">São Paulo (Brésil)</td>
+        
+        <td data-sort="ISO/TMB" data-title="TC/SC"><a href="/fr/contents/data/committee/48/82/4882545.html#meetings" title="ISO/TMB">ISO/TMB</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804090001020180413" data-title="Date">9-13</td>
+        <td data-sort="201804090001020180413" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Surrey (Canada)</td>
+        
+        <td data-sort="ISO/TC 092/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/05/05/50552.html#meetings" title="ISO/TC 92/SC 4">ISO/TC 92/SC 4</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809250000000000000" data-title="Date">25</td>
+        <td data-sort="201809250000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Geneva (Suisse)</td>
+        
+        <td data-sort="ISO/TMB" data-title="TC/SC"><a href="/fr/contents/data/committee/48/82/4882545.html#meetings" title="ISO/TMB">ISO/TMB</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809210000000000000" data-title="Date">21</td>
+        <td data-sort="201809210000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Royaume-Uni</td>
+        
+        <td data-sort="ISO/TC 034/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/78/47870.html#meetings" title="ISO/TC 34/SC 2">ISO/TC 34/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201903180001020190322" data-title="Date">18-22</td>
+        <td data-sort="201903180001020190322" data-title="Mois">Mars 2019</td>
+        <td data-title="Lieu">Beijing (Chine)</td>
+        
+        <td data-sort="ISO/TC 094/~SC 013" data-title="TC/SC"><a href="/fr/contents/data/committee/05/06/50626.html#meetings" title="ISO/TC 94/SC 13">ISO/TC 94/SC 13</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804250001020180426" data-title="Date">25-26</td>
+        <td data-sort="201804250001020180426" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 067/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/95/49532.html#meetings" title="ISO/TC 67/SC 2">ISO/TC 67/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809280000000000000" data-title="Date">28</td>
+        <td data-sort="201809280000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Philadelphia (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 028" data-title="TC/SC"><a href="/fr/contents/data/committee/04/73/47356.html#meetings" title="ISO/TC 28">ISO/TC 28</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809260000000000000" data-title="Date">26</td>
+        <td data-sort="201809260000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Sentrum (Norvège)</td>
+        
+        <td data-sort="ISO/TC 163/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/05/35/53512.html#meetings" title="ISO/TC 163/SC 2">ISO/TC 163/SC 2</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806110001020180615" data-title="Date">11-15</td>
+        <td data-sort="201806110001020180615" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Helsinki (Finlande)</td>
+        
+        <td data-sort="ISO/TC 020/~SC 014" data-title="TC/SC"><a href="/fr/contents/data/committee/04/66/46614.html#meetings" title="ISO/TC 20/SC 14">ISO/TC 20/SC 14</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804230001020180427" data-title="Date">23-27</td>
+        <td data-sort="201804230001020180427" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Hangzhou (Chine)</td>
+        
+        <td data-sort="ISO/TC 171" data-title="TC/SC"><a href="/fr/contents/data/committee/05/36/53650.html#meetings" title="ISO/TC 171">ISO/TC 171</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804230001020180427" data-title="Date">23-27</td>
+        <td data-sort="201804230001020180427" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Zürich (Suisse)</td>
+        
+        <td data-sort="ISO/TC 068" data-title="TC/SC"><a href="/fr/contents/data/committee/04/96/49650.html#meetings" title="ISO/TC 68">ISO/TC 68</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804230001020180424" data-title="Date">23-24</td>
+        <td data-sort="201804230001020180424" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Wuhan (Chine)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 027" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45306.html#meetings" title="ISO/IEC JTC 1/SC 27">ISO/IEC JTC 1/SC 27</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811120001020181116" data-title="Date">12-16</td>
+        <td data-sort="201811120001020181116" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Matsue (Japon)</td>
+        
+        <td data-sort="ISO/TC 043/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/85/48558.html#meetings" title="ISO/TC 43/SC 2">ISO/TC 43/SC 2</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809160001020180921" data-title="Date">16-21</td>
+        <td data-sort="201809160001020180921" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Milano (Italie)</td>
+        
+        <td data-sort="ISO/TC 106" data-title="TC/SC"><a href="/fr/contents/data/committee/05/12/51218.html#meetings" title="ISO/TC 106">ISO/TC 106</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806040001020180608" data-title="Date">4-8</td>
+        <td data-sort="201806040001020180608" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Lisbon (Portugal)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 040" data-title="TC/SC"><a href="/fr/contents/data/committee/50/13/5013818.html#meetings" title="ISO/IEC JTC 1/SC 40">ISO/IEC JTC 1/SC 40</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810310010000000000" data-title="Date"></td>
+        <td data-sort="201810310010000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Beijing (Chine)</td>
+        
+        <td data-sort="ISO/TC 059/~SC 015" data-title="TC/SC"><a href="/fr/contents/data/committee/04/92/49206.html#meetings" title="ISO/TC 59/SC 15">ISO/TC 59/SC 15</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201912310040000000000" data-title="Date"></td>
+        <td data-sort="201912310040000000000" data-title="Mois">2019</td>
+        <td data-title="Lieu">Portugal</td>
+        
+        <td data-sort="ISO/TC 042" data-title="TC/SC"><a href="/fr/contents/data/committee/04/84/48420.html#meetings" title="ISO/TC 42">ISO/TC 42</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310011020180527" data-title="Date">27-1</td>
+        <td data-sort="201805310011020180527" data-title="Mois">Mai-Juin 2018</td>
+        <td data-title="Lieu">Espoo (Finlande)</td>
+        
+        <td data-sort="ISO/TC 238" data-title="TC/SC"><a href="/fr/contents/data/committee/55/44/554401.html#meetings" title="ISO/TC 238">ISO/TC 238</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809300010000000000" data-title="Date"></td>
+        <td data-sort="201809300010000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Vienna (Autriche)</td>
+        
+        <td data-sort="ISO/TC 005/~SC 005" data-title="TC/SC"><a href="/fr/contents/data/committee/04/56/45636.html#meetings" title="ISO/TC 5/SC 5">ISO/TC 5/SC 5</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805210001020180525" data-title="Date">21-25</td>
+        <td data-sort="201805210001020180525" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Suède</td>
+        
+        <td data-sort="ISO/TC 121" data-title="TC/SC"><a href="/fr/contents/data/committee/05/19/51984.html#meetings" title="ISO/TC 121">ISO/TC 121</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310011020180528" data-title="Date">28-1</td>
+        <td data-sort="201805310011020180528" data-title="Mois">Mai-Juin 2018</td>
+        <td data-title="Lieu">Toronto (Canada)</td>
+        
+        <td data-sort="ISO/TC 274" data-title="TC/SC"><a href="/fr/contents/data/committee/44/18/4418564.html#meetings" title="ISO/TC 274">ISO/TC 274</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201905200001020190524" data-title="Date">20-24</td>
+        <td data-sort="201905200001020190524" data-title="Mois">Mai 2019</td>
+        <td data-title="Lieu">Stockholm (Suède)</td>
+        
+        <td data-sort="ISO/TC 274" data-title="TC/SC"><a href="/fr/contents/data/committee/44/18/4418564.html#meetings" title="ISO/TC 274">ISO/TC 274</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809190001020180920" data-title="Date">19-20</td>
+        <td data-sort="201809190001020180920" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Belfast (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 034/~SC 011" data-title="TC/SC"><a href="/fr/contents/data/committee/04/79/47936.html#meetings" title="ISO/TC 34/SC 11">ISO/TC 34/SC 11</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810290001020181031" data-title="Date">29-31</td>
+        <td data-sort="201810290001020181031" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Kuala Lumpur (Malaisie)</td>
+        
+        <td data-sort="ISO/TC 206" data-title="TC/SC"><a href="/fr/contents/data/committee/05/47/54756.html#meetings" title="ISO/TC 206">ISO/TC 206</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201912310040000000000" data-title="Date"></td>
+        <td data-sort="201912310040000000000" data-title="Mois">2019</td>
+        <td data-title="Lieu">Jinan (Chine)</td>
+        
+        <td data-sort="ISO/TC 206" data-title="TC/SC"><a href="/fr/contents/data/committee/05/47/54756.html#meetings" title="ISO/TC 206">ISO/TC 206</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 131" data-title="TC/SC"><a href="/fr/contents/data/committee/05/22/52232.html#meetings" title="ISO/TC 131">ISO/TC 131</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181019" data-title="Date">15-19</td>
+        <td data-sort="201810150001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Frankfurt (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 131" data-title="TC/SC"><a href="/fr/contents/data/committee/05/22/52232.html#meetings" title="ISO/TC 131">ISO/TC 131</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201906150000000000000" data-title="Date">15</td>
+        <td data-sort="201906150000000000000" data-title="Mois">Juin 2019</td>
+        <td data-title="Lieu">Japon</td>
+        
+        <td data-sort="ISO/TC 276" data-title="TC/SC"><a href="/fr/contents/data/committee/45/14/4514241.html#meetings" title="ISO/TC 276">ISO/TC 276</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806100001020180613" data-title="Date">10-13</td>
+        <td data-sort="201806100001020180613" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Milan (Italie)</td>
+        
+        <td data-sort="ISO/TC 289" data-title="TC/SC"><a href="/fr/contents/data/committee/50/65/5065082.html#meetings" title="ISO/TC 289">ISO/TC 289</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806190001020180622" data-title="Date">19-22</td>
+        <td data-sort="201806190001020180622" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Lausanne (Suisse)</td>
+        
+        <td data-sort="ISO/TC 034/~SC 009" data-title="TC/SC"><a href="/fr/contents/data/committee/04/79/47920.html#meetings" title="ISO/TC 34/SC 9">ISO/TC 34/SC 9</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201808270001020180831" data-title="Date">27-31</td>
+        <td data-sort="201808270001020180831" data-title="Mois">Août 2018</td>
+        <td data-title="Lieu">Japon</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 006" data-title="TC/SC"><a href="/fr/contents/data/committee/04/50/45072.html#meetings" title="ISO/IEC JTC 1/SC 6">ISO/IEC JTC 1/SC 6</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810160001020181018" data-title="Date">16-18</td>
+        <td data-sort="201810160001020181018" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Baden (Suisse)</td>
+        
+        <td data-sort="ISO/TC 192" data-title="TC/SC"><a href="/fr/contents/data/committee/05/44/54432.html#meetings" title="ISO/TC 192">ISO/TC 192</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201808270001020180831" data-title="Date">27-31</td>
+        <td data-sort="201808270001020180831" data-title="Mois">Août 2018</td>
+        <td data-title="Lieu">Shenyang Shi (Chine)</td>
+        
+        <td data-sort="ISO/TC 102" data-title="TC/SC"><a href="/fr/contents/data/committee/05/10/51012.html#meetings" title="ISO/TC 102">ISO/TC 102</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807230001020180727" data-title="Date">23-27</td>
+        <td data-sort="201807230001020180727" data-title="Mois">Juillet 2018</td>
+        <td data-title="Lieu">Baku (Azerbaïdjan)</td>
+        
+        <td data-sort="ISO/TC 262" data-title="TC/SC"><a href="/fr/contents/data/committee/62/91/629121.html#meetings" title="ISO/TC 262">ISO/TC 262</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805060001020180511" data-title="Date">6-11</td>
+        <td data-sort="201805060001020180511" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">New Delhi (Inde)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 007" data-title="TC/SC"><a href="/fr/contents/data/committee/04/50/45086.html#meetings" title="ISO/IEC JTC 1/SC 7">ISO/IEC JTC 1/SC 7</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806250001020180629" data-title="Date">25-29</td>
+        <td data-sort="201806250001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Arlington (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 020/~SC 016" data-title="TC/SC"><a href="/fr/contents/data/committee/53/36/5336224.html#meetings" title="ISO/TC 20/SC 16">ISO/TC 20/SC 16</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809240001020180928" data-title="Date">24-28</td>
+        <td data-sort="201809240001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Firenze (Italie)</td>
+        
+        <td data-sort="ISO/TC 300" data-title="TC/SC"><a href="/fr/contents/data/committee/59/60/5960430.html#meetings" title="ISO/TC 300">ISO/TC 300</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804240001020180426" data-title="Date">24-26</td>
+        <td data-sort="201804240001020180426" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Haidian Qu (Chine)</td>
+        
+        <td data-sort="ISO/TC 034/~SC 012" data-title="TC/SC"><a href="/fr/contents/data/committee/04/79/47942.html#meetings" title="ISO/TC 34/SC 12">ISO/TC 34/SC 12</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806180001020180622" data-title="Date">18-22</td>
+        <td data-sort="201806180001020180622" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/50/45050.html#meetings" title="ISO/IEC JTC 1/SC 2">ISO/IEC JTC 1/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809130001020180914" data-title="Date">13-14</td>
+        <td data-sort="201809130001020180914" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Chūō-ku (Japon)</td>
+        
+        <td data-sort="ISO/TC 119" data-title="TC/SC"><a href="/fr/contents/data/committee/05/18/51896.html#meetings" title="ISO/TC 119">ISO/TC 119</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804180000000000000" data-title="Date">18</td>
+        <td data-sort="201804180000000000000" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">New Orleans (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 044/~SC 013" data-title="TC/SC"><a href="/fr/contents/data/committee/56/95/5695966.html#meetings" title="ISO/TC 44/SC 13">ISO/TC 44/SC 13</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804090001020180412" data-title="Date">9-12</td>
+        <td data-sort="201804090001020180412" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Surrey (Canada)</td>
+        
+        <td data-sort="ISO/TC 092/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/05/05/50504.html#meetings" title="ISO/TC 92/SC 1">ISO/TC 92/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806120001020180613" data-title="Date">12-13</td>
+        <td data-sort="201806120001020180613" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">São Paulo (Brésil)</td>
+        
+        <td data-sort="ISO/COUNCIL" data-title="TC/SC"><a href="/fr/contents/data/committee/05/50/55010.html#meetings" title="ISO/COUNCIL">ISO/COUNCIL</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809240000000000000" data-title="Date">24</td>
+        <td data-sort="201809240000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Geneva (Suisse)</td>
+        
+        <td data-sort="ISO/COUNCIL" data-title="TC/SC"><a href="/fr/contents/data/committee/05/50/55010.html#meetings" title="ISO/COUNCIL">ISO/COUNCIL</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809230001020180928" data-title="Date">23-28</td>
+        <td data-sort="201809230001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Oslo (Norvège)</td>
+        
+        <td data-sort="ISO/TC 163" data-title="TC/SC"><a href="/fr/contents/data/committee/05/34/53476.html#meetings" title="ISO/TC 163">ISO/TC 163</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810220001020181026" data-title="Date">22-26</td>
+        <td data-sort="201810220001020181026" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Italie</td>
+        
+        <td data-sort="ISO/TC 215" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54960.html#meetings" title="ISO/TC 215">ISO/TC 215</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310011020180528" data-title="Date">28-1</td>
+        <td data-sort="201805310011020180528" data-title="Mois">Mai-Juin 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 188/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/61/53/615333.html#meetings" title="ISO/TC 188/SC 1">ISO/TC 188/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809270000000000000" data-title="Date">27</td>
+        <td data-sort="201809270000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Garching (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 083/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/05/02/50222.html#meetings" title="ISO/TC 83/SC 4">ISO/TC 83/SC 4</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810100001020181012" data-title="Date">10-12</td>
+        <td data-sort="201810100001020181012" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Minato-ku (Japon)</td>
+        
+        <td data-sort="ISO/TC 020" data-title="TC/SC"><a href="/fr/contents/data/committee/04/64/46484.html#meetings" title="ISO/TC 20">ISO/TC 20</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806040001020180607" data-title="Date">4-7</td>
+        <td data-sort="201806040001020180607" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Hotel Equatorial Shanghai，65 Yan`an Road West, Shanghai, China (Chine)</td>
+        
+        <td data-sort="ISO/TC 249" data-title="TC/SC"><a href="/fr/contents/data/committee/59/84/598435.html#meetings" title="ISO/TC 249">ISO/TC 249</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Yeongdong-daero (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 006/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/56/45694.html#meetings" title="ISO/TC 6/SC 2">ISO/TC 6/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805170000000000000" data-title="Date">17</td>
+        <td data-sort="201805170000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/TC 067/~SC 009" data-title="TC/SC"><a href="/fr/contents/data/committee/57/49/5749612.html#meetings" title="ISO/TC 67/SC 9">ISO/TC 67/SC 9</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809210000000000000" data-title="Date">21</td>
+        <td data-sort="201809210000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Barcelona (Espagne)</td>
+        
+        <td data-sort="ISO/TC 067/~SC 009" data-title="TC/SC"><a href="/fr/contents/data/committee/57/49/5749612.html#meetings" title="ISO/TC 67/SC 9">ISO/TC 67/SC 9</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201802250001020180226" data-title="Date">25-26</td>
+        <td data-sort="201802250001020180226" data-title="Mois">Février 2018</td>
+        <td data-title="Lieu">Phoenix (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 115" data-title="TC/SC"><a href="/fr/contents/data/committee/05/17/51766.html#meetings" title="ISO/TC 115">ISO/TC 115</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809250000000000000" data-title="Date">25</td>
+        <td data-sort="201809250000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Geneva (Suisse)</td>
+        
+        <td data-sort="ISO/DEVCO" data-title="TC/SC"><a href="/fr/contents/data/committee/05/50/55004.html#meetings" title="ISO/DEVCO">ISO/DEVCO</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806110000000000000" data-title="Date">11</td>
+        <td data-sort="201806110000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">São Paulo (Brésil)</td>
+        
+        <td data-sort="ISO/COUNCIL/CSC/FIN" data-title="TC/SC"><a href="/fr/contents/data/committee/25/99/259960.html#meetings" title="ISO/COUNCIL/CSC/FIN">ISO/COUNCIL/CSC/FIN</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201808270000000000000" data-title="Date">27</td>
+        <td data-sort="201808270000000000000" data-title="Mois">Août 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/COUNCIL/CSC/FIN" data-title="TC/SC"><a href="/fr/contents/data/committee/25/99/259960.html#meetings" title="ISO/COUNCIL/CSC/FIN">ISO/COUNCIL/CSC/FIN</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806110000000000000" data-title="Date">11</td>
+        <td data-sort="201806110000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">São Paulo (Brésil)</td>
+        
+        <td data-sort="ISO/President's committee" data-title="TC/SC"><a href="/fr/contents/data/committee/48/82/4882535.html#meetings" title="ISO/President's committee">ISO/President's committee</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809230000000000000" data-title="Date">23</td>
+        <td data-sort="201809230000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Geneva (Suisse)</td>
+        
+        <td data-sort="ISO/President's committee" data-title="TC/SC"><a href="/fr/contents/data/committee/48/82/4882535.html#meetings" title="ISO/President's committee">ISO/President's committee</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811200000000000000" data-title="Date">20</td>
+        <td data-sort="201811200000000000000" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/COUNCIL/CSC/FIN" data-title="TC/SC"><a href="/fr/contents/data/committee/25/99/259960.html#meetings" title="ISO/COUNCIL/CSC/FIN">ISO/COUNCIL/CSC/FIN</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811020000000000000" data-title="Date">2</td>
+        <td data-sort="201811020000000000000" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/President's committee" data-title="TC/SC"><a href="/fr/contents/data/committee/48/82/4882535.html#meetings" title="ISO/President's committee">ISO/President's committee</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806250001020180629" data-title="Date">25-29</td>
+        <td data-sort="201806250001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Paris (France)</td>
+        
+        <td data-sort="ISO/TC 188" data-title="TC/SC"><a href="/fr/contents/data/committee/05/42/54258.html#meetings" title="ISO/TC 188">ISO/TC 188</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201912310040000000000" data-title="Date"></td>
+        <td data-sort="201912310040000000000" data-title="Mois">2019</td>
+        <td data-title="Lieu">Toronto (Canada)</td>
+        
+        <td data-sort="ISO/TC 188" data-title="TC/SC"><a href="/fr/contents/data/committee/05/42/54258.html#meetings" title="ISO/TC 188">ISO/TC 188</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201910160001020191018" data-title="Date">16-18</td>
+        <td data-sort="201910160001020191018" data-title="Mois">Octobre 2019</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 020" data-title="TC/SC"><a href="/fr/contents/data/committee/04/64/46484.html#meetings" title="ISO/TC 20">ISO/TC 20</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806150000000000000" data-title="Date">15</td>
+        <td data-sort="201806150000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Great Abington (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 044/~SC 014" data-title="TC/SC"><a href="/fr/contents/data/committee/56/95/5695988.html#meetings" title="ISO/TC 44/SC 14">ISO/TC 44/SC 14</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201812030001020181207" data-title="Date">3-7</td>
+        <td data-sort="201812030001020181207" data-title="Mois">Décembre 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 194" data-title="TC/SC"><a href="/fr/contents/data/committee/05/45/54508.html#meetings" title="ISO/TC 194">ISO/TC 194</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805280001020180531" data-title="Date">28-31</td>
+        <td data-sort="201805280001020180531" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Moskva (Russie, Fédération de)</td>
+        
+        <td data-sort="ISO/TC 071" data-title="TC/SC"><a href="/fr/contents/data/committee/04/98/49898.html#meetings" title="ISO/TC 71">ISO/TC 71</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810220001020181026" data-title="Date">22-26</td>
+        <td data-sort="201810220001020181026" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Xinxiang (Chine)</td>
+        
+        <td data-sort="ISO/TC 131/~SC 006" data-title="TC/SC"><a href="/fr/contents/data/committee/05/23/52300.html#meetings" title="ISO/TC 131/SC 6">ISO/TC 131/SC 6</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805050000000000000" data-title="Date">5</td>
+        <td data-sort="201805050000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Lake Louise (Canada)</td>
+        
+        <td data-sort="ISO/TC 098/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/05/09/50936.html#meetings" title="ISO/TC 98/SC 1">ISO/TC 98/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806110000000000000" data-title="Date">11</td>
+        <td data-sort="201806110000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">São Paulo (Brésil)</td>
+        
+        <td data-sort="ISO/COUNCIL/CSC/SP" data-title="TC/SC"><a href="/fr/contents/data/committee/25/99/259963.html#meetings" title="ISO/COUNCIL/CSC/SP">ISO/COUNCIL/CSC/SP</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811190000000000000" data-title="Date">19</td>
+        <td data-sort="201811190000000000000" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/COUNCIL/CSC/SP" data-title="TC/SC"><a href="/fr/contents/data/committee/25/99/259963.html#meetings" title="ISO/COUNCIL/CSC/SP">ISO/COUNCIL/CSC/SP</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Brno-střed (Tchèque, République)</td>
+        
+        <td data-sort="ISO/TC 035" data-title="TC/SC"><a href="/fr/contents/data/committee/04/79/47962.html#meetings" title="ISO/TC 35">ISO/TC 35</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806130000000000000" data-title="Date">13</td>
+        <td data-sort="201806130000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">São Paulo (Brésil)</td>
+        
+        <td data-sort="ISO/COUNCIL/CSC/NOM" data-title="TC/SC"><a href="/fr/contents/data/committee/68/87/6887745.html#meetings" title="ISO/COUNCIL/CSC/NOM">ISO/COUNCIL/CSC/NOM</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806140000000000000" data-title="Date">14</td>
+        <td data-sort="201806140000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">São Paulo (Brésil)</td>
+        
+        <td data-sort="ISO/COUNCIL/CSC/OVE" data-title="TC/SC"><a href="/fr/contents/data/committee/67/74/6774216.html#meetings" title="ISO/COUNCIL/CSC/OVE">ISO/COUNCIL/CSC/OVE</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805070001020180508" data-title="Date">7-8</td>
+        <td data-sort="201805070001020180508" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Chiyoda-ku (Japon)</td>
+        
+        <td data-sort="ISO/TC 044/~SC 008" data-title="TC/SC"><a href="/fr/contents/data/committee/04/86/48628.html#meetings" title="ISO/TC 44/SC 8">ISO/TC 44/SC 8</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810100001020181012" data-title="Date">10-12</td>
+        <td data-sort="201810100001020181012" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/TC 256" data-title="TC/SC"><a href="/fr/contents/data/committee/61/81/618129.html#meetings" title="ISO/TC 256">ISO/TC 256</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180516" data-title="Date">14-16</td>
+        <td data-sort="201805140001020180516" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Brussel (Belgique)</td>
+        
+        <td data-sort="ISO/PC 308" data-title="TC/SC"><a href="/fr/contents/data/committee/62/66/6266669.html#meetings" title="ISO/PC 308">ISO/PC 308</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806280001020180629" data-title="Date">28-29</td>
+        <td data-sort="201806280001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Cheju (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 083" data-title="TC/SC"><a href="/fr/contents/data/committee/05/01/50190.html#meetings" title="ISO/TC 83">ISO/TC 83</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201903310010000000000" data-title="Date"></td>
+        <td data-sort="201903310010000000000" data-title="Mois">Mars 2019</td>
+        <td data-title="Lieu">Beijing (Chine)</td>
+        
+        <td data-sort="ISO/TC 094" data-title="TC/SC"><a href="/fr/contents/data/committee/05/05/50580.html#meetings" title="ISO/TC 94">ISO/TC 94</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201906300010000000000" data-title="Date"></td>
+        <td data-sort="201906300010000000000" data-title="Mois">Juin 2019</td>
+        <td data-title="Lieu">Nijverdal (Pays-Bas)</td>
+        
+        <td data-sort="ISO/TC 094/~SC 014" data-title="TC/SC"><a href="/fr/contents/data/committee/29/98/299803.html#meetings" title="ISO/TC 94/SC 14">ISO/TC 94/SC 14</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810310010000000000" data-title="Date"></td>
+        <td data-sort="201810310010000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/PC 308" data-title="TC/SC"><a href="/fr/contents/data/committee/62/66/6266669.html#meetings" title="ISO/PC 308">ISO/PC 308</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810240001020181026" data-title="Date">24-26</td>
+        <td data-sort="201810240001020181026" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 123" data-title="TC/SC"><a href="/fr/contents/data/committee/05/20/52090.html#meetings" title="ISO/TC 123">ISO/TC 123</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810100001020181012" data-title="Date">10-12</td>
+        <td data-sort="201810100001020181012" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Okayama (Japon)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 017" data-title="TC/SC"><a href="/fr/contents/data/committee/04/51/45144.html#meetings" title="ISO/IEC JTC 1/SC 17">ISO/IEC JTC 1/SC 17</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805220001020180525" data-title="Date">22-25</td>
+        <td data-sort="201805220001020180525" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Kathmandu (Népal)</td>
+        
+        <td data-sort="ISO/PC 305" data-title="TC/SC"><a href="/fr/contents/data/committee/61/70/6170397.html#meetings" title="ISO/PC 305">ISO/PC 305</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181019" data-title="Date">15-19</td>
+        <td data-sort="201810150001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Hangzhou (Chine)</td>
+        
+        <td data-sort="ISO/TC 138" data-title="TC/SC"><a href="/fr/contents/data/committee/05/25/52500.html#meetings" title="ISO/TC 138">ISO/TC 138</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805070001020180510" data-title="Date">7-10</td>
+        <td data-sort="201805070001020180510" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Indonésie</td>
+        
+        <td data-sort="ISO/COPOLCO" data-title="TC/SC"><a href="/fr/contents/data/committee/05/50/55000.html#meetings" title="ISO/COPOLCO">ISO/COPOLCO</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809240001020180928" data-title="Date">24-28</td>
+        <td data-sort="201809240001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Billund (Danemark)</td>
+        
+        <td data-sort="ISO/TC 181" data-title="TC/SC"><a href="/fr/contents/data/committee/05/40/54044.html#meetings" title="ISO/TC 181">ISO/TC 181</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810080000000000000" data-title="Date">8</td>
+        <td data-sort="201810080000000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/TC 012" data-title="TC/SC"><a href="/fr/contents/data/committee/04/62/46202.html#meetings" title="ISO/TC 12">ISO/TC 12</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805170000000000000" data-title="Date">17</td>
+        <td data-sort="201805170000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Düsseldorf (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 067/~SC 005" data-title="TC/SC"><a href="/fr/contents/data/committee/04/95/49588.html#meetings" title="ISO/TC 67/SC 5">ISO/TC 67/SC 5</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201808130001020180817" data-title="Date">13-17</td>
+        <td data-sort="201808130001020180817" data-title="Mois">Août 2018</td>
+        <td data-title="Lieu">Helsinki (Finlande)</td>
+        
+        <td data-sort="ISO/TC 108/~SC 005" data-title="TC/SC"><a href="/fr/contents/data/committee/05/15/51538.html#meetings" title="ISO/TC 108/SC 5">ISO/TC 108/SC 5</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806100001020180615" data-title="Date">10-15</td>
+        <td data-sort="201806100001020180615" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">HangZhou (Chine)</td>
+        
+        <td data-sort="ISO/TC 037" data-title="TC/SC"><a href="/fr/contents/data/committee/04/81/48104.html#meetings" title="ISO/TC 37">ISO/TC 37</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Zhuhai (Chine)</td>
+        
+        <td data-sort="ISO/TC 268" data-title="TC/SC"><a href="/fr/contents/data/committee/65/69/656906.html#meetings" title="ISO/TC 268">ISO/TC 268</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806260000000000000" data-title="Date">26</td>
+        <td data-sort="201806260000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Genève (Suisse)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 023" data-title="TC/SC"><a href="/fr/contents/data/committee/04/52/45240.html#meetings" title="ISO/IEC JTC 1/SC 23">ISO/IEC JTC 1/SC 23</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804230001020180427" data-title="Date">23-27</td>
+        <td data-sort="201804230001020180427" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Santinho (Brésil)</td>
+        
+        <td data-sort="ISO/TC 023/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/04/70/47032.html#meetings" title="ISO/TC 23/SC 4">ISO/TC 23/SC 4</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810240001020181026" data-title="Date">24-26</td>
+        <td data-sort="201810240001020181026" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">BSI Group, Chiswick Tower, 389 Chiswick High Road, London, W4 4AL (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 070" data-title="TC/SC"><a href="/fr/contents/data/committee/04/98/49826.html#meetings" title="ISO/TC 70">ISO/TC 70</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Helsinki (Finlande)</td>
+        
+        <td data-sort="ISO/TC 085" data-title="TC/SC"><a href="/fr/contents/data/committee/05/02/50266.html#meetings" title="ISO/TC 85">ISO/TC 85</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809090001020180913" data-title="Date">9-13</td>
+        <td data-sort="201809090001020180913" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Seattle (États-Unis)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 034" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45374.html#meetings" title="ISO/IEC JTC 1/SC 34">ISO/IEC JTC 1/SC 34</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806010001020180609" data-title="Date">1-9</td>
+        <td data-sort="201806010001020180609" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 207/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/05/48/54818.html#meetings" title="ISO/TC 207/SC 1">ISO/TC 207/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805090001020180511" data-title="Date">9-11</td>
+        <td data-sort="201805090001020180511" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Bogotá (Colombie)</td>
+        
+        <td data-sort="ISO/TC 267" data-title="TC/SC"><a href="/fr/contents/data/committee/65/29/652901.html#meetings" title="ISO/TC 267">ISO/TC 267</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804180001020180420" data-title="Date">18-20</td>
+        <td data-sort="201804180001020180420" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Haidian Qu (Chine)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 042" data-title="TC/SC"><a href="/fr/contents/data/committee/67/94/6794475.html#meetings" title="ISO/IEC JTC 1/SC 42">ISO/IEC JTC 1/SC 42</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181019" data-title="Date">15-19</td>
+        <td data-sort="201810150001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Montreal (Canada)</td>
+        
+        <td data-sort="ISO/TC 002/~SC 014" data-title="TC/SC"><a href="/fr/contents/data/committee/62/65/626544.html#meetings" title="ISO/TC 2/SC 14">ISO/TC 2/SC 14</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181019" data-title="Date">15-19</td>
+        <td data-sort="201810150001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Montreal (Canada)</td>
+        
+        <td data-sort="ISO/TC 002/~SC 007" data-title="TC/SC"><a href="/fr/contents/data/committee/04/54/45482.html#meetings" title="ISO/TC 2/SC 7">ISO/TC 2/SC 7</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804180001020180420" data-title="Date">18-20</td>
+        <td data-sort="201804180001020180420" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Roma (Italie)</td>
+        
+        <td data-sort="ISO/TC 023/~SC 019" data-title="TC/SC"><a href="/fr/contents/data/committee/04/71/47156.html#meetings" title="ISO/TC 23/SC 19">ISO/TC 23/SC 19</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809040001020180906" data-title="Date">4-6</td>
+        <td data-sort="201809040001020180906" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">VDMA, Lyoner Strasse 18, Frankfurt (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 306" data-title="TC/SC"><a href="/fr/contents/data/committee/61/98/6198707.html#meetings" title="ISO/TC 306">ISO/TC 306</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809170001020180921" data-title="Date">17-21</td>
+        <td data-sort="201809170001020180921" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Copenhagen (Danemark)</td>
+        
+        <td data-sort="ISO/TC 008" data-title="TC/SC"><a href="/fr/contents/data/committee/04/57/45776.html#meetings" title="ISO/TC 8">ISO/TC 8</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806270000000000000" data-title="Date">27</td>
+        <td data-sort="201806270000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Cheju (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 083/~SC 006" data-title="TC/SC"><a href="/fr/contents/data/committee/05/02/50250.html#meetings" title="ISO/TC 83/SC 6">ISO/TC 83/SC 6</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310011020180528" data-title="Date">28-1</td>
+        <td data-sort="201805310011020180528" data-title="Mois">Mai-Juin 2018</td>
+        <td data-title="Lieu">København (Danemark)</td>
+        
+        <td data-sort="ISO/TC 211" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54904.html#meetings" title="ISO/TC 211">ISO/TC 211</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 307" data-title="TC/SC"><a href="/fr/contents/data/committee/62/66/6266604.html#meetings" title="ISO/TC 307">ISO/TC 307</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804120001020180413" data-title="Date">12-13</td>
+        <td data-sort="201804120001020180413" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 008/~SC 007" data-title="TC/SC"><a href="/fr/contents/data/committee/04/58/45866.html#meetings" title="ISO/TC 8/SC 7">ISO/TC 8/SC 7</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804250001020180426" data-title="Date">25-26</td>
+        <td data-sort="201804250001020180426" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Santinho (Brésil)</td>
+        
+        <td data-sort="ISO/TC 023/~SC 003" data-title="TC/SC"><a href="/fr/contents/data/committee/04/70/47022.html#meetings" title="ISO/TC 23/SC 3">ISO/TC 23/SC 3</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804230001020180427" data-title="Date">23-27</td>
+        <td data-sort="201804230001020180427" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Sandviken (Suède)</td>
+        
+        <td data-sort="ISO/TC 039/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/83/48372.html#meetings" title="ISO/TC 39/SC 2">ISO/TC 39/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810160001020181019" data-title="Date">16-19</td>
+        <td data-sort="201810160001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Kyoto (Japon)</td>
+        
+        <td data-sort="ISO/TC 005/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/56/45612.html#meetings" title="ISO/TC 5/SC 2">ISO/TC 5/SC 2</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809260000000000000" data-title="Date">26</td>
+        <td data-sort="201809260000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Philadelphia (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 028/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/04/74/47414.html#meetings" title="ISO/TC 28/SC 4">ISO/TC 28/SC 4</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201808270001020180831" data-title="Date">27-31</td>
+        <td data-sort="201808270001020180831" data-title="Mois">Août 2018</td>
+        <td data-title="Lieu">Osaka (Japon)</td>
+        
+        <td data-sort="ISO/TC 108/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/05/15/51514.html#meetings" title="ISO/TC 108/SC 4">ISO/TC 108/SC 4</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807250001020180726" data-title="Date">25-26</td>
+        <td data-sort="201807250001020180726" data-title="Mois">Juillet 2018</td>
+        <td data-title="Lieu">Lyalovo (Russie, Fédération de)</td>
+        
+        <td data-sort="ISO/TC 281" data-title="TC/SC"><a href="/fr/contents/data/committee/48/56/4856666.html#meetings" title="ISO/TC 281">ISO/TC 281</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804160001020180420" data-title="Date">16-20</td>
+        <td data-sort="201804160001020180420" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Praha 6 (Tchèque, République)</td>
+        
+        <td data-sort="ISO/TC 022/~SC 039" data-title="TC/SC"><a href="/fr/contents/data/committee/53/91/5391225.html#meetings" title="ISO/TC 22/SC 39">ISO/TC 22/SC 39</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805110001020180512" data-title="Date">11-12</td>
+        <td data-sort="201805110001020180512" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Chicago (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 214" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54954.html#meetings" title="ISO/TC 214">ISO/TC 214</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810190000000000000" data-title="Date">19</td>
+        <td data-sort="201810190000000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 153" data-title="TC/SC"><a href="/fr/contents/data/committee/05/31/53156.html#meetings" title="ISO/TC 153">ISO/TC 153</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804250001020180426" data-title="Date">25-26</td>
+        <td data-sort="201804250001020180426" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Santinho (Brésil)</td>
+        
+        <td data-sort="ISO/TC 023/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/70/47012.html#meetings" title="ISO/TC 23/SC 2">ISO/TC 23/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310011020180529" data-title="Date">29-1</td>
+        <td data-sort="201805310011020180529" data-title="Mois">Mai-Juin 2018</td>
+        <td data-title="Lieu">Paris (France)</td>
+        
+        <td data-sort="ISO/TC 156" data-title="TC/SC"><a href="/fr/contents/data/committee/05/32/53264.html#meetings" title="ISO/TC 156">ISO/TC 156</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809270000000000000" data-title="Date">27</td>
+        <td data-sort="201809270000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Philadelphia (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 028/~SC 005" data-title="TC/SC"><a href="/fr/contents/data/committee/04/74/47442.html#meetings" title="ISO/TC 28/SC 5">ISO/TC 28/SC 5</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804090001020180412" data-title="Date">9-12</td>
+        <td data-sort="201804090001020180412" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Surrey (Canada)</td>
+        
+        <td data-sort="ISO/TC 092/~SC 003" data-title="TC/SC"><a href="/fr/contents/data/committee/05/05/50540.html#meetings" title="ISO/TC 92/SC 3">ISO/TC 92/SC 3</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805300000000000000" data-title="Date">30</td>
+        <td data-sort="201805300000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 107/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/05/13/51384.html#meetings" title="ISO/TC 107/SC 4">ISO/TC 107/SC 4</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804210000000000000" data-title="Date">21</td>
+        <td data-sort="201804210000000000000" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">San Diego (États-Unis)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 029" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45316.html#meetings" title="ISO/IEC JTC 1/SC 29">ISO/IEC JTC 1/SC 29</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Lisboa (Portugal)</td>
+        
+        <td data-sort="ISO/TC 046" data-title="TC/SC"><a href="/fr/contents/data/committee/04/87/48750.html#meetings" title="ISO/TC 46">ISO/TC 46</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181019" data-title="Date">15-19</td>
+        <td data-sort="201810150001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Montreal (Canada)</td>
+        
+        <td data-sort="ISO/TC 002/~SC 012" data-title="TC/SC"><a href="/fr/contents/data/committee/62/65/626540.html#meetings" title="ISO/TC 2/SC 12">ISO/TC 2/SC 12</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804230001020180428" data-title="Date">23-28</td>
+        <td data-sort="201804230001020180428" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Edinburgh (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 147" data-title="TC/SC"><a href="/fr/contents/data/committee/05/28/52834.html#meetings" title="ISO/TC 147">ISO/TC 147</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805210001020180526" data-title="Date">21-26</td>
+        <td data-sort="201805210001020180526" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Changping (Chine)</td>
+        
+        <td data-sort="ISO/TC 184" data-title="TC/SC"><a href="/fr/contents/data/committee/05/41/54110.html#meetings" title="ISO/TC 184">ISO/TC 184</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805080001020180510" data-title="Date">8-10</td>
+        <td data-sort="201805080001020180510" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Panama City (Panama)</td>
+        
+        <td data-sort="ISO/TC 008/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/04/58/45800.html#meetings" title="ISO/TC 8/SC 1">ISO/TC 8/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811140001020181116" data-title="Date">14-16</td>
+        <td data-sort="201811140001020181116" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Courbevoie (France)</td>
+        
+        <td data-sort="ISO/TC 017/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/04/62/46250.html#meetings" title="ISO/TC 17/SC 1">ISO/TC 17/SC 1</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201905310010000000000" data-title="Date"></td>
+        <td data-sort="201905310010000000000" data-title="Mois">Mai 2019</td>
+        <td data-title="Lieu">Detmold (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 034/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/04/78/47874.html#meetings" title="ISO/TC 34/SC 4">ISO/TC 34/SC 4</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805070001020180511" data-title="Date">7-11</td>
+        <td data-sort="201805070001020180511" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Orlando (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 010" data-title="TC/SC"><a href="/fr/contents/data/committee/04/59/45986.html#meetings" title="ISO/TC 10">ISO/TC 10</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806050001020180607" data-title="Date">5-7</td>
+        <td data-sort="201806050001020180607" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 029/~SC 010" data-title="TC/SC"><a href="/fr/contents/data/committee/04/75/47562.html#meetings" title="ISO/TC 29/SC 10">ISO/TC 29/SC 10</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806060001020180607" data-title="Date">6-7</td>
+        <td data-sort="201806060001020180607" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Milano (Italie)</td>
+        
+        <td data-sort="ISO/TC 291" data-title="TC/SC"><a href="/fr/contents/data/committee/52/43/5243738.html#meetings" title="ISO/TC 291">ISO/TC 291</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804250000000000000" data-title="Date">25</td>
+        <td data-sort="201804250000000000000" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Pau (France)</td>
+        
+        <td data-sort="ISO/TC 067/~SC 003" data-title="TC/SC"><a href="/fr/contents/data/committee/04/95/49562.html#meetings" title="ISO/TC 67/SC 3">ISO/TC 67/SC 3</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804230001020180427" data-title="Date">23-27</td>
+        <td data-sort="201804230001020180427" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Warsaw (Pologne)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 038" data-title="TC/SC"><a href="/fr/contents/data/committee/60/13/601355.html#meetings" title="ISO/IEC JTC 1/SC 38">ISO/IEC JTC 1/SC 38</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310011020180529" data-title="Date">29-1</td>
+        <td data-sort="201805310011020180529" data-title="Mois">Mai-Juin 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 269" data-title="TC/SC"><a href="/fr/contents/data/committee/66/16/661629.html#meetings" title="ISO/TC 269">ISO/TC 269</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806040001020180608" data-title="Date">4-8</td>
+        <td data-sort="201806040001020180608" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Busan (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 022/~SC 032" data-title="TC/SC"><a href="/fr/contents/data/committee/53/83/5383636.html#meetings" title="ISO/TC 22/SC 32">ISO/TC 22/SC 32</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 172/~SC 007" data-title="TC/SC"><a href="/fr/contents/data/committee/05/37/53738.html#meetings" title="ISO/TC 172/SC 7">ISO/TC 172/SC 7</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805200001020180525" data-title="Date">20-25</td>
+        <td data-sort="201805200001020180525" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Changping (Chine)</td>
+        
+        <td data-sort="ISO/TC 184/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/05/41/54158.html#meetings" title="ISO/TC 184/SC 4">ISO/TC 184/SC 4</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805240001020180525" data-title="Date">24-25</td>
+        <td data-sort="201805240001020180525" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Hilton Nanjing, No.100 Middle of Jiangdong Road, Jianye District (Chine)</td>
+        
+        <td data-sort="ISO/TC 034/~SC 019" data-title="TC/SC"><a href="/fr/contents/data/committee/67/16/6716626.html#meetings" title="ISO/TC 34/SC 19">ISO/TC 34/SC 19</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201812060000000000000" data-title="Date">6</td>
+        <td data-sort="201812060000000000000" data-title="Mois">Décembre 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 044/~SC 006" data-title="TC/SC"><a href="/fr/contents/data/committee/04/86/48622.html#meetings" title="ISO/TC 44/SC 6">ISO/TC 44/SC 6</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804220001020180428" data-title="Date">22-28</td>
+        <td data-sort="201804220001020180428" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Seoul (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 204" data-title="TC/SC"><a href="/fr/contents/data/committee/05/47/54706.html#meetings" title="ISO/TC 204">ISO/TC 204</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805220001020180523" data-title="Date">22-23</td>
+        <td data-sort="201805220001020180523" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 172/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/05/37/53708.html#meetings" title="ISO/TC 172/SC 4">ISO/TC 172/SC 4</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810180001020181019" data-title="Date">18-19</td>
+        <td data-sort="201810180001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Nanjing (Chine)</td>
+        
+        <td data-sort="ISO/TC 199" data-title="TC/SC"><a href="/fr/contents/data/committee/05/46/54604.html#meetings" title="ISO/TC 199">ISO/TC 199</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181019" data-title="Date">15-19</td>
+        <td data-sort="201810150001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Montreal (Canada)</td>
+        
+        <td data-sort="ISO/TC 002/~SC 011" data-title="TC/SC"><a href="/fr/contents/data/committee/62/65/626538.html#meetings" title="ISO/TC 2/SC 11">ISO/TC 2/SC 11</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806060000000000000" data-title="Date">6</td>
+        <td data-sort="201806060000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Saint-Denis (France)</td>
+        
+        <td data-sort="ISO/TC 220" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54990.html#meetings" title="ISO/TC 220">ISO/TC 220</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810110001020181012" data-title="Date">11-12</td>
+        <td data-sort="201810110001020181012" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Thaïlande</td>
+        
+        <td data-sort="ISO/TC 058/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/90/49018.html#meetings" title="ISO/TC 58/SC 2">ISO/TC 58/SC 2</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806250001020180630" data-title="Date">25-30</td>
+        <td data-sort="201806250001020180630" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Helsinki (Finlande)</td>
+        
+        <td data-sort="ISO/TC 096" data-title="TC/SC"><a href="/fr/contents/data/committee/05/06/50642.html#meetings" title="ISO/TC 96">ISO/TC 96</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810190000000000000" data-title="Date">19</td>
+        <td data-sort="201810190000000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Montreal (Canada)</td>
+        
+        <td data-sort="ISO/TC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/54/45446.html#meetings" title="ISO/TC 2">ISO/TC 2</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809280000000000000" data-title="Date">28</td>
+        <td data-sort="201809280000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Delft (Pays-Bas)</td>
+        
+        <td data-sort="ISO/TC 254" data-title="TC/SC"><a href="/fr/contents/data/committee/61/70/617082.html#meetings" title="ISO/TC 254">ISO/TC 254</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805230001020180525" data-title="Date">23-25</td>
+        <td data-sort="201805230001020180525" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Sydney (Australie)</td>
+        
+        <td data-sort="ISO/TC 298" data-title="TC/SC"><a href="/fr/contents/data/committee/59/02/5902483.html#meetings" title="ISO/TC 298">ISO/TC 298</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811120001020181116" data-title="Date">12-16</td>
+        <td data-sort="201811120001020181116" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Matsue (Japon)</td>
+        
+        <td data-sort="ISO/TC 043/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/04/84/48474.html#meetings" title="ISO/TC 43/SC 1">ISO/TC 43/SC 1</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811120001020181116" data-title="Date">12-16</td>
+        <td data-sort="201811120001020181116" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Matsue (Japon)</td>
+        
+        <td data-sort="ISO/TC 043" data-title="TC/SC"><a href="/fr/contents/data/committee/04/84/48458.html#meetings" title="ISO/TC 43">ISO/TC 43</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804250001020180426" data-title="Date">25-26</td>
+        <td data-sort="201804250001020180426" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Mexico City (Mexique)</td>
+        
+        <td data-sort="ISO/CASCO" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54998.html#meetings" title="ISO/CASCO">ISO/CASCO</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804170001020180419" data-title="Date">17-19</td>
+        <td data-sort="201804170001020180419" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Praha 1 (Tchèque, République)</td>
+        
+        <td data-sort="ISO/TC 022/~SC 035" data-title="TC/SC"><a href="/fr/contents/data/committee/53/83/5383897.html#meetings" title="ISO/TC 22/SC 35">ISO/TC 22/SC 35</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805180000000000000" data-title="Date">18</td>
+        <td data-sort="201805180000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Delft (Pays-Bas)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 039" data-title="TC/SC"><a href="/fr/contents/data/committee/65/40/654019.html#meetings" title="ISO/IEC JTC 1/SC 39">ISO/IEC JTC 1/SC 39</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810040000000000000" data-title="Date">4</td>
+        <td data-sort="201810040000000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 221" data-title="TC/SC"><a href="/fr/contents/data/committee/27/05/270590.html#meetings" title="ISO/TC 221">ISO/TC 221</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804200000000000000" data-title="Date">20</td>
+        <td data-sort="201804200000000000000" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Minato (Japon)</td>
+        
+        <td data-sort="ISO/TC 022/~SC 037" data-title="TC/SC"><a href="/fr/contents/data/committee/53/91/5391154.html#meetings" title="ISO/TC 22/SC 37">ISO/TC 22/SC 37</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180515" data-title="Date">14-15</td>
+        <td data-sort="201805140001020180515" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Digital-ro 32-gil (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 282/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/51/48/5148678.html#meetings" title="ISO/TC 282/SC 1">ISO/TC 282/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805170001020180518" data-title="Date">17-18</td>
+        <td data-sort="201805170001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Digital-ro 32-gil (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 282/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/52/61/5261836.html#meetings" title="ISO/TC 282/SC 2">ISO/TC 282/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180515" data-title="Date">14-15</td>
+        <td data-sort="201805140001020180515" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Digital-ro 32-gil (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 282/~SC 003" data-title="TC/SC"><a href="/fr/contents/data/committee/52/61/5261857.html#meetings" title="ISO/TC 282/SC 3">ISO/TC 282/SC 3</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805170001020180518" data-title="Date">17-18</td>
+        <td data-sort="201805170001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Digital-ro 32-gil (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 282/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/62/15/6215620.html#meetings" title="ISO/TC 282/SC 4">ISO/TC 282/SC 4</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809190001020180921" data-title="Date">19-21</td>
+        <td data-sort="201809190001020180921" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Kampala (Ouganda)</td>
+        
+        <td data-sort="ISO/TC 202" data-title="TC/SC"><a href="/fr/contents/data/committee/05/46/54674.html#meetings" title="ISO/TC 202">ISO/TC 202</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806250001020180629" data-title="Date">25-29</td>
+        <td data-sort="201806250001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Sydney (Australie)</td>
+        
+        <td data-sort="ISO/TC 224" data-title="TC/SC"><a href="/fr/contents/data/committee/29/97/299764.html#meetings" title="ISO/TC 224">ISO/TC 224</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809200001020180921" data-title="Date">20-21</td>
+        <td data-sort="201809200001020180921" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Atlanta (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 260" data-title="TC/SC"><a href="/fr/contents/data/committee/62/87/628737.html#meetings" title="ISO/TC 260">ISO/TC 260</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810120000000000000" data-title="Date">12</td>
+        <td data-sort="201810120000000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Monserrat (Argentine)</td>
+        
+        <td data-sort="ISO/TC 304" data-title="TC/SC"><a href="/fr/contents/data/committee/61/31/6131376.html#meetings" title="ISO/TC 304">ISO/TC 304</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810220001020181026" data-title="Date">22-26</td>
+        <td data-sort="201810220001020181026" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Liuzhou (Chine)</td>
+        
+        <td data-sort="ISO/TC 127" data-title="TC/SC"><a href="/fr/contents/data/committee/05/21/52172.html#meetings" title="ISO/TC 127">ISO/TC 127</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810310011020181029" data-title="Date">29-2</td>
+        <td data-sort="201810310011020181029" data-title="Mois">Octobre-Novembre 2018</td>
+        <td data-title="Lieu">Sydney (Australie)</td>
+        
+        <td data-sort="ISO/TC 110/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/53/49/534959.html#meetings" title="ISO/TC 110/SC 4">ISO/TC 110/SC 4</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804250001020180427" data-title="Date">25-27</td>
+        <td data-sort="201804250001020180427" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 022/~SC 033" data-title="TC/SC"><a href="/fr/contents/data/committee/53/83/5383785.html#meetings" title="ISO/TC 22/SC 33">ISO/TC 22/SC 33</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805310000000000000" data-title="Date">31</td>
+        <td data-sort="201805310000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">RSSB    Helicon 1    South Place   Moorgate   London   EC2M 2RB (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 017/~SC 015" data-title="TC/SC"><a href="/fr/contents/data/committee/04/64/46434.html#meetings" title="ISO/TC 17/SC 15">ISO/TC 17/SC 15</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806240000000000000" data-title="Date">24</td>
+        <td data-sort="201806240000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Ljubljana (Slovénie)</td>
+        
+        <td data-sort="ISO/TC 201/~SC 010" data-title="TC/SC"><a href="/fr/contents/data/committee/62/84/6284362.html#meetings" title="ISO/TC 201/SC 10">ISO/TC 201/SC 10</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804230001020180427" data-title="Date">23-27</td>
+        <td data-sort="201804230001020180427" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">North Wood (Irlande)</td>
+        
+        <td data-sort="ISO/TC 034/~SC 005" data-title="TC/SC"><a href="/fr/contents/data/committee/04/78/47878.html#meetings" title="ISO/TC 34/SC 5">ISO/TC 34/SC 5</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809170001020180921" data-title="Date">17-21</td>
+        <td data-sort="201809170001020180921" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 198" data-title="TC/SC"><a href="/fr/contents/data/committee/05/45/54576.html#meetings" title="ISO/TC 198">ISO/TC 198</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805140001020180518" data-title="Date">14-18</td>
+        <td data-sort="201805140001020180518" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Toronto (Canada)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 032" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45342.html#meetings" title="ISO/IEC JTC 1/SC 32">ISO/IEC JTC 1/SC 32</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201906030001020190607" data-title="Date">3-7</td>
+        <td data-sort="201906030001020190607" data-title="Mois">Juin 2019</td>
+        <td data-title="Lieu">Paris (France)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 040" data-title="TC/SC"><a href="/fr/contents/data/committee/50/13/5013818.html#meetings" title="ISO/IEC JTC 1/SC 40">ISO/IEC JTC 1/SC 40</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809020001020180905" data-title="Date">2-5</td>
+        <td data-sort="201809020001020180905" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Tel-Aviv (Israël)</td>
+        
+        <td data-sort="ISO/TC 264" data-title="TC/SC"><a href="/fr/contents/data/committee/64/86/648605.html#meetings" title="ISO/TC 264">ISO/TC 264</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806040001020180608" data-title="Date">4-8</td>
+        <td data-sort="201806040001020180608" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Santa Fe (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 145" data-title="TC/SC"><a href="/fr/contents/data/committee/05/26/52662.html#meetings" title="ISO/TC 145">ISO/TC 145</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806110001020180615" data-title="Date">11-15</td>
+        <td data-sort="201806110001020180615" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Bloomington (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 149/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/05/30/53034.html#meetings" title="ISO/TC 149/SC 1">ISO/TC 149/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805160001020180517" data-title="Date">16-17</td>
+        <td data-sort="201805160001020180517" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Barcelona (Espagne)</td>
+        
+        <td data-sort="ISO/TC 087" data-title="TC/SC"><a href="/fr/contents/data/committee/05/04/50400.html#meetings" title="ISO/TC 87">ISO/TC 87</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809210000000000000" data-title="Date">21</td>
+        <td data-sort="201809210000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Beijing (Chine)</td>
+        
+        <td data-sort="ISO/TC 142" data-title="TC/SC"><a href="/fr/contents/data/committee/05/26/52624.html#meetings" title="ISO/TC 142">ISO/TC 142</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805110000000000000" data-title="Date">11</td>
+        <td data-sort="201805110000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Milano (Italie)</td>
+        
+        <td data-sort="ISO/TC 022/~SC 036" data-title="TC/SC"><a href="/fr/contents/data/committee/53/83/5383958.html#meetings" title="ISO/TC 22/SC 36">ISO/TC 22/SC 36</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201812060001020181207" data-title="Date">6-7</td>
+        <td data-sort="201812060001020181207" data-title="Mois">Décembre 2018</td>
+        <td data-title="Lieu">Vancouver (Canada)</td>
+        
+        <td data-sort="ISO/TC 197" data-title="TC/SC"><a href="/fr/contents/data/committee/05/45/54560.html#meetings" title="ISO/TC 197">ISO/TC 197</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810220001020181026" data-title="Date">22-26</td>
+        <td data-sort="201810220001020181026" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Moscow (Russie, Fédération de)</td>
+        
+        <td data-sort="ISO/TC 307" data-title="TC/SC"><a href="/fr/contents/data/committee/62/66/6266604.html#meetings" title="ISO/TC 307">ISO/TC 307</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201905270001020190531" data-title="Date">27-31</td>
+        <td data-sort="201905270001020190531" data-title="Mois">Mai 2019</td>
+        <td data-title="Lieu">Dublin (Irlande)</td>
+        
+        <td data-sort="ISO/TC 307" data-title="TC/SC"><a href="/fr/contents/data/committee/62/66/6266604.html#meetings" title="ISO/TC 307">ISO/TC 307</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201911180001020191122" data-title="Date">18-22</td>
+        <td data-sort="201911180001020191122" data-title="Mois">Novembre 2019</td>
+        <td data-title="Lieu">Visakhapatnam (Inde)</td>
+        
+        <td data-sort="ISO/TC 307" data-title="TC/SC"><a href="/fr/contents/data/committee/62/66/6266604.html#meetings" title="ISO/TC 307">ISO/TC 307</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806040001020180606" data-title="Date">4-6</td>
+        <td data-sort="201806040001020180606" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 207/~SC 005" data-title="TC/SC"><a href="/fr/contents/data/committee/05/48/54854.html#meetings" title="ISO/TC 207/SC 5">ISO/TC 207/SC 5</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809270001020180928" data-title="Date">27-28</td>
+        <td data-sort="201809270001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Jiaozuo (Chine)</td>
+        
+        <td data-sort="ISO/TC 226" data-title="TC/SC"><a href="/fr/contents/data/committee/36/33/363319.html#meetings" title="ISO/TC 226">ISO/TC 226</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806250001020180629" data-title="Date">25-29</td>
+        <td data-sort="201806250001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 069" data-title="TC/SC"><a href="/fr/contents/data/committee/04/97/49742.html#meetings" title="ISO/TC 69">ISO/TC 69</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809170001020180921" data-title="Date">17-21</td>
+        <td data-sort="201809170001020180921" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Bremen (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 110" data-title="TC/SC"><a href="/fr/contents/data/committee/05/15/51588.html#meetings" title="ISO/TC 110">ISO/TC 110</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805200001020180525" data-title="Date">20-25</td>
+        <td data-sort="201805200001020180525" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Changping (Chine)</td>
+        
+        <td data-sort="ISO/TC 184/~SC 005" data-title="TC/SC"><a href="/fr/contents/data/committee/05/41/54192.html#meetings" title="ISO/TC 184/SC 5">ISO/TC 184/SC 5</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806190001020180621" data-title="Date">19-21</td>
+        <td data-sort="201806190001020180621" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">天童市 (Japon)</td>
+        
+        <td data-sort="ISO/PC 294" data-title="TC/SC"><a href="/fr/contents/data/committee/56/29/5629986.html#meetings" title="ISO/PC 294">ISO/PC 294</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806120001020180615" data-title="Date">12-15</td>
+        <td data-sort="201806120001020180615" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Chicago (États-Unis)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 031" data-title="TC/SC"><a href="/fr/contents/data/committee/04/53/45332.html#meetings" title="ISO/IEC JTC 1/SC 31">ISO/IEC JTC 1/SC 31</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806060001020180608" data-title="Date">6-8</td>
+        <td data-sort="201806060001020180608" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Minato (Japon)</td>
+        
+        <td data-sort="ISO/PC 315" data-title="TC/SC"><a href="/fr/contents/data/committee/68/80/6880159.html#meetings" title="ISO/PC 315">ISO/PC 315</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181017" data-title="Date">15-17</td>
+        <td data-sort="201810150001020181017" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Shanghai (Chine)</td>
+        
+        <td data-sort="ISO/TC 024" data-title="TC/SC"><a href="/fr/contents/data/committee/04/71/47166.html#meetings" title="ISO/TC 24">ISO/TC 24</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806200001020180622" data-title="Date">20-22</td>
+        <td data-sort="201806200001020180622" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">London (Royaume-Uni)</td>
+        
+        <td data-sort="ISO/TC 314" data-title="TC/SC"><a href="/fr/contents/data/committee/68/10/6810883.html#meetings" title="ISO/TC 314">ISO/TC 314</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804130000000000000" data-title="Date">13</td>
+        <td data-sort="201804130000000000000" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/TC 022/~SC 031" data-title="TC/SC"><a href="/fr/contents/data/committee/53/83/5383568.html#meetings" title="ISO/TC 22/SC 31">ISO/TC 22/SC 31</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201808060001020180810" data-title="Date">6-10</td>
+        <td data-sort="201808060001020180810" data-title="Mois">Août 2018</td>
+        <td data-title="Lieu">Vigoulet-Auzil (France)</td>
+        
+        <td data-sort="ISO/IEC JTC 001/~SC 024" data-title="TC/SC"><a href="/fr/contents/data/committee/04/52/45252.html#meetings" title="ISO/IEC JTC 1/SC 24">ISO/IEC JTC 1/SC 24</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809200001020180921" data-title="Date">20-21</td>
+        <td data-sort="201809200001020180921" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Irvine (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 022/~SC 031" data-title="TC/SC"><a href="/fr/contents/data/committee/53/83/5383568.html#meetings" title="ISO/TC 22/SC 31">ISO/TC 22/SC 31</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811120001020181115" data-title="Date">12-15</td>
+        <td data-sort="201811120001020181115" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Matsue (Japon)</td>
+        
+        <td data-sort="ISO/TC 043/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/85/48558.html#meetings" title="ISO/TC 43/SC 2">ISO/TC 43/SC 2</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810190000000000000" data-title="Date">19</td>
+        <td data-sort="201810190000000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Caparica (Portugal)</td>
+        
+        <td data-sort="ISO/TC 079" data-title="TC/SC"><a href="/fr/contents/data/committee/05/00/50084.html#meetings" title="ISO/TC 79">ISO/TC 79</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809270001020180928" data-title="Date">27-28</td>
+        <td data-sort="201809270001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 266" data-title="TC/SC"><a href="/fr/contents/data/committee/65/25/652577.html#meetings" title="ISO/TC 266">ISO/TC 266</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806250001020180629" data-title="Date">25-29</td>
+        <td data-sort="201806250001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Mexique</td>
+        
+        <td data-sort="ISO/TC 301" data-title="TC/SC"><a href="/fr/contents/data/committee/60/77/6077221.html#meetings" title="ISO/TC 301">ISO/TC 301</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806250001020180629" data-title="Date">25-29</td>
+        <td data-sort="201806250001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Mexique</td>
+        
+        <td data-sort="ISO/TC 301" data-title="TC/SC"><a href="/fr/contents/data/committee/60/77/6077221.html#meetings" title="ISO/TC 301">ISO/TC 301</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810170001020181019" data-title="Date">17-19</td>
+        <td data-sort="201810170001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Seocho-gu (Corée, République de)</td>
+        
+        <td data-sort="ISO/TC 212" data-title="TC/SC"><a href="/fr/contents/data/committee/05/49/54916.html#meetings" title="ISO/TC 212">ISO/TC 212</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806150000000000000" data-title="Date">15</td>
+        <td data-sort="201806150000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Düsseldorf (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 044/~SC 010" data-title="TC/SC"><a href="/fr/contents/data/committee/04/86/48650.html#meetings" title="ISO/TC 44/SC 10">ISO/TC 44/SC 10</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201903270001020190328" data-title="Date">27-28</td>
+        <td data-sort="201903270001020190328" data-title="Mois">Mars 2019</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/TC 044/~SC 010" data-title="TC/SC"><a href="/fr/contents/data/committee/04/86/48650.html#meetings" title="ISO/TC 44/SC 10">ISO/TC 44/SC 10</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809030001020180907" data-title="Date">3-7</td>
+        <td data-sort="201809030001020180907" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Addis Ababa (Éthiopie)</td>
+        
+        <td data-sort="ISO/TC 296" data-title="TC/SC"><a href="/fr/contents/data/committee/58/19/5819148.html#meetings" title="ISO/TC 296">ISO/TC 296</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201903310010000000000" data-title="Date"></td>
+        <td data-sort="201903310010000000000" data-title="Mois">Mars 2019</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/TC 023/~SC 015" data-title="TC/SC"><a href="/fr/contents/data/committee/04/71/47140.html#meetings" title="ISO/TC 23/SC 15">ISO/TC 23/SC 15</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809270001020180928" data-title="Date">27-28</td>
+        <td data-sort="201809270001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 227" data-title="TC/SC"><a href="/fr/contents/data/committee/36/93/369318.html#meetings" title="ISO/TC 227">ISO/TC 227</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811280001020181129" data-title="Date">28-29</td>
+        <td data-sort="201811280001020181129" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 044/~SC 003" data-title="TC/SC"><a href="/fr/contents/data/committee/04/86/48610.html#meetings" title="ISO/TC 44/SC 3">ISO/TC 44/SC 3</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810150001020181019" data-title="Date">15-19</td>
+        <td data-sort="201810150001020181019" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Hangzhou (Chine)</td>
+        
+        <td data-sort="ISO/TC 043/~SC 003" data-title="TC/SC"><a href="/fr/contents/data/committee/65/30/653046.html#meetings" title="ISO/TC 43/SC 3">ISO/TC 43/SC 3</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806160001020180619" data-title="Date">16-19</td>
+        <td data-sort="201806160001020180619" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Gothenburg (Suède)</td>
+        
+        <td data-sort="ISO/TC 135/~SC 007" data-title="TC/SC"><a href="/fr/contents/data/committee/05/24/52432.html#meetings" title="ISO/TC 135/SC 7">ISO/TC 135/SC 7</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809170000000000000" data-title="Date">17</td>
+        <td data-sort="201809170000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Copenhagen (Danemark)</td>
+        
+        <td data-sort="ISO/TC 008/~SC 007" data-title="TC/SC"><a href="/fr/contents/data/committee/04/58/45866.html#meetings" title="ISO/TC 8/SC 7">ISO/TC 8/SC 7</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809190000000000000" data-title="Date">19</td>
+        <td data-sort="201809190000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Norrmalm (Suède)</td>
+        
+        <td data-sort="ISO/TC 164/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/05/35/53554.html#meetings" title="ISO/TC 164/SC 1">ISO/TC 164/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809180000000000000" data-title="Date">18</td>
+        <td data-sort="201809180000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Norrmalm (Suède)</td>
+        
+        <td data-sort="ISO/TC 164/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/05/35/53556.html#meetings" title="ISO/TC 164/SC 2">ISO/TC 164/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809200000000000000" data-title="Date">20</td>
+        <td data-sort="201809200000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Norrmalm (Suède)</td>
+        
+        <td data-sort="ISO/TC 164/~SC 003" data-title="TC/SC"><a href="/fr/contents/data/committee/05/35/53558.html#meetings" title="ISO/TC 164/SC 3">ISO/TC 164/SC 3</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809200000000000000" data-title="Date">20</td>
+        <td data-sort="201809200000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Norrmalm (Suède)</td>
+        
+        <td data-sort="ISO/TC 164/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/05/35/53560.html#meetings" title="ISO/TC 164/SC 4">ISO/TC 164/SC 4</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809210000000000000" data-title="Date">21</td>
+        <td data-sort="201809210000000000000" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Norrmalm (Suède)</td>
+        
+        <td data-sort="ISO/TC 164" data-title="TC/SC"><a href="/fr/contents/data/committee/05/35/53550.html#meetings" title="ISO/TC 164">ISO/TC 164</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806280001020180629" data-title="Date">28-29</td>
+        <td data-sort="201806280001020180629" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Saint-Denis (France)</td>
+        
+        <td data-sort="ISO/TC 091" data-title="TC/SC"><a href="/fr/contents/data/committee/05/04/50490.html#meetings" title="ISO/TC 91">ISO/TC 91</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805250000000000000" data-title="Date">25</td>
+        <td data-sort="201805250000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Beijing (Chine)</td>
+        
+        <td data-sort="ISO/TC 184/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/05/41/54124.html#meetings" title="ISO/TC 184/SC 1">ISO/TC 184/SC 1</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201808210001020180822" data-title="Date">21-22</td>
+        <td data-sort="201808210001020180822" data-title="Mois">Août 2018</td>
+        <td data-title="Lieu">AKASAKA INTERCITY CONFERENCE CENTER, 1-8-1, Akasaka, Minato-ku,Tokyo (Japon)</td>
+        
+        <td data-sort="ISO/TC 008/~SC 004" data-title="TC/SC"><a href="/fr/contents/data/committee/04/58/45842.html#meetings" title="ISO/TC 8/SC 4">ISO/TC 8/SC 4</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807030001020180707" data-title="Date">3-7</td>
+        <td data-sort="201807030001020180707" data-title="Mois">Juillet 2018</td>
+        <td data-title="Lieu">Indonésie</td>
+        
+        <td data-sort="ISO/TC 008/~SC 008" data-title="TC/SC"><a href="/fr/contents/data/committee/04/58/45868.html#meetings" title="ISO/TC 8/SC 8">ISO/TC 8/SC 8</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810280001020181030" data-title="Date">28-30</td>
+        <td data-sort="201810280001020181030" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Chennai (Inde)</td>
+        
+        <td data-sort="ISO/TC 120" data-title="TC/SC"><a href="/fr/contents/data/committee/05/19/51974.html#meetings" title="ISO/TC 120">ISO/TC 120</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806120001020180614" data-title="Date">12-14</td>
+        <td data-sort="201806120001020180614" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Gamla Staden (Suède)</td>
+        
+        <td data-sort="ISO/TC 008/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/58/45816.html#meetings" title="ISO/TC 8/SC 2">ISO/TC 8/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806110001020180615" data-title="Date">11-15</td>
+        <td data-sort="201806110001020180615" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Paris (France)</td>
+        
+        <td data-sort="ISO/TC 193" data-title="TC/SC"><a href="/fr/contents/data/committee/05/44/54448.html#meetings" title="ISO/TC 193">ISO/TC 193</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810010001020181005" data-title="Date">1-5</td>
+        <td data-sort="201810010001020181005" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/TC 039/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/04/83/48372.html#meetings" title="ISO/TC 39/SC 2">ISO/TC 39/SC 2</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809170001020180919" data-title="Date">17-19</td>
+        <td data-sort="201809170001020180919" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Pays-Bas</td>
+        
+        <td data-sort="ISO/TC 138/~SC 006" data-title="TC/SC"><a href="/fr/contents/data/committee/05/25/52590.html#meetings" title="ISO/TC 138/SC 6">ISO/TC 138/SC 6</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810010001020181005" data-title="Date">1-5</td>
+        <td data-sort="201810010001020181005" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Gradignan (France)</td>
+        
+        <td data-sort="ISO/TC 034/~SC 017" data-title="TC/SC"><a href="/fr/contents/data/committee/58/39/583916.html#meetings" title="ISO/TC 34/SC 17">ISO/TC 34/SC 17</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804200000000000000" data-title="Date">20</td>
+        <td data-sort="201804200000000000000" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/President's committee" data-title="TC/SC"><a href="/fr/contents/data/committee/48/82/4882535.html#meetings" title="ISO/President's committee">ISO/President's committee</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201804200000000000000" data-title="Date">20</td>
+        <td data-sort="201804200000000000000" data-title="Mois">Avril 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/COUNCIL/CSC/NOM" data-title="TC/SC"><a href="/fr/contents/data/committee/68/87/6887745.html#meetings" title="ISO/COUNCIL/CSC/NOM">ISO/COUNCIL/CSC/NOM</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Information définitive mais réunion pas encore convoquée">*</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807160001020180719" data-title="Date">16-19</td>
+        <td data-sort="201807160001020180719" data-title="Mois">Juillet 2018</td>
+        <td data-title="Lieu">Dakar (Sénégal)</td>
+        
+        <td data-sort="ISO/PC 318" data-title="TC/SC"><a href="/fr/contents/data/committee/69/39/6939753.html#meetings" title="ISO/PC 318">ISO/PC 318</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809100001020180914" data-title="Date">10-14</td>
+        <td data-sort="201809100001020180914" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">San Diego (États-Unis)</td>
+        
+        <td data-sort="ISO/TC 150" data-title="TC/SC"><a href="/fr/contents/data/committee/05/30/53058.html#meetings" title="ISO/TC 150">ISO/TC 150</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807240001020180726" data-title="Date">24-26</td>
+        <td data-sort="201807240001020180726" data-title="Mois">Juillet 2018</td>
+        <td data-title="Lieu">Sydney (Australie)</td>
+        
+        <td data-sort="ISO/PC 316" data-title="TC/SC"><a href="/fr/contents/data/committee/69/09/6909987.html#meetings" title="ISO/PC 316">ISO/PC 316</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807020001020180705" data-title="Date">2-5</td>
+        <td data-sort="201807020001020180705" data-title="Mois">Juillet 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 020/~SC 001" data-title="TC/SC"><a href="/fr/contents/data/committee/04/65/46506.html#meetings" title="ISO/TC 20/SC 1">ISO/TC 20/SC 1</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809170001020180920" data-title="Date">17-20</td>
+        <td data-sort="201809170001020180920" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Chennai (Inde)</td>
+        
+        <td data-sort="ISO/TC 157" data-title="TC/SC"><a href="/fr/contents/data/committee/05/32/53290.html#meetings" title="ISO/TC 157">ISO/TC 157</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201807010001020180706" data-title="Date">1-6</td>
+        <td data-sort="201807010001020180706" data-title="Mois">Juillet 2018</td>
+        <td data-title="Lieu">Saint-Denis (France)</td>
+        
+        <td data-sort="ISO/TC 265" data-title="TC/SC"><a href="/fr/contents/data/committee/64/86/648607.html#meetings" title="ISO/TC 265">ISO/TC 265</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201810250000000000000" data-title="Date">25</td>
+        <td data-sort="201810250000000000000" data-title="Mois">Octobre 2018</td>
+        <td data-title="Lieu">Beijing (Chine)</td>
+        
+        <td data-sort="ISO/TC 059/~SC 015" data-title="TC/SC"><a href="/fr/contents/data/committee/04/92/49206.html#meetings" title="ISO/TC 59/SC 15">ISO/TC 59/SC 15</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201902270001020190228" data-title="Date">27-28</td>
+        <td data-sort="201902270001020190228" data-title="Mois">Février 2019</td>
+        <td data-title="Lieu">Japon</td>
+        
+        <td data-sort="ISO/TMB" data-title="TC/SC"><a href="/fr/contents/data/committee/48/82/4882545.html#meetings" title="ISO/TMB">ISO/TMB</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201906190001020190620" data-title="Date">19-20</td>
+        <td data-sort="201906190001020190620" data-title="Mois">Juin 2019</td>
+        <td data-title="Lieu">Geneva (Suisse)</td>
+        
+        <td data-sort="ISO/TMB" data-title="TC/SC"><a href="/fr/contents/data/committee/48/82/4882545.html#meetings" title="ISO/TMB">ISO/TMB</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809240001020180928" data-title="Date">24-28</td>
+        <td data-sort="201809240001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Oslo (Norvège)</td>
+        
+        <td data-sort="ISO/TC 205" data-title="TC/SC"><a href="/fr/contents/data/committee/05/47/54740.html#meetings" title="ISO/TC 205">ISO/TC 205</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201805230000000000000" data-title="Date">23</td>
+        <td data-sort="201805230000000000000" data-title="Mois">Mai 2018</td>
+        <td data-title="Lieu">Virtuel</td>
+        
+        <td data-sort="ISO/TC 012" data-title="TC/SC"><a href="/fr/contents/data/committee/04/62/46202.html#meetings" title="ISO/TC 12">ISO/TC 12</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809100001020180914" data-title="Date">10-14</td>
+        <td data-sort="201809100001020180914" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Istanbul (Turquie)</td>
+        
+        <td data-sort="ISO/TC 165" data-title="TC/SC"><a href="/fr/contents/data/committee/05/35/53584.html#meetings" title="ISO/TC 165">ISO/TC 165</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201811300010000000000" data-title="Date"></td>
+        <td data-sort="201811300010000000000" data-title="Mois">Novembre 2018</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/TC 234" data-title="TC/SC"><a href="/fr/contents/data/committee/54/10/541071.html#meetings" title="ISO/TC 234">ISO/TC 234</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806260001020180627" data-title="Date">26-27</td>
+        <td data-sort="201806260001020180627" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Toronto (Canada)</td>
+        
+        <td data-sort="ISO/TC 023/~SC 014" data-title="TC/SC"><a href="/fr/contents/data/committee/04/71/47138.html#meetings" title="ISO/TC 23/SC 14">ISO/TC 23/SC 14</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809040001020180906" data-title="Date">4-6</td>
+        <td data-sort="201809040001020180906" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu"></td>
+        
+        <td data-sort="ISO/TC 017/~SC 017" data-title="TC/SC"><a href="/fr/contents/data/committee/04/64/46450.html#meetings" title="ISO/TC 17/SC 17">ISO/TC 17/SC 17</a></td>
+        <td data-title="Note">
+          
+              <a data-toggle="tooltip" data-placement="top" title="Provisoire">**</a>
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201809240001020180928" data-title="Date">24-28</td>
+        <td data-sort="201809240001020180928" data-title="Mois">Septembre 2018</td>
+        <td data-title="Lieu">Sydney (Australie)</td>
+        
+        <td data-sort="ISO/TC 146" data-title="TC/SC"><a href="/fr/contents/data/committee/05/27/52702.html#meetings" title="ISO/TC 146">ISO/TC 146</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+      <tr>
+        <td data-sort="201806070000000000000" data-title="Date">7</td>
+        <td data-sort="201806070000000000000" data-title="Mois">Juin 2018</td>
+        <td data-title="Lieu">Berlin (Allemagne)</td>
+        
+        <td data-sort="ISO/TC 207/~SC 002" data-title="TC/SC"><a href="/fr/contents/data/committee/05/48/54824.html#meetings" title="ISO/TC 207/SC 2">ISO/TC 207/SC 2</a></td>
+        <td data-title="Note">
+          
+              &nbsp;
+            
+        </td>
+      </tr>
+  
+  </tbody>
+</table>
+
+<hr />
+<h6>Note:</h6>
+
+<p>* Information d&eacute;finitive mais r&eacute;union pas encore convoqu&eacute;e<br />
+** Provisoire</p><div class="clear"></div><div class="clear"></div><div class="clear"></div>
+    </div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/developing-standards.html">
+                Participer
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/who-develops-standards.html">
+                Qui élabore les normes
+              </a>
+            
+        </li>
+      
+        <li>
+          Calendrier des réunions
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren inPath firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

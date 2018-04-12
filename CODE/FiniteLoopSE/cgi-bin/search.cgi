@@ -1,9 +1,23 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import cgi
 import os
 import time
+from query import *
+
 #from http import cookies 
 #https://docs.python.org/3/library/http.cookies.html
+
+queryInstance = similarity('processingOutput.db')
+tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
+normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
+queryInstance.similarity(normalizedQuery)
+queryInstance.proximity(tokenizedQuery)
+ans = queryInstance.rankedOutput
+res = ans[0]
+ran = ans[1]
+
+#queryInstance.showResult()
+#queryInstance.writeOutput('OUTPUT/queryOutput.db')
 
 print("Content-type: text/html")
 print()
@@ -109,7 +123,10 @@ results = [
 	]
 
 i = 0
-while i < len(results):
+#while i < len(results):
+
+while i < len(res):
+	k = next(iter(res[0]))
 	print( """
 		<p>
 			<p class="title">%s</p>
@@ -117,9 +134,9 @@ while i < len(results):
 			<p class="rank">Ranking: %s</p>
 			<p class="summary">%s</p>
 		</p>
-	""" % (results[i][0], results[i][1], results[i][2], results[i][3]))
+	""" % (k, res[0][k][2], ran[i], 'unknown'))
 	i += 1
-	if i < len(results):
+	if i < len(res):
 		print( """
 			<p class="blank">
 			&nbsp;

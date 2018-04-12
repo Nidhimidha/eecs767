@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <title>Notre monde avec ISO 45001</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <!-- Thumbnail image for Google search -->
+  <meta name="thumbnail" content="http://www.iso.org/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268.jpg/thumbnails/300x300" />
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@isostandards" />
+  <meta name="twitter:title" content="Notre monde avec ISO 45001" />
+  <meta name="twitter:description" content="Qu’elles soient victimes d’une exposition à des produits chimiques toxiques ou d’un accident de voiture mortel imputable à la fatigue, chaque année des millions de personnes sont blessées ou décèdent dans le cadre de leur travail. Aujourd’hui, grâce à la première Norme internationale sur les systèmes de management de la santé et de la sécurité au travail, nombre de ces événements indésirables peuvent être évités. Découvrez pourquoi ISO 45001 peut changer la donne pour des millions de travailleurs (et limiter les dangers pour la santé liés au travail), partout dans le monde." />
+  <meta name="twitter:image" content="http://www.iso.org/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268.jpg/thumbnails/800" />
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Notre monde avec ISO 45001" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://www.iso.org/cms/render/live/fr/sites/isoorg/contents/news/2018/03/Ref2268.html" />
+  <meta property="og:image" content="http://www.iso.org/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268.jpg/thumbnails/800" />
+  <meta property="og:site_name" content="ISO" />
+  <meta property="og:description" content="Qu’elles soient victimes d’une exposition à des produits chimiques toxiques ou d’un accident de voiture mortel imputable à la fatigue, chaque année des millions de personnes sont blessées ou décèdent dans le cadre de leur travail. Aujourd’hui, grâce à la première Norme internationale sur les systèmes de management de la santé et de la sécurité au travail, nombre de ces événements indésirables peuvent être évités. Découvrez pourquoi ISO 45001 peut changer la donne pour des millions de travailleurs (et limiter les dangers pour la santé liés au travail), partout dans le monde." />
+  <!-- Facebook admin : Maria -->
+  <meta property="fb:admins" content="100001116079676" />
+  <!-- Date of news publication (for Google)-->
+  <meta name="pubdate" content="20180312" />
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.social-popup').click(function (event) {
+        var width = 575,
+          height = 400,
+          left = ($(window).width() - width) / 2,
+          top = ($(window).height() - height) / 2,
+          url = this.href,
+          opts = 'status=1' +
+            ',width=' + width +
+            ',height=' + height +
+            ',top=' + top +
+            ',left=' + left;
+        if ($(this).hasClass('twitter')) {
+          window.open(url + '?text=Notre monde avec ISO 45001&url=' + document.URL, 'Twitter', opts);
+        }
+        if ($(this).hasClass('facebook')) {
+          window.open(url + '?s=100&p[title]=Facebook Share&p[url]=' + document.URL, 'Facebook', opts);
+        }
+        if ($(this).hasClass('linkedin')) {
+          window.open(url + '?url=' + document.URL, 'Linkedin', opts);
+        }
+        if ($(this).hasClass('googleplus')) {
+          window.open(url + '?url=' + document.URL, 'Google+', opts);
+        }
+        return false;
+      });
+    });
+  </script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.email-nospam').each(function () {
+          var prefix = $(this).attr('data-prefix');
+          var suffix = $(this).attr('data-suffix');
+          var email = prefix + '@' + suffix;
+          var emailURL = 'mailto:' + email;
+          $(this).attr('href', emailURL).html(email);
+          $(this).removeAttr('data-prefix');
+          $(this).removeAttr('data-suffix');
+        });
+      });
+    </script>
+  
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/news/ref2268.html">English</a></li><li><a href="/ru/news/ref2268.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover inPath"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren inPath active firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="main container" itemscope itemtype="http://schema.org/Article">
+  
+  <div class="row row-top row-no-padding">
+    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+      
+      <img src="/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268.jpg/thumbnails/1200x300" class="width-100pct" alt='Construction workers on a scaffold,building a site.'/>
+      <img src="/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268.jpg/thumbnails/300x300" class="hidden" alt='Construction workers on a scaffold,building a site.' itemprop="url"/>
+      <meta itemprop="height" content="300"><meta itemprop="width" content="300">
+    </figure>
+  </div>
+
+  <article class="hentry">
+    <span class="hidden" id="currentNewsUrl" data-url="Ref2268"></span>
+    <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/about-us.html">
+                L&#039;ISO
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/news_index.html">
+                Actualités
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/news_archive.html">
+                Archives
+              </a>
+            
+        </li>
+      <li>
+      Notre monde avec ISO 45001
+    </li>
+  </ol>
+
+</div>
+<header class="entry-header clearfix">
+  
+  <h1 itemprop="name headline">Notre monde avec ISO 45001</h1>
+  <div class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="http://www.iso.org/modules/isoorg-template/img/iso/iso-logo-print.gif"/>
+      <meta itemprop="width" content="283">
+      <meta itemprop="height" content="261">
+    </div>
+    <meta itemprop="name" content="">
+  </div>
+  <div class="entry-description clearfix">
+    
+      <span class="author">
+        Par <span class="fn" itemprop="author">Elizabeth Gasiorowski-Denis</span>
+      </span>
+    
+    <span class="time">
+      |
+      <time class='updated' datetime='2018-03-12' itemprop="datePublished">
+        12 mars 2018
+      </time>
+    </span>
+    <aside class="entry-social ss-icon">
+      <ul>
+        <li><a class="twitter social-popup" href="http://twitter.com/share" title="Partager sur Twitter"><strong>&#xF611;</strong></a>
+        </li>
+        <li><a class="facebook social-popup" href="http://www.facebook.com/sharer.php" title="Partager sur Facebook">
+          <strong>&#xF610;</strong></a></li>
+        <li><a class="linkedin social-popup" href="https://www.linkedin.com/cws/share" title="Partager sur Linkedin">
+          <strong>&#xF612;</strong></a></li>
+        <li><a class="googleplus social-popup" href="https://plus.google.com/share" title="Partager sur Googleplus">
+          <strong>&#xF613;</strong></a></li>
+      </ul>
+    </aside>
+  </div>
+</header>
+
+
+    <div class="entry-content">
+      <div class="row">
+        <div class="col-md-7">
+          
+
+
+  <div class="lead" itemprop="description"><p>Qu&rsquo;elles soient victimes d&rsquo;une exposition &agrave; des produits chimiques toxiques ou d&rsquo;un accident de voiture mortel imputable &agrave; la fatigue, chaque ann&eacute;e des millions de personnes sont bless&eacute;es ou d&eacute;c&egrave;dent dans le cadre de leur travail. Aujourd&rsquo;hui, gr&acirc;ce &agrave; la premi&egrave;re Norme internationale sur les syst&egrave;mes de management de la sant&eacute; et de la s&eacute;curit&eacute; au travail, nombre de ces &eacute;v&eacute;nements ind&eacute;sirables peuvent &ecirc;tre &eacute;vit&eacute;s. D&eacute;couvrez pourquoi ISO&nbsp;45001 peut changer la donne pour des millions de travailleurs (et limiter les dangers pour la sant&eacute; li&eacute;s au travail), partout dans le monde.</p>
+</div>
+
+<div class="articleBody" itemprop="articleBody"><p>La prochaine fois que quelqu&rsquo;un affirmera devant vous que son travail le tue, ce ne sera peut-&ecirc;tre pas qu&rsquo;une fa&ccedil;on de parler. Toutes les 15 secondes, quelque part dans le monde, un travailleur perd la vie &agrave; la suite d&rsquo;un accident du travail ou d&rsquo;une maladie professionnelle, et 153 personnes se blessent. Et d&eacute;sormais, de nouvelles donn&eacute;es mettent en &eacute;vidence une hausse des accidents sur les lieux de travail en l&rsquo;espace d&rsquo;&agrave; peine trois ans, avec pr&egrave;s de 500&nbsp;000 traumatismes suppl&eacute;mentaires.</p>
+
+<p>Selon de r&eacute;centes estimations de l&rsquo;Organisation internationale du &shy;Travail (OIT), 2,78&nbsp;millions de d&eacute;c&egrave;s sont li&eacute;s au travail chaque ann&eacute;e. En d&rsquo;autres termes, chaque jour, quelque 7&nbsp;700 personnes perdent la vie du fait de maladies professionnelles ou de traumatismes li&eacute;s au travail. En 2014, ce chiffre &eacute;tait estim&eacute; &agrave; 2,3&nbsp;millions seulement, un &eacute;cart qui pourrait &ecirc;tre d&ucirc; &agrave; l&rsquo;allongement de l&rsquo;esp&eacute;rance de vie et l&rsquo;utilisation de nouvelles donn&eacute;es dans les estimations les plus r&eacute;centes. En outre, 374&nbsp;millions de traumatismes et de maladies non mortels li&eacute;s au travail sont enregistr&eacute;s chaque ann&eacute;e, avec pour cons&eacute;quence des arr&ecirc;ts de travail prolong&eacute;s pour les travailleurs. Ces chiffres brossent un tableau r&eacute;aliste du monde du travail moderne : les travailleurs peuvent subir de lourdes cons&eacute;quences simplement en &laquo;&nbsp;faisant leur travail&nbsp;&raquo;.</p>
+
+<p><img alt="A team wearing hazmat suits and handling hazardous materials." class="frame width-100pct" height="533" src="/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268_hazmat.jpg/thumbnails/800" width="800" /></p>
+
+<p>Outre des co&ucirc;ts croissants (et consid&eacute;rables) pour les travailleurs et leur famille, la sant&eacute; et la s&eacute;curit&eacute; au travail (S&amp;ST) ont un impact consid&eacute;rable sur le d&eacute;veloppement &eacute;conomique et social. Selon l&rsquo;agence onusienne, le co&ucirc;t total des maladies, des traumatismes et des d&eacute;c&egrave;s &agrave; l&rsquo;&eacute;chelle internationale repr&eacute;senterait 3,94&nbsp;% du produit int&eacute;rieur brut (PIB) mondial, soit pr&egrave;s de USD&nbsp;2&nbsp;990 milliards, li&eacute;s aux co&ucirc;ts directs et indirects des traumatismes et des maladies.</p>
+
+<p>Mais cela ne s&rsquo;arr&ecirc;te pas l&agrave;. Lors du XXI<sup>e</sup> Congr&egrave;s mondial sur la s&eacute;curit&eacute; et la sant&eacute; au travail, tenu &agrave; Singapour en 2017, Guy Ryder, Directeur g&eacute;n&eacute;ral de l&rsquo;OIT, a ainsi expliqu&eacute; que l&rsquo;absence d&rsquo;investissements suffisants dans la s&eacute;curit&eacute; et la sant&eacute; au travail &eacute;quivalait environ au PIB cumul&eacute; des 130 pays les plus pauvres du monde. C&rsquo;est donc un d&eacute;fi de taille qu&rsquo;il nous faut relever.</p>
+
+<h2>Des cha&icirc;nes d&rsquo;approvisionnement complexes</h2>
+
+<p>Du fait de l&rsquo;ouverture &agrave; l&rsquo;international de nombreuses entreprises, la question de la S&amp;ST s&rsquo;est complexifi&eacute;e. Ainsi, le dispersement des cha&icirc;nes d&rsquo;approvisionnement aggrave les niveaux de risque pour les entreprises multinationales et rend la question de la S&amp;ST &agrave; la fois critique et complexe. Il faut savoir que sans la mise en place d&rsquo;un syst&egrave;me de management efficace de la S&amp;ST au niveau de ses cha&icirc;nes d&rsquo;approvisionnement, la direction d&rsquo;une entreprise n&rsquo;a aucune visibilit&eacute; sur un aspect essentiel de sa structure de management, ce qui peut engendrer des risques juridiques et financiers et nuire &agrave; sa r&eacute;putation. Un organisme doit donc voir au-del&agrave; de ses probl&eacute;matiques de sant&eacute; et de s&eacute;curit&eacute; imm&eacute;diates et tenir compte de ce que la soci&eacute;t&eacute; au sens large attend de lui. Il doit &eacute;galement prendre en compte ses intervenants ext&eacute;rieurs et ses fournisseurs, car la fa&ccedil;on dont ces derniers accomplissent leur travail est susceptible d&rsquo;affecter les personnes situ&eacute;es &agrave; proximit&eacute; de leurs sites.</p>
+
+<p>Il n&rsquo;est manifestement pas facile d&rsquo;atteindre des objectifs de S&amp;ST au niveau de la cha&icirc;ne d&rsquo;approvisionnement et de tels objectifs exigent de s&rsquo;appuyer sur des fondations solides et une am&eacute;lioration continue. C&rsquo;est la raison d&rsquo;&ecirc;tre d&rsquo;ISO&nbsp;45001, premi&egrave;re Norme internationale relative aux syst&egrave;mes de management de la sant&eacute; et de la s&eacute;curit&eacute; au travail. La norme offre aux organismes publics, &agrave; l&rsquo;industrie et aux parties prenantes concern&eacute;es des lignes directrices efficaces et concr&egrave;tes pour am&eacute;liorer la s&eacute;curit&eacute; des travailleurs dans le monde entier. Gr&acirc;ce &agrave; un cadre facilement exploitable, ses lignes directrices peuvent &ecirc;tre appliqu&eacute;es aux usines et sites de production, qu&rsquo;il s&rsquo;agisse de partenaires ou de filiales, quelle que soit leur localisation.</p>
+
+<p><img alt="Business people sitting at a curved wooden desk." class="frame align-right" height="369" src="/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268_busniess%20meeting.jpg/thumbnails/300" width="300" />Pr&egrave;s d&rsquo;une centaine d&rsquo;experts ont particip&eacute; &agrave; l&rsquo;&eacute;laboration d&rsquo;ISO&nbsp;45001&nbsp;&ndash; dirig&eacute;e par le comit&eacute; de projet ISO/PC&nbsp;283, <em>Syst&egrave;mes de management de la sant&eacute; et de la s&eacute;curit&eacute; au travail</em>&nbsp;&ndash; avec des dizaines d&rsquo;organisations, notamment l&rsquo;IOSH (Institution of Occupational Safety and Health), le plus grand organisme professionnel au monde destin&eacute; aux personnes en charge de la sant&eacute; et de la s&eacute;curit&eacute; au travail. L&rsquo;IOSH d&eacute;fend, soutient, conseille et forme les professionnels de la s&eacute;curit&eacute; et de la sant&eacute; au travail au sein d&rsquo;organismes de toute taille. &Eacute;troitement impliqu&eacute; dans l&rsquo;&eacute;laboration d&rsquo;ISO&nbsp;45001 en qualit&eacute; d&rsquo;organisation en liaison avec l&rsquo;ISO/PC&nbsp;283, l&rsquo;IOSH aide actuellement ses 46&nbsp;000 membres, partout dans le monde, dans leur transition vers cette nouvelle norme.</p>
+
+<p>&Eacute;minent expert de la S&amp;ST, Richard Jones, Directeur, Politique et affaires publiques, IOSH, a contribu&eacute; en tant que chef d&rsquo;une organisation en liaison &agrave; l&rsquo;&eacute;laboration d&rsquo;ISO&nbsp;45001. Pour lui, l&rsquo;objectif premier est de s&rsquo;affranchir des fronti&egrave;res &eacute;conomiques et nationales en mati&egrave;re de sant&eacute; et de s&eacute;curit&eacute; au travail. &laquo;&nbsp;Dans notre &eacute;conomie de plus en plus mondialis&eacute;e, marqu&eacute;e par le d&eacute;veloppement de cha&icirc;nes d&rsquo;approvisionnement &eacute;tendues et complexes et par la hausse du nombre de travailleurs migrants et vuln&eacute;rables, l&rsquo;accent mis par ISO&nbsp;45001 sur le management de la sant&eacute; et de la s&eacute;curit&eacute; au niveau des cha&icirc;nes d&rsquo;approvisionnement devrait permettre de g&eacute;rer de mani&egrave;re plus responsable les achats, l&rsquo;externalisation et la sous-traitance et, potentiellement, de sauver de nombreuses vies.&nbsp;&raquo; Cela pourrait avoir une incidence consid&eacute;rable, avec des organismes &eacute;tendant leur management du risque aussi loin qu&rsquo;ils en ont la ma&icirc;trise ou l&rsquo;influence dans leurs cha&icirc;nes d&rsquo;approvisionnement.</p>
+
+<p>Parce que la norme met en avant les processus externalis&eacute;s et les sous-traitants, les organismes peuvent choisir de tirer parti des solutions offertes par l&rsquo;approche des syst&egrave;mes de management d&rsquo;ISO&nbsp;45001 pour identifier, ma&icirc;triser et am&eacute;liorer en continu leurs opportunit&eacute;s de r&eacute;duire ou d&rsquo;&eacute;liminer les risques pesant sur la sant&eacute; et la s&eacute;curit&eacute; des travailleurs au niveau de la cha&icirc;ne d&rsquo;approvisionnement.</p>
+
+<h2>Une approche descendante</h2>
+
+<p>De nombreux employeurs reconnaissent qu&rsquo;une bonne gestion du risque en mati&egrave;re de S&amp;ST contribue non seulement &agrave; pr&eacute;venir les traumatismes, les pathologies et les d&eacute;c&egrave;s, mais aussi &agrave; soutenir les moyens de subsistance, les entreprises et les communaut&eacute;s. &Agrave; cet &eacute;gard, l&rsquo;approche ax&eacute;e sur les syst&egrave;mes adopt&eacute;e par ISO&nbsp;45001 peut aider un plus grand nombre d&rsquo;organismes &agrave; y parvenir.</p>
+
+<p>Mais comment cela se traduit-il concr&egrave;tement&nbsp;? Pour garantir un syst&egrave;me de management de la S&amp;ST solide et sain, tous les acteurs de l&rsquo;organisation, des employ&eacute;s aux dirigeants, doivent &ecirc;tre convaincus qu&rsquo;ils ont un r&ocirc;le &agrave; jouer dans le maintien d&rsquo;un environnement s&ucirc;r.</p>
+
+<p>L&rsquo;implication de l&rsquo;ensemble de l&rsquo;entreprise est l&rsquo;un des avantages cl&eacute;s d&rsquo;ISO&nbsp;45001. La nouvelle norme reconna&icirc;t la valeur de la consultation du personnel pour &eacute;laborer de meilleures pratiques en mati&egrave;re de sant&eacute; et de s&eacute;curit&eacute; au travail et met davantage l&rsquo;accent sur la participation active des employ&eacute;s dans le d&eacute;veloppement, la planification, la mise en &oelig;uvre et l&rsquo;am&eacute;lioration continue d&rsquo;un syst&egrave;me de management de la S&amp;ST.</p>
+
+<p>La direction doit jouer un r&ocirc;le actif, promouvoir une culture positive et communiquer ce qui doit &ecirc;tre fait et surtout, pourquoi cela est important. Les dirigeants doivent d&eacute;montrer qu&rsquo;ils sont activement impliqu&eacute;s et qu&rsquo;ils prennent des mesures pour int&eacute;grer le syst&egrave;me de management de la S&amp;ST &agrave; l&rsquo;ensemble des processus op&eacute;rationnels. &laquo;&nbsp;ISO&nbsp;45001 met l&rsquo;accent sur la participation des dirigeants et des travailleurs, tout en garantissant que le syst&egrave;me tient compte du &laquo;&nbsp;monde&nbsp;&raquo; dans lequel l&rsquo;organisme op&egrave;re et des facteurs internes et externes qui l&rsquo;impactent, c&rsquo;est-&agrave;-dire son contexte&nbsp;&raquo;, pr&eacute;cise M.&nbsp;Jones. &laquo;&nbsp;Cela signifie que les dirigeants doivent jouer un r&ocirc;le de direction manifeste, &ecirc;tre activement impliqu&eacute;s dans la mise en &oelig;uvre du syst&egrave;me et s&rsquo;assurer de son int&eacute;gration aux autres syst&egrave;mes op&eacute;rationnels.&nbsp;&raquo;</p>
+
+<p>Selon M.&nbsp;Jones, le syst&egrave;me doit &ecirc;tre adapt&eacute; au profil de risque et &agrave; la complexit&eacute; de l&rsquo;organisme. Par exemple, dans les organismes de petite taille, la participation efficace des travailleurs peut &ecirc;tre obtenue plus directement et simplement, sans recourir &agrave; des structures de comit&eacute; formelles. Il explique &eacute;galement qu&rsquo;il peut exister d&rsquo;autres vecteurs d&rsquo;am&eacute;lioration&nbsp;: &laquo;&nbsp;Les organismes clients exigeront toujours plus de leurs fournisseurs et prestataires de services qu&rsquo;ils d&eacute;montrent leur bonne gestion de la S&amp;ST afin de s&rsquo;assurer qu&rsquo;ils sont en accord avec leur propre syst&egrave;me.&nbsp;&raquo;</p>
+
+<p><img alt="Carpenters carrying wood planks." class="frame width-100pct" height="497" src="/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268_carpenters.jpg/thumbnails/800" width="800" /></p>
+
+<h2>La pr&eacute;vention paie</h2>
+
+<p>Quelles sont d&egrave;s lors les responsabilit&eacute;s des entreprises en mati&egrave;re de protection de leurs employ&eacute;s&nbsp;? Les employeurs ont le devoir de r&eacute;duire l&rsquo;exposition de leurs effectifs ou de les former &agrave; la pr&eacute;vention et de les &eacute;quiper d&rsquo;outils afin de r&eacute;duire au minimum les risques. En d&rsquo;autres termes&nbsp;: la pr&eacute;vention paie. Il n&rsquo;est donc pas surprenant que le XXI<sup>e</sup> Congr&egrave;s mondial de 2017 ait choisi comme slogan&nbsp;: &laquo;&nbsp;Une vision globale de la pr&eacute;vention&nbsp;&raquo;. La pr&eacute;vention, essentielle pour relever le d&eacute;fi de la s&eacute;curit&eacute; des travailleurs, est consid&eacute;r&eacute;e comme plus efficace (et moins on&eacute;reuse) que le traitement et la r&eacute;&eacute;ducation. En phase avec le slogan du Congr&egrave;s mondial, ISO 45001 d&eacute;veloppe une approche du management de la S&amp;ST fond&eacute;e sur le risque.</p>
+
+<p>Pour David Smith, Pr&eacute;sident de l&rsquo;ISO/PC&nbsp;283 charg&eacute; d&rsquo;&eacute;laborer ISO&nbsp;45001, les entreprises doivent s&rsquo;attacher &agrave; g&eacute;rer l&rsquo;ensemble de leurs risques pour assurer le maintien et la prosp&eacute;rit&eacute; de leurs activit&eacute;s. &laquo;&nbsp;La S&amp;ST est donc un aspect essentiel que chaque entreprise doit savoir anticiper &raquo; explique-t-il. &laquo;&nbsp;Une mauvaise gestion peut en effet impliquer de lourdes cons&eacute;quences pour les personnes, mais aussi pour les employeurs qui se trouvent alors confront&eacute;s &agrave; tous ordres de difficult&eacute;s&nbsp;: perte de personnels qualifi&eacute;s, interruption des activit&eacute;s, plaintes, primes d&rsquo;assurance &eacute;lev&eacute;es, poursuites en justice, atteinte &agrave; la r&eacute;putation, frilosit&eacute; des investisseurs et, en fin de compte, perte de chiffre d&rsquo;affaires.&nbsp;&raquo;</p>
+
+<p>M.&nbsp;Smith pr&eacute;cise que l&rsquo;approche fond&eacute;e sur les risques en mati&egrave;re de gestion de la S&amp;ST d&rsquo;ISO&nbsp;45001 pr&eacute;conise l&rsquo;adoption d&rsquo;une attitude pr&eacute;ventive en mati&egrave;re de S&amp;ST afin d&rsquo;identifier les activit&eacute;s et les processus de l&rsquo;organisme susceptibles de faire courir un danger aux personnes qu&rsquo;il emploie ou aux tiers (par exemple, aux visiteurs, au grand public, etc.) et de se conformer &agrave; toutes les exigences l&eacute;gales applicables. Il ajoute qu&rsquo;il est n&eacute;cessaire d&rsquo;identifier les dangers afin d&rsquo;&eacute;liminer ou limiter ceux qui pr&eacute;sentent un risque significatif.</p>
+
+<p>L&rsquo;&eacute;valuation continue des risques et opportunit&eacute;s est &eacute;galement un &eacute;l&eacute;ment commun aux normes ISO&nbsp;9001 (management de la qualit&eacute;) et ISO&nbsp;14001 (management environnemental), qui reposent sur un cadre fond&eacute; sur le risque similaire ainsi que sur le mod&egrave;le PDCA (Planifier-R&eacute;aliser-V&eacute;rifier-Agir). Selon M.&nbsp;Smith, l&rsquo;application efficace de ces mesures doit permettre d&rsquo;aborder les situations susceptibles de d&eacute;boucher sur des probl&egrave;mes de sant&eacute; longue dur&eacute;e et sur l&rsquo;absent&eacute;isme prolong&eacute; des travailleurs, ainsi que celles qui peuvent donner lieu &agrave; des accidents. Cela explique en partie pourquoi ISO&nbsp;45001 repr&eacute;sente une am&eacute;lioration consid&eacute;rable par rapport &agrave; OHSAS&nbsp;18001, qui sera remplac&eacute;e par la nouvelle norme ISO au terme d&rsquo;une p&eacute;riode de migration de trois ans.</p>
+
+<h2>Une culture d&rsquo;entreprise</h2>
+
+<p>&Eacute;videmment, toutes les discussions relatives &agrave; la S&amp;ST se doivent d&rsquo;inclure les entreprises. En effet, lorsqu&rsquo;un de leurs employ&eacute;s se blesse, les entreprises perdent l&rsquo;exp&eacute;rience et les comp&eacute;tences de cette personne, ainsi que sa force de travail. Multipliez cela par plusieurs centaines (ou milliers) d&rsquo;employ&eacute;s et les co&ucirc;ts peuvent devenir particuli&egrave;rement &eacute;lev&eacute;s.</p>
+
+<p><img alt="" class="frame align-right" height="370" src="/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268_produktion.jpg/thumbnails/300" width="300" />Dans l&rsquo;id&eacute;al, tout environnement de travail devrait contribuer &agrave; am&eacute;liorer votre sant&eacute; et vous faciliter la vie. De nombreuses soci&eacute;t&eacute;s sont en mesure de tendre vers cet objectif et y travaillent, notamment le groupe LEGO, un fabricant de jouets pour enfants bas&eacute; au Danemark. L&rsquo;entreprise, qui emploie 16&nbsp;836 personnes (rapport annuel LEGO 2016), reconna&icirc;t l&rsquo;importance et l&rsquo;int&eacute;r&ecirc;t de veiller &agrave; la sant&eacute; et &agrave; la s&eacute;curit&eacute; de ses employ&eacute;s. Elle s&rsquo;appr&ecirc;te donc &agrave; effectuer la transition vers ISO&nbsp;45001.</p>
+
+<p>&laquo;&nbsp;Nous visons la certification ISO&nbsp;45001, notamment parce que les nouveaux chapitres relatifs &agrave; l&rsquo;engagement de la direction et &agrave; la d&eacute;finition des parties int&eacute;ress&eacute;es correspondent parfaitement &agrave; notre entreprise et &agrave; l&rsquo;approche que nous adoptons envers toutes nos parties prenantes. Nous mettons d&eacute;j&agrave; en &oelig;uvre cette approche dans nos revues de direction&nbsp;&raquo;, explique Sofka Ane Br&aelig;ndgaard, &shy;Responsable principale, Syst&egrave;me de management int&eacute;gr&eacute;, LEGO. Mme&nbsp;Br&aelig;ndgaard souligne que LEGO fera le m&ecirc;me usage d&rsquo;ISO&nbsp;45001 que de toutes les autres normes&nbsp;: &laquo;&nbsp;Les normes ISO repr&eacute;sentent pour nous des outils qui nous aident &agrave; nous concentrer sur nos processus et &agrave; apporter la juste valeur &agrave; nos clients et consommateurs.&nbsp;&raquo;</p>
+
+<p>Dans le cadre de sa d&eacute;marche en faveur de la S&amp;ST, l&rsquo;entreprise implique ses employ&eacute;s de diff&eacute;rentes fa&ccedil;ons, notamment par la cr&eacute;ation d&rsquo;un comit&eacute; de s&eacute;curit&eacute; proactif charg&eacute; de la sensibilisation sur des probl&eacute;matiques telles que les dangers ergonomiques, ou encore un blog interne sur lequel les employ&eacute;s peuvent signaler les risques pour la s&eacute;curit&eacute;. Leurs t&eacute;moignages et suggestions sont ensuite pris en compte pour proc&eacute;der &agrave; des am&eacute;liorations.</p>
+
+<p>&laquo;&nbsp;&Ecirc;tre certifi&eacute;s ISO&nbsp;45001 d&eacute;montrerait que nous prenons au s&eacute;rieux la sant&eacute; et la s&eacute;curit&eacute; de nos employ&eacute;s et de tous ceux qui travaillent pour le groupe LEGO, dans la droite ligne de notre cadre de marque LEGO et de nos engagements vis-&agrave;-vis de nos partenaires, des personnes et de la plan&egrave;te&nbsp;&raquo; ajoute-t-elle. &laquo;&nbsp;Nous sommes une soci&eacute;t&eacute; &agrave; faible risque et nous ne transigeons pas avec la sant&eacute; et la s&eacute;curit&eacute;. ISO&nbsp;45001 est l&rsquo;un des outils sur lesquels nous entendons nous appuyer pour garantir les meilleures conditions de travail possibles.&nbsp;&raquo;</p>
+
+<p>ISO&nbsp;45001 adopte la structure-cadre (HLS) de l&rsquo;Annexe&nbsp;SL, ce qui signifie qu&rsquo;elle pr&eacute;sente la m&ecirc;me structure que d&rsquo;autres normes de syst&egrave;me de management ISO comme ISO&nbsp;9001 et ISO&nbsp;14001. Cela permettra aux organismes qui le souhaitent d&rsquo;int&eacute;grer plus facilement leurs syst&egrave;mes apparent&eacute;s les uns aux autres, partiellement ou en totalit&eacute;&nbsp;&ndash; par exemple, leurs syst&egrave;mes de management environnemental, de la qualit&eacute; ou de la s&eacute;curit&eacute; avec un syst&egrave;me de management de la sant&eacute; et de la s&eacute;curit&eacute; au travail. L&rsquo;utilisation de processus communs permet ainsi d&rsquo;en accro&icirc;tre l&rsquo;efficacit&eacute;.</p>
+
+<p>&laquo;&nbsp;Pour nous, la possibilit&eacute; de travailler avec trois normes adoptant la m&ecirc;me structure-cadre et la m&ecirc;me approche se r&eacute;v&egrave;le une am&eacute;lioration consid&eacute;rable&nbsp;&raquo;, poursuit Mme&nbsp;Br&aelig;ndgaard. &laquo;&nbsp;&Ecirc;tre certifi&eacute;s selon ces trois normes nous facilitera les choses, car notre syst&egrave;me de management int&eacute;gr&eacute; ne fera pas de distinction entre les normes et permettra d&rsquo;int&eacute;grer nos processus relatifs &agrave; la qualit&eacute;, l&rsquo;environnement et la sant&eacute; et la s&eacute;curit&eacute; &agrave; nos processus op&eacute;rationnels.&nbsp;&raquo;</p>
+
+<h2>Meilleures pratiques</h2>
+
+<p>Imaginez d&eacute;dier de longues ann&eacute;es &agrave; am&eacute;liorer vos connaissances et vos comp&eacute;tences professionnelles pour voir ce travail g&acirc;ch&eacute; en une fraction de secondes. C&rsquo;est g&eacute;n&eacute;ralement ce que l&rsquo;on ressent lorsque l&rsquo;on est victime d&rsquo;un accident au travail.</p>
+
+<p>Mais r&eacute;duire significativement l&rsquo;incidence des traumatismes et des maladies professionnelles n&rsquo;est pas chose ais&eacute;e. Si cela peut s&rsquo;av&eacute;rer long et difficile, il est cependant possible d&rsquo;enregistrer des progr&egrave;s dans ce domaine. Les partisans d&rsquo;ISO&nbsp;45001 sont convaincus que les organismes qui mettront en &oelig;uvre la norme seront mieux plac&eacute;s pour contr&ocirc;ler les risques pour la S&amp;ST, am&eacute;liorer leurs performances globales en mati&egrave;re de s&eacute;curit&eacute;, et d&eacute;montrer de fa&ccedil;on tangible aux clients et aux consommateurs qu&rsquo;ils s&rsquo;engagent &agrave; veiller &agrave; la sant&eacute; et la s&eacute;curit&eacute; de leurs employ&eacute;s.</p>
+
+<p>Construire un syst&egrave;me de management de la S&amp;ST solide dans le contexte international actuel est une opportunit&eacute; et non un fardeau. Les entreprises qui prennent cette d&eacute;marche au s&eacute;rieux font savoir aux travailleurs et &agrave; la communaut&eacute; que leur temps et leur bien-&ecirc;tre sont importants. Elles se prot&egrave;gent ainsi contre les d&eacute;c&egrave;s, les pertes mat&eacute;rielles et m&ecirc;me les faillites.</p>
+
+<p>Il ne fait aucun doute que d&rsquo;autres &eacute;v&eacute;nements ind&eacute;sirables se produiront &agrave; l&rsquo;avenir, mais ensemble, nous pouvons inverser la tendance et limiter leur survenue. M.&nbsp;Smith est convaincu qu&rsquo;ISO&nbsp;45001 nous permettra d&rsquo;&ecirc;tre rassur&eacute;s quant &agrave; notre sant&eacute; et notre bien-&ecirc;tre au travail. &laquo;&nbsp;La nouvelle norme ISO&nbsp;45001 devrait accro&icirc;tre la cr&eacute;dibilit&eacute; du management de la S&amp;ST&nbsp;&raquo; estime-t-il. &laquo;&nbsp;Son adoption massive devrait r&eacute;duire les drames r&eacute;v&eacute;l&eacute;s par la presse, dans lesquels un mauvais management de la S&amp;ST est &agrave; l&rsquo;origine de d&eacute;c&egrave;s, de blessures et de catastrophes de grande ampleur.&nbsp;&raquo; En prenant des pr&eacute;cautions sens&eacute;es et en mettant en &oelig;uvre ISO&nbsp;45001, nous pourrons bient&ocirc;t &ecirc;tre plus sereins au travail.</p>
+
+<p><img alt="Two workers welding in a factory." class="frame width-100pct" height="525" src="/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2268/Ref2268_welding.jpg/thumbnails/800" width="800" /></p>
+</div>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+          
+  <h3>Informations associées</h3>
+  <ul class="refine"><li><div class="media">
+
+  <figure class="media-left">
+    <a href="/fr/iso-45001-occupational-health-and-safety.html"  title="ISO 45001 Santé et sécurité au travail">
+    <img src="/files/live/sites/isoorg/files/standards/popular_standards/iso_45001_occupational_health/img/measuring-blood-pressure.jpg/thumbnails/300x300" class="media-object width-100 shadow"
+         alt="Nurse measuring blood pressure."  title="504309690" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/iso-45001-occupational-health-and-safety.html" title="ISO 45001 Santé et sécurité au travail" >ISO 45001 Santé et sécurité au travail</a>
+        </h6>
+      
+        <div class="entry-summary">
+          Réduire les risques sur le lieu de travail et créer un environnement de travail plus sûr.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--></li><li><div class="media">
+
+  <figure class="media-left">
+    <a href="/fr/news/ref2272.html"  title="ISO 45001 vient de paraître">
+    <img src="/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2272/Ref2272.jpg/thumbnails/300x300" class="media-object width-100 shadow"
+         alt="Two workers welding in a factory." />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-header">
+      
+      <div class="entry-description small">
+        
+          <span class="author">
+            Par <span class="fn">Elizabeth Gasiorowski-Denis</span>
+          </span>
+        |
+          <span class="time">
+            <time class='updated' datetime='2018-03-12'>12 mars 2018</time>
+          </span>
+        
+      </div>
+    </div>
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/news/ref2272.html" title="ISO 45001 vient de paraître" >ISO 45001 vient de paraître</a>
+        </h6>
+      
+        <div class="entry-summary">
+          La Norme internationale sur la santé et la sécurité au travail s’apprête à transformer les pratiques sur les lieux de travail.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--></li></ul>
+  <h3>Contact</h3>
+  
+
+
+<div class="vcard contact clearfix" itemscope itemtype="http://schema.org/Person">
+  
+    <div class="figure-box">
+      <figure class="shadow frame circle">
+        <img src="/files/live/sites/isoorg/files/contacts/ISO/COMM/elizabeth-GASIOROWSKI-DENIS.jpg/thumbnails/300x300/" class="photo" alt="Elizabeth Gasiorowski-Denis" border="0">
+      </figure>
+    </div>
+  
+  <div class="content-box">
+    <div class="fn n">
+      
+        <span class="given-name" itemprop="givenName">Elizabeth</span>
+      
+        <span class="family-name" itemprop="familyName">Gasiorowski-Denis</span>
+      
+    </div>
+    
+      <hr/>
+    
+      <div class="tel" itemprop="telephone">+41 22 749 03 25</div>
+    
+      <div class="email" itemprop="email">
+        <a class="email-nospam" href="#" data-prefix="gasiorowski" data-suffix="iso.org"></a>
+      </div>
+    
+  </div>
+</div>
+  <div class="well align-center glyphicon-shopping-cart width-100pct">
+    <h3>Normes</h3>
+    <ul class="refine"><li><div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/63787.html" title="ISO 45001:2018" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 45001:2018</a>
+  </div>
+
+  <div class="entry-summary">
+      <div class='mainTitle'>Systèmes de management de la santé et de la sécurité au travail</div><div class='text-help'>Exigences et lignes directrices pour leur utilisation</div>
+  </div>
+
+</div></li></ul>
+  </div>
+<p>&nbsp;</p>
+
+<h4>Cet article est tir&eacute; de l&#39;&nbsp;<em>ISOfocus</em>:&nbsp;</h4><div class="media">
+
+  <figure class="media-left">
+    <a href="/fr/isofocus_127.html"  title="Santé et sécurité au travail – Êtes-vous prêt pour ISO 45001?">
+    <img src="/files/live/sites/isoorg/files/news/magazine/ISOfocus%20(2013-NOW)/fr/2018/ISOfocus_127/ISOfocus_127.jpg/thumbnails/300" class="media-object width-100 shadow"
+         alt="http://www.iso.org/fr/news/"  title="http://www.iso.org/fr/news/" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/isofocus_127.html" title="Santé et sécurité au travail – Êtes-vous prêt pour ISO 45001?" >Santé et sécurité au travail – Êtes-vous prêt pour ISO 45001?</a>
+        </h6>
+      
+        <div class="entry-summary">
+          Découvrez pourquoi ISO 45001 peut changer la donne pour des millions de travailleurs (et limiter les dangers pour la santé liés au travail) partout dans le monde.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media-->
+        </div>
+      </div>
+    </div>
+    
+  <footer class="clearfix">
+    <div class="metadata-container clearfix">
+      
+      <div class="entry-keywords maxwidth-100pct small">
+        <div class="metadata-container clearfix">
+          
+            <dl class="dl-inline">
+              <dt>
+                <span class="glyphicon-tags"></span> Mots clés:
+              </dt>
+                <dd itemprop="keywords">
+        <a href="/fr/home/about-us/news_index/news-list/x/category2/security" title="Sécurité">Sécurité</a>
+      </dd>
+      <dd itemprop="keywords">
+        <a href="/fr/home/about-us/news_index/news-list/x/category2/safety" title="Sécurité">Sécurité</a>
+      </dd>
+            </dl>
+          
+            <dl class="dl-inline">
+              <dt>
+                Secteurs:
+              </dt>
+                <dd itemprop="keywords">
+        <a href="/fr/home/about-us/news_index/news-list/x/category1/SECURITY_SAFETY" title="Sécurité, sûreté et risques">Sécurité, sûreté et risques</a>
+      </dd>
+            </dl>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </article>
+  
+
+<div class="row row-light row-bottom">
+  
+      <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
+        
+
+
+<div class="vcard contact clearfix" itemscope itemtype="http://schema.org/Person">
+  
+    <div class="figure-box">
+      <figure class="shadow frame circle">
+        <img src="/files/live/sites/isoorg/files/contacts/ISO/COMM/elizabeth-GASIOROWSKI-DENIS.jpg/thumbnails/300x300/" class="photo" alt="Default ISOfocus" border="0">
+      </figure>
+    </div>
+  
+  <div class="content-box">
+    <div class="fn n">
+      
+        <span class="given-name" itemprop="givenName">Elizabeth</span>
+      
+        <span class="family-name" itemprop="familyName">Gasiorowski-Denis</span>
+      
+    </div>
+    
+      <div class="role" itemprop="jobTitle">Rédactrice en chef d&#039;ISOfocus</div>
+    
+      <div class="org" itemprop="worksFor">ISO</div>
+    
+      <hr/>
+    
+      <div class="tel" itemprop="telephone">+41 22 749 03 25</div>
+    
+      <div class="email" itemprop="email">
+        <a class="email-nospam" href="#" data-prefix="gasiorowski" data-suffix="iso.org"></a>
+      </div>
+    
+  </div>
+</div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1">
+        <div class="well glyphicon-envelope">
+  <h4 class="text-center">Suivez l&#39;actualit&eacute; de l&#39;ISO</h4>
+
+<p class="text-center">Inscrivez-vous &agrave; notre Newsletter (en anglais) pour suivre nos actualit&eacute;s, points de vue et informations sur nos produits.</p><div class="text-center">
+<div class="createsend-button" data-listid="d/CD/0F2/2B5/3412DA7993AC3B7C" style="height:27px;display:inline-block;">&nbsp;</div>
+<script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
+</div><div class="clear"></div>
+</div>
+      </div>
+    
+</div>
+</div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/about-us.html">
+                L&#039;ISO
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/news_index.html">
+                Actualités
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/news_archive.html">
+                Archives
+              </a>
+            
+        </li>
+      <li>
+      Notre monde avec ISO 45001
+    </li>
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren inPath"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

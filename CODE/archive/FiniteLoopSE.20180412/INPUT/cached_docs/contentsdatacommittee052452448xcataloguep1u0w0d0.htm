@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20161208">
+    
+
+    <title>ISO/TC 136 - Furniture</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"en",uilang:"en",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='en_US';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<link id="staticAssetCSS2" rel="stylesheet" href="/modules/iso-jahia-service-module/css/horizontal.filterbar.css?1521042854944" media="screen" type="text/css"/>
+<link id="staticAssetCSS3" rel="stylesheet" href="/modules/iso-jahia-service-module/css/datatable.search.css?1521042854944" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/fwk-module/javascript/angular.min.js?1521042755143"></script>
+<script id="staticAssetJavascript2" type="text/javascript" src="/modules/fwk-module/javascript/angular-route.min.js?1521042755143"></script>
+<script id="staticAssetJavascript3" type="text/javascript" src="/modules/iso-jahia-service-module/javascript/browseby.filterbar.js?1521042854944"></script>
+<script id="staticAssetJavascript4" type="text/javascript" src="/modules/iso-jahia-service-module/javascript/horizontal.filterbar.js?1521042854944"></script>
+<script id="staticAssetJavascript5" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+  <base href="/committee/52448/x/catalogue/" />
+
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/en/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/en/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('body').tooltip({
+        selector: '[data-toggle=iso-tooltip]'
+      });
+    });
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">English <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/fr/committee/52448.html?view=catalogue&amp;angularParam=p/1/u/0/w/0/d/0">français</a></li><li><a href="/ru/committee/52448.html?view=catalogue&amp;angularParam=p/1/u/0/w/0/d/0">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=en">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="ISO logo for print"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">International Organization for Standardization</p>
+              <p class="title-small title-red text-right hidden-xs">When the world agrees</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Search">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Pedestrians crossing a street at a crosswalk.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a></h4>
+<p>Whether you run a business, work for a company or government, or want to know how standards contribute to products and services that you use, you'll find it here.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">SMEs</a></li><li class="noChildren"><a href="/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">Learn more</a></li><li class="noChildren"><a href="/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consumers</a></li><li class="noChildren lastInLevel"><a href="/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">ISO and policy makers</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Popular standards</a></li><li class="hasChildren dropdown hover"><a href="/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a></h4>
+<p>A set of processes that show your product, service or system meets the requirements of a standard.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">The ISO Survey</a></li><li class="noChildren lastInLevel"><a href="/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">All about ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">What we do</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">What we do</a></h4>
+<p>Find out how we develop and publish international standards by bringing together more than 160 members and more than 45,000 experts</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Developing standards</a></li><li class="noChildren"><a href="/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Research</a></li><li class="noChildren"><a href="/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Capacity building</a></li><li class="noChildren lastInLevel"><a href="/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Education about standards</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Members</a></li><li class="hasChildren dropdown hover"><a href="/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">News</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">News</a></h4>
+<p>Keep up to date with the latest in standardization or browse our rich archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">News archive</a></li><li class="noChildren"><a href="/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">ISOfocus magazine</a></li><li class="noChildren"><a href="/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Events and meetings</a></li><li class="noChildren lastInLevel"><a href="/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Media kit</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Taking part</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Who develops standards</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Technical Committees</a></li><li class="noChildren"><a href="/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Other bodies</a></li><li class="noChildren lastInLevel"><a href="/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organizations in cooperation</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open lastInLevel"><a href="/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren inPath firstInLevel"><a href="/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    
+
+
+
+
+
+
+
+
+<template:addResources>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('table[id^="datatable"]').DataTable({
+        "destroy": true,
+        "paging": false,
+        "info": false,
+        "searching": true,
+        "language": {
+          "search": "",
+          "searchPlaceholder": "Filter the list",
+          "zeroRecords": "No matching records found"
+        }
+      });
+    });
+  </script>
+</template:addResources>
+
+<input type="hidden" id="indexReference" value="ISO/TC 136 - Furniture"/>
+
+<div class="container main">
+  <div class="row row-top row-light">
+    <div class="col-md-12">
+      <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/store.html">
+                Store
+              </a>
+            
+        </li>
+      
+        <li>
+          
+<a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a>
+
+        </li>
+      
+        <li>
+          
+              <a href="/standards-catalogue/browse-by-tc.html">
+                Browse by TC
+              </a>
+            
+        </li>
+      <li>ISO/TC 136</li>
+  </ol>
+
+</div>
+      <h1 class="page-header">Standards catalogue</h1>
+      <div class="heading-condensed">
+        <h2>
+          <strong><a href="/committee/52448.html">ISO/TC 136</a></strong>
+          <sup><a href="/contents/data/committee/05/24/52448.catalogue.rss" class="ss-icon ss-social-circle text-warning text-small" data-toggle="iso-tooltip" data-original-title="RSS">&#xE310;</a></sup>
+        </h2>
+        <h3>Furniture</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      
+          <div class="filterApp" ng-app="filterApp" ng-controller="mainCtrl">
+            
+            <div class="hidden" ng-view></div>
+
+            <div id="horizontalFilterBar">
+              <ul class="list-inline form">
+                <li><strong>Filter:</strong></li>
+                <li>
+                  <input type="checkbox" name="" id="statusP" ng-checked="pChecked || pChecked == null">&nbsp;
+                  <span class="glyphicon glyphicon-ok-circle"></span><label for="statusP">Published standards</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusU" ng-checked="uChecked || uChecked == null">&nbsp;
+                  <span class="glyphicon glyphicon-record"></span><label for="statusU">Standards under development</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusW" ng-checked="wChecked">&nbsp;
+                  <span class="glyphicon glyphicon-ban-circle"></span><label for="statusW">Withdrawn standards</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusD" ng-checked="dChecked">&nbsp;
+                  <span class="glyphicon glyphicon-remove-circle"></span><label for="statusD">Projects deleted</label>
+                </li>
+              </ul>
+            </div>
+
+            <table id="datatable-tc-projects" class="table responsive-table">
+              <thead>
+              <tr>
+                <th class="col-md-9">Standard and/or project&nbsp;under the direct responsibility of&nbsp;ISO/TC 136&nbsp;Secretariat <span class="text-xs" ng-bind-template="({{nbResults}})"></span></th>
+                <th class="col-md-1">Stage</th>
+                <th class="col-md-2">ICS</th>
+              </tr>
+              </thead>
+              <tbody>
+              
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="0" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/8164.html?browse=tc" title="ISO 3055:1985" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 3055:1985</a>
+  </div>
+
+  <div class="entry-summary">
+      Kitchen equipment -- Coordinating sizes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.040.01.html">97.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="1" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10006.html?browse=tc" title="ISO 4211:1979" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 4211:1979</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Assessment of surface resistance to cold liquids
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="2" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10007.html?browse=tc" title="ISO 4211-2:1993" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4211-2:1993</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Tests for surfaces -- Part 2: Assessment of resistance to wet heat
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="3" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/55266.html?browse=tc" title="ISO 4211-2:2013" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 4211-2:2013</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Tests for surface finishes -- Part 2: Assessment of resistance to wet heat
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="4" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10008.html?browse=tc" title="ISO 4211-3:1993" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4211-3:1993</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Tests for surface finishes -- Part 3: Assessment of resistance to dry heat
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="5" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/55267.html?browse=tc" title="ISO 4211-3:2013" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 4211-3:2013</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Tests for surface finishes -- Part 3: Assessment of resistance to dry heat
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="6" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10009.html?browse=tc" title="ISO 4211-4:1988" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 4211-4:1988</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Tests for surfaces -- Part 4: Assessment of resistance to impact
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="7" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/11841.html?browse=tc" title="ISO 5731:1978" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 5731:1978</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Kitchen equipment -- Limit of size
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.040.01.html">97.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="8" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/11843.html?browse=tc" title="ISO 5732:1978" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 5732:1978</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Kitchen equipment -- Sizes of openings for built-in appliances
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.040.01.html">97.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="9" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/12165.html?browse=tc" title="ISO 5970:1979" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 5970:1979</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Chairs and tables for educational institutions -- Functional sizes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.60">95.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="10" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/13769.html?browse=tc" title="ISO 7170:1993" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 7170:1993</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Storage units -- Determination of strength and durability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="11" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/38718.html?browse=tc" title="ISO 7170:2005" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 7170:2005</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Storage units -- Determination of strength and durability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="12" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/66897.html?browse=tc" title="ISO/DIS 7170" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 7170</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Storage units -- Test methods for the determination of strength and durability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.60">40.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="13" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/13770.html?browse=tc" title="ISO 7171:1988" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 7171:1988</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Storage units -- Determination of stability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="14" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/66309.html?browse=tc" title="ISO/DIS 7171" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 7171</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Storage units -- Test methods for the determination of stability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.60">40.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="15" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/13771.html?browse=tc" title="ISO 7172:1988" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 7172:1988</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Tables -- Determination of stability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="16" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/13772.html?browse=tc" title="ISO 7173:1989" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 7173:1989</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Chairs and stools -- Determination of strength and durability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="17" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/13773.html?browse=tc" title="ISO 7174-1:1988" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 7174-1:1988</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Chairs -- Determination of stability -- Part 1: Upright chairs and stools
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="18" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/13774.html?browse=tc" title="ISO 7174-2:1992" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 7174-2:1992</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Chairs -- Determination of stability -- Part 2: Chairs with tilting or reclining mechanisms when fully reclined, and rocking chairs
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="19" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/13775.html?browse=tc" title="ISO 7175-1:1997" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 7175-1:1997</a>
+  </div>
+
+  <div class="entry-summary">
+      Children's cots and folding cots for domestic use -- Part 1: Safety requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="20" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/69430.html?browse=tc" title="ISO/DIS 7175-1" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 7175-1</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Children's cots and folding cots for domestic use -- Part 1: Safety requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.60">40.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="21" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/13776.html?browse=tc" title="ISO 7175-2:1988" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 7175-2:1988</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Children's cots -- Safety requirements and testing -- Part 2: Test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/97.190.html">97.190</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="22" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/21151.html?browse=tc" title="ISO 7175-2:1997" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 7175-2:1997</a>
+  </div>
+
+  <div class="entry-summary">
+      Children's cots and folding cots for domestic use -- Part 2: Test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="23" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/69431.html?browse=tc" title="ISO/DIS 7175-2" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 7175-2</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Children's cots and folding cots for domestic use -- Part 2: Test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.60">40.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="24" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15282.html?browse=tc" title="ISO 8191-1:1987" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 8191-1:1987</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Assessment of the ignitability of upholstered furniture -- Part 1: Ignition source: smouldering cigarette
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/13.220.40.html">13.220.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="25" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15283.html?browse=tc" title="ISO 8191-2:1988" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 8191-2:1988</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Assessment of ignitability of upholstered furniture -- Part 2: Ignition source: match-flame equivalent
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/13.220.40.html">13.220.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="26" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15806.html?browse=tc" title="ISO 8554-1:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8554-1:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture locks -- Part 1: Latch lock, dead lock, rod- operating lock, central locking system, cylinder lock, combination lock
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="27" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15807.html?browse=tc" title="ISO 8554-2:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8554-2:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture locks -- Part 2: Surface-mounted lock, inset-type lock, mortise lock
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="28" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15808.html?browse=tc" title="ISO 8554-3:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8554-3:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture locks -- Part 3: Left hand lock, right hand lock, down lock, up lock
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="29" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15809.html?browse=tc" title="ISO 8554-4:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8554-4:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture locks -- Part 4: Key, rotary lock-handle, cylinder
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="30" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15810.html?browse=tc" title="ISO 8555-1:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8555-1:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture fittings -- Part 1: Assembly fittings
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="31" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15811.html?browse=tc" title="ISO 8555-2:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8555-2:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture fittings -- Part 2: Hinges and flap hinges
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="32" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15812.html?browse=tc" title="ISO 8555-3:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8555-3:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture fittings -- Part 3: Drawer slides and sliding door gears
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="33" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15813.html?browse=tc" title="ISO 8555-4:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8555-4:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture fittings -- Part 4: Holding devices, flap stays, lid stays
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="34" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15814.html?browse=tc" title="ISO 8555-5:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8555-5:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture fittings -- Part 5: Height adjusters, furniture legs, underframes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="35" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15815.html?browse=tc" title="ISO 8555-6:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8555-6:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture fittings -- Part 6: Shelf supports, hanging rails, cabinet suspension brackets
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="36" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15816.html?browse=tc" title="ISO 8555-7:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8555-7:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture fittings -- Part 7: Handles, knobs, escutcheons, escutcheon insets
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="37" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15817.html?browse=tc" title="ISO 8555-8:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8555-8:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Hardware for furniture -- Terms for furniture fittings -- Part 8: Castors and glides
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                      <li><a href="/ics/01.040.97.html">01.040.97</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="38" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16692.html?browse=tc" title="ISO 9098-1:1994" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9098-1:1994</a>
+  </div>
+
+  <div class="entry-summary">
+      Bunk beds for domestic use -- Safety requirements and tests -- Part 1: Safety requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="39" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16693.html?browse=tc" title="ISO 9098-2:1994" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9098-2:1994</a>
+  </div>
+
+  <div class="entry-summary">
+      Bunk beds for domestic use -- Safety requirements and tests -- Part 2: Test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="40" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16850.html?browse=tc" title="ISO 9221-1:1992" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 9221-1:1992</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Children's high chairs -- Part 1: Safety requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="41" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/66795.html?browse=tc" title="ISO 9221-1:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9221-1:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Children's high chairs -- Part 1: Safety requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="42" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16851.html?browse=tc" title="ISO 9221-2:1992" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 9221-2:1992</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Children's high chairs -- Part 2: Test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="43" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/66798.html?browse=tc" title="ISO 9221-2:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9221-2:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Children's high chairs -- Part 2: Test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="44" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/18118.html?browse=tc" title="ISO 10131-1:1997" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10131-1:1997</a>
+  </div>
+
+  <div class="entry-summary">
+      Foldaway beds -- Safety requirements and tests -- Part 1: Safety requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="45" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/18119.html?browse=tc" title="ISO 10131-2:1997" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10131-2:1997</a>
+  </div>
+
+  <div class="entry-summary">
+      Foldaway beds -- Safety requirements and tests -- Part 2: Test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="46" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/28810.html?browse=tc" title="ISO 15717:1998" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 15717:1998</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Kitchen equipment -- Safety requirements and test methods for kitchen cabinets and work tops
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.040.10.html">97.040.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="47" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/66310.html?browse=tc" title="ISO 19833:2018" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 19833:2018</a>
+  </div>
+
+  <div class="entry-summary">
+      Furniture -- Beds -- Test methods for the determination of stability, strength and durability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="48" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/35608.html?browse=tc" title="ISO 21015:2007" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 21015:2007</a>
+  </div>
+
+  <div class="entry-summary">
+      Office furniture -- Office work chairs -- Test methods for the determination of stability, strength and durability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="49" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/35609.html?browse=tc" title="ISO 21016:2007" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 21016:2007</a>
+  </div>
+
+  <div class="entry-summary">
+      Office furniture -- Tables and desks -- Test methods for the determination of stability, strength and durability
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="50" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/66835.html?browse=tc" title="ISO 24496:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 24496:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Office furniture -- Office chairs -- Methods for the determination of dimensions
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="51" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/61980.html?browse=tc" title="ISO/TR 24496:2012" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/TR 24496:2012</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Office furniture -- Office work chairs -- Methods for the determination of dimensions
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/97.140.html">97.140</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+            
+            <p ng-show="nbResults == 0" class="text-center">
+              No matching records found
+            </p>
+          </div>
+        
+    </div>
+  </div>
+</div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/store.html">
+                Store
+              </a>
+            
+        </li>
+      
+        <li>
+          
+<a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a>
+
+        </li>
+      
+        <li>
+          
+              <a href="/standards-catalogue/browse-by-tc.html">
+                Browse by TC
+              </a>
+            
+        </li>
+      <li>ISO/TC 136</li>
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/standards.html">Standards</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/benefits-of-standards.html">Benefits</a></li><li class="noChildren"><a href="/standards-in-action.html">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html">Popular standards</a></li><li class="noChildren"><a href="/conformity-assessment.html">Certification & conformity</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/about-us.html">All about ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/what-we-do.html">What we do</a></li><li class="noChildren"><a href="/structure.html">Structure</a></li><li class="noChildren"><a href="/members.html">Members</a></li><li class="noChildren"><a href="/news_index.html">News</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/developing-standards.html">Taking part</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/who-develops-standards.html">Who develops standards</a></li><li class="noChildren"><a href="/deliverables-all.html">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath lastInLevel"><a href="/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren inPath firstInLevel"><a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/iso-name-and-logo.html">ISO name and logo</a></li><li class="noChildren"><a href="/privacy-and-copyright.html">Privacy and copyright</a></li><li class="noChildren"><a href="/sitemap.html">Sitemap</a></li><li class="noChildren"><a href="/working-with-iso.html" >Jobs</a></li><li class="noChildren"><a href="/frequently-asked-questions-faqs.html">FAQs</a></li><li class="noChildren lastInLevel"><a href="/contact-iso.html">Contact ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">We are committed to ensuring that our website is accessible to everyone. If you have any questions or suggestions regarding the accessibility of this site, please <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contact us</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© All Rights Reserved</a> <span id="copyright" class="collapse">All ISO publications and materials are protected by copyright and are subject to the user’s acceptance of ISO’s conditions of copyright. Any use, including reproduction requires our written permission. All copyright requests should be addressed to <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

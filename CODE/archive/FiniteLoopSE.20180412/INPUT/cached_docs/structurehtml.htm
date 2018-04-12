@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20170829">
+    
+      <meta name="description" content="We're ISO, the International Organization for Standardization. We develop and publish International Standards." />
+    
+
+    <title>Structure</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"en",uilang:"en",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='en_US';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/en/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/en/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.email-nospam').each(function () {
+          var prefix = $(this).attr('data-prefix');
+          var suffix = $(this).attr('data-suffix');
+          var email = prefix + '@' + suffix;
+          var emailURL = 'mailto:' + email;
+          $(this).attr('href', emailURL).html(email);
+          $(this).removeAttr('data-prefix');
+          $(this).removeAttr('data-suffix');
+        });
+      });
+    </script>
+  
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">English <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/fr/structure.html">français</a></li><li><a href="/ru/structure.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=en">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="ISO logo for print"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">International Organization for Standardization</p>
+              <p class="title-small title-red text-right hidden-xs">When the world agrees</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Search">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Pedestrians crossing a street at a crosswalk.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a></h4>
+<p>Whether you run a business, work for a company or government, or want to know how standards contribute to products and services that you use, you'll find it here.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">SMEs</a></li><li class="noChildren"><a href="/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">Learn more</a></li><li class="noChildren"><a href="/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consumers</a></li><li class="noChildren lastInLevel"><a href="/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">ISO and policy makers</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Popular standards</a></li><li class="hasChildren dropdown hover"><a href="/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a></h4>
+<p>A set of processes that show your product, service or system meets the requirements of a standard.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">The ISO Survey</a></li><li class="noChildren lastInLevel"><a href="/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open"><a href="/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">All about ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">What we do</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">What we do</a></h4>
+<p>Find out how we develop and publish international standards by bringing together more than 160 members and more than 45,000 experts</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Developing standards</a></li><li class="noChildren"><a href="/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Research</a></li><li class="noChildren"><a href="/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Capacity building</a></li><li class="noChildren lastInLevel"><a href="/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Education about standards</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren inPath active"><a href="/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Members</a></li><li class="hasChildren dropdown hover"><a href="/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">News</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">News</a></h4>
+<p>Keep up to date with the latest in standardization or browse our rich archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">News archive</a></li><li class="noChildren"><a href="/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">ISOfocus magazine</a></li><li class="noChildren"><a href="/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Events and meetings</a></li><li class="noChildren lastInLevel"><a href="/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Media kit</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Taking part</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Who develops standards</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Technical Committees</a></li><li class="noChildren"><a href="/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Other bodies</a></li><li class="noChildren lastInLevel"><a href="/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organizations in cooperation</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="container main">
+<div class="row row-top row-no-padding">
+<div id="carousel-ae5b4ff9-e5e5-47d1-b846-45d2bd82f906" class="carousel full-width slide carousel-fade" data-ride="carousel" data-interval="8000">
+
+  
+  <div class="carousel-inner">
+    <div class="item active">
+      <figure>
+        
+        <img src='/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/img/play-stone-1237458.jpg/thumbnails/1200x300' alt='governance-banner' class="width-100pct"/>
+      </figure>
+      
+    </div>
+  </div>
+
+  
+</div><div class="clear"></div><div class="clear"></div>
+    </div><div class="row row-top row-light">
+<div class="col-md-12"><div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/about-us.html">
+                All about ISO
+              </a>
+            
+        </li>
+      
+        <li>
+          Structure
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div><h1>Structure and governance</h1><div class="clear"></div><div class="clear"></div></div><div class="col-md-7"><p>ISO is an independent, non-governmental organization made up of members from the national standards bodies of 161 countries. Our members play a vital role in how we operate, meeting once a year for a General Assembly that decides our strategic objectives.</p>
+
+<p>Our Central Secretariat in Geneva, Switzerland, coordinates the system and runs day-to-day operations, overseen by the Secretary General.</p>
+
+<h3>The General Assembly</h3>
+
+<p>The General Assembly is the overarching organ and ultimate authority of the Organization. It is an annual meeting attended by our <a href="/members.html" title="ISO Members">members</a> and our <a href="/principal-officers.html" title="Principal Officers">Principal Officers</a>.</p>
+
+<h3><a href="/committee/55010.html" title="ISO Council">The ISO Council</a></h3>
+
+<p>The ISO Council is the core governance body of the Organization and reports to the General Assembly. It meets three times a year and is made up of 20 member bodies, the ISO Officers and the Chairs of the Policy Development Committees CASCO, COPOLCO and DEVCO. The Council has direct responsibility over a number of bodies reporting to Council:</p>
+
+<ul>
+	<li>The <a href="/committee/4882535.html" title="ISO President's committee">President&rsquo;s Committee</a> advises Council on matters decided by Council.</li>
+	<li>Council Standing Committees address matters related to finance (CSC/FIN), strategy and policy (CSC/SP), nominations for governance positions (CSC/NOM), and oversight of the Organization&rsquo;s governance practices (CSC/OVE).</li>
+	<li>Advisory Groups provide advice on matters related to ISO&rsquo;s commercial policy (CPAG) and Information Technology (ITSAG).</li>
+	<li><a href="/casco.html" title="CASCO">CASCO</a> - provides guidance on conformity assessment</li>
+	<li><a href="/copolco.html" title="COPOLCO">COPOLCO</a> - provides guidance on consumer issues</li>
+	<li><a href="/devco.html" title="DEVCO">DEVCO </a>- provides guidance on matters related to developing countries</li>
+</ul>
+
+<p>Membership to the Council is open to all member bodies and rotates to make sure it is representative of the member community.</p>
+
+<h3><a href="/governance-of-technical-work.html" title="Governance of technical work">Technical Management Board</a> (TMB)</h3>
+
+<p>The management of the technical work is taken care of by the Technical Management Board, which reports to Council. This body is also responsible for the <a href="/technical-committees.html" title="Technical Committees">technical committees</a> that lead standard development and any strategic advisory boards created on technical matters.</p><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><h3>Membership</h3>
+
+<p>ISO is a network of national standards bodies that represent ISO in their country.</p>
+
+<p>There are three member categories, each enjoying different levels access and influence over the ISO system. This helps us to be inclusive while also recognizing the different needs and capacities of each member.</p>
+
+<p><strong>Read more about <a href="/members.html" title="ISO Members">ISO membership</a>.</strong></p>
+
+<h4>Contact</h4>
+
+<p>If you have any questions about ISO members or becoming an ISO member, please contact our head of membership Pamela Tarif.</p>
+
+
+<div class="vcard contact clearfix" itemscope itemtype="http://schema.org/Person">
+  
+    <div class="figure-box">
+      <figure class="shadow frame circle">
+        <img src="/files/live/sites/isoorg/files/contacts/ISO/Other/pamela-tarif.jpg/thumbnails/300x300/" class="photo" alt="Pamela Tarif" border="0">
+      </figure>
+    </div>
+  
+  <div class="content-box">
+    <div class="fn n">
+      
+        <span class="given-name" itemprop="givenName">Pamela</span>
+      
+        <span class="family-name" itemprop="familyName">Tarif</span>
+      
+    </div>
+    
+      <div class="role" itemprop="jobTitle">Head of Membership</div>
+    
+      <div class="org" itemprop="worksFor">ISO</div>
+    
+      <hr/>
+    
+      <div class="email" itemprop="email">
+        <a class="email-nospam" href="#" data-prefix="tarif" data-suffix="iso.org"></a>
+      </div>
+    
+  </div>
+</div><div class="clear"></div><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><div class="row">
+<div class="col-md-12"><div class="clear"></div></div><div class="col-md-7"><figure class="image width-100pct frame"><a class="fancybox glyphicon-zoom-in" href="/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/img/structure2018-en.gif" title="ISO governance structure"><img alt="ISO governance structure" height="627" src="/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/img/structure2018-en.gif" width="1024" /></a>
+<figcaption>ISO Governance structure</figcaption>
+</figure><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><div class="media">
+
+  <figure class="media-left">
+    <a href="/publication/PUB100322.html"  title="ISO Statutes">
+    <img src="https://www.iso.org/obp/graphics/pub/8f1df0ac-5290-4e47-9e96-f2f53bf0f7cd_7d85ea86729f8dc8d09d3873dcc08c86.jpg" class="media-object width-100 shadow"
+         alt="Cover page: ISO Statutes"  title="ISO Statutes" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/publication/PUB100322.html" title="ISO Statutes" >ISO Statutes</a>
+        </h6>
+      
+        <div class="entry-summary">
+          Trilingual document in English, French and Russian, of the complete text of ISO Statutes.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="clear"></div><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><div class="row row-middle row-light">
+<div class="col-md-12"><h2 style="font-family: MetaWebPro, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);"><a href="/principal-officers.html" title="Principal Officers">Principal officers</a></h2>
+
+<p><em><strong>Please note:</strong></em>&nbsp;The figures in brackets show the year at the end of which the term of office expires.</p>
+
+<p><a class="glyphicon-file" href="http://isotc.iso.org/livelink/livelink/fetch/-15620321/15620323/15620665/ISO_past_Officers.pdf?nodeid=18595424&amp;vernum=-2" target="_blank" title="Past Principal Officers of ISO">Past Principal Officers of ISO</a></p><div class="row">
+<div class="col-md-4"><div class="media">
+<div class="media-left"><img alt="John Walters" class="media-object frame width-180" height="400" src="/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/principal_officers_img/john-walter-portrait.jpg" width="300" /></div>
+<div class="media-body">
+<h5 class="media-heading"><strong><a href="/home/about-us/structure/principal-officers.html#president-elect" title="ISO President-elect">John Walter</a></strong></h5>
+<p><em>ISO President</em><br />
+Canada<br />
+(2019)</p>
+</div>
+</div><div class="clear"></div></div>
+        <div class="col-md-4"><div class="media">
+<div class="media-left"><img alt="Scott Steedman" class="media-object frame width-180" height="400" src="/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/principal_officers_img/scott-steedman-portrait.jpg" width="300" /></div>
+<div class="media-body">
+<h5 class="media-heading"><a href="/home/about-us/structure/principal-officers.html#vppolicy" title="ISO Vice-President (policy)">Scott Steedman</a></h5>
+<p><em>ISO Vice-President (policy)</em><br />
+United Kingdom<br />
+(2019)</p>
+</div>
+</div><div class="clear"></div></div>
+        <div class="col-md-4"><div class="media">
+<div class="media-left"><img alt="Piet-Hein Daverveldt" class="media-object frame width-180" height="400" src="/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/principal_officers_img/piet-daverveldt-portrait.jpg" width="300" /></div>
+<div class="media-body">
+<h5 class="media-heading">​<a href="/home/about-us/structure/principal-officers.html#vptm" title="ISO Vice-President (technical management)">Piet-Hein Daverveldt</a></h5>
+<em>ISO Vice-President (technical management)</em><br />
+Netherlands<br />
+(2018)</div>
+</div><div class="clear"></div></div>
+    </div><div class="row">
+<div class="col-md-4"><div class="media">
+<div class="media-left"><img alt="Bronwyn Evans" class="media-object frame width-180" height="400" src="/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/principal_officers_img/bronwyn-evans-portrait.jpg" width="300" /></div>
+
+<div class="media-body">
+<h5 class="media-heading"><a href="/home/about-us/structure/principal-officers.html#vpfin" title="ISO Vice-President (finance)">Bronwyn Evans</a></h5>
+<em>ISO Vice-President (finance)</em><br />
+Australia<br />
+(2018)</div>
+</div><div class="clear"></div></div>
+        <div class="col-md-4"><div class="media">
+<div class="media-left"><img alt="Dominique Christin" class="media-object frame width-180" height="400" src="/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/principal_officers_img/dominique-christin-portrait%20.jpg" width="300" /></div>
+<div class="media-body">
+<h5 class="media-heading"><a href="/home/about-us/structure/principal-officers.html#treasurer" title="ISO Treasurer">Dominique Christin</a></h5>
+<em>ISO Treasurer</em><br />
+Switzerland<br />
+(2018)</div>
+</div><div class="clear"></div></div>
+        <div class="col-md-4"><div class="media">
+<div class="media-left"><img alt="Sergio Mujica" class="media-object frame width-180" height="400" src="/files/live/sites/isoorg/files/about%20ISO/structure_and_governance/principal_officers_img/Sergio%20Mujica%20portrait.jpg" width="300" /></div>
+
+<div class="media-body">
+<h5 class="media-heading"><a href="/home/about-us/structure/principal-officers.html#sg" title="ISO Secretary-General">Sergio Mujica</a></h5>
+<em>ISO Secretary-General (Chief Executive Officer)</em><br />
+ISO Central Secretariat</div>
+</div><div class="clear"></div></div>
+    </div><div class="row">
+<div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+    </div><div class="clear"></div></div>
+    </div><div class="row">
+<div class="col-md-7"><h2><a href="/organizations-in-cooperation-with-iso.html" title="Organizations in cooperation with ISO">Partners</a></h2>
+
+<p>We work closely with two other international standards development organizations, the <a href="http://www.iec.ch/" target="_blank" title="IEC - International Electrotechnical Commission">International Electrotechnical Commission</a> (IEC) and <a href="http://www.itu.int/en/Pages/default.aspx" target="_blank" title="International Telecommunication Union">International Telecommunication Union</a> (ITU). In 2001, ISO, IEC and ITU formed the <a href="http://www.worldstandardscooperation.org/" target="_blank" title="WSC - World Standards Cooperation Web site">World Standards Cooperation</a> (WSC) in order to strengthen the standards systems of the three organisations. The WSC also promotes the adoption and implementation of international consensus-based standards worldwide.</p>
+
+<p>In addition, we also have a close relationship with the <a href="http://www.wto.org/" target="_blank" title="WTO - World Trade Organization">World Trade Organization</a> (WTO) which particularly appreciates the contribution of International Standards to <a href="https://tbtcode.iso.org" title="WTO ISO Standards Information Gateway">reducing technical barriers to trade</a>.</p>
+
+<p>ISO also works with United Nations partners. For example, we liaise with UN specialized agencies that do technical harmonization or technical assistance, including the UN Economic and Social Council (ECOSOC).</p>
+
+<p>In total, ISO collaborates with over <a href="/organizations-in-cooperation-with-iso.html" title="Organizations in cooperation with ISO">700 international, regional and national organisations</a>. These organisations take part in the standard development process as well as sharing expertise and best practices.</p><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><h3>How is ISO financed?</h3>
+
+<p>Our national members pay subscriptions that meet the operational cost of the Central Secretariat. The subscription paid by each member is in proportion to the country&#39;s Gross National Income and trade figures. Another source of revenue is the sale of standards.</p>
+
+<p>However, the operations of ISO&#39;s Central Secretariat represent only about one fifth of the cost of the system&#39;s operation. Other costs are related to specific standard development projects and technical work. These costs are borne by member bodies and business organizations that allow their experts to participate and pay their travel costs.</p><div class="clear"></div>
+            </div>
+    </div><div class="row row-bottom row-light">
+<div class="col-md-4"><div class="media">
+
+  <figure class="media-left">
+    <a href="/publication/PUB100364.html"  title="ISO Strategy 2016-2020">
+    <img src="https://www.iso.org/obp/graphics/pub/c46c1217-eed2-4a29-b97c-f511e2da5d68_008e8a41eb94d74801d0673e33944b02.jpg" class="media-object width-100 shadow"
+         alt="Cover page: ISO Strategy 2016-2020"  title="ISO Strategy 2016-2020" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/publication/PUB100364.html" title="ISO Strategy 2016-2020" >ISO Strategy 2016-2020</a>
+        </h6>
+      
+        <div class="entry-summary">
+          The ISO Strategy outlines our priorities for the next five years. It provides guidance and strategic direction, helping us to respond to a future where constant change will require us to continually improve the ISO system.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="clear"></div></div>
+        <div class="col-md-4"><div class="media">
+
+  <figure class="media-left">
+    <a href="/publication/PUB100374.html"  title="ISO Action Plan for developing countries 2016-2020">
+    <img src="https://www.iso.org/obp/graphics/pub/a86d30d9-3a14-45a7-9932-e61ef083356c_d6d7a8b1419e10e9809cd26eaa6de876.jpg" class="media-object width-100 shadow"
+         alt="Cover page: ISO Action Plan for developing countries 2016-2020"  title="ISO Action Plan for developing countries 2016-2020" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/publication/PUB100374.html" title="ISO Action Plan for developing countries 2016-2020" >ISO Action Plan for developing countries 2016-2020</a>
+        </h6>
+      
+        <div class="entry-summary">
+          ISO's Action Plan maps out how ISO aims to contribute to improving developing countries' economic growth and access to world markets and helping to achieve sustainable development.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="clear"></div></div>
+        <div class="col-md-4"><div class="media">
+
+  <figure class="media-left">
+    <a href="/publication/PUB100385.html"  title="Annual Report 2016">
+    <img src="https://www.iso.org/obp/graphics/pub/0ca1773d-e669-4918-9587-0c68cd3c50c2_5a542358f8f76b93e482047045722745.jpg" class="media-object width-100 shadow"
+         alt="Cover page: Annual Report 2016"  title="Annual Report 2016" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/publication/PUB100385.html" title="Annual Report 2016" >Annual Report 2016</a>
+        </h6>
+      
+        <div class="entry-summary">
+          Navigating a world in transition  In 2016 the world faced challenges brought up by globalization, climate change and the unprecedented speed of technological breakthroughs. Here are the highlights of what ISO put in place to help the world get back control of the helm and seize the potential for positive...
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="clear"></div></div>
+    </div><div class="clear"></div><div class="clear"></div>
+    </div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/about-us.html">
+                All about ISO
+              </a>
+            
+        </li>
+      
+        <li>
+          Structure
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/standards.html">Standards</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/benefits-of-standards.html">Benefits</a></li><li class="noChildren"><a href="/standards-in-action.html">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html">Popular standards</a></li><li class="noChildren"><a href="/conformity-assessment.html">Certification & conformity</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath"><a href="/about-us.html">All about ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/what-we-do.html">What we do</a></li><li class="noChildren inPath active"><a href="/structure.html">Structure</a></li><li class="noChildren"><a href="/members.html">Members</a></li><li class="noChildren"><a href="/news_index.html">News</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/developing-standards.html">Taking part</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/who-develops-standards.html">Who develops standards</a></li><li class="noChildren"><a href="/deliverables-all.html">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/iso-name-and-logo.html">ISO name and logo</a></li><li class="noChildren"><a href="/privacy-and-copyright.html">Privacy and copyright</a></li><li class="noChildren"><a href="/sitemap.html">Sitemap</a></li><li class="noChildren"><a href="/working-with-iso.html" >Jobs</a></li><li class="noChildren"><a href="/frequently-asked-questions-faqs.html">FAQs</a></li><li class="noChildren lastInLevel"><a href="/contact-iso.html">Contact ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">We are committed to ensuring that our website is accessible to everyone. If you have any questions or suggestions regarding the accessibility of this site, please <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contact us</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© All Rights Reserved</a> <span id="copyright" class="collapse">All ISO publications and materials are protected by copyright and are subject to the user’s acceptance of ISO’s conditions of copyright. Any use, including reproduction requires our written permission. All copyright requests should be addressed to <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

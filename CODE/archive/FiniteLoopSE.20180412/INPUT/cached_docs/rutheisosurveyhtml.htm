@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="ru" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="ru" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ru"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20171002">
+    
+      <meta name="description" content="Это процесс установления соответствия продукции, услуги или системы установленным требованиям." />
+    
+
+    <title>Исследование ИСО</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"ru",uilang:"ru",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); 
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/ru/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/ru/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.email-nospam').each(function () {
+          var prefix = $(this).attr('data-prefix');
+          var suffix = $(this).attr('data-suffix');
+          var email = prefix + '@' + suffix;
+          var emailURL = 'mailto:' + email;
+          $(this).attr('href', emailURL).html(email);
+          $(this).removeAttr('data-prefix');
+          $(this).removeAttr('data-suffix');
+        });
+      });
+    </script>
+  
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">русский <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/the-iso-survey.html">English</a></li><li><a href="/fr/the-iso-survey.html">français</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=ru">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/ru/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Логотип ИСО для печати"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Международная организация по стандартизации</p>
+              <p class="title-small title-red text-right hidden-xs">Когда мировое сообщество достигает консенсуса</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Поиск">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown inPath open firstInLevel"><a href="/ru/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Стандарты</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/ru/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Преимущества</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/ru/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">SMEs</a></li><li class="noChildren"><a href="/ru/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">Mатериалы ИСО</a></li><li class="noChildren"><a href="/ru/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Потребители</a></li><li class="noChildren lastInLevel"><a href="/ru/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">ИСО и правительства</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/ru/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Стандарты в действии</a></li><li class="noChildren"><a href="/ru/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Популярные стандарты</a></li><li class="hasChildren dropdown hover inPath lastInLevel"><a href="/ru/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Сертификация и соответствие</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/ru/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Сертификация и соответствие</a></h4>
+<p>Это процесс установления соответствия продукции, услуги или системы установленным требованиям.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/ru/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Сертификация</a></li><li class="noChildren"><a href="/ru/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren inPath active"><a href="/ru/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">Исследование ИСО</a></li><li class="noChildren lastInLevel"><a href="/ru/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ресурсы по оценке соответствия</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/ru/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">Все об ИСО</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/ru/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">То, что мы делаем</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/ru/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">То, что мы делаем</a></h4>
+<p>Ознакомьтесь с тем, как мы разрабатываем и публикуем международные стандарты, привлекая более 160 членов и 45000 экспертов</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/ru/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Разрабатывая стандарты</a></li><li class="noChildren"><a href="/ru/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Исследования</a></li><li class="noChildren"><a href="/ru/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Развивающиеся страны</a></li><li class="noChildren lastInLevel"><a href="/ru/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Образование в области стандартизации</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/ru/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Структура</a></li><li class="noChildren"><a href="/ru/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Члены</a></li><li class="hasChildren dropdown hover"><a href="/ru/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Новости</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/ru/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Новости</a></h4>
+<p>Будьте в курсе последних новостей или ознакомьтесь с нашим архивом.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/ru/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Архив новостей</a></li><li class="noChildren"><a href="/ru/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Журнал ISOfocus</a></li><li class="noChildren"><a href="/ru/events.html" class="dropdown-toggle" role="button" aria-expanded="false">События</a></li><li class="noChildren lastInLevel"><a href="/ru/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Медиа-кит</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/ru/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Участие</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/ru/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Кто разрабатывает стандарты</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/ru/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Технические комитеты</a></li><li class="noChildren"><a href="/ru/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Другие органы</a></li><li class="noChildren lastInLevel"><a href="/ru/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organizations in cooperation with ISO</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/ru/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Рабочие материалы</a></li><li class="noChildren"><a href="/ru/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Принять участие</a></li><li class="noChildren lastInLevel"><a href="/ru/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ресурсы</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/ru/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Интернет-магазин</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/ru/home/store/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Каталог стандартов</a></li><li class="noChildren lastInLevel"><a href="/ru/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Публикации и продукция</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="container main">
+<div class="row row-top row-no-padding">
+<div id="carousel-d9985a5c-c00b-4885-909d-8839d4298faa" class="carousel full-width slide carousel-fade" data-ride="carousel" data-interval="8000">
+
+  
+  <div class="carousel-inner">
+    <div class="item active">
+      <figure>
+        
+        <img src='/files/live/sites/isoorg/files/standards/conformity_assessment/certification/img/focus-on-binoculars.jpg/thumbnails/1200x300' alt='Close up of binoculars, slightly desaturated.' class="width-100pct"/>
+      </figure>
+      
+    </div>
+  </div>
+
+  
+</div><div class="clear"></div><div class="clear"></div>
+    </div><div class="row row-top row-light">
+<div class="col-md-12"><div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/ru/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/ru/standards.html">
+                Стандарты
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/ru/conformity-assessment.html">
+                Сертификация и соответствие
+              </a>
+            
+        </li>
+      
+        <li>
+          Исследование ИСО
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div><h1>ISO Survey</h1><div class="clear"></div><div class="clear"></div></div><div class="col-md-7"><p>Every year we perform a survey of certifications to our management system standards. The survey shows the number of valid certificates to ISO management standards (such as ISO&nbsp9001 and ISO&nbsp14001) reported for each country, each year.</p>
+
+<p>ISO does not perform certification. Organizations looking to get certified to an ISO standard must contact an independent certification body. <em>The ISO Survey</em> counts the number of certificates issued by certification bodies that have been accredited by members of the <a href="http://www.iaf.nu" target="_blank" title="International Accreditation Forum (IAF)">International Accreditation Forum (IAF)</a>.</p>
+
+<p>Learn more about <a href="/ru/certification.html" title="Certification">how to get certified</a>.</p><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1">
+
+
+<div class="vcard contact clearfix" itemscope itemtype="http://schema.org/Person">
+  
+    <div class="figure-box">
+      <figure class="shadow frame circle">
+        <img src="/files/live/sites/isoorg/files/contacts/ISO/Other/Laurent-charlet.jpg/thumbnails/300x300/" class="photo" alt="Laurent Charlet" border="0">
+      </figure>
+    </div>
+  
+  <div class="content-box">
+    <div class="fn n">
+      
+        <span class="given-name" itemprop="givenName">Laurent</span>
+      
+        <span class="family-name" itemprop="familyName">Charlet</span>
+      
+    </div>
+    
+      <hr/>
+    
+      <div class="email" itemprop="email">
+        <a class="email-nospam" href="#" data-prefix="charlet" data-suffix="iso.org"></a>
+      </div>
+    
+  </div>
+</div><div class="clear"></div><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><div class="row">
+<div class="col-md-12"><h2>ISO Survey 2016</h2><div class="clear"></div><div class="clear"></div></div><div class="col-md-7"><div>
+<p>A total of 1 643 523&nbsp;valid certificates were recorded across nine standards compared to&nbsp;1&nbsp;520&nbsp;368 in 2015, an increase of 8&nbsp;%,&nbsp;with a further 834 certificates across two new additions to the survey bringing the 2016 total to 1 644 357.</p>
+
+<p>This year, we added two new management system standards to the survey &ndash;&nbsp;ISO&nbsp;39001:2012,&nbsp;<em>Road traffic safety (RTS) management systems </em>&ndash;&nbsp;<em>Requirements with guidance for use</em>, and ISO&nbsp;28000:2007,&nbsp;<em>Specification for security management systems for the supply chain</em>&nbsp;&ndash; after recommendations from international accreditation and certification experts that we consult annually. This brings the total of standards surveyed to 11.</p>
+
+<p>Read the overview in the <a href="http://isotc.iso.org/livelink/livelink?func=ll&amp;objId=19208898&amp;objAction=Open&amp;nexturl=%2Flivelink%2Flivelink%3Ffunc%3Dll%26objId%3D18808772%26objAction%3Dbrowse%26viewType%3D1" target="_blank" title="ISO Survey 2016 Executive Summary">Executive&nbsp;summary</a>&nbsp;[PDF]. &nbsp; &nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div class="isobox width-100pct emphasis-lightgray">
+<p>Despite our best efforts to display consistent results, there are fluctuations in the number of certificates from year to year due to:</p>
+
+<ul>
+	<li>The variability in numbers of certificates reported each year by individual certification bodies</li>
+	<li>Inconsistent participation of some certification bodies that contribute to the survey one year but not the next</li>
+	<li>The participation of new certification bodies</li>
+</ul>
+</div>
+</div><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><div class="isobox well">
+<h3>Survey data</h3>
+
+<p>The full Survey data is available in Excel format&nbsp;<a href="http://isotc.iso.org/livelink/livelink?func=ll&amp;objId=18808772&amp;objAction=browse&amp;viewType=1" target="_blank" title="ISO Survey of certifications to management system standards - Full results">here</a></p>
+</div>
+
+<p>&nbsp;</p><div class="clear"></div><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><div class="clear"></div>
+    </div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/ru/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/ru/standards.html">
+                Стандарты
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/ru/conformity-assessment.html">
+                Сертификация и соответствие
+              </a>
+            
+        </li>
+      
+        <li>
+          Исследование ИСО
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Карта сайта</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover inPath firstInLevel"><a href="/ru/standards.html">Стандарты</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/ru/benefits-of-standards.html">Преимущества</a></li><li class="noChildren"><a href="/ru/standards-in-action.html">Стандарты в действии</a></li><li class="noChildren"><a href="/ru/popular-standards.html">Популярные стандарты</a></li><li class="noChildren inPath lastInLevel"><a href="/ru/conformity-assessment.html">Сертификация и соответствие</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/ru/about-us.html">Все об ИСО</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/ru/what-we-do.html">То, что мы делаем</a></li><li class="noChildren"><a href="/ru/structure.html">Структура</a></li><li class="noChildren"><a href="/ru/members.html">Члены</a></li><li class="noChildren"><a href="/ru/news_index.html">Новости</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/ru/developing-standards.html">Участие</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/ru/who-develops-standards.html">Кто разрабатывает стандарты</a></li><li class="noChildren"><a href="/ru/deliverables-all.html">Рабочие материалы</a></li><li class="noChildren"><a href="/ru/get-involved.html">Принять участие</a></li><li class="noChildren lastInLevel"><a href="/ru/resources.html">Ресурсы</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/ru/store.html">Интернет-магазин</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/ru/home/store/standards-catalogue/browse-by-ics.html" >Каталог стандартов</a></li><li class="noChildren lastInLevel"><a href="/ru/publication-list.html">Публикации и продукция</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/ru/footer-links/iso-name-and-logo.html">Название и логотип ИСО</a></li><li class="noChildren"><a href="/ru/privacy-and-copyright.html">Конфиденциальность и авторское право</a></li><li class="noChildren"><a href="/ru/sitemap.html">Карта сайта</a></li><li class="noChildren"><a href="/ru/working-with-iso.html" >Вакансии</a></li><li class="noChildren"><a href="/ru/footer-links/frequently-asked-questions-faqs.html">FAQs</a></li><li class="noChildren lastInLevel"><a href="/ru/contact-iso.html">Связаться с ИСО</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Мы гарантируем доступ к нашему сайту каждому. Если у вас возникли вопросы или предложения, касающиеся доступа к данной странице, пожалуйста <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">свяжитесь с нами</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Все права сохраняются</a> <span id="copyright" class="collapse">Все публикации и материалы ИСО защищены авторским правом и принадлежат с одобрения ИСО условий авторского права. Любое использование материалов без предварительного письменного разрешения ИСО, запрещается. Запросы на разрешение подаются в <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

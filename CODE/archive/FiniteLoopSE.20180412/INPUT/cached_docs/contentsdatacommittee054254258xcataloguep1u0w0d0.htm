@@ -1,0 +1,3844 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20161208">
+    
+
+    <title>ISO/TC 188 - Small craft</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"en",uilang:"en",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='en_US';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<link id="staticAssetCSS2" rel="stylesheet" href="/modules/iso-jahia-service-module/css/horizontal.filterbar.css?1521042854944" media="screen" type="text/css"/>
+<link id="staticAssetCSS3" rel="stylesheet" href="/modules/iso-jahia-service-module/css/datatable.search.css?1521042854944" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/fwk-module/javascript/angular.min.js?1521042755143"></script>
+<script id="staticAssetJavascript2" type="text/javascript" src="/modules/fwk-module/javascript/angular-route.min.js?1521042755143"></script>
+<script id="staticAssetJavascript3" type="text/javascript" src="/modules/iso-jahia-service-module/javascript/browseby.filterbar.js?1521042854944"></script>
+<script id="staticAssetJavascript4" type="text/javascript" src="/modules/iso-jahia-service-module/javascript/horizontal.filterbar.js?1521042854944"></script>
+<script id="staticAssetJavascript5" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+  <base href="/committee/54258/x/catalogue/" />
+
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/en/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/en/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('body').tooltip({
+        selector: '[data-toggle=iso-tooltip]'
+      });
+    });
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">English <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/fr/committee/54258.html?view=catalogue&amp;angularParam=p/1/u/0/w/0/d/0">français</a></li><li><a href="/ru/committee/54258.html?view=catalogue&amp;angularParam=p/1/u/0/w/0/d/0">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=en">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="ISO logo for print"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">International Organization for Standardization</p>
+              <p class="title-small title-red text-right hidden-xs">When the world agrees</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Search">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Pedestrians crossing a street at a crosswalk.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a></h4>
+<p>Whether you run a business, work for a company or government, or want to know how standards contribute to products and services that you use, you'll find it here.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">SMEs</a></li><li class="noChildren"><a href="/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">Learn more</a></li><li class="noChildren"><a href="/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consumers</a></li><li class="noChildren lastInLevel"><a href="/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">ISO and policy makers</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Popular standards</a></li><li class="hasChildren dropdown hover"><a href="/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a></h4>
+<p>A set of processes that show your product, service or system meets the requirements of a standard.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">The ISO Survey</a></li><li class="noChildren lastInLevel"><a href="/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">All about ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">What we do</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">What we do</a></h4>
+<p>Find out how we develop and publish international standards by bringing together more than 160 members and more than 45,000 experts</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Developing standards</a></li><li class="noChildren"><a href="/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Research</a></li><li class="noChildren"><a href="/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Capacity building</a></li><li class="noChildren lastInLevel"><a href="/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Education about standards</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Members</a></li><li class="hasChildren dropdown hover"><a href="/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">News</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">News</a></h4>
+<p>Keep up to date with the latest in standardization or browse our rich archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">News archive</a></li><li class="noChildren"><a href="/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">ISOfocus magazine</a></li><li class="noChildren"><a href="/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Events and meetings</a></li><li class="noChildren lastInLevel"><a href="/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Media kit</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Taking part</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Who develops standards</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Technical Committees</a></li><li class="noChildren"><a href="/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Other bodies</a></li><li class="noChildren lastInLevel"><a href="/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organizations in cooperation</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open lastInLevel"><a href="/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren inPath firstInLevel"><a href="/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    
+
+
+
+
+
+
+
+
+<template:addResources>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('table[id^="datatable"]').DataTable({
+        "destroy": true,
+        "paging": false,
+        "info": false,
+        "searching": true,
+        "language": {
+          "search": "",
+          "searchPlaceholder": "Filter the list",
+          "zeroRecords": "No matching records found"
+        }
+      });
+    });
+  </script>
+</template:addResources>
+
+<input type="hidden" id="indexReference" value="ISO/TC 188 - Small craft"/>
+
+<div class="container main">
+  <div class="row row-top row-light">
+    <div class="col-md-12">
+      <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/store.html">
+                Store
+              </a>
+            
+        </li>
+      
+        <li>
+          
+<a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a>
+
+        </li>
+      
+        <li>
+          
+              <a href="/standards-catalogue/browse-by-tc.html">
+                Browse by TC
+              </a>
+            
+        </li>
+      <li>ISO/TC 188</li>
+  </ol>
+
+</div>
+      <h1 class="page-header">Standards catalogue</h1>
+      <div class="heading-condensed">
+        <h2>
+          <strong><a href="/committee/54258.html">ISO/TC 188</a></strong>
+          <sup><a href="/contents/data/committee/05/42/54258.catalogue.rss" class="ss-icon ss-social-circle text-warning text-small" data-toggle="iso-tooltip" data-original-title="RSS">&#xE310;</a></sup>
+        </h2>
+        <h3>Small craft</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      
+        <table id="datatable-committee-children" class="table table-striped responsive-table">
+          <thead>
+          <tr>
+            <th class="col-md-2">Subcommittee</th>
+            <th class="col-md-5">Subcommittee Title</th>
+            <th class="col-md-2 text-center">Published standards</th>
+            <th class="col-md-3 text-center">Standards under development</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+                <td data-title="Subcommittee">
+                  <a href="/contents/data/committee/61/53/615333/x/catalogue/">ISO/TC 188/SC 1</a>
+                </td>
+                <td data-title="Subcommittee Title">Personal safety equipment</td>
+                <td data-title="Published standards" class="text-center">
+                  <a href="/contents/data/committee/61/53/615333/x/catalogue/p/1/u/0/w/0/d/0">23</a>
+                </td>
+                <td data-title="Standards under development" class="text-center">
+                  <a href="/contents/data/committee/61/53/615333/x/catalogue/p/0/u/1/w/0/d/0">9</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="Subcommittee">
+                  <a href="/contents/data/committee/53/98/5398578/x/catalogue/">ISO/TC 188/SC 2</a>
+                </td>
+                <td data-title="Subcommittee Title">Engines and propulsion systems</td>
+                <td data-title="Published standards" class="text-center">
+                  <a href="/contents/data/committee/53/98/5398578/x/catalogue/p/1/u/0/w/0/d/0">29</a>
+                </td>
+                <td data-title="Standards under development" class="text-center">
+                  <a href="/contents/data/committee/53/98/5398578/x/catalogue/p/0/u/1/w/0/d/0">6</a>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      
+            </div>
+          </div>
+        </div>
+        <div class="container main" id="projects">
+          <div class="row">
+            <div class="col-md-12">
+      
+          <div class="filterApp" ng-app="filterApp" ng-controller="mainCtrl">
+            
+            <div class="hidden" ng-view></div>
+
+            <div id="horizontalFilterBar">
+              <ul class="list-inline form">
+                <li><strong>Filter:</strong></li>
+                <li>
+                  <input type="checkbox" name="" id="statusP" ng-checked="pChecked || pChecked == null">&nbsp;
+                  <span class="glyphicon glyphicon-ok-circle"></span><label for="statusP">Published standards</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusU" ng-checked="uChecked || uChecked == null">&nbsp;
+                  <span class="glyphicon glyphicon-record"></span><label for="statusU">Standards under development</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusW" ng-checked="wChecked">&nbsp;
+                  <span class="glyphicon glyphicon-ban-circle"></span><label for="statusW">Withdrawn standards</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusD" ng-checked="dChecked">&nbsp;
+                  <span class="glyphicon glyphicon-remove-circle"></span><label for="statusD">Projects deleted</label>
+                </li>
+              </ul>
+            </div>
+
+            <table id="datatable-tc-projects" class="table responsive-table">
+              <thead>
+              <tr>
+                <th class="col-md-9">Standard and/or project&nbsp;under the direct responsibility of&nbsp;ISO/TC 188&nbsp;Secretariat <span class="text-xs" ng-bind-template="({{nbResults}})"></span></th>
+                <th class="col-md-1">Stage</th>
+                <th class="col-md-2">ICS</th>
+              </tr>
+              </thead>
+              <tbody>
+              
+                <tr ng-show="wChecked">
+                  <td data-sort="0" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10479.html?browse=tc" title="ISO/TR 4558:1985" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/TR 4558:1985</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Rigging screws for stainless steel wire rope -- Principal dimensions for forks, connection pins and eye-holes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="1" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10481.html?browse=tc" title="ISO 4559:1978" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4559:1978</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Shipbuilding -- Tracks for yachts -- Interchangeability dimensions
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="2" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10483.html?browse=tc" title="ISO 4565:1986" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4565:1986</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Anchor chains
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="3" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10484.html?browse=tc" title="ISO 4566:1985" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4566:1985</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Shipbuilding -- Inboard-engined pleasure craft -- Propeller shaft ends and bosses
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="4" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/10486.html?browse=tc" title="ISO 4567:1978" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4567:1978</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Shipbuilding -- Yachts -- Waste water fittings
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                      <li><a href="/ics/13.030.40.html">13.030.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="5" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/12442.html?browse=tc" title="ISO 6185:1982" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 6185:1982</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Shipbuilding and marine structures -- Inflatable boats -- Boats made of reinforced elastomers or plastomers
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="6" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34124.html?browse=tc" title="ISO 6185-1:2001" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 6185-1:2001</a>
+  </div>
+
+  <div class="entry-summary">
+      Inflatable boats -- Part 1: Boats with a maximum motor power rating of 4,5 kW
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="7" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34125.html?browse=tc" title="ISO 6185-2:2001" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 6185-2:2001</a>
+  </div>
+
+  <div class="entry-summary">
+      Inflatable boats -- Part 2: Boats with a maximum motor power rating of 4,5 kW to 15 kW inclusive
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="8" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34126.html?browse=tc" title="ISO 6185-3:2001" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 6185-3:2001</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Inflatable boats -- Part 3: Boats with a maximum motor power rating of 15 kW and greater
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="9" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/60201.html?browse=tc" title="ISO 6185-3:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 6185-3:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      Inflatable boats -- Part 3: Boats with a hull length less than 8 m with a motor rating of 15 kW and greater
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="10" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/38415.html?browse=tc" title="ISO 6185-4:2011" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 6185-4:2011</a>
+  </div>
+
+  <div class="entry-summary">
+      Inflatable boats -- Part 4: Boats with a hull length of between 8 m and 24 m with a motor power rating of 15 kW and greater
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="11" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/14760.html?browse=tc" title="ISO 7840:1985" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 7840:1985</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Fire resistant fuel hoses
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="12" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/14761.html?browse=tc" title="ISO 7840:1994" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 7840:1994</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Fire-resistant fuel hoses
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="13" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/35180.html?browse=tc" title="ISO 7840:2004" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 7840:2004</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Fire-resistant fuel hoses
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="14" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15143.html?browse=tc" title="ISO 8099:1985" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8099:1985</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Toilet retention and recirculating systems for the treatment of toilet waste
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                      <li><a href="/ics/13.030.40.html">13.030.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="15" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/33458.html?browse=tc" title="ISO 8099:2000" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8099:2000</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Toilet waste retention systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="16" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/73216.html?browse=tc" title="ISO 8099-1:2018" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 8099-1:2018</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Waste systems -- Part 1: Waste water retention
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="17" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/71020.html?browse=tc" title="ISO/CD 8099-2" ><span class="glyphicon glyphicon-record"></span>ISO/CD 8099-2</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Waste systems -- Part 2: Waste water treatment
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#30.20">30.20</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="18" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/15672.html?browse=tc" title="ISO 8469:1994" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8469:1994</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Non-fire-resistant fuel hoses
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="19" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/37498.html?browse=tc" title="ISO 8469:2006" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8469:2006</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Non-fire-resistant fuel hoses
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="20" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16051.html?browse=tc" title="ISO 8665:1988" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8665:1988</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Marine propulsion engines and systems -- Power measurements and declarations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="21" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16052.html?browse=tc" title="ISO 8665:1994" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8665:1994</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Marine propulsion engines and systems -- Power measurements and declarations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="22" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/32250.html?browse=tc" title="ISO 8666:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8666:2002</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Principal data
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="23" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/65424.html?browse=tc" title="ISO 8666:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 8666:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Principal data
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="24" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16323.html?browse=tc" title="ISO 8846:1990" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 8846:1990</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical devices -- Protection against ignition of surrounding flammable gases
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="25" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16324.html?browse=tc" title="ISO 8847:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8847:1987</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Steering gear -- Wire rope and pulley systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="26" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16326.html?browse=tc" title="ISO 8849:1990" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 8849:1990</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrically operated bilge-pumps
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="27" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34174.html?browse=tc" title="ISO 8849:2003" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 8849:2003</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrically operated direct-current bilge pumps
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="28" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/72107.html?browse=tc" title="ISO/CD 8849" ><span class="glyphicon glyphicon-record"></span>ISO/CD 8849</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrically operated direct-current bilge pumps
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#30.20">30.20</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="29" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16682.html?browse=tc" title="ISO 9093-1:1994" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9093-1:1994</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Seacocks and through-hull fittings -- Part 1: Metallic
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="30" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34494.html?browse=tc" title="ISO 9093-2:2002" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9093-2:2002</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Seacocks and through-hull fittings -- Part 2: Non-metallic
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="31" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/61729.html?browse=tc" title="ISO 9094:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9094:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Fire protection
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="32" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34497.html?browse=tc" title="ISO 9094-1:2003" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 9094-1:2003</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Fire protection -- Part 1: Craft with a hull length of up to and including 15 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="33" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34495.html?browse=tc" title="ISO 9094-2:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 9094-2:2002</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Fire protection -- Part 2: Craft with a hull length of over 15 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="34" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/16691.html?browse=tc" title="ISO 9097:1991" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9097:1991</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electric fans
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                      <li><a href="/ics/23.120.html">23.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="35" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/37478.html?browse=tc" title="ISO 9650-1:2005" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9650-1:2005</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Inflatable liferafts -- Part 1: Type I
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="36" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/37479.html?browse=tc" title="ISO 9650-2:2005" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9650-2:2005</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Inflatable liferafts -- Part 2: Type II
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="37" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/37480.html?browse=tc" title="ISO 9650-3:2005" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 9650-3:2005</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Inflatable liferafts -- Part 3: Material
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="38" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/45643.html?browse=tc" title="ISO 9650-3:2009" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 9650-3:2009</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Inflatable liferafts -- Part 3: Materials
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="39" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/18059.html?browse=tc" title="ISO 10087:1990" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10087:1990</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull identification -- Coding system
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="40" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/22932.html?browse=tc" title="ISO 10087:1995" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10087:1995</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull identification -- Coding system
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="41" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/37497.html?browse=tc" title="ISO 10087:2006" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10087:2006</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Craft identification -- Coding system
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="42" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/67299.html?browse=tc" title="ISO/DIS 10087" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 10087</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Craft identification -- Coding system
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.99">40.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="43" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/18060.html?browse=tc" title="ISO 10088:1992" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10088:1992</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Permanently installed fuel systems and fixed fuel tanks
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="44" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/29774.html?browse=tc" title="ISO 10088:2001" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10088:2001</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Permanently installed fuel systems and fixed fuel tanks
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="45" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/45343.html?browse=tc" title="ISO 10088:2009" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10088:2009</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Permanently installed fuel systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="46" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/18121.html?browse=tc" title="ISO 10133:1994" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10133:1994</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical systems -- Extra-low-voltage d.c. installations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="47" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/27317.html?browse=tc" title="ISO 10133:2000" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10133:2000</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical systems -- Extra-low-voltage d.c. installations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="48" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/45867.html?browse=tc" title="ISO 10133:2012" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10133:2012</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical systems -- Extra-low-voltage d.c. installations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="49" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/18122.html?browse=tc" title="ISO 10134:1993" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10134:1993</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical devices -- Lightning protection
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="50" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34175.html?browse=tc" title="ISO 10134:2003" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10134:2003</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical devices -- Lightning-protection systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="51" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/75622.html?browse=tc" title="ISO/DTR 10134" ><span class="glyphicon glyphicon-record"></span>ISO/DTR 10134</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical devices -- Lightning-protection systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#30.20">30.20</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="52" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/33318.html?browse=tc" title="ISO 10239:2000" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10239:2000</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Liquefied petroleum gas (LPG) systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="53" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/35654.html?browse=tc" title="ISO 10239:2000/Cor 1:2001" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10239:2000/Cor 1:2001</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="54" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/41913.html?browse=tc" title="ISO 10239:2008" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10239:2008</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Liquefied petroleum gas (LPG) systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="55" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/60148.html?browse=tc" title="ISO 10239:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10239:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Liquefied petroleum gas (LPG) systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="56" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/18277.html?browse=tc" title="ISO 10240:1995" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 10240:1995</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Owner's manual
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="57" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/33291.html?browse=tc" title="ISO 10240:2004" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10240:2004</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Owner's manual
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="58" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/64507.html?browse=tc" title="ISO 10240:2004/Amd 1:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10240:2004/Amd 1:2015</a>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="59" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/74205.html?browse=tc" title="ISO/CD 10240" ><span class="glyphicon glyphicon-record"></span>ISO/CD 10240</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Owner's manual
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#30.20">30.20</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="60" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/19094.html?browse=tc" title="ISO 11105:1995" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 11105:1995</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Ventilation of petrol engine and/or petrol tank compartments
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="61" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/41644.html?browse=tc" title="ISO 11192:2005" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 11192:2005</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Graphical symbols
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                      <li><a href="/ics/01.080.20.html">01.080.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="62" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/19390.html?browse=tc" title="ISO/TR 11447:1994" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/TR 11447:1994</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Interchangeability dimensions of navigation lights
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="63" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/19526.html?browse=tc" title="ISO 11591:2000" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 11591:2000</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft, engine-driven -- Field of vision from helm position
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="64" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/46211.html?browse=tc" title="ISO 11591:2011" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 11591:2011</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft, engine-driven -- Field of vision from helm position
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="65" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/67210.html?browse=tc" title="ISO/DIS 11591" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 11591</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Field of vision from helm position
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.99">40.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="66" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/32251.html?browse=tc" title="ISO 11812:2001" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 11812:2001</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Watertight cockpits and quick-draining cockpits
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="67" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/67204.html?browse=tc" title="ISO/DIS 11812" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 11812</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Watertight or quick draining recesses and cockpits
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.20">40.20</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="68" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/51225.html?browse=tc" title="ISO 12133:2011" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12133:2011</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Carbon monoxide (CO) detection systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="69" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/32511.html?browse=tc" title="ISO 12215-1:2000" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-1:2000</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 1: Materials: Thermosetting resins, glass-fibre reinforcement, reference laminate
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="70" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34466.html?browse=tc" title="ISO 12215-2:2002" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-2:2002</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 2: Materials: Core materials for sandwich construction, embedded materials
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="71" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/25270.html?browse=tc" title="ISO 12215-3:2002" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-3:2002</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 3: Materials: Steel, aluminium alloys, wood, other materials
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="72" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/25271.html?browse=tc" title="ISO 12215-4:2002" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-4:2002</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 4: Workshop and manufacturing
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="73" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/40210.html?browse=tc" title="ISO 12215-5:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-5:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 5: Design pressures for monohulls, design stresses, scantlings determination
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="74" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/61193.html?browse=tc" title="ISO 12215-5:2008/Amd 1:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-5:2008/Amd 1:2014</a>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="75" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/69552.html?browse=tc" title="ISO/DIS 12215-5" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 12215-5</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 5: Design pressures for monohulls, design stresses, scantlings determination
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.99">40.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="76" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/42346.html?browse=tc" title="ISO 12215-6:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-6:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 6: Structural arrangements and details
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="77" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/73457.html?browse=tc" title="ISO/DIS 12215-7" ><span class="glyphicon glyphicon-record"></span>ISO/DIS 12215-7</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 7: Scantlings determination of multihulls
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#40.99">40.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="78" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/37476.html?browse=tc" title="ISO 12215-8:2009" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-8:2009</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 8: Rudders
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="79" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/57245.html?browse=tc" title="ISO 12215-8:2009/Cor 1:2010" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-8:2009/Cor 1:2010</a>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="80" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/55339.html?browse=tc" title="ISO 12215-9:2012" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12215-9:2012</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 9: Sailing craft appendages
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="81" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/67294.html?browse=tc" title="ISO/AWI 12215-10" ><span class="glyphicon glyphicon-record"></span>ISO/AWI 12215-10</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Hull construction and scantlings -- Part 10: Rig loads and rig attachment in sailing craft
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#20.00">20.00</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="82" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/33661.html?browse=tc" title="ISO 12216:2002" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12216:2002</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Windows, portlights, hatches, deadlights and doors -- Strength and watertightness requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="83" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/69553.html?browse=tc" title="ISO/CD 12216" ><span class="glyphicon glyphicon-record"></span>ISO/CD 12216</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Windows, portlights, hatches, deadlights and doors -- Strength and watertightness requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#30.99">30.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="84" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/33073.html?browse=tc" title="ISO 12217-1:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12217-1:2002</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 1: Non-sailing boats of hull length greater than or equal to 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="85" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/46451.html?browse=tc" title="ISO 12217-1:2002/Amd 1:2009" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12217-1:2002/Amd 1:2009</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="86" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/55957.html?browse=tc" title="ISO 12217-1:2013" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12217-1:2013</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 1: Non-sailing boats of hull length greater than or equal to 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="87" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/68140.html?browse=tc" title="ISO 12217-1:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12217-1:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 1: Non-sailing boats of hull length greater than or equal to 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="88" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/23259.html?browse=tc" title="ISO 12217-2:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12217-2:2002</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 2: Sailing boats of hull length greater than or equal to 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="89" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/55958.html?browse=tc" title="ISO 12217-2:2013" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12217-2:2013</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 2: Sailing boats of hull length greater than or equal to 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="90" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/68141.html?browse=tc" title="ISO 12217-2:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12217-2:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 2: Sailing boats of hull length greater than or equal to 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="91" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/28594.html?browse=tc" title="ISO 12217-3:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12217-3:2002</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 3: Boats of hull length less than 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="92" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/46452.html?browse=tc" title="ISO 12217-3:2002/Amd 1:2009" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12217-3:2002/Amd 1:2009</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="93" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/55959.html?browse=tc" title="ISO 12217-3:2013" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12217-3:2013</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 3: Boats of hull length less than 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="94" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/68142.html?browse=tc" title="ISO 12217-3:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 12217-3:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Stability and buoyancy assessment and categorization -- Part 3: Boats of hull length less than 6 m
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="95" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/35358.html?browse=tc" title="ISO 12401:2004" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 12401:2004</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Deck safety harness and safety line for use on recreational craft -- Safety requirements and test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="96" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/21603.html?browse=tc" title="ISO 13297:1995" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 13297:1995</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical systems -- Alternating current installations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="97" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/27316.html?browse=tc" title="ISO 13297:2000" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 13297:2000</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical systems -- Alternating current installations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="98" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/46477.html?browse=tc" title="ISO 13297:2012" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 13297:2012</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical systems -- Alternating current installations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="99" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/66210.html?browse=tc" title="ISO 13297:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 13297:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical systems -- Alternating current installations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="100" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/69551.html?browse=tc" title="ISO/CD 13297" ><span class="glyphicon glyphicon-record"></span>ISO/CD 13297</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electrical systems -- Alternating current installations
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#30.60">30.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="101" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/22348.html?browse=tc" title="ISO 13590:1997" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 13590:1997</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Personal watercraft -- Construction and system installation requirements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="102" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/35359.html?browse=tc" title="ISO 14227:2001" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 14227:2001</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Magnetic compasses
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="103" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/24540.html?browse=tc" title="ISO 14509:2000" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 14509:2000</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft - Measurement of airborne sound emitted by powered recreational craft
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                      <li><a href="/ics/17.140.30.html">17.140.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="104" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/36427.html?browse=tc" title="ISO 14509:2000/Amd 1:2004" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 14509:2000/Amd 1:2004</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/17.140.30.html">17.140.30</a></li>
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="105" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/39532.html?browse=tc" title="ISO 14509-1:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 14509-1:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Airborne sound emitted by powered recreational craft -- Part 1: Pass-by measurement procedures
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                      <li><a href="/ics/17.140.30.html">17.140.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="106" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34769.html?browse=tc" title="ISO 14509-2:2006" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 14509-2:2006</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Airborne sound emitted by powered recreational craft -- Part 2: Sound assessment using reference craft
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                      <li><a href="/ics/17.140.30.html">17.140.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="107" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/44710.html?browse=tc" title="ISO 14509-3:2009" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 14509-3:2009</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Airborne sound emitted by powered recreational craft -- Part 3: Sound assessment using calculation and measurement procedures
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                      <li><a href="/ics/17.140.30.html">17.140.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="108" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/25875.html?browse=tc" title="ISO 14895:2000" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 14895:2000</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Liquid-fuelled galley stoves
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="109" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/61102.html?browse=tc" title="ISO 14895:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 14895:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Liquid-fuelled galley stoves and heating appliances
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="110" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/25641.html?browse=tc" title="ISO 14945:2004" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 14945:2004</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Builder's plate
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="111" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/69555.html?browse=tc" title="ISO/CD 14945" ><span class="glyphicon glyphicon-record"></span>ISO/CD 14945</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Builder's plate
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#30.60">30.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="112" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/25642.html?browse=tc" title="ISO 14946:2001" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 14946:2001</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Maximum load capacity
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="113" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/71063.html?browse=tc" title="ISO/CD 14946" ><span class="glyphicon glyphicon-record"></span>ISO/CD 14946</a>&nbsp;<span class='text-warning small'>[Under development]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Maximum load capacity
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#30.99">30.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="114" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/26247.html?browse=tc" title="ISO 15027-1:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 15027-1:2002</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Immersion suits -- Part 1: Constant wear suits, requirements including safety
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/13.340.10.html">13.340.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="115" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/28888.html?browse=tc" title="ISO 15027-2:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 15027-2:2002</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Immersion suits -- Part 2: Abandonment suits, requirements including safety
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/13.340.10.html">13.340.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="116" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/28889.html?browse=tc" title="ISO 15027-3:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 15027-3:2002</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Immersion suits -- Part 3: Test methods
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/13.340.10.html">13.340.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="117" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/26406.html?browse=tc" title="ISO 15083:2003" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 15083:2003</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft - Bilge-pumping systems
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="118" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/26407.html?browse=tc" title="ISO 15084:2003" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 15084:2003</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Anchoring, mooring and towing -- Strong points
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="119" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/26408.html?browse=tc" title="ISO 15085:2003" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 15085:2003</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Man-overboard prevention and recovery
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="120" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/43905.html?browse=tc" title="ISO 15085:2003/Amd 1:2009" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 15085:2003/Amd 1:2009</a>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="121" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/69543.html?browse=tc" title="ISO 15085:2003/Amd 2:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 15085:2003/Amd 2:2017</a>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="122" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/57088.html?browse=tc" title="ISO 16180:2013" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 16180:2013</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Navigation lights -- Installation, placement and visibility
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="123" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/56158.html?browse=tc" title="ISO 16315:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 16315:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electric propulsion system
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="124" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/63709.html?browse=tc" title="ISO 19009:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 19009:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Electric navigation lights -- Performance of LED lights
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="125" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/34550.html?browse=tc" title="ISO 21487:2006" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 21487:2006</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+  <div class="entry-summary">
+      Small craft -- Permanently installed petrol and diesel fuel tanks
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="126" data-title="Standard and/or project">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/standard/52919.html?browse=tc" title="ISO 21487:2006/Cor 1:2008" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 21487:2006/Cor 1:2008</a>&nbsp;<span class='text-danger small'>[Withdrawn]</span>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stage">
+                    <a href="/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/ics/47.080.html">47.080</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+            
+            <p ng-show="nbResults == 0" class="text-center">
+              No matching records found
+            </p>
+          </div>
+        
+    </div>
+  </div>
+</div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/store.html">
+                Store
+              </a>
+            
+        </li>
+      
+        <li>
+          
+<a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a>
+
+        </li>
+      
+        <li>
+          
+              <a href="/standards-catalogue/browse-by-tc.html">
+                Browse by TC
+              </a>
+            
+        </li>
+      <li>ISO/TC 188</li>
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/standards.html">Standards</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/benefits-of-standards.html">Benefits</a></li><li class="noChildren"><a href="/standards-in-action.html">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html">Popular standards</a></li><li class="noChildren"><a href="/conformity-assessment.html">Certification & conformity</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/about-us.html">All about ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/what-we-do.html">What we do</a></li><li class="noChildren"><a href="/structure.html">Structure</a></li><li class="noChildren"><a href="/members.html">Members</a></li><li class="noChildren"><a href="/news_index.html">News</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/developing-standards.html">Taking part</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/who-develops-standards.html">Who develops standards</a></li><li class="noChildren"><a href="/deliverables-all.html">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath lastInLevel"><a href="/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren inPath firstInLevel"><a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/iso-name-and-logo.html">ISO name and logo</a></li><li class="noChildren"><a href="/privacy-and-copyright.html">Privacy and copyright</a></li><li class="noChildren"><a href="/sitemap.html">Sitemap</a></li><li class="noChildren"><a href="/working-with-iso.html" >Jobs</a></li><li class="noChildren"><a href="/frequently-asked-questions-faqs.html">FAQs</a></li><li class="noChildren lastInLevel"><a href="/contact-iso.html">Contact ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">We are committed to ensuring that our website is accessible to everyone. If you have any questions or suggestions regarding the accessibility of this site, please <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contact us</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© All Rights Reserved</a> <span id="copyright" class="collapse">All ISO publications and materials are protected by copyright and are subject to the user’s acceptance of ISO’s conditions of copyright. Any use, including reproduction requires our written permission. All copyright requests should be addressed to <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

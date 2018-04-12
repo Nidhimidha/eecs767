@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8" />
+	<title>FiniteLoop Squad Search</title>
+	<style>
+		body {
+			font: normal 10px/.75 helvetica;
+		}
+		#header {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 50px;
+			background: steelblue;
+		}
+		#header h1 {
+			margin: 15px;
+			padding: 0;
+			color: white;
+		}
+		#header a {
+			text-decoration: none;
+		}
+		#search {
+			margin: 0 auto;
+			margin-top: 70px;
+			border: 2px dash black;
+			width: 100%;
+			height: 25px;
+			text-align: center;
+		}
+		#search input {
+			width: 200px;
+		}
+		#results {
+			position: absolute;
+			top: 125px;
+			left: 0;
+			width: 100%;
+			background: #eee;
+		}
+		#footer {
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			height: 50px;
+			color: white;
+			text-align: center;
+			background: steelblue;
+		}
+	</style>
+	<body>
+		<div id="header">
+			<a href="index.html"><h1>FiniteLoop Squad 
+			Search</h1></a>
+		</div>
+		<div id="search">
+			<form method="post" action="cgi-bin/search.cgi">
+				<input type="text" name="query" />
+			</form>
+		</div>
+		<div id="results">
+		</div>
+		<div id="footer">
+			<p>Spring 2018 &middot;
+                        EECS 767, Information Retrieval &middot;
+                        Blake Bryant, Nidhi Midha, Ron Andrews</p>
+		</div>
+	</body>
+</html>

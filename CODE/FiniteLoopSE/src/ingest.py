@@ -8,7 +8,7 @@ import io
 import fileinput
 import string
 import urllib #required to open html documents
-import urllib2 #required in python 2.7
+#import urllib2 #required in python 2.7
 import re #required to remove html tags vie regex
 import codecs #required to open html files
 import nltk #requires python 3.5 or python 2.7 to install
@@ -57,7 +57,7 @@ path = ('/home/splunk/Documents/EECS_767/Project/cached_docs/')
 #path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\test\\')
 
 if(len(sys.argv)>1):
-	path=sys.argv[1]
+        path=sys.argv[1]
 
 #-------------------------------------------------------------------------------
 #
@@ -109,6 +109,7 @@ def func_tokenize(raw_input):
 
         except:
             print ('Error in regex', sys.exc_info()[0], sys.exc_info()[1])
+ 
         ### the following section uses Python 3 conventions
         #try:
             ##tr = str.maketrans(" ", " ", string.punctuation)#used to strip punctuation ## need to change for python 2   THis is python 3
@@ -119,7 +120,8 @@ def func_tokenize(raw_input):
         try:
             raw_input = (raw_input.decode('unicode_escape').encode('ascii','ignore')) ##
         except:
-            print ('Error removing unicode characters from line var', sys.exc_info()[0], sys.exc_info()[1])
+            pass
+            #print ('Error removing unicode characters from line var', sys.exc_info()[0], sys.exc_info()[1])
         try:
             #line = tags.sub(' ',str(raw_input)) #remove html tags ##python 3 code
             line = re.sub(tags,' ',str(raw_input)) #remove html tags
@@ -159,12 +161,14 @@ def func_tokenize(raw_input):
 # ----------------------------------------------------------------
 
 class IndexValues(object):
-    def __init__(self, data, doc_key, terms, proximity,download_manifest):
+    def __init__(self, data, doc_key,title_map, terms, proximity,download_manifest,num_docs):
         self.data = data #array to store raw input from file
         self.doc_key = doc_key #dictionary to store document information
+        self.title_map=title_map#used to map titles to filenames
         self.terms=terms #dictionary to store terms and their frequency
         self.proximity=proximity # dictionary to store term location within documents
         self.download_manifest=download_manifest#this should be a dictionary stored in an external .db file
+        self.num_docs=num_docs
 
     # This function parses documents to generate term frequency and term proximity
     # This function calls the parsing document function
@@ -173,18 +177,29 @@ class IndexValues(object):
         #Iterate through each document (row in data) and append term frequemcy
         #to the document position in the terms dictionary  
         try:
-            num_docs=len(self.data)#may not be necessary
+            self.num_docs=len(self.data)#used to initialize terms arrays
             print ('Creating index')
             for document_id, document in enumerate (self.data):
-                self.func_parse_document(num_docs,document_id,document)
+                self.func_parse_document(self.num_docs,document_id,document)
         except:       
             print ('Error updating tf values in terms dictionary', sys.exc_info()[0], sys.exc_info()[1])
         #return index_data()
+    #This function parses the document for <title> tags and stores the stringe within the tags in a
+    #dictionary called "title_map"
+    #@timing #comment out to remove timing
+    def func_parse_title(self,page,filename):
+        #print ('Parsing title for document'+ str(filename))
+        try:
+                match = re.search(r'(<title>)(.*?)(<)',page) #regex to match title and tags as separate capture groups
+                title = match.group(2)  #regex to return the string between tags
+                #print ('printing title')
+                #print (title)
+                self.title_map[filename]=[title] #store title in the title_map dictionary
+        except:
+                print('Error parsing title of document', sys.exc_info()[0], sys.exc_info()[1])
+        #terms=getattr(index_data,terms)
             
     #@timing #comment out to remove timing
-    #def func_parse_document(num_docs,document_id,document):
-    #def func_parse_document(terms,num_docs,proximity,document_id,document):
-    #def func_parse_document(index_data,num_docs,document_id,document):
     def func_parse_document(self,num_docs,document_id,document):
         print ('Parsing terms for document_id'+ str(document_id))
         #terms=getattr(index_data,terms)
@@ -250,7 +265,18 @@ class IndexValues(object):
                 with open('proximity.txt','w') as proximity_out_put_file:
                     proximity_out_put_file.write(json.dumps(self.proximity))
             except:
-                print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])  
+                print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])
+            try:
+                with open('title_map.txt','w') as title_map_out_put_file:
+                    title_map_out_put_file.write(json.dumps(self.title_map))
+            except:
+                print ('Error printing data to title_map file', sys.exc_info()[0], sys.exc_info()[1]) 
+            try:
+                with open('num_docs.txt','w') as num_docs_out_put_file:
+                    num_docs_out_put_file.write(json.dumps(self.num_docs))
+            except:
+                print ('Error printing data to title_map file', sys.exc_info()[0], sys.exc_info()[1])
+
             #export data via shelve
         except:
             print ('Error with func_json_out', sys.exc_info()[0], sys.exc_info()[1])
@@ -260,10 +286,12 @@ class IndexValues(object):
         try:           
             print ('Exporting data to shelf .db file')
             try:   
-                d = shelve.open('OUTPUT/ingestOutput.db')
+                d = shelve.open('OUTPUT/ingestOutput')
                 d['index'] = self.terms
                 d['doc_key'] = self.doc_key
                 d['proximity'] = self.proximity ## may be wrong without []
+                d['title_map']=self.title_map 
+                d['num_docs']=self.num_docs
                 d.close()   
             except:
                 print ('Error exporting data via shelve', sys.exc_info()[0], sys.exc_info()[1]) 
@@ -291,8 +319,9 @@ class IndexValues(object):
             documents_in_directory = os.listdir(path)
             #print (documents_in_directory) ##Debugging
             #data = []
+            document_id=0
             #doc_key={}#create dictionary to store document information
-            for document_id, filename in enumerate(documents_in_directory):
+            for document, filename in enumerate(documents_in_directory):
                 #def func_open_document(doc_key
                 print(filename)#debugging
                 if not (filename.startswith('.') or filename.endswith('.db')):# added exclusion for .db file to prevent parsing the manifest file 
@@ -306,11 +335,15 @@ class IndexValues(object):
                         except:
                             print ('Error appednding document info to doc_key', sys.exc_info()[0], sys.exc_info()[1])
                         try:
-                            page = urllib2.urlopen(file_format+path+filename).read()##linux path
+                            print ('Caching document '+ str(document_id))
+                            #page = urllib2.urlopen(file_format+path+filename).read()##linux path
+                            page = urllib.request.urlopen(file_format+path+filename).read()##linux path
                             #page = urllib2.urlopen(file_format+path+filename).read()##windows path
+                            document_id+=1
                         except:
                             print ('Error using urllib to open file', sys.exc_info()[0], sys.exc_info()[1])
-                        print ('Caching document'+ str(document_id))
+                        print ('Parsing title and tags from '+str(filename))  
+                        self.func_parse_title(page,filename)
                         line = func_tokenize(page) #remove HTML tags from the document
                         try:
                             self.data.append(line)
@@ -328,12 +361,12 @@ class IndexValues(object):
 @timing #comment out to remove timing
 def main():
     print ("Welcome to the EECS767 document parsing program!")
-    index_data=IndexValues([],{},{},defaultdict(list),{})
+    index_data=IndexValues([],{},{},{},defaultdict(list),{},0)
     index_data.func_read_download_manifest(path)
     index_data.func_open_files(path)   
     index_data.func_create_index() 
-    index_data.func_json_out()#May be useful for debugging
+#    index_data.func_json_out()#May be useful for debugging
     index_data.func_export_data_via_shelve()
     print ('Program complete!')
 if __name__ == "__main__":    
-	main()
+        main()

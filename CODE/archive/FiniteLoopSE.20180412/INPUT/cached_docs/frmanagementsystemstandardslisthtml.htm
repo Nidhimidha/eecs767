@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20170831">
+    
+      <meta name="description" content="Ces normes donnent un modèle à suivre pour mettre en place et utiliser un système de management. Apprenez-en plus sur leur fonctionnement et leur application." />
+    
+
+    <title>Normes de système de management de l’ISO</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/management-system-standards-list.html">English</a></li><li><a href="/ru/management-system-standards-list.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown inPath open firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren inPath"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="container main">
+<div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/standards.html">
+                Normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/popular-standards.html">
+                Les normes les plus connues
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/management-system-standards.html">
+                Normes de système de management
+              </a>
+            
+        </li>
+      
+        <li>
+          Normes de système de management...
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div><div class="row">
+<div class="col-md-12"><h1>Normes de syst&egrave;me de management</h1><div class="clear"></div><div class="clear"></div></div><div class="col-md-7"><p>Ici vous trouverez une liste de nos normes de syst&egrave;me de management&nbsp;class&eacute;e par secteur d&#39;activit&eacute;. Vous pouvez &eacute;galement&nbsp;t&eacute;l&eacute;charger&nbsp;<a href="http://isotc.iso.org/livelink/livelink?func=ll&amp;objId=18964860&amp;objAction=Open&amp;nexturl=%2Flivelink%2Flivelink%3Ffunc%3Dll%26objId%3D16474137%26objAction%3Dbrowse%26viewType%3D1" title="Liste complète de normes de système de management">une liste compl&egrave;te de normes de syst&egrave;me de management</a> sous forme de fichier Excel.</p><h2></h2>
+<div class="accordion-container" id="6e53bfa1-f736-4c07-822b-cb50cf2f62e4">
+    <div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#6e53bfa1-f736-4c07-822b-cb50cf2f62e4" href="#5557c970-9f6d-4a26-a395-1661ba86bb32">
+        Qualité
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="5557c970-9f6d-4a26-a395-1661ba86bb32" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-quality">
+	<thead>
+		<tr>
+			<th scope="col" style="white-space: nowrap;">R&eacute;f&eacute;rence</th>
+			<th scope="col">Titre</th>
+			<th scope="col">HLS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/62085.html" title="Systèmes de management de la qualité -- Exigences">ISO&nbsp;9001:2015</a></td>
+			<td>Syst&egrave;mes de management de la qualit&eacute; -- Exigences</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/61386.html" title="ISO 18091:2014 - Systèmes de management de la qualité -- Lignes directrices...">ISO 18091:2014</a></td>
+			<td>Syst&egrave;mes de management de la qualit&eacute; -- Lignes directrices pour l&#39;application de l&#39;ISO 9001:2008 &agrave; la collectivit&eacute; locale</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/59752.html" title="ISO&amp;nbsp13485:2016 - Dispositifs médicaux -- Systèmes de management de la qualité -- Exigences à des fins réglementaires">ISO 13485:2016</a></td>
+			<td>Dispositifs m&eacute;dicaux -- Syst&egrave;mes de management de la qualit&eacute; -- Exigences &agrave; des fins r&eacute;glementaires</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/56869.html" title="ISO&amp;nbsp10004:2012 - Management de la qualité -- Satisfaction du client -- Lignes directrices relatives à la surveillance et au mesurage">ISO 10004:2012</a></td>
+			<td>Management de la qualit&eacute; -- Satisfaction du client -- Lignes directrices relatives &agrave; la surveillance et au mesurage</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70376.html" title="ISO 10006:2017 - Management de la qualité -- Lignes directrices pour le...">ISO 10006:2017</a></td>
+			<td>Management de la qualit&eacute; -- Lignes directrices pour le management de la qualit&eacute; dans les projets</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="white-space: nowrap;"><a href="/fr/standard/60045.html" title="ISO/TS&amp;nbsp17582:2014 - Systèmes de management de la qualité -- Exigences particulières pour l'application de l'ISO 9001:2008 aux organismes électoraux à tous les niveaux du gouvernement">ISO/TS 17582:2014</a></td>
+			<td>Syst&egrave;mes de management de la qualit&eacute; -- Exigences particuli&egrave;res pour l&#39;application de l&#39;ISO 9001:2008 aux organismes &eacute;lectoraux &agrave; tous les niveaux du gouvernement</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="white-space: nowrap;"><a href="/fr/standard/66266.html" title="ISO 21001 - Titre manque">ISO 21001</a></td>
+			<td>&nbsp;</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td style="white-space: nowrap;"><a href="/fr/standard/72712.html" title="ISO/TS 22163 - Applications ferroviaires -- Système de management de...">ISO/TS 22163:2017</a></td>
+			<td>Applications ferroviaires -- Syst&egrave;me de management de la qualit&eacute; -- Exigences particuli&egrave;res li&eacute;es &agrave; l&#39;application ISO 9001:2015 dans le secteur ferroviaire</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td style="white-space: nowrap;"><a href="/fr/standard/67773.html" title="ISO 29001 - Industries du pétrole, de la pétrochimie et du gaz naturel...">ISO 29001</a></td>
+			<td>Industries du p&eacute;trole, de la p&eacute;trochimie et du gaz naturel -- Syst&egrave;mes de management de la qualit&eacute; sp&eacute;cifiques au secteur -- Exigences pour les organismes de fourniture de produits et de services</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70293.html" title="ISO/IEC 80079-34 - Atmosphères explosives -- Partie 34: Application...">ISO/IEC 80079-34</a></td>
+			<td>Atmosph&egrave;res explosives -- Partie 34: Application des syst&egrave;mes de qualit&eacute; pour la fabrication d&#39;&eacute;quipements</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/64908.html" title="ISO 19443 - Systèmes de management de la qualité -- Exigences spécifiques pour l'application de l'ISO 9001 et des exigences GS-R de l'AIEA par les organisations de la chaîne d'approvisionnement du secteur de l'énergie nucléaire">ISO 19443</a></td>
+			<td>Syst&egrave;mes de management de la qualit&eacute; -- Exigences sp&eacute;cifiques pour l&#39;application de l&#39;ISO 9001 et des exigences GS-R de l&#39;AIEA par les organisations de la cha&icirc;ne d&#39;approvisionnement du secteur de l&#39;&eacute;nergie nucl&eacute;aire</td>
+			<td>Oui</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+        </div>
+    </div>
+</div><div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#6e53bfa1-f736-4c07-822b-cb50cf2f62e4" href="#1bc3a50f-fd45-4071-a4d5-b573d7f92c82">
+        Industrie
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="1bc3a50f-fd45-4071-a4d5-b573d7f92c82" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-industry">
+	<thead>
+		<tr>
+			<th scope="col">R&eacute;f&eacute;rence</th>
+			<th scope="col">Titre</th>
+			<th scope="col">HLS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/54594.html" title="ISO 14298:2013 - Technologie graphique -- Management des procédés d'impression...">ISO&nbsp;14298:2013</a></td>
+			<td>Technologie graphique -- Management des proc&eacute;d&eacute;s d&#39;impression de s&eacute;curit&eacute;</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70729.html" title="ISO 15378:2017 - Articles d'emballage primaire pour médicaments -- Exigences...">ISO&nbsp;15378:2017</a></td>
+			<td>Articles d&#39;emballage primaire pour m&eacute;dicaments -- Exigences particuli&egrave;res pour l&#39;application de l&#39;ISO 9001:2015 prenant en consid&eacute;ration les Bonnes Pratiques de Fabrication (BPF)</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70424.html" title="ISO 16000-40 - Air intérieur -- Partie 40: Système de management de...">ISO&nbsp;16000-40</a></td>
+			<td>Air int&eacute;rieur -- Partie 40: Syst&egrave;me de management de la qualit&eacute; de l&#39;air int&eacute;rieur</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/72712.html" title="ISO/TS 22163:2017 - Applications ferroviaires -- Système de management...">ISO/TS&nbsp;22163:2017</a></td>
+			<td>Applications ferroviaires -- Syst&egrave;me de management de la qualit&eacute; -- Exigences li&eacute;es au syst&egrave;me de management de l&#39;activit&eacute; &agrave; destination des organismes ferroviaires: ISO 9001:2015 et exigences particuli&egrave;res concernant les applications dans le secteur ferroviaire</td>
+			<td>Oui</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+        </div>
+    </div>
+</div><div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#6e53bfa1-f736-4c07-822b-cb50cf2f62e4" href="#1c1483a0-2f39-4a8d-ac21-d21f70691b55">
+        Sûreté et sécurité
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="1c1483a0-2f39-4a8d-ac21-d21f70691b55" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-safety">
+	<thead>
+		<tr>
+			<th scope="col">R&eacute;f&eacute;rence</th>
+			<th scope="col">Titre</th>
+			<th scope="col">HLS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/45967.html" title="ISO 10377:2013 - Sécurité des produits de consommation -- Lignes directrices pour les fournisseurs">ISO&nbsp;10377:2013</a></td>
+			<td>S&eacute;curit&eacute; des produits de consommation -- Lignes directrices pour les fournisseurs</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/45968.html" title="ISO 10393:2013 - Rappel de produits de consommation -- Lignes directrices pour les fournisseurs">ISO&nbsp;10393:2013</a></td>
+			<td>Rappel de produits de consommation -- Lignes directrices pour les fournisseurs</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/63380.html" title="ISO 18788:2015 - Système de management des opérations de sécurité privées -- Exigences et lignes directrices pour son utilisation">ISO&nbsp;18788:2015</a></td>
+			<td>Syst&egrave;me de management des op&eacute;rations de s&eacute;curit&eacute; priv&eacute;es -- Exigences et lignes directrices pour son utilisation</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/65464.html" title="ISO 22000 - Systèmes de management de la sécurité des denrées alimentaires -- Exigences pour tout organisme appartenant à la chaîne alimentaire">ISO 22000</a></td>
+			<td>Syst&egrave;mes de management de la s&eacute;curit&eacute; des denr&eacute;es alimentaires -- Exigences pour tout organisme appartenant &agrave; la cha&icirc;ne alimentaire</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/60992.html" title="ISO 22004:2014 - Systèmes de management de la sécurité des denrées alimentaires -- Recommandations pour l'application de l'ISO 22000">ISO&nbsp;22004:2014</a></td>
+			<td>Syst&egrave;mes de management de la s&eacute;curit&eacute; des denr&eacute;es alimentaires -- Recommandations pour l&#39;application de l&#39;ISO 22000</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/50038.html" title="ISO 22301:2012 - Sécurité sociétale -- Systèmes de management de la continuité d'activité -- Exigences">ISO&nbsp;22301:2012</a></td>
+			<td>S&eacute;curit&eacute; soci&eacute;tale -- Syst&egrave;mes de management de la continuit&eacute; d&#39;activit&eacute; -- Exigences</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/64118.html" title="ISO 24518:2015 - Activités relatives aux services de l'eau potable et de l'assainissement -- Gestion de crise des services publics de l'eau">ISO&nbsp;24518:2015</a></td>
+			<td>Activit&eacute;s relatives aux services de l&#39;eau potable et de l&#39;assainissement -- Gestion de crise des services publics de l&#39;eau</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/63166.html" title="ISO 28007-1:2015 - Navires et technologie maritime -- Guide destiné aux sociétés privées de sécurité maritime (PMSC) fournissant des agents de protection armés embarqués sous contrat privé (PCASP) à bord de navires (et contrat pro forma) -- Partie 1: Généralités">ISO&nbsp;28007-1:2015</a></td>
+			<td>Navires et technologie maritime -- Guide destin&eacute; aux soci&eacute;t&eacute;s priv&eacute;es de s&eacute;curit&eacute; maritime (PMSC) fournissant des agents de protection arm&eacute;s embarqu&eacute;s sous contrat priv&eacute; (PCASP) &agrave; bord de navires (et contrat pro forma) -- Partie 1: G&eacute;n&eacute;ralit&eacute;s</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/61588.html" title="ISO/DIS 34001.4 - Sécurité et résilience -- Système de management de la sécurité">ISO/DIS&nbsp;34001.4</a></td>
+			<td>S&eacute;curit&eacute; et r&eacute;silience -- Syst&egrave;me de management de la s&eacute;curit&eacute;</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/64749.html" title="ISO/TS 34700:2016 - Gestion du bien-être animal -- Exigences générales et orientations pour les organisations des filières alimentaires">ISO/TS&nbsp;34700:2016</a></td>
+			<td>Gestion du bien-&ecirc;tre animal -- Exigences g&eacute;n&eacute;rales et orientations pour les organisations des fili&egrave;res alimentaires</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/71293.html" title="ISO/NP 35001 - Titre manque">ISO/NP 35001</a></td>
+			<td>&nbsp;</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/44958.html" title="ISO 39001:2012 - Systèmes de management de la sécurité routière -- Exigences et recommandations de bonnes pratiques">ISO&nbsp;39001:2012</a></td>
+			<td>Syst&egrave;mes de management de la s&eacute;curit&eacute; routi&egrave;re -- Exigences et recommandations de bonnes pratiques</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/63787.html" title="ISO/DIS 45001 - Systèmes de management de la santé et de la sécurité au travail -- Exigences avec directives d'utilisation">ISO/DIS&nbsp;45001</a></td>
+			<td>Syst&egrave;mes de management de la sant&eacute; et de la s&eacute;curit&eacute; au travail -- Exigences avec directives d&#39;utilisation</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/51367.html" title="ISO/IEC 80079-34:2011 - Atmosphères explosives -- Partie 34: Application des systèmes de qualité pour la fabrication d'équipements">ISO/IEC&nbsp;80079-34:2011</a></td>
+			<td>Atmosph&egrave;res explosives -- Partie 34: Application des syst&egrave;mes de qualit&eacute; pour la fabrication d&#39;&eacute;quipements</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+        </div>
+    </div>
+</div><div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#6e53bfa1-f736-4c07-822b-cb50cf2f62e4" href="#138a3125-1865-47ed-8fa8-9a8f2e24550d">
+        Management
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="138a3125-1865-47ed-8fa8-9a8f2e24550d" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-management">
+	<thead>
+		<tr>
+			<th scope="col"><span style="font-weight: normal;">R&eacute;f&eacute;rence</span></th>
+			<th scope="col"><span style="font-weight: normal;">Titre</span></th>
+			<th scope="col"><span style="font-weight: normal;">HLS</span></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/62342.html" title="ISO 19600:2014 - Systèmes de management de la compliance -- Lignes directrices"><font color="#333333">ISO&nbsp;19600:2014</font></a></td>
+			<td>Compliance management systems -- Guidelines</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/53733.html" title="ISO 30301:2011 - Information et documentation -- Systèmes de gestion des documents d'activité -- Exigences"><font color="#333333">ISO&nbsp;30301:2011</font></a></td>
+			<td>Information et documentation -- Syst&egrave;mes de gestion des documents d&#39;activit&eacute; -- Exigences</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/54673.html" title="ISO 30302:2015 - Information et documentation -- Système de gestion des documents d'activité -- Lignes directrices de mise en oeuvre"><font color="#333333">ISO&nbsp;30302:2015</font></a></td>
+			<td>Information et documentation -- Syst&egrave;me de gestion des documents d&#39;activit&eacute; -- Lignes directrices de mise en oeuvre</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68683.html" title="ISO 30401 - Titre manque"><font color="#333333">ISO 30401</font></a></td>
+			<td>&nbsp;</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/64765.html" title="ISO/DIS 34101-1 - Fèves de cacao durable et traçable -- Partie 1: Exigences relatives aux systèmes de management de la durabilité"><font color="#333333">ISO 34101-1</font></a></td>
+			<td>F&egrave;ves de cacao durable et tra&ccedil;able -- Partie 1: Exigences relatives aux syst&egrave;mes de management de la durabilit&eacute;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/65034.html" title="ISO 37001:2016 - Systèmes de management anti-corruption -- Exigences et recommandations de mise en oeuvre"><font color="#333333">ISO&nbsp;37001:2016</font></a></td>
+			<td>Syst&egrave;mes de management anti-corruption -- Exigences et recommandations de mise en oeuvre</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/61885.html" title="ISO 37101:2016 - Développement durable au sein des communautés territoriales -- Système de management pour le développement durable -- Exigences et lignes directrices pour son utilisation"><font color="#333333">ISO&nbsp;37101:2016</font></a></td>
+			<td>D&eacute;veloppement durable au sein des communaut&eacute;s territoriales -- Syst&egrave;me de management pour le d&eacute;veloppement durable -- Exigences et lignes directrices pour son utilisation</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68021.html" title="ISO 41001 - Facility management -- Systèmes de management -- Exigences..."><font color="#333333">ISO 41001</font></a></td>
+			<td>Facility management -- Syst&egrave;mes de management -- Exigences avec directives d&#39;utilisation</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/72798.html" title="ISO 44001:2017 - Systèmes de management collaboratif d'une relation d'affaire..."><font color="#333333">ISO 44001:2017</font></a></td>
+			<td>Collaborative business relationship management systems -- Framework</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68221.html" title="ISO/AWI 50501"><font color="#333333">ISO/AWI&nbsp;50501</font></a></td>
+			<td>&nbsp;</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/55089.html" title="ISO 55001:2014 - Gestion d'actifs -- Systèmes de management -- Exigences"><font color="#333333">ISO&nbsp;55001:2014</font></a></td>
+			<td>Gestion d&#39;actifs -- Syst&egrave;mes de management -- Exigences</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/55090.html" title="ISO 55002:2014 - Gestion d'actifs -- Systèmes de management -- Lignes directrices relatives à l'application de l'ISO 55001"><font color="#333333">ISO&nbsp;55002:2014</font></a></td>
+			<td>Gestion d&#39;actifs -- Syst&egrave;mes de management -- Lignes directrices relatives &agrave; l&#39;application de l&#39;ISO 55001</td>
+			<td>Oui</td>
+		</tr>
+	</tbody>
+</table>
+
+        </div>
+    </div>
+</div><div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#6e53bfa1-f736-4c07-822b-cb50cf2f62e4" href="#07401a1b-88b5-451e-8ac0-0086b98e74b0">
+        Santé et médecine
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="07401a1b-88b5-451e-8ac0-0086b98e74b0" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-health">
+	<thead>
+		<tr>
+			<th scope="col">R&eacute;f&eacute;rence</th>
+			<th scope="col">Titre</th>
+			<th scope="col">HLS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/59752.html" title="ISO 13485:2016 - Medical devices -- Quality management systems -- Requirements...">ISO&nbsp13485:2016</a></td>
+			<td>Dispositifs m&eacute;dicaux -- Syst&egrave;mes de management de la qualit&eacute; -- Exigences &agrave; des fins r&eacute;glementaires</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+        </div>
+    </div>
+</div><div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#6e53bfa1-f736-4c07-822b-cb50cf2f62e4" href="#df27e08b-3d56-4e33-bea7-a9a679304431">
+        Environnement et énergie
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="df27e08b-3d56-4e33-bea7-a9a679304431" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-health">
+	<thead>
+		<tr>
+			<th scope="col">R&eacute;f&eacute;rence</th>
+			<th scope="col">Titre</th>
+			<th scope="col">HLS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/60857.html" title="ISO 14001:2015 - Systèmes de management environnemental -- Exigences et lignes directrices pour son utilisation">ISO&nbsp;14001:2015</a></td>
+			<td>Syst&egrave;mes de management environnemental -- Exigences et lignes directrices pour son utilisation</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70138.html" title="ISO/AWI 14002-1 - Titre manque -- Partie 1: Titre manque">ISO 14002-1</a></td>
+			<td>-</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/60856.html" title="ISO 14004:2016 - Systèmes de management environnemental -- Lignes directrices générales pour la mise en application">ISO&nbsp;14004:2016</a></td>
+			<td>Syst&egrave;mes de management environnemental -- Lignes directrices g&eacute;n&eacute;rales pour la mise en application</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/43208.html" title="ISO 14005:2010 - Systèmes de management environnemental -- Lignes directrices pour la mise en application par phases d'un système de management environnemental, incluant l'utilisation d'une évaluation de performance environnementale">ISO&nbsp;14005:2010</a></td>
+			<td>Syst&egrave;mes de management environnemental -- Lignes directrices pour la mise en application par phases d&#39;un syst&egrave;me de management environnemental, incluant l&#39;utilisation d&#39;une &eacute;valuation de performance environnementale</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/43241.html" title="ISO 14006:2011 - Systèmes de management environnemental -- Lignes directrices pour intégrer l'éco-conception">ISO&nbsp;14006:2011</a></td>
+			<td>Syst&egrave;mes de management environnemental -- Lignes directrices pour int&eacute;grer l&#39;&eacute;co-conception</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/69426.html" title="ISO/CD 50001 - Systèmes de management de l'énergie -- Exigences et recommandations...">ISO/DIS 50001</a></td>
+			<td>Syst&egrave;mes de management de l&#39;&eacute;nergie -- Exigences et recommandations de mise en oeuvre</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/60041.html" title="ISO 50004:2014 - Systèmes de management de l'énergie -- Lignes directrices pour la mise en oeuvre, la maintenance et l'amélioration d'un système de management de l'énergie">ISO&nbsp;50004:2014</a></td>
+			<td>Syst&egrave;mes de management de l&#39;&eacute;nergie -- Lignes directrices pour la mise en oeuvre, la maintenance et l&#39;am&eacute;lioration d&#39;un syst&egrave;me de management de l&#39;&eacute;nergie</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+        </div>
+    </div>
+</div><div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#6e53bfa1-f736-4c07-822b-cb50cf2f62e4" href="#59982bfa-7fca-45c0-9a7f-8826c7a10fa9">
+        Technologies de l’information
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="59982bfa-7fca-45c0-9a7f-8826c7a10fa9" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-safety">
+	<thead>
+		<tr>
+			<th scope="col">R&eacute;f&eacute;rence</th>
+			<th scope="col">Titre</th>
+			<th scope="col">HLS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/68531.html" title="ISO/IEC 19770-1 - Technologies de l'information -- Gestion des actifs...">ISO/IEC 19770-1</a></td>
+			<td>Technologies de l&#39;information -- Gestion des actifs logiciels -- Partie 1: Proc&eacute;d&eacute;s et &eacute;valuation progressive de la conformit&eacute;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70636.html" title="ISO/IEC 20000-1 - Technologies de l'information -- Gestion des services...">ISO/IEC&nbsp;20000-1</a></td>
+			<td>Technologies de l&#39;information -- Gestion des services -- Partie 1: Exigences du syst&egrave;me de management des services</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/72120.html" title="ISO/IEC 20000-2 - Technologies de l'information -- Gestion des services...">ISO/IEC 20000-2</a></td>
+			<td>Technologies de l&#39;information -- Gestion des services -- Partie 2: Guide pour l&#39;application des syst&egrave;mes de management des services</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/54534.html" title="ISO/IEC 27001:2013 - Technologies de l'information -- Techniques de sécurité...">ISO/IEC&nbsp;27001:2013</a></td>
+			<td>Technologies de l&#39;information -- Techniques de s&eacute;curit&eacute; -- Syst&egrave;mes de management de la s&eacute;curit&eacute; de l&#39;information -- Exigences</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/63417.html" title="ISO/IEC 27003:2017 - Technologies de l'information -- Techniques de sécurité...">ISO/IEC 27003:2017</a></td>
+			<td>Information technology -- Security techniques -- Information security management systems -- Guidance</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/64138.html" title="ISO/IEC 27013:2015 - Technologies de l'information -- Techniques de sécurité...">ISO/IEC&nbsp;27013:2015</a></td>
+			<td>Technologies de l&#39;information -- Techniques de s&eacute;curit&eacute; -- Guide sur la mise en oeuvre int&eacute;gr&eacute;e d&#39;ISO/IEC 27001 et ISO/IEC 20000-1</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68427.html" title="ISO/IEC 27010:2015 - Technologies de l'information -- Techniques de sécurité...">ISO/IEC&nbsp;27010:2015</a></td>
+			<td>Technologies de l&#39;information -- Techniques de s&eacute;curit&eacute; -- Gestion de la s&eacute;curit&eacute; de l&#39;information des communications intersectorielles et interorganisationnelles</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/71670.html" title="ISO/IEC 27552 - Technologies de l’information -- Techniques de sécurité...">ISO/IEC 27552</a></td>
+			<td>Technologies de l&rsquo;information -- Techniques de s&eacute;curit&eacute; -- Extension d&rsquo;ISO/IEC 27001 &agrave; la gestion de la protection de la vie priv&eacute;e -- Exigences</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/66240.html" title="ISO/IEC 90003:2014 - Ingénierie du logiciel -- Lignes directrices pour...">ISO/IEC&nbsp;90003:2014</a></td>
+			<td>Ing&eacute;nierie du logiciel -- Lignes directrices pour l&#39;application de l&#39;ISO 9001:2008 aux logiciels informatiques</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+        </div>
+    </div>
+</div><div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#6e53bfa1-f736-4c07-822b-cb50cf2f62e4" href="#ea24d264-4a99-445a-829a-473d40ffcae7">
+        Services
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="ea24d264-4a99-445a-829a-473d40ffcae7" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-service">
+	<thead>
+		<tr>
+			<th scope="col">R&eacute;f&eacute;rence</th>
+			<th scope="col">Titre</th>
+			<th scope="col">HLS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/51986.html" title="ISO/IEC 20000-1:2011 - Technologies de l'information -- Gestion des services...">ISO/IEC 20000-1:2011</a> &nbsp; &nbsp;</td>
+			<td>Technologies de l&#39;information -- Gestion des services -- Partie 1: Exigences du syst&egrave;me de management des services</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/54552.html" title="ISO 20121:2012 - Systèmes de management responsable appliqués à l'activité...">ISO&nbsp;20121:2012</a></td>
+			<td>Event sustainability management systems -- Requirements with guidance for use</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/54857.html" title="ISO 21101:2014 - Adventure tourism -- Safety management systems -- Requirements">ISO 21101:2014</a></td>
+			<td>Tourisme d&#39;aventure -- Syst&egrave;mes de management de la s&eacute;curit&eacute; -- Exigences</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/64118.html" title="ISO 24518:2015 - Activités relatives aux services de l'eau potable et de...">ISO 24518:2015</a></td>
+			<td>Activit&eacute;s relatives aux services de l&#39;eau potable et de l&#39;assainissement -- Gestion de crise des services publics de l&#39;eau</td>
+			<td>Oui</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68286.html" title="ISO/WD 24526 - Systèmes de gestion rationnelle de l'eau -- Exigences et...">ISO/WD 24526</a></td>
+			<td>Syst&egrave;mes de gestion rationnelle de l&#39;eau -- Exigences et lignes directrices pour son utilisation</td>
+			<td>Oui</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+        </div>
+    </div>
+</div>
+</div><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><h3><a id="TypeAB" name="TypeAB"></a>Qu&rsquo;est-ce qui diff&eacute;rencie une NSM de type&nbsp;A d&rsquo;une NSM de type&nbsp;B&nbsp;?</h3>
+
+<p><strong>Une NSM de type&nbsp;A contient des exigences en vertu desquelles une organisation peut revendiquer une conformit&eacute;, ce qui n&rsquo;est pas le cas d&rsquo;une NSM de type&nbsp;B.&nbsp;</strong></p>
+
+<p>En cons&eacute;quence, on ne devrait trouver que des recommandations (lignes directrices) ou des informations de support dans une NSM de type&nbsp;B. Certaines normes de syst&egrave;me de management peuvent fournir une combinaison d&rsquo;exigences et de lignes directrices&nbsp;: comme elles contiennent des exigences, elles seront consid&eacute;r&eacute;es comme &eacute;tant des NSM de type&nbsp;A. En g&eacute;n&eacute;ral, une NSM de type&nbsp;B (ex.&nbsp:&nbsp;<a href="/fr/standard/60041.html" title="ISO 50004:2014 - Energy management systems -- Guidance for the implementation,...">ISO&nbsp;50004:2014</a>) fournit des lignes directrices pour l&rsquo;application d&rsquo;une NSM de type&nbsp;A&nbsp;(ex. :&nbsp;<a href="/fr/standard/51297.html" title="ISO 50001:2011 - Energy management systems -- Requirements with guidance...">ISO&nbsp;50001:2011</a>). Toutefois, certaines NSM de type&nbsp;B sont ind&eacute;pendantes (ex.&nbsp;:&nbsp;<a href="/fr/standard/62342.html" title="ISO 19600:2014 - Compliance management systems -- Guidelines">ISO&nbsp;19600:2014</a>).</p><p><strong><a href="/fr/management-system-standards.html" title="Normes de système de management">Normes de syst&egrave;mes de managements c&eacute;l&egrave;bres&nbsp;&raquo;</a></strong></p><div class="clear"></div><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><div class="row row-topline row-middle">
+<div class="col-md-12"><h3>La &laquo;&nbsp;structure-cadre&nbsp;&raquo; - HLS</h3><p>Les normes signal&eacute;es par HLS (High Level Structure)&nbsp;suivent une m&ecirc;me structure &nbsp;dite <a href="http://isotc.iso.org/livelink/livelink/Open/17859835" target="_blank" title="Excerpt of Annex SL of ISO IEC Directives">&laquo;structure-cadre&raquo;&nbsp;</a>[PDF]&nbsp;au sens o&ugrave; elles contiennent un corpus commun de termes et de d&eacute;finitions. Cet alignement est particuli&egrave;rement utile pour les organismes qui optent pour la mise en &oelig;uvre d&rsquo;un syst&egrave;me de management unique (parfois appel&eacute; &laquo; int&eacute;gr&eacute; &raquo;), permettant de satisfaire aux exigences de deux ou plusieurs normes de syst&egrave;mes de management simultan&eacute;ment.</p><h2></h2>
+<div class="accordion-container" id="e8e7e3a4-2e4c-46f6-a4fd-ecf48f545e11">
+    <div class="panel">
+    
+    <a class="trigger collapsed" data-toggle="collapse" data-parent="#e8e7e3a4-2e4c-46f6-a4fd-ecf48f545e11" href="#9e2d769c-8321-4358-a588-3fc32f5f0ecd">
+        Liste de normes suivant la «structure-cadre»
+        <span class="arrow glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <div id="9e2d769c-8321-4358-a588-3fc32f5f0ecd" class="collapse">
+        <div class="collapsible">
+            <table border="0" cellpadding="1" cellspacing="1" class="table table-hover table-striped table-responsive" id="datatable-hls">
+	<thead>
+		<tr>
+			<th scope="col">Reference</th>
+			<th scope="col">Title</th>
+			<th scope="col">Category</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="/fr/standard/62085.html" title="ISO 9001:2015 - Quality management systems -- Requirements">ISO&nbsp;9001:2015</a></td>
+			<td>Syst&egrave;mes de management de la qualit&eacute; -- Exigences</td>
+			<td>Qualit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/72798.html" title="ISO/DIS 44001 - Collaborative business relationship management systems...">ISO 44001</a></td>
+			<td>Syst&egrave;mes de gestion collaborative d&#39;une relation d&#39;affaire -- Cadre de travail</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/60857.html" title="ISO 14001:2015 - Systèmes de management environnemental -- Exigences et lignes directrices pour son utilisation">ISO 14001:2015</a></td>
+			<td>Syst&egrave;mes de management environnemental -- Exigences et lignes directrices pour son utilisation</td>
+			<td>Environnement et &eacute;nergie</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/60856.html" title="ISO 14004:2016 - Systèmes de management environnemental -- Lignes directrices générales pour la mise en application">ISO 14004:2016</a></td>
+			<td>Syst&egrave;mes de management environnemental -- Lignes directrices g&eacute;n&eacute;rales pour la mise en application</td>
+			<td>Environnement et &eacute;nergie</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/54594.html" title="ISO 14298:2013 - Graphic technology -- Management of security printing...">ISO&nbsp;14298:2013</a></td>
+			<td>Technologie graphique -- Management des proc&eacute;d&eacute;s d&#39;impression de s&eacute;curit&eacute;</td>
+			<td>Industrie</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70729.html" title="ISO 15378:2017 - Articles d'emballage primaire pour médicaments -- Exigences...">ISO&nbsp;15378:2017</a></td>
+			<td>Articles d&#39;emballage primaire pour m&eacute;dicaments -- Exigences particuli&egrave;res pour l&#39;application de l&#39;ISO 9001:2015 prenant en consid&eacute;ration les Bonnes Pratiques de Fabrication (BPF)</td>
+			<td>Industrie</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70424.html" title="ISO/AWI 16000-40 - Air intérieur -- Partie 40: Système de management de...">ISO 16000-40</a></td>
+			<td>Air int&eacute;rieur -- Partie 40: Syst&egrave;me de management de la qualit&eacute; de l&#39;air int&eacute;rieur</td>
+			<td>Industrie</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/63380.html" title="ISO 18788:2015 - Management system for private security operations -- Requirements...">ISO&nbsp;18788:2015</a></td>
+			<td>Syst&egrave;me de management des op&eacute;rations de s&eacute;curit&eacute; priv&eacute;es -- Exigences et lignes directrices pour son utilisation</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/64908.html" title="ISO/CD 19443 - Quality management systems -- Specific requirements for...">ISO 19443</a></td>
+			<td>Syst&egrave;mes de management de la qualit&eacute; -- Exigences sp&eacute;cifiques pour l&#39;application de l&#39;ISO 9001 et des exigences GS-R de l&#39;AIEA par les organisations de la cha&icirc;ne d&#39;approvisionnement du secteur de l&#39;&eacute;nergie nucl&eacute;aire</td>
+			<td>Qualit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/62342.html" title="ISO 19600:2014 - Compliance management systems -- Guidelines">ISO&nbsp;19600:2014</a></td>
+			<td>Syst&egrave;mes de management de la compliance -- Lignes directrices</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70636.html" title="ISO/IEC 20000-1 - Technologies de l'information -- Gestion des services...">ISO 20000-1</a></td>
+			<td>Technologies de l&#39;information -- Gestion des services -- Partie 1: Exigences du syst&egrave;me de management des services</td>
+			<td>Technologies de l&rsquo;information</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/72120.html" title="ISO/IEC 20000-2 - Technologies de l'information -- Gestion des services...">ISO 20000-2</a></td>
+			<td>Technologies de l&#39;information -- Gestion des services -- Partie 2: Guide pour l&#39;application des syst&egrave;mes de management des services</td>
+			<td>Technologies de l&rsquo;information</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/54552.html" title="ISO 20121:2012 - Event sustainability management systems -- Requirements...">ISO&nbsp;20121:2012</a></td>
+			<td>Syst&egrave;mes de management responsable appliqu&eacute;s &agrave; l&#39;activit&eacute; &eacute;v&eacute;nementielle -- Exigences et recommandations de mise en oeuvre</td>
+			<td>Services</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/66266.html" title="ISO/CD 21001 - Educational organizations -- Management systems for educational...">ISO 21001</a></td>
+			<td>&nbsp;</td>
+			<td>Qualit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/54857.html" title="ISO 21101:2014 - Tourisme d'aventure -- Systèmes de management de la sécurité -- Exigences">ISO 21101:2014</a></td>
+			<td>Tourisme d&#39;aventure -- Syst&egrave;mes de management de la s&eacute;curit&eacute; -- Exigences</td>
+			<td>Services</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/65464.html" title="ISO/CD 22000 - Food safety management systems -- Requirements for any organization...">ISO 22000&nbsp;</a></td>
+			<td>Syst&egrave;mes de management de la s&eacute;curit&eacute; des denr&eacute;es alimentaires -- Exigences pour tout organisme appartenant &agrave; la cha&icirc;ne alimentaire</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/72712.html" title="ISO/PRF TS 22163 - Applications ferroviaires -- Système de management de...">ISO/PRF TS 22163</a> &nbsp; &nbsp;</td>
+			<td>Applications ferroviaires -- Syst&egrave;me de management de la qualit&eacute; -- Exigences particuli&egrave;res li&eacute;es &agrave; l&#39;application ISO 9001:2015 dans le secteur ferroviaire</td>
+			<td>Qualit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/72712.html" title="ISO/TS 22163:2017 - Applications ferroviaires -- Système de management...">ISO/TS 22163:2017</a></td>
+			<td>Applications ferroviaires -- Syst&egrave;me de management de la qualit&eacute; -- Exigences li&eacute;es au syst&egrave;me de management de l&#39;activit&eacute; &agrave; destination des organismes ferroviaires: ISO 9001:2015 et exigences particuli&egrave;res concernant les applications dans le secteur ferroviaire</td>
+			<td>Industrie</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/50038.html" title="ISO 22301:2012 - Societal security -- Business continuity management systems...">ISO&nbsp;22301:2012</a></td>
+			<td>S&eacute;curit&eacute; soci&eacute;tale -- Syst&egrave;mes de management de la continuit&eacute; d&#39;activit&eacute; -- Exigences</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/50050.html" title="ISO 22313:2012 - Societal security -- Business continuity management systems...">ISO&nbsp;22313:2012</a></td>
+			<td>S&eacute;curit&eacute; soci&eacute;tale -- Syst&egrave;mes de management de la continuit&eacute; d&#39;activit&eacute; -- Lignes directrices</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/64118.html" title="ISO 24518:2015 - Activités relatives aux services de l'eau potable et de l'assainissement -- Gestion de crise des services publics de l'eau">ISO&nbsp;24518:2015</a></td>
+			<td>Activit&eacute;s relatives aux services de l&#39;eau potable et de l&#39;assainissement -- Gestion de crise des services publics de l&#39;eau</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68286.html" title="ISO/WD 24526 - Water efficiency management systems -- Requirements with...">ISO 24526</a></td>
+			<td>Syst&egrave;mes de gestion rationnelle de l&#39;eau -- Exigences et lignes directrices pour son utilisation</td>
+			<td>Services</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/54534.html" title="ISO/IEC 27001:2013 - Information technology -- Security techniques -- Information...">ISO/IEC&nbsp;27001:2013</a></td>
+			<td>Technologies de l&#39;information -- Techniques de s&eacute;curit&eacute; -- Syst&egrave;mes de management de la s&eacute;curit&eacute; de l&#39;information -- Exigences</td>
+			<td>Technologies de l&rsquo;information</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68427.html" title="ISO/IEC 27010:2015 - Information technology -- Security techniques -- Information...">ISO/IEC&nbsp;27010:2015</a></td>
+			<td>Technologies de l&#39;information -- Techniques de s&eacute;curit&eacute; -- Gestion de la s&eacute;curit&eacute; de l&#39;information des communications intersectorielles et interorganisationnelles</td>
+			<td>Technologies de l&rsquo;information</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/67773.html" title="ISO 29001 - Industries du pétrole, de la pétrochimie et du gaz naturel...">ISO 29001</a></td>
+			<td>Industries du p&eacute;trole, de la p&eacute;trochimie et du gaz naturel -- Syst&egrave;mes de management de la qualit&eacute; sp&eacute;cifiques au secteur -- Exigences pour les organismes de fourniture de produits et de services</td>
+			<td>Qualit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/53733.html" title="ISO 30301:2011 - Information and documentation -- Management systems for...">ISO 30301:2011</a></td>
+			<td>Information et documentation -- Syst&egrave;mes de gestion des documents d&#39;activit&eacute; -- Exigences</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68683.html" title="ISO/CD 30401 - Titre manque">ISO 30401</a></td>
+			<td>&nbsp;</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/61588.html" title="ISO/DIS 34001.4 - Security and resilience -- Security management system...">ISO 34001.4</a></td>
+			<td>S&eacute;curit&eacute; et r&eacute;silience -- Syst&egrave;me de management de la s&eacute;curit&eacute;</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/71293.html" title="ISO/NP 35001 - Laboratory biorisk management system -- Requirements">ISO 35001</a></td>
+			<td>&nbsp;</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/65034.html" title="ISO 37001:2016 - Anti-bribery management systems -- Requirements with guidance...">ISO&nbsp;37001:2016</a></td>
+			<td>Syst&egrave;mes de management anti-corruption -- Exigences et recommandations de mise en oeuvre</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/61885.html" title="ISO 37101:2016 - Sustainable development in communities -- Management system...">ISO&nbsp;37101:2016</a></td>
+			<td>D&eacute;veloppement durable au sein des communaut&eacute;s territoriales -- Syst&egrave;me de management pour le d&eacute;veloppement durable -- Exigences et lignes directrices pour son utilisation</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/44958.html" title="ISO 39001:2012 - Road traffic safety (RTS) management systems - Requirements...">ISO&nbsp;39001:2012</a></td>
+			<td>Syst&egrave;mes de management de la s&eacute;curit&eacute; routi&egrave;re -- Exigences et recommandations de bonnes pratiques</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68021.html" title="ISO/CD 41001 - Facility management -- Management systems -- Requirements...">ISO 41001</a></td>
+			<td>Facility management -- Syst&egrave;mes de management -- Exigences avec directives d&#39;utilisation</td>
+			<td>Industrie</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/63787.html" title="ISO/DIS 45001 - Occupational health and safety management systems -- Requirements...">ISO 45001</a></td>
+			<td>Syst&egrave;mes de management de la sant&eacute; et de la s&eacute;curit&eacute; au travail -- Exigences avec directives d&#39;utilisation</td>
+			<td>S&ucirc;ret&eacute; et s&eacute;curit&eacute;</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/69426.html" title="ISO/DIS 50001 - Systèmes de management de l'énergie -- Exigences et recommandations...">ISO/DIS 50001</a></td>
+			<td>Syst&egrave;mes de management de l&#39;&eacute;nergie -- Exigences et recommandations de mise en oeuvre</td>
+			<td>Environnement et &eacute;nergie</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/68221.html" title="ISO/CD 50501 - Innovation management - Innovation management system -...">ISO/CD 50501&nbsp;</a></td>
+			<td>Management de l&rsquo;innovation -- Syst&egrave;me de management de l&rsquo;innovation -- Lignes directrices</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/55089.html" title="ISO 55001:2014 - Asset management -- Management systems -- Requirements">ISO&nbsp;55001:2014</a></td>
+			<td>Gestion d&#39;actifs -- Syst&egrave;mes de management -- Exigences</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/55090.html" title="ISO 55002:2014 - Asset management -- Management systems -- Guidelines for...">ISO&nbsp;55002:2014</a></td>
+			<td>Gestion d&#39;actifs -- Syst&egrave;mes de management -- Lignes directrices relatives &agrave; l&#39;application de l&#39;ISO 55001</td>
+			<td>Management</td>
+		</tr>
+		<tr>
+			<td><a href="/fr/standard/70293.html" title="ISO/IEC 80079-34 - Atmosphères explosives -- Partie 34: Application...">ISO/IEC 80079-34</a></td>
+			<td>Atmosph&egrave;res explosives -- Partie 34: Application des syst&egrave;mes de qualit&eacute; pour la fabrication d&#39;&eacute;quipements</td>
+			<td>Qualit&eacute;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+        </div>
+    </div>
+</div>
+</div><div class="clear"></div><div class="clear"></div></div>
+    </div><div class="row row-light row-bottom">
+<div class="col-md-12"><p><a href="/fr/conformity-assessment.html">Pour revendiquer la conformit&eacute; &agrave; une norme</a>, une organisation doit d&eacute;montrer qu&rsquo;elle r&eacute;pond aux exigences d&eacute;finies. Le rassemblement de telles preuves s&rsquo;effectue g&eacute;n&eacute;ralement par le biais d&rsquo;un audit. Il y a trois types d&rsquo;audit&nbsp;: de premi&egrave;re partie, de seconde partie et de tierce partie. Les audits de premi&egrave;re partie sont des audits internes. Les audits de seconde et de tierce partie sont des audits externes. Un audit de tierce partie peut d&eacute;boucher sur une certification. &Agrave; propos de la certification&nbsp;: une certification peut uniquement &ecirc;tre &eacute;tablie en vertu d&rsquo;un document contenant des exigences. Par cons&eacute;quent, une certification selon une NSM de type&nbsp;B n&rsquo;est pas possible.&nbsp;<a href="/fr/home/standards/popular-standards/management-system-standards/management-system-standards-list.html#TypeAB">En savoir plus sur ce qui diff&eacute;rencie une NSM de type&nbsp;A d&rsquo;une&nbsp; NSM de type&nbsp;B</a>.</p><div class="clear"></div></div>
+    </div><div class="clear"></div><div class="clear"></div>
+    </div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/standards.html">
+                Normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/popular-standards.html">
+                Les normes les plus connues
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/management-system-standards.html">
+                Normes de système de management
+              </a>
+            
+        </li>
+      
+        <li>
+          Normes de système de management...
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover inPath firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren inPath"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

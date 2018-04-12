@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20161208">
+    
+
+    <title>ISO/COPOLCO - Comité pour la politique en matière de consommation</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      // datatable-meetings initialization
+      $('table#datatable-meetings').DataTable({
+        "destroy": true,
+        "paging": false,
+        "info": false,
+        "searching": false,
+        "columns": [
+          null,
+          null,
+          null,
+          null,
+          { "orderable": false } /* cannot sort by note */
+        ]
+      });
+
+      // Tooltip initialization
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+
+      // Popover initialization
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+
+    });
+
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/committee/55000.html">English</a></li><li><a href="/ru/committee/55000.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover inPath firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren inPath active firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    
+
+<div class="container main">
+  <div class="row row-top row-light">
+    <div class="col-md-12">
+    <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/developing-standards.html">
+                Participer
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/who-develops-standards.html">
+                Qui élabore les normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/technical-committees.html">
+                Comités techniques
+              </a>
+            
+        </li>
+      <li>ISO/COPOLCO</li>
+  </ol>
+
+</div>
+      <div class="page-header heading-condensed">
+        <h1>
+          <strong>ISO/COPOLCO</strong>
+          
+        </h1>
+        <h2>Comité pour la politique en matière de consommation</h2>
+      </div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="col-md-7">
+      
+
+<h3>Informations</h3>
+<ul class="refine">
+  
+  <li>
+    
+    <div itemscope itemtype="http://schema.org/Person">
+      <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Secrétaire</span>:</div>
+      <div class="entry-name entry-block" itemprop="name"><a href="mailto:kissinger@iso.org">Mrs Dana Kissinger-Matray</a></div>
+    </div>
+  </li>
+  
+    <li>
+    
+    <div itemscope itemtype="http://schema.org/Person">
+      <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Président(e)&nbsp;(jusqu'à fin&nbsp;2019)</span>:</div>
+      <div class="entry-name entry-block" itemprop="name">Mr Guillermo Zucal</div>
+    </div>
+
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Vice président(e)</span>:</div>
+        <div class="entry-name entry-block" itemprop="name">Mr Seng Choon Seah</div>
+      </div>
+    
+  </li>
+  
+  <li>
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Responsable de programmes techniques ISO <span class="glyphicon glyphicon-info-sign text-muted" data-toggle="popover" data-trigger="click hover" data-placement="top" data-html="true" data-content="<small>Le responsable ISO de programmes techniques (TPM) est le point de contact principal du Secrétariat central de l'ISO pour les comités techniques. Il/elle supervise les programmes de travail d'un portefeuille de comités dans des secteurs connexes et fournit au leadership de ces comités des conseils, du soutien et de la formation. L'identification, l’élaboration et la progression de nouvelles possibilités de normalisation dans le cadre de son domaine d'action fait aussi partie du rôle, comme la promotion de la marque ISO au sein de son/ses secteur(s).</small>" data-original-title="Responsable de programmes techniques ISO (TPM)"></span></span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:kissinger@iso.org">Mrs Dana Kissinger-Matray</a></div>
+      </div>
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Responsable de programmes éditoriaux ISO <span class="glyphicon glyphicon-info-sign text-muted" data-toggle="popover" data-trigger="click hover" data-placement="top" data-html="true" data-content="<small>Le responsable ISO de programmes éditoriaux (EPM) est le point de contact principal du Secrétariat central de l'ISO pour les questions liées à la rédaction ou à la revue de normes. Les EPMs sont responsables de la gestion générale de l’élaboration éditoriale des projets appartenant à des comités qui leur sont assignés et ils veillent à maintenir le plus haut degré de qualité de ces documents, à les publier en temps opportun et à suivre les règles et politiques de rédaction de l’ISO.</small>" data-original-title="Responsable ISO de programmes éditoriaux (EPM)"></span></span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:stanton@iso.org">Mr Brian Stanton</a></div>
+      </div>
+    
+  </li>
+  
+  <li>
+    Date de création: 1978
+  </li>
+  
+</ul>
+
+
+  <h3>Domaine des travaux</h3>
+  
+      <p><I>Membres </I> <P>La participation au COPOLCO est ouverte aux comités membres intéressés en qualité de membres participants (P) ou de membres observateurs (O) et aux membres correspondants intéressés en qualité de membres observateurs (O). <P><i>Mandat </i><ul><li>Étudier les moyens susceptibles d'aider les consommateurs à bénéficier de la normalisation et les moyens susceptibles d'améliorer leur participation aux travaux de normalisation nationale et internationale. </li><li>Constituer un lieu d'échange d'informations sur l'expérience de la participation des consommateurs à l'élaboration et à l'application des normes dans le domaine de la consommation, et sur les autres questions présentant un intérêt pour les consomateurs en matière de normalisation nationale et internationale. </li><li>Donner des avis au Conseil quant aux points de vue consolidés des consommateurs sur les questions pertinentes relatives aux activités actuelles et futures de normalisation et d'évaluation de la conformité</li> <li>Donner des avis au Conseil sur la nécessité de politiques ou actions nouvelles ou révisées au sein de l'ISO se rapportant aux besoins des consommateurs. </li></ul><P>Des informations complémentaires sur le COPOLCO et les activités connexes de l'ISO peuvent être consultées à la section <a href="http://www.iso.org/iso/fr/resources/resources_consumers.htm">Ressources utiles pour consommateurs</a>. </p>
+    
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      
+
+<div class="well">
+  <h3>Liens utiles</h3>
+  <ul class="refine">
+    
+    <li>
+      <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+        <div class="entry-name entry-title">
+          <a href="/fr/contents/data/committee/05/50/55000/x/catalogue/p/0/u/1/w/0/d/0" title="ISO/COPOLCO Work programme" itemprop="url"><span class="glyphicon glyphicon-link"></span><span itemprop="name">Programme technique</span></a>
+        </div>
+        <div class="entry-summary" itemprop="description">Projets de travail et nouveaux projets préliminaires</div>
+      </div>
+    </li>
+    
+      <li>
+        <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+          <div class="entry-name entry-title">
+            <a href="http://isotc.iso.org/livelink/livelink?func=ll&objAction=browse&objId=8925011" title="Working area" target="_blank" itemprop="url"><span class="glyphicon glyphicon-new-window"></span><span itemprop="name">Espace de travail</span></a>
+          </div>
+          <div class="entry-summary" itemprop="description">sur ISOTC et le dossier "Public information"</div>
+        </div>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+  </div>
+  
+
+<div class="row row-middle text-center">
+  
+    <div class="col-md-3 col-sm-6">
+      <div class="well">
+        <div class="statistic">
+          <span class="number small"><a href="/fr/contents/data/committee/05/50/55000/x/catalogue/p/1/u/0/w/0/d/0">8</a></span>
+          <h4>Normes ISO publiées<span class="small">&nbsp;*</span></h4>
+          
+              <p>sous la responsabilité directe du&nbsp;ISO/COPOLCO</p>
+            
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3 col-sm-6">
+      <div class="well">
+        <div class="statistic">
+          <span class="number small"><a href="/fr/contents/data/committee/05/50/55000/x/catalogue/p/0/u/1/w/0/d/0">3</a></span>
+          <h4>Projets de normes ISO<span class="small">&nbsp;*</span></h4>
+          
+              <p>sous la responsabilité directe du&nbsp;ISO/COPOLCO</p>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="clearfix visible-sm"></div>
+  
+  <div class="col-md-3 col-sm-6">
+    <div class="well">
+      <div class="statistic">
+        <span class="number small"><a href="?view=participation">73</a></span>
+        <h4>Membres participants</h4>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-3 col-sm-6">
+    <div class="well">
+      <div class="statistic">
+        <span class="number small"><a href="?view=participation">51</a></span>
+        <h4>Membres observateurs</h4>
+      </div>
+    </div>
+  </div>
+  
+    <div class="col-md-12"><p class="text-muted small align-left">* ce nombre inclut les mises à jour</p></div>
+  
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <!-- Nav tabs -->
+    
+    <ul class="nav nav-tabs" role="tablist">
+      
+        <li role="presentation" class="active"><a href="#structure" aria-controls="structure" role="tab" data-toggle="tab"><h3>Structure</h3></a></li>
+      
+        <li role="presentation" class=""><a href="#liaisons" aria-controls="liaisons" role="tab" data-toggle="tab"><h3>Liaisons</h3></a></li>
+      
+        <li role="presentation" class=""><a href="#meetings" aria-controls="meetings" role="tab" data-toggle="tab"><h3>Réunions</h3></a></li>
+      
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      
+        <div role="tabpanel" class="tab-pane active" id="structure">
+          <div class="row">
+            <div class="col-md-12">
+              <table id="datatable-structure" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:200px;">Référence</th>
+                  <th>Titre</th>
+                  <th style="width:100px;">Type</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/TG 002" data-title="Référence">ISO/COPOLCO/TG 2
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Bill Dee</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">"Building B-to-C confidence Task Group"</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/TG 003" data-title="Référence">ISO/COPOLCO/TG 3
+                        </td>
+                        <td data-title="Titre">"Value proposition of COPOLCO"</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/TG 005" data-title="Référence">ISO/COPOLCO/TG 5
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Antonino Serra Cambaceres</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Sharing economy</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 001" data-title="Référence">ISO/COPOLCO/WG 1
+                        </td>
+                        <td data-title="Titre">Membres du Groupe du Président et autres participants</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 002" data-title="Référence">ISO/COPOLCO/WG 2
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Takashi Nakakuki</strong>&#32;(jusqu'à fin &#32;2018)
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Domaines clefs pour les consommateurs</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 003" data-title="Référence">ISO/COPOLCO/WG 3
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mrs Sadie Homer</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Participation et formation du consommateur</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 004" data-title="Référence">ISO/COPOLCO/WG 4
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Ms Eunsook Moon</strong>&#32;(jusqu'à fin &#32;2019)
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Sécurité des produits</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 005" data-title="Référence">ISO/COPOLCO/WG 5
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Bill Dee</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Protection des consommateurs sur le marché mondial</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 009" data-title="Référence">ISO/COPOLCO/WG 9
+                        </td>
+                        <td data-title="Titre">Groupe de domaines clefs et personnes clefs</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 011" data-title="Référence">ISO/COPOLCO/WG 11
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr John Perry</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Révision du Guide 74</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 015" data-title="Référence">ISO/COPOLCO/WG 15
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mrs Michele Althoff</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Révision de l'ISO/CEI Guide 14</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 016" data-title="Référence">ISO/COPOLCO/WG 16
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Ms Sandra Herrera</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Révision de l'ISO/CEI Guide 41</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 018" data-title="Référence">ISO/COPOLCO/WG 18
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mrs Chengyang LIU</strong>
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">"Consumer issues in services"</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/COPOLCO/WG 019" data-title="Référence">ISO/COPOLCO/WG 19
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>L'animateur,&#32;
+                                <strong>Mr Bill Dee</strong>&#32;(jusqu'à fin &#32;2018)
+                                  &#32;peut être contacté par le biais du <a href='#secretariat'>secrétariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Titre">Privacy advisory task group</td>
+                      
+                    <td data-title="Type">Groupe de travail</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+
+              
+            </div>
+          </div>
+        </div>
+      
+      <div role="tabpanel" class="tab-pane " id="liaisons">
+        
+          <div class="row row-top">
+            <div class="col-md-12">
+              <h5>Comités en liaison vers le&nbsp;ISO/COPOLCO</h5>
+              <p class="help-block">Les Comités ci-dessous peuvent accéder aux documents du&nbsp;ISO/COPOLCO :</p>
+              <table id="datatable-LIA_I_R_CC" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:250px;">Référence</th>
+                  <th>Titre</th>
+                  <th style="width:110px;">ISO/CEI</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 304" data-title="Référence"><a href="/fr/committee/6131376.html">ISO/TC 304</a></td>
+                      
+                    <td data-title="Titre">Administration de la santé</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+          <div class="row row-topline row-middle">
+            
+            <div class="col-md-12">
+              <h5>Comités en liaison depuis le&nbsp;ISO/COPOLCO</h5>
+              <p class="help-block">ISO/COPOLCO&nbsp;peut accéder aux documents des Comités ci-dessous : :</p>
+              <table id="datatable-LIA_I_CC" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:250px;">Référence</th>
+                  <th>Titre</th>
+                  <th style="width:110px;">ISO/CEI</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/CASCO" data-title="Référence"><a href="/fr/committee/54998.html">ISO/CASCO</a></td>
+                      
+                    <td data-title="Titre">Comité pour l'évaluation de la conformité</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 173/~SC 001" data-title="Référence"><a href="/fr/committee/53792.html">ISO/TC 173/SC 1</a></td>
+                      
+                    <td data-title="Titre">Fauteuils roulants</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 304" data-title="Référence"><a href="/fr/committee/6131376.html">ISO/TC 304</a></td>
+                      
+                    <td data-title="Titre">Administration de la santé</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+          <div class="row row-topline row-middle">
+            
+            <div class="col-md-12">
+              
+                <h5>Organisations en liaison (Catégories A et B)</h5>
+                <table id="datatable-LIA_I_CC" class="table table-striped responsive-table">
+                  <thead>
+                  <tr>
+                    <th style="width:250px;">Sigle</th>
+                    <th>Titre</th>
+                    <th style="width:110px;">Catégorie</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td data-sort="anec" data-title="Sigle"><a href="/fr/organization/284182.html">ANEC</a></td>
+                      <td data-title="Titre">European Association for the Co-ordination of Consumer Representation in Standardization</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ci" data-title="Sigle"><a href="/fr/organization/9601.html">CI</a></td>
+                      <td data-title="Titre">Consumers International</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="oecd" data-title="Sigle"><a href="/fr/organization/9694.html">OECD</a></td>
+                      <td data-title="Titre">Organisation for Economic Co-operation and Development, OECD</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="oiml" data-title="Sigle"><a href="/fr/organization/9698.html">OIML</a></td>
+                      <td data-title="Titre">International Organization of Legal Metrology</td>
+                      <td data-title="Catégorie">A</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              
+              <br/>
+              
+            </div>
+          </div>
+        
+      </div>
+
+      
+          <div role="tabpanel" class="tab-pane " id="meetings">
+            
+                <table id="datatable-meetings" class="table table-striped responsive-table">
+                  <thead>
+                  <tr>
+                    <th class="col-md-1">Date</th>
+                    <th class="col-md-3">Mois</th>
+                    <th class="col-md-4">Lieu</th>
+                    <th class="col-md-3">TC/SC</th>
+                    <th class="col-md-1">Note</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td data-sort="201805070001020180510" data-title="Date">7-10</td>
+                      <td data-sort="201805070001020180510" data-title="Mois">Mai 2018</td>
+                      <td data-title="Lieu">Indonésie</td>
+                      <td data-sort="ISO/COPOLCO" data-title="TC/SC">
+                        ISO/COPOLCO
+                      </td>
+                      <td data-title="Note">
+                        
+                            &nbsp;
+                          
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+                <hr />
+                <p class="help-block small text-right">
+                  * Information définitive mais réunion pas encore convoquée<br/>
+                  ** Provisoire<br/>
+                </p>
+              
+          </div>
+        
+    </div>
+  </div>
+</div>
+
+</div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/developing-standards.html">
+                Participer
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/who-develops-standards.html">
+                Qui élabore les normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/technical-committees.html">
+                Comités techniques
+              </a>
+            
+        </li>
+      <li>ISO/COPOLCO</li>
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren inPath firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

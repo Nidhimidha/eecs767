@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20170914">
+    
+      <meta name="description" content="Nous sommes l'ISO, l'Organisation internationale de normalisation. Nous établissons et publions des Normes internationales." />
+    
+
+    <title>ISO - Organisation internationale de normalisation</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/home.html">English</a></li><li><a href="/ru/home.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="container main">
+<div class="row row-top row-no-padding">
+<div id="carousel-e1b36b12-657a-47a0-895a-6556e5397f97" class="carousel full-width slide carousel-fade" data-ride="carousel" data-interval="8000">
+
+  
+  <div class="carousel-inner">
+    <div class="item active">
+      <figure>
+        
+        <img src='/files/live/sites/isoorg/files/news/News_archive/2018/03/Ref2272/Ref2272.jpg/thumbnails/1200x300' alt='Two workers welding in a factory.' class="width-100pct"/>
+      </figure>
+      
+        <div class="carousel-caption-full-width width-40pct color-white">
+          <h2><a href="/fr/news/ref2272.html" title="ISO 45001 vient de paraître">ISO&nbsp;45001 vient de para&icirc;tre</a></h2>
+
+<p>Un grand pas en avant pour la s&eacute;curit&eacute; au travail</p>
+
+        </div>
+      
+    </div><div class="item">
+      <figure>
+        
+        <img src='/files/live/sites/isoorg/files/news/img/ISOfocus_127_carousel.jpg/thumbnails/1200x300' alt='492596662' class="width-100pct"/>
+      </figure>
+      
+        <div class="carousel-caption-full-width width-40pct color-white">
+          <h2><a href="/fr/isofocus_127.html" title="Santé et sécurité au travail – Êtes-vous prêt pour ISO 45000?">&Ecirc;tes-vous pr&ecirc;t&nbsp;?</a></h2>
+
+<p>D&eacute;couvrez le tout dernier num&eacute;ro d&rsquo;<em>ISOfocus</em> sur ISO&nbsp;45001</p>
+
+        </div>
+      
+    </div><div class="item">
+      <figure>
+        
+        <img src='/files/live/sites/isoorg/files/news/img/Homepage%20carousel%20-%20Conformity%20assessment.jpg/thumbnails/1200x300' alt='Conformity and certification banner' class="width-100pct"/>
+      </figure>
+      
+        <div class="carousel-caption-full-width width-40pct color-white">
+          <h2><a href="/fr/conformity-assessment.html" title="Certification &amp; conformité">Faites entendre votre voix</a></h2>
+
+<p>Le point sur l&rsquo;&eacute;valuation de la conformit&eacute; et la certification</p>
+
+        </div>
+      
+    </div><div class="item">
+      <figure>
+        
+        <img src='/files/live/sites/isoorg/files/news/News_archive/2017/12/Ref2250/17025_flip_1200x300.jpg/thumbnails/1200x300' alt='Laboratory.' class="width-100pct"/>
+      </figure>
+      
+        <div class="carousel-caption-full-width width-40pct color-white">
+          <h2><a href="/fr/news/ref2250.html" title="New edition of ISO/IEC 17025 just published">La nouvelle ISO/IEC 17025</a></h2>
+
+<p>La norme la plus pris&eacute;e pour la comp&eacute;tence des laboratoires d&rsquo;&eacute;talonnages et d&rsquo;essais vient de faire l&rsquo;objet d&rsquo;une mise &agrave; jour.</p>
+
+        </div>
+      
+    </div>
+  </div>
+
+  
+    <ol class="carousel-indicators">
+      
+          <li data-target="#carousel-e1b36b12-657a-47a0-895a-6556e5397f97" data-slide-to="0" class='active'></li>
+          
+          <li data-target="#carousel-e1b36b12-657a-47a0-895a-6556e5397f97" data-slide-to="1"></li>
+          
+          <li data-target="#carousel-e1b36b12-657a-47a0-895a-6556e5397f97" data-slide-to="2"></li>
+          
+          <li data-target="#carousel-e1b36b12-657a-47a0-895a-6556e5397f97" data-slide-to="3"></li>
+          
+    </ol>
+
+    <a class="left carousel-control" href="#carousel-e1b36b12-657a-47a0-895a-6556e5397f97" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-e1b36b12-657a-47a0-895a-6556e5397f97" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  
+</div><div class="clear"></div><div class="clear"></div>
+    </div><div class="row row-top row-light">
+<div class="col-md-12"><div class="breadcrumb-container small">
+  
+</div><div class="clear"></div><div class="clear"></div></div><div class="col-md-7"><p class="lead">Nous sommes&nbsp;l&#39;ISO, l&#39;Organisation internationale de normalisation. Nous &eacute;tablissons et publions des Normes internationales.</p><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><div class="top-md-push-2" >
+     <div class="well glyphicon-shopping-cart shadow-light">
+  <h3 class="text-center">ISO Store</h3>
+
+<p class="text-center">Souhaitez-vous&nbsp;acheter une norme ISO?</p><div class="text-center" >
+     <a role="button" href="/fr/store.html" class="btn btn-primary btn-md"><span class='glyphicon null'></span> Visitez l'ISO store</a>&nbsp;
+</div><br/>
+</div><div class="clear"></div>
+</div><div class="clear"></div>
+            </div><div class="clear"></div>
+    </div><div class="row">
+<div class="col-md-4"><h3>Questions courantes</h3>
+<ul class="refine">
+	<li><a href="/fr/standards.html" title="Standards">Qu&#39;est-ce-qu&#39;une norme?</a></li>
+	<li><a href="/fr/developing-standards.html" title="Developing standards">Comment l&rsquo;ISO &eacute;labore-t-elle les normes?</a></li>
+	<li><a href="/fr/benefits-of-standards.html" title="Benefits of standards">Quels sont les avantages des Normes internationales ISO?</a></li>
+</ul><div class="clear"></div></div>
+        <div class="col-md-4"><h3>Comment obtenir la certification?</h3>
+
+<p>L&rsquo;ISO n&rsquo;effectue pas de certifications ou d&rsquo;&eacute;valuations de la conformit&eacute;. Vous devez pour cela contacter un organisme de certification national ou r&eacute;gional.</p>
+
+<p><a href="/fr/certification.html" title="Certification">En savoir plus sur la certification et la recherche d&rsquo;un organisme de certification.</a></p><div class="clear"></div></div>
+        <div class="col-md-4"><h3>Connectez-vous avec l&#39;ISO</h3>
+
+<p>Nous sommes pr&eacute;sents sur les m&eacute;dias sociaux.<br />
+Suivez-nous sur:</p>
+
+<div class="entry-social"><span class="ss-icon ss-social-circle"><a href="http://www.iso.org/facebook" title="Facebook"></a></span> <span class="ss-icon ss-social-circle"><a href="http://www.iso.org/twitter" title="Twitter"></a></span>&nbsp;<span class="ss-icon ss-social-circle"><a href="http://www.iso.org/youtube" title="Youtube"></a></span> <span class="ss-icon ss-social-circle"><a href="http://www.iso.org/linkedin" title="Linkedin"></a></span></div><div class="clear"></div></div>
+    </div><div class="row row-middle row-light">
+<div class="col-md-12"><h3>Nos 3 normes les plus connues</h3><div class="clear"></div></div><div class="col-md-4"><div class="highlight-box clearfix">
+
+  <figure class="img-top">
+    <a href="/fr/home/standards/popular-standards/isoiec-17025-testing-and-calibra.html"  title="ISO/IEC 17025 Laboratoires d&#039;étalonnages et d&#039;essais">
+    <img src="/files/live/sites/isoorg/files/standards/popular_standards/iso_iec_17025/laboratory-2815639.jpg/thumbnails/1200x300"
+        />
+    </a>
+  </figure>
+
+  <div class="box-text clearfix">
+  
+    <div class="entry-content">
+      
+        <h5 class="entry-name">
+          <a href="/fr/home/standards/popular-standards/isoiec-17025-testing-and-calibra.html" title="ISO/IEC 17025 Laboratoires d&#039;étalonnages et d&#039;essais" >ISO/IEC 17025 Laboratoires d&#039;étalonnages et d&#039;essais</a>
+        </h5>
+      
+        <div class="entry-summary">
+          Essais et étalonnages effectués au moyen de méthodes normalisées, de méthodes non normalisées et de méthodes élaborées par les laboratoires
+        </div>
+      
+    </div>
+  </div><!-- close of box-text-->
+</div><!-- close of highlightbox--><div class="clear"></div></div>
+        <div class="col-md-4"><div class="highlight-box clearfix">
+
+  <figure class="img-top">
+    <a href="/fr/iso-9001-quality-management.html"  title="ISO 9001 Management de la qualité">
+    <img src="/files/live/sites/isoorg/files/standards/popular_standards/iso_9000_quality_management/img/Standards-Popular_TAB.jpg/thumbnails/1200x300"
+         alt="Production line into press plant house." />
+    </a>
+  </figure>
+
+  <div class="box-text clearfix">
+  
+    <div class="entry-content">
+      
+        <h5 class="entry-name">
+          <a href="/fr/iso-9001-quality-management.html" title="ISO 9001 Management de la qualité" >ISO 9001 Management de la qualité</a>
+        </h5>
+      
+        <div class="entry-summary">
+          Avec cette famille de normes, assurez-vous que les produits et les services que vous proposez répondent aux besoins des clients.
+        </div>
+      
+    </div>
+  </div><!-- close of box-text-->
+</div><!-- close of highlightbox--><div class="clear"></div></div>
+        <div class="col-md-4"><div class="highlight-box clearfix">
+
+  <figure class="img-top">
+    <a href="/fr/isoiec-27001-information-security.html"  title="ISO/IEC 27001 Management de la sécurité de l&#039;information">
+    <img src="/files/live/sites/isoorg/files/standards/popular_standards/iso_27001_information_security_management/img/Hub-blue-cable.jpg/thumbnails/1200x300"
+         title="ISO/IEC 27001 Management de la sécurité de l'information" />
+    </a>
+  </figure>
+
+  <div class="box-text clearfix">
+  
+    <div class="entry-content">
+      
+        <h5 class="entry-name">
+          <a href="/fr/isoiec-27001-information-security.html" title="ISO/IEC 27001 Management de la sécurité de l&#039;information" >ISO/IEC 27001 Management de la sécurité de l&#039;information</a>
+        </h5>
+      
+        <div class="entry-summary">
+          Gérez la sécurité des informations de votre organisation avec cette famille de normes.
+        </div>
+      
+    </div>
+  </div><!-- close of box-text-->
+</div><!-- close of highlightbox--><div class="clear"></div></div><div class="clear"></div>
+    </div><div class="row">
+<div class="col-md-12"><h3>Autres normes connues</h3><div class="row">
+<div class="col-md-4"><ul class="refine">
+	<li><a href="/fr/iso-14001-environmental-management.html" title="ISO 14001 Environmental management">ISO&nbsp;14001</a>&nbsp;Management environnemental</li>
+	<li><a href="/fr/iso-3166-country-codes.html" title="ISO 3166 Country Codes">ISO 3166</a>&nbsp;Codes des pays</li>
+	<li><a href="/fr/iso-26000-social-responsibility.html" title="ISO 26000 Social responsibility">ISO 26000</a>&nbsp;Responsabilit&eacute; soci&eacute;tale</li>
+	<li><a href="/fr/iso-31000-risk-management.html" title="ISO 31000 Risk management">ISO 31000</a>&nbsp;Management du risque</li>
+</ul><div class="clear"></div></div>
+        <div class="col-md-4"><ul class="refine">
+	<li><a href="/fr/iso-50001-energy-management.html" title="ISO 50001 Energy management">ISO 50001</a>&nbsp;Management de l&#39;&eacute;nergie</li>
+	<li><a href="/fr/iso-45001-occupational-health-and-safety.html" title="ISO 45001 Occupational health and safety">ISO 45001</a>&nbsp;Sant&eacute; et s&eacute;curit&eacute; au travail</li>
+	<li><a href="/fr/iso-13485-medical-devices.html" title="ISO 13485 Medical devices">ISO 13485</a>&nbsp;Dispositifs m&eacute;dicaux</li>
+	<li><a href="/fr/iso-37001-anti-bribery-management.html" title="ISO 37001 Anti-bribery management systems">ISO 37001</a>&nbsp;Syst&egrave;mes de management anti-corruption</li>
+</ul><div class="clear"></div></div>
+        <div class="col-md-4"><div class="well glyphicon-eye-open">
+  <h3 class="text-center">Pr&eacute;visualisez les normes ISO</h3>
+
+<p class="text-center">Visualisez le contenu des normes, effectuez vos recherches dans le texte int&eacute;gral et acc&eacute;dez aux toutes derni&egrave;res mises &agrave; jour sur la <a href="https://www.iso.org/obp/ui/fr/" target="_blank"><strong>plateforme de consultation en ligne</strong></a></p>
+</div><div class="clear"></div></div>
+    </div><div class="clear"></div></div><div class="clear"></div>
+    </div><div class="clear"></div><div class="clear"></div>
+    </div><div class="container main container">
+<div class="row">
+<div class="col-md-12"><h1>Actualit&eacute;s</h1><div class="clear"></div></div>
+    </div><div class="row">
+<div class="col-md-7"><div ng-app="filterableListApp" ng-controller="mainCtrl" data-site-url="/cms/render/live/fr/sites/isoorg.html">
+  
+  <span id="pageSize" class="hidden" data-size="10"></span>
+
+  
+  <span id="nodeCategory1" class="hidden" data-node=""></span>
+  <span id="nodeCategory2" class="hidden" data-node=""></span>
+  
+  <div class="hidden" ng-view></div>
+  <div ng-bind-html="error | sanitize"></div>
+  
+  <div class="article-list media-list">
+    
+    <div ng-hide="nodes.count != undefined">
+      <div class="media" itemscope itemtype="http://schema.org/CreativeWork">
+  
+    <figure class="media-left">
+      <a href="/fr/news/ref2279.html"  title="Jouets pour enfants: miser sur la sécurité">
+      <img src="/files/live/sites/isoorg/files/news/News_archive/2018/04/Ref2279/Ref2279.jpg/thumbnails/300x300" class="media-object width-100 shadow" itemprop="thumbnailUrl"
+           alt="Little boy playing with an educational toy." />
+      </a>
+    </figure>
+  
+  <div class="media-body">
+    
+      <div class="entry-header">
+        
+        <div class="entry-description small">
+          
+          <span class="author">
+            Par <span class="fn" itemprop="author">Clare Naden</span>
+          </span>
+          |
+          <span class="time">
+            <time class='updated' datetime='2018-04-09' itemprop="datePublished">
+                9 avril 2018
+            </time>
+          </span>
+          
+        </div>
+      </div>
+    
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/news/ref2279.html" title="Jouets pour enfants: miser sur la sécurité"  itemprop="url">
+          <span itemprop="name">Jouets pour enfants: miser sur la sécurité</span></a>
+        </h6>
+      
+        <div class="entry-summary" itemprop="description">
+            Veiller à ce que les enfants ne se blessent pas en jouant, tel est l’objet d’une Norme internationale ISO sur la sécurité des jouets très largement utilisée, qui vient tout juste d’être mise à jour pour s’assurer qu’elle couvre tout ce qui doit l’être.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="media" itemscope itemtype="http://schema.org/CreativeWork">
+  
+    <figure class="media-left">
+      <a href="/fr/news/ref2278.html"  title="La contribution des normes ISO à la Journée mondiale de la santé">
+      <img src="/files/live/sites/isoorg/files/news/News_archive/2018/04/Ref2278/Ref2278.jpg/thumbnails/300x300" class="media-object width-100 shadow" itemprop="thumbnailUrl"
+          />
+      </a>
+    </figure>
+  
+  <div class="media-body">
+    
+      <div class="entry-header">
+        
+        <div class="entry-description small">
+          
+          <span class="author">
+            Par <span class="fn" itemprop="author">Clare Naden</span>
+          </span>
+          |
+          <span class="time">
+            <time class='updated' datetime='2018-04-07' itemprop="datePublished">
+                7 avril 2018
+            </time>
+          </span>
+          
+        </div>
+      </div>
+    
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/news/ref2278.html" title="La contribution des normes ISO à la Journée mondiale de la santé"  itemprop="url">
+          <span itemprop="name">La contribution des normes ISO à la Journée mondiale de la santé</span></a>
+        </h6>
+      
+        <div class="entry-summary" itemprop="description">
+            La Journée mondiale de la santé, une initiative de l’Organisation mondiale de la santé (OMS), a pour slogan la « santé pour tous », et un comité ISO récemment créé a pour but d’y contribuer.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="media" itemscope itemtype="http://schema.org/CreativeWork">
+  
+    <figure class="media-left">
+      <a href="/fr/news/ref2275.htm"  title="Les clés du succès commercial dans la nouvelle édition d’une norme ISO">
+      <img src="/files/live/sites/isoorg/files/news/News_archive/2018/04/Ref2275/Ref2275.jpg/thumbnails/300x300" class="media-object width-100 shadow" itemprop="thumbnailUrl"
+           alt="Top view of a business team sitting at a table." />
+      </a>
+    </figure>
+  
+  <div class="media-body">
+    
+      <div class="entry-header">
+        
+        <div class="entry-description small">
+          
+          <span class="author">
+            Par <span class="fn" itemprop="author">Clare Naden</span>
+          </span>
+          |
+          <span class="time">
+            <time class='updated' datetime='2018-04-04' itemprop="datePublished">
+                4 avril 2018
+            </time>
+          </span>
+          
+        </div>
+      </div>
+    
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/news/ref2275.htm" title="Les clés du succès commercial dans la nouvelle édition d’une norme ISO"  itemprop="url">
+          <span itemprop="name">Les clés du succès commercial dans la nouvelle édition d’une norme ISO</span></a>
+        </h6>
+      
+        <div class="entry-summary" itemprop="description">
+            La durée de vie moyenne des entreprises diminue ; pourtant, certaines d'entre elles traversent les siècles. Comment rester compétitif dans un monde en pleine mutation ? Une norme récemment révisée vise à répondre à cette question.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media--><div class="media" itemscope itemtype="http://schema.org/CreativeWork">
+  
+    <figure class="media-left">
+      <a href="/fr/news/ref2277.html"  title="L’embarras du choix: un guide international pour un étiquetage efficace des produits vient d’être actualisé">
+      <img src="/files/live/sites/isoorg/files/news/News_archive/2018/04/Ref2277/Ref2277.jpg/thumbnails/300x300" class="media-object width-100 shadow" itemprop="thumbnailUrl"
+           alt="A woman is grocery shopping and reading product information on a label." />
+      </a>
+    </figure>
+  
+  <div class="media-body">
+    
+      <div class="entry-header">
+        
+        <div class="entry-description small">
+          
+          <span class="author">
+            Par <span class="fn" itemprop="author">Clare Naden</span>
+          </span>
+          |
+          <span class="time">
+            <time class='updated' datetime='2018-04-03' itemprop="datePublished">
+                3 avril 2018
+            </time>
+          </span>
+          
+        </div>
+      </div>
+    
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/news/ref2277.html" title="L’embarras du choix: un guide international pour un étiquetage efficace des produits vient d’être actualisé"  itemprop="url">
+          <span itemprop="name">L’embarras du choix: un guide international pour un étiquetage efficace des produits vient d’être actualisé</span></a>
+        </h6>
+      
+        <div class="entry-summary" itemprop="description">
+            À l’ère du numérique, les consommateurs n’ont jamais été autant informés sur les produits qu’ils achètent, ni aussi avides d’informations. Présenter de manière adéquate ces informations est donc une question stratégique fondamentale pour les entreprises. Un guide international récemment révisé aidera...
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media-->
+    </div>
+  </div>
+</div><hr />
+<p class="text-right"><a href="/fr/news_archive.html" title="News archive"><strong>Toutes les actualit&eacute;s &raquo;</strong></a></p><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><div class="well glyphicon-envelope">
+  <h4 class="text-center">Suivez l&#39;actualit&eacute; de l&#39;ISO</h4>
+
+<p class="text-center">Inscrivez-vous &agrave; notre Newsletter (en anglais) pour suivre nos actualit&eacute;s, points de vue et informations sur nos produits.</p><div class="text-center">
+<div class="createsend-button" data-listid="d/CD/0F2/2B5/3412DA7993AC3B7C" style="height:27px;display:inline-block;">&nbsp;</div>
+<script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
+</div><div class="clear"></div>
+</div><div class="highlight-box clearfix">
+
+  <figure class="img-top">
+    <a href="/fr/annual-reports.html"  title="Rapports annuels">
+    <img src="/files/live/sites/isoorg/files/about%20ISO/annual_reports/img/All%20about%20ISO-Annual%20Reports_TAB.jpg/thumbnails/1200x300"
+        />
+    </a>
+  </figure>
+
+  <div class="box-text clearfix">
+  
+    <div class="entry-content">
+      
+        <h5 class="entry-name">
+          <a href="/fr/annual-reports.html" title="Rapports annuels" >Rapports annuels</a>
+        </h5>
+      
+        <div class="entry-summary">
+          Le résumé des activités de l&#039;année
+        </div>
+      
+    </div>
+  </div><!-- close of box-text-->
+</div><!-- close of highlightbox--><div class="well">
+  <div class="media">
+
+  <figure class="media-left">
+    <a href="/fr/events.html"  title="Manifestations">
+    <img src="/files/live/sites/isoorg/files/news/img/calendar-close-up.jpg/thumbnails/300x300" class="media-object width-100 shadow"
+         alt="Months and dates shown on a calendar whilst turning the pages with shallow depth of field"  title="534789453" />
+    </a>
+  </figure>
+
+  <div class="media-body">
+  
+    <div class="entry-content">
+      
+        <h6 class="entry-name entry-title">
+          <a href="/fr/events.html" title="Manifestations" >Manifestations</a>
+        </h6>
+      
+        <div class="entry-summary">
+          Consultez cette section pour tout savoir sur les prochaines manifestations et les manifestations récentes.
+        </div>
+      
+    </div>
+    
+  </div><!-- close of media-body-->
+</div><!-- close of media-->
+</div><div class="clear"></div>
+            </div>
+    </div><div class="row row-bottom row-light">
+<div class="col-md-7"><h2 style="font-family: MetaWebPro, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);"><a id="focus-anchor" name="focus-anchor"></a>Ce mois&nbsp;dans <em>ISOfocus</em></h2><div class="media">
+<div class="media-left"><a href="/fr/isofocus_127.html" title="Santé et sécurité au travail – Êtes-vous prêt pour ISO 45000?"><img alt="Page de couverture:  ISOfocus Mars/Avril 2018 - 	 Santé et sécurité au travail – Êtes-vous prêt pour ISO 45000?" class="media-object width-180 shadow align-left" height="424" src="/files/live/sites/isoorg/files/news/magazine/ISOfocus%20(2013-NOW)/fr/2018/ISOfocus_127/ISOfocus_127.jpg/thumbnails/300" width="300" /></a></div>
+
+<div class="media-body">
+<div class="section-head">Mars-avril&nbsp;2018</div>
+
+<h4 class="media-heading"><a href="/fr/isofocus_127.html" title="Santé et sécurité au travail – Êtes-vous prêt pour ISO 45000?"><strong>Sant&eacute; et s&eacute;curit&eacute; au travail - &Ecirc;tes-vous pr&ecirc;t pour ISO&nbsp;45000&nbsp;?</strong></a></h4>
+D&eacute;couvrez pourquoi ISO 45001 peut changer la donne pour des millions de travailleurs (et limiter les dangers pour la sant&eacute; li&eacute;s au travail) partout dans le monde.</div>
+</div><div class="clear"></div><div class="clear"></div>
+            </div>
+        
+            <div class="col-md-4 col-md-offset-1"><h3><em>ISOfocus</em></h3><p>Publi&eacute; en anglais, fran&ccedil;ais et espagnol, six fois par an,&nbsp;<em>ISOfocus&nbsp;</em>est votre porte d&#39;acc&egrave;s &agrave; l&#39;actualit&eacute; des Normes internationales. Que vous soyez une multinationale aux prises avec des d&eacute;cisions majeures ou une petite entreprise &agrave; la recherche d&#39;id&eacute;es, l&rsquo;<em>ISOfocus</em>&nbsp;entend donner des &eacute;clairages d&#39;ensemble utiles &agrave; la planification strat&eacute;gique mais aussi les petites pr&eacute;cisions qui peuvent faire toute la diff&eacute;rence.</p>
+
+<p>Vous y trouverez des th&eacute;matiques d&#39;envergure internationale, allant de l&#39;informatique &agrave; la logistique, mais aussi des parcours personnels, et bien d&#39;autres choses encore.</p><hr />
+<p class="text-right"><a href="/fr/isofocus.html" title="ISO Magazines"><strong>Tous les num&eacute;ros &raquo;</strong></a></p><div class="clear"></div><div class="clear"></div>
+            </div>
+    </div><div class="clear"></div>
+    </div><div class="clear"></div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

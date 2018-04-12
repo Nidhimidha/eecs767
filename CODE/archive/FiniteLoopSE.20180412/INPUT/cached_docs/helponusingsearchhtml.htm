@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20170904">
+    
+
+    <title>Help on using search</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"en",uilang:"en",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='en_US';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/en/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/en/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">English <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/fr/help-on-using-search.html">français</a></li><li><a href="/ru/help-on-using-search.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=en">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="ISO logo for print"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">International Organization for Standardization</p>
+              <p class="title-small title-red text-right hidden-xs">When the world agrees</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Search">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Pedestrians crossing a street at a crosswalk.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a></h4>
+<p>Whether you run a business, work for a company or government, or want to know how standards contribute to products and services that you use, you'll find it here.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">SMEs</a></li><li class="noChildren"><a href="/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">Learn more</a></li><li class="noChildren"><a href="/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consumers</a></li><li class="noChildren lastInLevel"><a href="/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">ISO and policy makers</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Popular standards</a></li><li class="hasChildren dropdown hover"><a href="/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a></h4>
+<p>A set of processes that show your product, service or system meets the requirements of a standard.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">The ISO Survey</a></li><li class="noChildren lastInLevel"><a href="/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">All about ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">What we do</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">What we do</a></h4>
+<p>Find out how we develop and publish international standards by bringing together more than 160 members and more than 45,000 experts</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Developing standards</a></li><li class="noChildren"><a href="/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Research</a></li><li class="noChildren"><a href="/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Capacity building</a></li><li class="noChildren lastInLevel"><a href="/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Education about standards</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Members</a></li><li class="hasChildren dropdown hover"><a href="/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">News</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">News</a></h4>
+<p>Keep up to date with the latest in standardization or browse our rich archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">News archive</a></li><li class="noChildren"><a href="/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">ISOfocus magazine</a></li><li class="noChildren"><a href="/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Events and meetings</a></li><li class="noChildren lastInLevel"><a href="/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Media kit</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Taking part</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Who develops standards</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Technical Committees</a></li><li class="noChildren"><a href="/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Other bodies</a></li><li class="noChildren lastInLevel"><a href="/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organizations in cooperation</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="container main">
+<div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          Help on using search
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div><div class="row">
+<div class="col-md-10 col-md-offset-1"><h1>Help on using search</h1><div class="clear"></div><h2>Specific searches</h2>
+
+<p>Several ways are provided to help you find the standards, work items or information publications of interest to you:</p>
+
+<ul>
+	<li>a quick&nbsp;<strong>Search&nbsp;</strong>box on the top banner of each page.</li>
+	<li>an<strong>&nbsp;Advanced Search</strong>&nbsp;each for Standards and for Publications and e-products. You can get to these searches by clicking on the Advanced Search link under the search box</li>
+</ul>
+
+<h3>Search by keywords and phrases</h3>
+
+<ul>
+	<li>If you enter more than one keyword, the search will default to the logical operator AND. For example, if you enter the words&nbsp;<strong>water quality</strong>, the search result will return those items containing both words, although not necessarily together as a phrase.</li>
+	<li>lf you wish to search for items containing any one of a number of words, then you should insert&nbsp;<strong>OR</strong>&nbsp;between each keyword, e.g.,&nbsp;<strong>water OR quality</strong>&nbsp;will return any item which contains either of the words water or quality or both.</li>
+	<li>If you wish to search for items containing an exact phrase or combination of words in a specific order, then you should enclose the phrase within quotation marks, e.g.&nbsp;<strong>&quot;water quality&quot;</strong>.</li>
+</ul>
+
+<p>The search is not case-sensitive, i. e. a search on&nbsp;<strong>Shipbuilding</strong>&nbsp;will yield the same result as&nbsp;<strong>shipbuilding</strong>&nbsp;or&nbsp;<strong>SHIPBUILDING</strong>.</p>
+
+<p>You can truncate a search term by using&nbsp;<strong>*</strong>&nbsp;as a wild card character. For example,&nbsp;<strong>ship*</strong>&nbsp;will search for ships, shipbuilding, shipping, as well as other terms starting with &quot;ship&quot;),&nbsp;<strong>*land</strong>&nbsp;will find inland, subland, etc.</p>
+
+<h3>Search by document reference (ISO) number</h3>
+
+<p>You can search for an ISO standard by entering the numerical part of the reference number of the document requested.</p>
+
+<ul>
+	<li>For example, if you are searching for ISO 31 and its parts, enter the search criteria&nbsp;<strong>31</strong>&nbsp;in the ISO number field. The search result will also include any associated amendments or corrigenda.</li>
+	<li>If you wish to find a specific part of a standard, e.g., ISO 31-11, you can enter&nbsp;<strong>31-11</strong>&nbsp;directly in any of the search boxes or, if you are using the&nbsp;<em>Extended search</em>&nbsp;form, you can use the separate fields provided for the ISO number, in this case&nbsp;<strong>31</strong>, and for the ISO part number, in this case&nbsp;<strong>11</strong>.</li>
+</ul>
+
+<h2>Advanced search</h2>
+
+<h3>Search for a specific document type or supplement type</h3>
+
+<p>By default the search looks for all standards-type documents. Select from the options given to restrict your search to a specific type of document, e.g. Guides, Technical Reports, etc., or to a specific type of supplement, e.g. Amendments, Technical corrigenda, etc.</p>
+
+<h3>Search by ICS (International Classification for Standards)</h3>
+
+<p>You can search for standards and/or projects classified by subject in accordance with any technical field and/or group and/or sub-group of the ICS. The search form links to the&nbsp;<a href="/standards-catalogue/browse-by-ics.html" title="Browse by ICS">List of ICS fields</a>, which gives a description of all ICS fields, groups and sub-groups.</p>
+
+<h3>Search by stage code</h3>
+
+<p>Allows a search for standards which have reached a particular stage in their development or life cycle. The stage codes used by ISO are based on the international harmonized stage code system. The search form links to a&nbsp;<a href="/stage-codes.html" title="International harmonized stage codes">stage code chart</a>&nbsp;giving the explanatory name for each valid stage code.&nbsp;</p>
+
+<p>In combination with a search by stage code, ALWAYS either select or define a date or period when the stage code was reached.</p>
+
+<h3>Search by committee</h3>
+
+<p>Allows you to restrict your search to the standards and/or projects of a specific ISO committee and/or one of its subcommittees. Although it is possible to browse through the lists of standards and/or projects by committee, as described above, using the Advanced search will also allow you to find withdrawn standards or deleted projects by committee, or to refine or extend your search according to the other criteria you select.</p>
+
+<h3>Search scope</h3>
+
+<p>You can search on&nbsp;<em>published standards</em>&nbsp;(<em>Catalogue</em>) and/or&nbsp;<em>work items</em>&nbsp;(<em>Technical programme</em>) and/or&nbsp;<em>Withdrawn standards</em>&nbsp;and/or&nbsp;<em>Deleted projects</em>, by checking the appropriate boxes in the search scope. The default search scope has been designed to adapt according to the environment (published standards and/or projects) which the user is working in, and to remain constant across several searches insofar as possible. However, because it is so easy to change environment when linking from search results to various parts of&nbsp;<em>ISO Online</em>, we would advise that you check that the search scope matches your requirement whenever you launch a search.</p><div class="clear"></div><div class="clear"></div>
+            </div>
+    </div><div class="clear"></div>
+    </div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          Help on using search
+        </li>
+      
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/standards.html">Standards</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/benefits-of-standards.html">Benefits</a></li><li class="noChildren"><a href="/standards-in-action.html">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html">Popular standards</a></li><li class="noChildren"><a href="/conformity-assessment.html">Certification & conformity</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/about-us.html">All about ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/what-we-do.html">What we do</a></li><li class="noChildren"><a href="/structure.html">Structure</a></li><li class="noChildren"><a href="/members.html">Members</a></li><li class="noChildren"><a href="/news_index.html">News</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/developing-standards.html">Taking part</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/who-develops-standards.html">Who develops standards</a></li><li class="noChildren"><a href="/deliverables-all.html">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/iso-name-and-logo.html">ISO name and logo</a></li><li class="noChildren"><a href="/privacy-and-copyright.html">Privacy and copyright</a></li><li class="noChildren"><a href="/sitemap.html">Sitemap</a></li><li class="noChildren"><a href="/working-with-iso.html" >Jobs</a></li><li class="noChildren"><a href="/frequently-asked-questions-faqs.html">FAQs</a></li><li class="noChildren lastInLevel"><a href="/contact-iso.html">Contact ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">We are committed to ensuring that our website is accessible to everyone. If you have any questions or suggestions regarding the accessibility of this site, please <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contact us</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© All Rights Reserved</a> <span id="copyright" class="collapse">All ISO publications and materials are protected by copyright and are subject to the user’s acceptance of ISO’s conditions of copyright. Any use, including reproduction requires our written permission. All copyright requests should be addressed to <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

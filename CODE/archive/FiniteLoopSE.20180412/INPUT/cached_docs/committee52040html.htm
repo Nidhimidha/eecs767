@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20161208">
+    
+
+    <title>ISO/TC 122 - Packaging</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"en",uilang:"en",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='en_US';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/en/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/en/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      // datatable-meetings initialization
+      $('table#datatable-meetings').DataTable({
+        "destroy": true,
+        "paging": false,
+        "info": false,
+        "searching": false,
+        "columns": [
+          null,
+          null,
+          null,
+          null,
+          { "orderable": false } /* cannot sort by note */
+        ]
+      });
+
+      // Tooltip initialization
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+
+      // Popover initialization
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+
+    });
+
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">English <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/fr/committee/52040.html">français</a></li><li><a href="/ru/committee/52040.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=en">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="ISO logo for print"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">International Organization for Standardization</p>
+              <p class="title-small title-red text-right hidden-xs">When the world agrees</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Search">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Pedestrians crossing a street at a crosswalk.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Benefits</a></h4>
+<p>Whether you run a business, work for a company or government, or want to know how standards contribute to products and services that you use, you'll find it here.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">SMEs</a></li><li class="noChildren"><a href="/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">Learn more</a></li><li class="noChildren"><a href="/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consumers</a></li><li class="noChildren lastInLevel"><a href="/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">ISO and policy makers</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Popular standards</a></li><li class="hasChildren dropdown hover"><a href="/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformity</a></h4>
+<p>A set of processes that show your product, service or system meets the requirements of a standard.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">The ISO Survey</a></li><li class="noChildren lastInLevel"><a href="/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">All about ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">What we do</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">What we do</a></h4>
+<p>Find out how we develop and publish international standards by bringing together more than 160 members and more than 45,000 experts</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Developing standards</a></li><li class="noChildren"><a href="/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Research</a></li><li class="noChildren"><a href="/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Capacity building</a></li><li class="noChildren lastInLevel"><a href="/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Education about standards</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Members</a></li><li class="hasChildren dropdown hover"><a href="/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">News</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">News</a></h4>
+<p>Keep up to date with the latest in standardization or browse our rich archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">News archive</a></li><li class="noChildren"><a href="/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">ISOfocus magazine</a></li><li class="noChildren"><a href="/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Events and meetings</a></li><li class="noChildren lastInLevel"><a href="/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Media kit</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Taking part</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Who develops standards</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Technical Committees</a></li><li class="noChildren"><a href="/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Other bodies</a></li><li class="noChildren lastInLevel"><a href="/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organizations in cooperation</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open lastInLevel"><a href="/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren inPath firstInLevel"><a href="/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    
+
+<div class="container main">
+  <div class="row row-top row-light">
+    <div class="col-md-12">
+    <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/store.html">
+                Store
+              </a>
+            
+        </li>
+      
+        <li>
+          
+<a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a>
+
+        </li>
+      
+        <li>
+          
+              <a href="/standards-catalogue/browse-by-tc.html">
+                Browse by TC
+              </a>
+            
+        </li>
+      <li>ISO/TC 122</li>
+  </ol>
+
+</div>
+      <div class="page-header heading-condensed">
+        <h1>
+          <strong>ISO/TC 122</strong>
+          
+        </h1>
+        <h2>Packaging</h2>
+      </div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="col-md-7">
+      
+
+<h3>About</h3>
+<ul class="refine">
+  
+  <li>
+    
+      <h6>Secretariat: <a href="/member/1835.html" title="Japanese Industrial Standards Committee (Japan)">JISC</a></h6>
+    
+    <div itemscope itemtype="http://schema.org/Person">
+      <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Secretary</span>:</div>
+      <div class="entry-name entry-block" itemprop="name"><a href="mailto:shirakura@jpi.or.jp">Mr Akira Shirakura</a></div>
+    </div>
+  </li>
+  
+  <li>
+    <h6>Twinned Secretariat: <a href="/member/1803.html" title="Institute of Standards and Industrial Research of Iran (Iran, Islamic Republic of)">ISIRI</a></h6>
+      
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Twinned Secretary</span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:isiritc122@gmail.com">Ms Manijeh Abdi</a></div>
+      </div>
+    
+  </li>
+  
+    <li>
+    
+    <div itemscope itemtype="http://schema.org/Person">
+      <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Chairperson&nbsp;(until end&nbsp;2020)</span>:</div>
+      <div class="entry-name entry-block" itemprop="name">Dr Takeo Shiina</div>
+    </div>
+
+    
+  </li>
+  
+  <li>
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">ISO Technical Programme Manager <span class="glyphicon glyphicon-info-sign text-muted" data-toggle="popover" data-trigger="click hover" data-placement="top" data-html="true" data-content="<small>The TPM is the main ISO Central Secretariat contact point for technical committees. He/she oversees the work programmes of a portfolio of committees in related sectors and provides the leadership of these committees with guidance, support, and training. Identification, development and progression of new standardization opportunities within his/her field of action is also part of the role, as is promoting the ISO brand within his/her sector(s).</small>" data-original-title="ISO Technical Programme Manager (TPM)"></span></span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:takahashi@iso.org">Mme Maho Takahashi</a></div>
+      </div>
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">ISO Editorial Programme Manager <span class="glyphicon glyphicon-info-sign text-muted" data-toggle="popover" data-trigger="click hover" data-placement="top" data-html="true" data-content="<small>The ISO Editorial Programme Manager (EPM) is the main ISO Central Secretariat contact point for any questions related to drafting or editing of standards. EPMs are responsible for managing the overall editorial development of the projects belonging to their assigned committees and they ensure that documents maintain the highest degree of quality, are delivered in a timely manner, and adhere to ISO’s drafting rules and policies.</small>" data-original-title="ISO Editorial Programme Manager (EPM)"></span></span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:gavoille@iso.org">Mr Bastien Gavoille</a></div>
+      </div>
+    
+  </li>
+  
+  <li>
+    Creation date: 1966
+  </li>
+  
+</ul>
+
+
+  <h3>Scope</h3>
+  
+      <p>Standardization in the field of packaging with regard to terminology and definitions, packaging dimensions, performance requirements and tests. <P>Excluded : <UL> <LI>matters falling within the scopes of particular committees (e.g. TC 6, 52 and 104). </UL> </p>
+    
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      
+
+<div class="well">
+  <h3>Quick links</h3>
+  <ul class="refine">
+    
+    <li>
+      <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+        <div class="entry-name entry-title">
+          <a href="/contents/data/committee/05/20/52040/x/catalogue/p/0/u/1/w/0/d/0" title="ISO/TC 122 Work programme" itemprop="url"><span class="glyphicon glyphicon-link"></span><span itemprop="name">Work programme</span></a>
+        </div>
+        <div class="entry-summary" itemprop="description">Drafts and new work items</div>
+      </div>
+    </li>
+    
+    <li>
+      <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+        <div class="entry-name entry-title">
+          <a href="http://www.iso.org/bp" title="Business plan" target="_blank" itemprop="url"><span class="glyphicon glyphicon-new-window"></span><span itemprop="name">Business plans</span></a>
+        </div>
+        <div class="entry-summary" itemprop="description">TC Business plans for public review</div>
+      </div>
+    </li>
+    
+      <li>
+        <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+          <div class="entry-name entry-title">
+            <a href="http://isotc.iso.org/livelink/livelink?func=ll&objAction=browse&objId=8869370" title="Working area" target="_blank" itemprop="url"><span class="glyphicon glyphicon-new-window"></span><span itemprop="name">Working area</span></a>
+          </div>
+          <div class="entry-summary" itemprop="description">on ISOTC and Public information folder</div>
+        </div>
+      </li>
+    
+      <li>
+        <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+          <div class="entry-name entry-title">
+            <a href="https://login.iso.org" title="ISO Electronic applications" itemprop="url"><span class="glyphicon glyphicon-new-window"></span><span itemprop="name">ISO Electronic applications</span></a>
+          </div>
+          <div class="entry-summary" itemprop="description">IT Tools that help support the standards development process</div>
+        </div>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+  </div>
+  
+
+<div class="row row-middle text-center">
+  
+    <div class="col-md-3 col-sm-6">
+      <div class="well">
+        <div class="statistic">
+          <span class="number small"><a href="/contents/data/committee/05/20/52040/x/catalogue/p/1/u/0/w/0/d/0">83</a></span>
+          <h4>published ISO standards<span class="small">&nbsp;*</span></h4>
+          
+              <p>related to the TC and its SCs</p>
+            
+            <div class="description">
+              <p>of which <a href="/contents/data/committee/05/20/52040/x/catalogue/p/1/u/0/w/0/d/0#projects">49</a> under the direct responsibility of&nbsp;ISO/TC 122</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3 col-sm-6">
+      <div class="well">
+        <div class="statistic">
+          <span class="number small"><a href="/contents/data/committee/05/20/52040/x/catalogue/p/0/u/1/w/0/d/0">14</a></span>
+          <h4>ISO standards under development<span class="small">&nbsp;*</span></h4>
+          
+              <p>related to the TC and its SCs</p>
+            
+            <div class="description">
+              <p>of which <a href="/contents/data/committee/05/20/52040/x/catalogue/p/0/u/1/w/0/d/0#projects">8</a> under the direct responsibility of&nbsp;ISO/TC 122</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+  <div class="clearfix visible-sm"></div>
+  
+  <div class="col-md-3 col-sm-6">
+    <div class="well">
+      <div class="statistic">
+        <span class="number small"><a href="?view=participation">31</a></span>
+        <h4>Participating members</h4>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-3 col-sm-6">
+    <div class="well">
+      <div class="statistic">
+        <span class="number small"><a href="?view=participation">46</a></span>
+        <h4>Observing members</h4>
+      </div>
+    </div>
+  </div>
+  
+    <div class="col-md-12"><p class="text-muted small align-left">* number includes updates</p></div>
+  
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <!-- Nav tabs -->
+    
+    <ul class="nav nav-tabs" role="tablist">
+      
+        <li role="presentation" class="active"><a href="#structure" aria-controls="structure" role="tab" data-toggle="tab"><h3>Structure</h3></a></li>
+      
+        <li role="presentation" class=""><a href="#liaisons" aria-controls="liaisons" role="tab" data-toggle="tab"><h3>Liaisons</h3></a></li>
+      
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      
+        <div role="tabpanel" class="tab-pane active" id="structure">
+          <div class="row">
+            <div class="col-md-12">
+              <table id="datatable-structure" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:200px;">Reference</th>
+                  <th>Title</th>
+                  <th style="width:100px;">Type</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/~SC 003" data-title="Reference"><a href="/committee/52068.html">ISO/TC 122/SC 3</a></td>
+                        <td data-title="Title">Performance requirements and tests for means of packaging, packages and unit loads (as required by ISO/TC 122)</td>
+                      
+                    <td data-title="Type">Sub committee</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/~SC 004" data-title="Reference"><a href="/committee/52082.html">ISO/TC 122/SC 4</a></td>
+                        <td data-title="Title">Packaging and the environment</td>
+                      
+                    <td data-title="Type">Sub committee</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 005" data-title="Reference">ISO/TC 122/WG 5
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Ms Jan Gates</strong>&#32;(until end of&#32;2018)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Terminology and vocabulary</td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 008" data-title="Reference">ISO/TC 122/WG 8
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Mr Klaus Peter Schmidt</strong>&#32;(until end of&#32;2018)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Plastic drums</td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 009" data-title="Reference">ISO/TC 122/WG 9
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Dr Ken Sagawa</strong>&#32;(until end of&#32;2019)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Accessible design for packaging</td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 011" data-title="Reference">ISO/TC 122/WG 11
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Mrs Dr Ellen Troska</strong>&#32;(until end of&#32;2019)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Household goods shipments</td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 012" data-title="Reference">ISO/TC 122/WG 12
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Dr Shinichi Ishii</strong>&#32;(until end of&#32;2018)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Supply chain applications of logistics technology </td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 013" data-title="Reference">ISO/TC 122/WG 13
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Dr Jae-Kyun Eom</strong>&#32;(until end of&#32;2019)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Returnable Transport System</td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 014" data-title="Reference">ISO/TC 122/WG 14
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Mr Mikael Hjalmarson</strong>&#32;(until end of&#32;2019)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Label Material</td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 015" data-title="Reference">ISO/TC 122/WG 15
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Mr Dieter Mößner</strong>&#32;(until end of&#32;2020)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Tamper verification features for medicinal product packaging</td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 122/WG 016" data-title="Reference">ISO/TC 122/WG 16
+                            <a href="javascript:void(0)" data-toggle="popover" data-content="<small>The convenor,&#32;
+                                <strong>Mr Jongkyoung Kim</strong>&#32;(until end of&#32;2020)
+                                  &#32;can be reached through the <a href='#secretariat'>secretariat</a>.</small>" data-placement="top" data-trigger="focus" role="button" tabindex="0" data-html="true" title=""><span class="glyphicon glyphicon-info-sign"></span></a>
+                          
+                        </td>
+                        <td data-title="Title">Temperature controlled product packaging</td>
+                      
+                    <td data-title="Type">Working group</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+
+              
+            </div>
+          </div>
+        </div>
+      
+      <div role="tabpanel" class="tab-pane " id="liaisons">
+        
+          <div class="row row-top">
+            <div class="col-md-12">
+              <h5>Liaison Committees to&nbsp;ISO/TC 122</h5>
+              <p class="help-block">The committees below can access the documents of&nbsp;ISO/TC 122 :</p>
+              <table id="datatable-LIA_I_R_CC" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:250px;">Reference</th>
+                  <th>Title</th>
+                  <th style="width:110px;">ISO/IEC</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 031" data-title="Reference"><a href="/committee/45332.html">ISO/IEC JTC 1/SC 31</a></td>
+                      
+                    <td data-title="Title">Automatic identification and data capture techniques</td>
+                    <td data-title="ISO/IEC">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 006" data-title="Reference"><a href="/committee/45674.html">ISO/TC 6</a></td>
+                      
+                    <td data-title="Title">Paper, board and pulps</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 051" data-title="Reference"><a href="/committee/48928.html">ISO/TC 51</a></td>
+                      
+                    <td data-title="Title">Pallets for unit load method of materials handling</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 052" data-title="Reference"><a href="/committee/48944.html">ISO/TC 52</a></td>
+                      
+                    <td data-title="Title">Light gauge metal containers</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 063" data-title="Reference"><a href="/committee/49492.html">ISO/TC 63</a></td>
+                      
+                    <td data-title="Title">Glass containers</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 104" data-title="Reference"><a href="/committee/51156.html">ISO/TC 104</a></td>
+                      
+                    <td data-title="Title">Freight containers</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 110" data-title="Reference"><a href="/committee/51588.html">ISO/TC 110</a></td>
+                      
+                    <td data-title="Title">Industrial trucks</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 159" data-title="Reference"><a href="/committee/53348.html">ISO/TC 159</a></td>
+                      
+                    <td data-title="Title">Ergonomics</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 159/~SC 003" data-title="Reference"><a href="/committee/53362.html">ISO/TC 159/SC 3</a></td>
+                      
+                    <td data-title="Title">Anthropometry and biomechanics</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 173/~SC 007" data-title="Reference"><a href="/committee/608504.html">ISO/TC 173/SC 7</a></td>
+                      
+                    <td data-title="Title">Assistive products for persons with impaired sensory functions</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 198" data-title="Reference"><a href="/committee/54576.html">ISO/TC 198</a></td>
+                      
+                    <td data-title="Title">Sterilization of health care products</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 204" data-title="Reference"><a href="/committee/54706.html">ISO/TC 204</a></td>
+                      
+                    <td data-title="Title">Intelligent transport systems</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 292" data-title="Reference"><a href="/committee/5259148.html">ISO/TC 292</a></td>
+                      
+                    <td data-title="Title">Security and resilience</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+          <div class="row row-topline row-middle">
+            
+            <div class="col-md-12">
+              <h5>Liaison Committees from&nbsp;ISO/TC 122</h5>
+              <p class="help-block">ISO/TC 122&nbsp;can access the documents of the committees below :</p>
+              <table id="datatable-LIA_I_CC" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:250px;">Reference</th>
+                  <th>Title</th>
+                  <th style="width:110px;">ISO/IEC</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001" data-title="Reference"><a href="/committee/45020.html">ISO/IEC JTC 1</a></td>
+                      
+                    <td data-title="Title">Information technology</td>
+                    <td data-title="ISO/IEC">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 006" data-title="Reference"><a href="/committee/45072.html">ISO/IEC JTC 1/SC 6</a></td>
+                      
+                    <td data-title="Title">Telecommunications and information exchange between systems</td>
+                    <td data-title="ISO/IEC">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 031" data-title="Reference"><a href="/committee/45332.html">ISO/IEC JTC 1/SC 31</a></td>
+                      
+                    <td data-title="Title">Automatic identification and data capture techniques</td>
+                    <td data-title="ISO/IEC">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 006" data-title="Reference"><a href="/committee/45674.html">ISO/TC 6</a></td>
+                      
+                    <td data-title="Title">Paper, board and pulps</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 020/~SC 009" data-title="Reference"><a href="/committee/46564.html">ISO/TC 20/SC 9</a></td>
+                      
+                    <td data-title="Title">Air cargo and ground equipment</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 034/~SC 017" data-title="Reference"><a href="/committee/583916.html">ISO/TC 34/SC 17</a></td>
+                      
+                    <td data-title="Title">Management systems for food safety</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 051" data-title="Reference"><a href="/committee/48928.html">ISO/TC 51</a></td>
+                      
+                    <td data-title="Title">Pallets for unit load method of materials handling</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 052" data-title="Reference"><a href="/committee/48944.html">ISO/TC 52</a></td>
+                      
+                    <td data-title="Title">Light gauge metal containers</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 104" data-title="Reference"><a href="/committee/51156.html">ISO/TC 104</a></td>
+                      
+                    <td data-title="Title">Freight containers</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 104/~SC 001" data-title="Reference"><a href="/committee/51166.html">ISO/TC 104/SC 1</a></td>
+                      
+                    <td data-title="Title">General purpose containers</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 104/~SC 002" data-title="Reference"><a href="/committee/51174.html">ISO/TC 104/SC 2</a></td>
+                      
+                    <td data-title="Title">Specific purpose containers</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 104/~SC 004" data-title="Reference"><a href="/committee/51188.html">ISO/TC 104/SC 4</a></td>
+                      
+                    <td data-title="Title">Identification and communication</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 110" data-title="Reference"><a href="/committee/51588.html">ISO/TC 110</a></td>
+                      
+                    <td data-title="Title">Industrial trucks</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 159" data-title="Reference"><a href="/committee/53348.html">ISO/TC 159</a></td>
+                      
+                    <td data-title="Title">Ergonomics</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 173/~SC 007" data-title="Reference"><a href="/committee/608504.html">ISO/TC 173/SC 7</a></td>
+                      
+                    <td data-title="Title">Assistive products for persons with impaired sensory functions</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 198" data-title="Reference"><a href="/committee/54576.html">ISO/TC 198</a></td>
+                      
+                    <td data-title="Title">Sterilization of health care products</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 204" data-title="Reference"><a href="/committee/54706.html">ISO/TC 204</a></td>
+                      
+                    <td data-title="Title">Intelligent transport systems</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 292" data-title="Reference"><a href="/committee/5259148.html">ISO/TC 292</a></td>
+                      
+                    <td data-title="Title">Security and resilience</td>
+                    <td data-title="ISO/IEC">ISO</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+          <div class="row row-topline row-middle">
+            
+            <div class="col-md-12">
+              
+                <h5>Organizations in liaison (Category A and B)</h5>
+                <table id="datatable-LIA_I_CC" class="table table-striped responsive-table">
+                  <thead>
+                  <tr>
+                    <th style="width:250px;">Acronym</th>
+                    <th>Title</th>
+                    <th style="width:110px;">Category</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td data-sort="aise" data-title="Acronym"><a href="/organization/8780.html">AISE</a></td>
+                      <td data-title="Title">International Association for Soaps, Detergent and Maintenance Products</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="apf" data-title="Acronym"><a href="/organization/8800.html">APF</a></td>
+                      <td data-title="Title">Asian Packaging Federation</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="bic" data-title="Acronym"><a href="/organization/9238.html">BIC</a></td>
+                      <td data-title="Title">International Container Bureau</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="epic" data-title="Acronym"><a href="/organization/9040.html">EPIC</a></td>
+                      <td data-title="Title">European Packaging Institute Consortium</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="gs1" data-title="Acronym"><a href="/organization/10067.html">GS1</a></td>
+                      <td data-title="Title">GS1</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="iapri" data-title="Acronym"><a href="/organization/627513.html">IAPRI</a></td>
+                      <td data-title="Title">International Association of Packaging Research Institutes</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="iata" data-title="Acronym"><a href="/organization/9226.html">IATA</a></td>
+                      <td data-title="Title">International Air Transport Association</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="icpp" data-title="Acronym"><a href="/organization/298032.html">ICPP</a></td>
+                      <td data-title="Title">International Confederation of Plastics Packaging Manufacturers</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ics - shipping" data-title="Acronym"><a href="/organization/9487.html">ICS - shipping</a></td>
+                      <td data-title="Title">International Chamber of Shipping</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="imo" data-title="Acronym"><a href="/organization/9581.html">IMO</a></td>
+                      <td data-title="Title">International Maritime Organization</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="itu" data-title="Acronym"><a href="/organization/9657.html">ITU</a></td>
+                      <td data-title="Title">International Telecommunication Union</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ogc" data-title="Acronym"><a href="/organization/9825.html">OGC</a></td>
+                      <td data-title="Title">Open Geospatial Consortium, Inc.</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="oie" data-title="Acronym"><a href="/organization/9456.html">OIE</a></td>
+                      <td data-title="Title">World Organization for Animal Health (OIE)</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="oiml" data-title="Acronym"><a href="/organization/9698.html">OIML</a></td>
+                      <td data-title="Title">International Organization of Legal Metrology</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="uic" data-title="Acronym"><a href="/organization/9759.html">UIC</a></td>
+                      <td data-title="Title">International Union of Railways</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="unece" data-title="Acronym"><a href="/organization/9010.html">UNECE</a></td>
+                      <td data-title="Title">United Nations Economic Commission for Europe</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="upu" data-title="Acronym"><a href="/organization/9781.html">UPU</a></td>
+                      <td data-title="Title">Universal Postal Union</td>
+                      <td data-title="Category">A</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="ec - european commission" data-title="Acronym"><a href="/organization/3182.html">EC - European Commission</a></td>
+                      <td data-title="Title">European Commission</td>
+                      <td data-title="Category">B</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="eurosac" data-title="Acronym"><a href="/organization/9090.html">EUROSAC</a></td>
+                      <td data-title="Title">European Federation of Multiwall Paper Sacks Manufacturers</td>
+                      <td data-title="Category">B</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="fao" data-title="Acronym"><a href="/organization/9098.html">FAO</a></td>
+                      <td data-title="Title">Food and Agriculture Organization of the United Nations</td>
+                      <td data-title="Category">B</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="oecd" data-title="Acronym"><a href="/organization/9694.html">OECD</a></td>
+                      <td data-title="Title">Organisation for Economic Co-operation and Development, OECD</td>
+                      <td data-title="Category">B</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="un" data-title="Acronym"><a href="/organization/9769.html">UN</a></td>
+                      <td data-title="Title">United Nations</td>
+                      <td data-title="Category">B</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="wco" data-title="Acronym"><a href="/organization/8833.html">WCO</a></td>
+                      <td data-title="Title">World Customs Organization</td>
+                      <td data-title="Category">B</td>
+                    </tr>
+                  
+                    <tr>
+                      <td data-sort="wpo" data-title="Acronym"><a href="/organization/9803.html">WPO</a></td>
+                      <td data-title="Title">World Packaging Organization</td>
+                      <td data-title="Category">B</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              
+              <br/>
+              
+            </div>
+          </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div itemscope itemtype="http://schema.org/Organization">
+        
+        <h3 id="secretariat">ISO/TC 122 - Secretariat</h3>
+        <div class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <h5><a href="/member/1835.html" title="Japanese Industrial Standards Committee (Japan)"><span itemprop="name">JISC</span></a> <small class="country-name" itemprop="addressCountry">Japan</small></h5>
+          <div class="name" itemprop="name">Japan Packaging Institute</div>
+          <div class="street-address" itemprop="streetAddress">10F Togeki Bldg.<br/>4-1-1, Tsukiji<br/>Tokyo 104-0045 Chuo-ku<br/>Japan</div>
+        </div>
+        <p>
+        <div class="tel">Tel: <span itemprop="telephone">+81 3 3543 1189</span></div><div class="fax">Fax: <span itemprop="faxNumber">+81 3 3543 8970</span></div><div class="url">Web: <span itemprop="url"><a href="http://www.jpi.or.jp" target="_blank" title="email">http://www.jpi.or.jp</a></span></div>
+        </p>
+        
+          <h6>Secretariat direct:</h6>
+          <div class="vcard contact clearfix" itemscope itemtype="http://schema.org/Person">
+            <div class="fn n" itemprop="name">Mr Akira Shirakura</div><div class="tel">Tel: <span itemprop="telephone">+81-3-3542-1189</span></div><div class="email" itemprop="email">Email: <a href="mailto:shirakura@jpi.or.jp" title="email">shirakura@jpi.or.jp</a></div>
+          </div>
+        
+      </div>
+    </div>
+
+    
+      <div class="col-md-6">
+        <h3 id="secretariatTwinned">ISO/TC 122 - Twinned Secretariat</h3>
+        <div itemscope itemtype="http://schema.org/Organization">
+            
+          <div class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <h5><a href="/member/1803.html" title="Institute of Standards and Industrial Research of Iran (Iran, Islamic Republic of)"><span itemprop="name">ISIRI</span></a> <small class="country-name" itemprop="addressCountry">Iran, Islamic Republic of</small></h5>
+            <div class="name" itemprop="name">Institute of Standards and Industrial Research of Iran</div>
+            <div class="street-address" itemprop="streetAddress">No.: 2592<br/>South West Vanak Square,<br/>P.O. Box: 14155-6139<br/>Tehran<br/>Iran, Islamic Republic of</div>
+          </div>
+          <p>
+          <div class="tel">Tel: <span itemprop="telephone">+98 26 32807045</span></div><div class="fax">Fax: <span itemprop="faxNumber">+98 26 32818787</span></div><div class="email">Email: <span itemprop="email"><a href="mailto:standard@isiri.gov.ir" title="email">standard@isiri.gov.ir</a></span></div><div class="url">Web: <span itemprop="url"><a href="http://www.isiri.gov.ir" target="_blank" title="email">http://www.isiri.gov.ir</a></span></div>
+          </p>
+
+          
+            <h6>Secretariat direct:</h6>
+            <div class="vcard contact clearfix" itemscope itemtype="http://schema.org/Person">
+              <div class="fn n" itemprop="name">Ms Manijeh Abdi</div><div class="email" itemprop="email">Email: <a href="mailto:isiritc122@gmail.com" title="email">isiritc122@gmail.com</a></div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+
+</div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/store.html">
+                Store
+              </a>
+            
+        </li>
+      
+        <li>
+          
+<a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a>
+
+        </li>
+      
+        <li>
+          
+              <a href="/standards-catalogue/browse-by-tc.html">
+                Browse by TC
+              </a>
+            
+        </li>
+      <li>ISO/TC 122</li>
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/standards.html">Standards</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/benefits-of-standards.html">Benefits</a></li><li class="noChildren"><a href="/standards-in-action.html">Standards in action</a></li><li class="noChildren"><a href="/popular-standards.html">Popular standards</a></li><li class="noChildren"><a href="/conformity-assessment.html">Certification & conformity</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/about-us.html">All about ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/what-we-do.html">What we do</a></li><li class="noChildren"><a href="/structure.html">Structure</a></li><li class="noChildren"><a href="/members.html">Members</a></li><li class="noChildren"><a href="/news_index.html">News</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/developing-standards.html">Taking part</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/who-develops-standards.html">Who develops standards</a></li><li class="noChildren"><a href="/deliverables-all.html">Deliverables</a></li><li class="noChildren"><a href="/get-involved.html">Get involved</a></li><li class="noChildren lastInLevel"><a href="/resources.html">Resources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath lastInLevel"><a href="/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren inPath firstInLevel"><a href="/standards-catalogue/browse-by-ics.html" >Standards catalogue</a></li><li class="noChildren lastInLevel"><a href="/publication-list.html">Publications and products</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/iso-name-and-logo.html">ISO name and logo</a></li><li class="noChildren"><a href="/privacy-and-copyright.html">Privacy and copyright</a></li><li class="noChildren"><a href="/sitemap.html">Sitemap</a></li><li class="noChildren"><a href="/working-with-iso.html" >Jobs</a></li><li class="noChildren"><a href="/frequently-asked-questions-faqs.html">FAQs</a></li><li class="noChildren lastInLevel"><a href="/contact-iso.html">Contact ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">We are committed to ensuring that our website is accessible to everyone. If you have any questions or suggestions regarding the accessibility of this site, please <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contact us</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© All Rights Reserved</a> <span id="copyright" class="collapse">All ISO publications and materials are protected by copyright and are subject to the user’s acceptance of ISO’s conditions of copyright. Any use, including reproduction requires our written permission. All copyright requests should be addressed to <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

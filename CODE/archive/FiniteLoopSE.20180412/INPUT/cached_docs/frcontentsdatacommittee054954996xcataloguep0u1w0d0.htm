@@ -1,0 +1,3771 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20161208">
+    
+
+    <title>ISO/TMBG - Bureau de gestion technique - groupes</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<link id="staticAssetCSS2" rel="stylesheet" href="/modules/iso-jahia-service-module/css/horizontal.filterbar.css?1521042854944" media="screen" type="text/css"/>
+<link id="staticAssetCSS3" rel="stylesheet" href="/modules/iso-jahia-service-module/css/datatable.search.css?1521042854944" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/fwk-module/javascript/angular.min.js?1521042755143"></script>
+<script id="staticAssetJavascript2" type="text/javascript" src="/modules/fwk-module/javascript/angular-route.min.js?1521042755143"></script>
+<script id="staticAssetJavascript3" type="text/javascript" src="/modules/iso-jahia-service-module/javascript/browseby.filterbar.js?1521042854944"></script>
+<script id="staticAssetJavascript4" type="text/javascript" src="/modules/iso-jahia-service-module/javascript/horizontal.filterbar.js?1521042854944"></script>
+<script id="staticAssetJavascript5" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+  <base href="/fr/committee/54996/x/catalogue/" />
+
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('body').tooltip({
+        selector: '[data-toggle=iso-tooltip]'
+      });
+    });
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/committee/54996.html?view=catalogue&amp;angularParam=p/0/u/1/w/0/d/0">English</a></li><li><a href="/ru/committee/54996.html?view=catalogue&amp;angularParam=p/0/u/1/w/0/d/0">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren inPath firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    
+
+
+
+
+
+
+
+
+<template:addResources>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('table[id^="datatable"]').DataTable({
+        "destroy": true,
+        "paging": false,
+        "info": false,
+        "searching": true,
+        "language": {
+          "search": "",
+          "searchPlaceholder": "Filtrer la liste",
+          "zeroRecords": "Aucun résultat n'a été trouvé"
+        }
+      });
+    });
+  </script>
+</template:addResources>
+
+<input type="hidden" id="indexReference" value="ISO/TMBG - Bureau de gestion technique - groupes"/>
+
+<div class="container main">
+  <div class="row row-top row-light">
+    <div class="col-md-12">
+      <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/store.html">
+                Store
+              </a>
+            
+        </li>
+      
+        <li>
+          
+<a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a>
+
+        </li>
+      
+        <li>
+          
+              <a href="/fr/standards-catalogue/browse-by-tc.html">
+                Explorer par TC
+              </a>
+            
+        </li>
+      <li>ISO/TMBG</li>
+  </ol>
+
+</div>
+      <h1 class="page-header">Catalogue de normes</h1>
+      <div class="heading-condensed">
+        <h2>
+          <strong><a href="/fr/committee/54996.html">ISO/TMBG</a></strong>
+          <sup><a href="/fr/contents/data/committee/05/49/54996.catalogue.rss" class="ss-icon ss-social-circle text-warning text-small" data-toggle="iso-tooltip" data-original-title="RSS">&#xE310;</a></sup>
+        </h2>
+        <h3>Bureau de gestion technique - groupes</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      
+          <div class="filterApp" ng-app="filterApp" ng-controller="mainCtrl">
+            
+            <div class="hidden" ng-view></div>
+
+            <div id="horizontalFilterBar">
+              <ul class="list-inline form">
+                <li><strong>Filtre:</strong></li>
+                <li>
+                  <input type="checkbox" name="" id="statusP" ng-checked="pChecked || pChecked == null">&nbsp;
+                  <span class="glyphicon glyphicon-ok-circle"></span><label for="statusP">Normes publiées</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusU" ng-checked="uChecked || uChecked == null">&nbsp;
+                  <span class="glyphicon glyphicon-record"></span><label for="statusU">Projets de normes</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusW" ng-checked="wChecked">&nbsp;
+                  <span class="glyphicon glyphicon-ban-circle"></span><label for="statusW">Normes annulées</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="statusD" ng-checked="dChecked">&nbsp;
+                  <span class="glyphicon glyphicon-remove-circle"></span><label for="statusD">Projets annulés</label>
+                </li>
+              </ul>
+            </div>
+
+            <table id="datatable-tc-projects" class="table responsive-table">
+              <thead>
+              <tr>
+                <th class="col-md-9">Norme et/ou projet&nbsp;sous la responsabilité directe du&nbsp;ISO/TMBG&nbsp;Secrétariat <span class="text-xs" ng-bind-template="({{nbResults}})"></span></th>
+                <th class="col-md-1">Stade</th>
+                <th class="col-md-2">ICS</th>
+              </tr>
+              </thead>
+              <tbody>
+              
+                <tr ng-show="wChecked">
+                  <td data-sort="0" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19712.html?browse=tc" title="ISO Guide 1:1972" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 1:1972</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Présentation des Normes internationales et des rapports techniques
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="1" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/36207.html?browse=tc" title="IWA 1:2001" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 1:2001</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes de management de la qualité -- Lignes directrices pour l'amélioration des procédés dans les organisations des services de santé
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/11.020.html">11.020</a></li>
+                    
+                      <li><a href="/fr/ics/03.120.10.html">03.120.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="2" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/41768.html?browse=tc" title="IWA 1:2005" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 1:2005</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes de management de la qualité -- Lignes directrices pour l'amélioration des procédés dans les organisations des services de santé
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/11.020.html">11.020</a></li>
+                    
+                      <li><a href="/fr/ics/03.120.10.html">03.120.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="3" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19713.html?browse=tc" title="ISO/IEC Guide 2:1991" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 2:1991</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Termes généraux et leurs définitions concernant la normalisation et les activités connexes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/01.040.01.html">01.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="4" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/24887.html?browse=tc" title="ISO/IEC Guide 2:1996" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 2:1996</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Normalisation et activités connexes -- Vocabulaire général
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/01.040.01.html">01.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="5" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/39976.html?browse=tc" title="ISO/IEC Guide 2:2004" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 2:2004</a>
+  </div>
+
+  <div class="entry-summary">
+      Normalisation et activités connexes -- Vocabulaire général
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/01.040.01.html">01.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="6" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/38866.html?browse=tc" title="IWA 2:2003" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 2:2003</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes de management de la qualité -- Lignes directrices pour l'application de l'ISO 9001:2000 dans l'éducation
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.120.10.html">03.120.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="7" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/45805.html?browse=tc" title="IWA 2:2007" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 2:2007</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes de management de la qualité -- Lignes directrices pour l'application de l'ISO 9001:2000 dans l'éducation
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.120.10.html">03.120.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="8" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19714.html?browse=tc" title="ISO/IEC Guide 3:1981" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 3:1981</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Indicatif des normes nationales qui sont équivalentes aux Normes internationales
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="9" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/43019.html?browse=tc" title="IWA 3:2005" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 3:2005</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Sécurité de l'image -- Réduction de l'incidence des effets biomédicaux indésirables causés par des séquences d'images visuelles
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/37.100.01.html">37.100.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="10" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/43020.html?browse=tc" title="IWA 4:2005" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 4:2005</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes de management de la qualité -- Lignes directrices pour l'application de l'ISO 9001:2000 à la collectivité locale
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.120.10.html">03.120.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="11" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/53504.html?browse=tc" title="IWA 4:2009" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 4:2009</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes de management de la qualité -- Lignes directrices pour l'application de l'ISO 9001:2008 à la collectivité locale
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.120.10.html">03.120.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="12" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19716.html?browse=tc" title="ISO Guide 5:1976" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 5:1976</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Désignation des objets normalisés sur le plan international
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="13" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/44985.html?browse=tc" title="IWA 5:2006" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 5:2006</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      État de préparation en cas de catastrophe
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.200.html">13.200</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="14" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/46456.html?browse=tc" title="IWA 6:2008" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 6:2008</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices pour le management des services de l'eau potable dans des conditions de crise
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.060.01.html">13.060.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="15" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/54944.html?browse=tc" title="IWA 8:2009" ><span class="glyphicon glyphicon-ban-circle"></span>IWA 8:2009</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Verrerie, objets de décoration, bijouterie, luminaires -- Clarté du verre -- Classification et méthode d'essai
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/81.040.01.html">81.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="16" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19720.html?browse=tc" title="ISO Guide 9:1976" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 9:1976</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Cours sur la normalisation
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="17" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/55328.html?browse=tc" title="IWA 9:2011" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 9:2011</a>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour la gestion du développement durable dans les quartiers d'affaires
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.020.01.html">13.020.01</a></li>
+                    
+                      <li><a href="/fr/ics/03.100.01.html">03.100.01</a></li>
+                    
+                      <li><a href="/fr/ics/91.040.01.html">91.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="18" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19722.html?browse=tc" title="ISO Guide 11:1978" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 11:1978</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Procédure d'élaboration des Normes internationales sur les symboles graphiques
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.080.10.html">01.080.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="19" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/61975.html?browse=tc" title="IWA 11:2012" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 11:2012</a>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices pour évaluer les performances d'une table de cuisson
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/97.040.20.html">97.040.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="20" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/63027.html?browse=tc" title="IWA 12:2013" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 12:2013</a>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices relatives à l'application de l'ISO 9001:2008 dans les organismes de contrôle
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.100.70.html">03.100.70</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="21" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/63129.html?browse=tc" title="IWA 13:2014" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 13:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices pour l'évaluation de ressources multiples
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.020.20.html">13.020.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="22" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/64736.html?browse=tc" title="IWA 14-1:2013" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 14-1:2013</a>
+  </div>
+
+  <div class="entry-summary">
+      Barrières de sécurité de véhicule -- Partie 1: Exigence de performance, méthode d'essai d'impact du véhicule et taux de performance
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/93.080.30.html">93.080.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="23" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/64737.html?browse=tc" title="IWA 14-2:2013" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 14-2:2013</a>
+  </div>
+
+  <div class="entry-summary">
+      Barrières de sécurité de véhicule -- Partie 2: Applications
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/93.080.30.html">93.080.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="24" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19726.html?browse=tc" title="ISO/IEC Guide 15:1977" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 15:1977</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Recueil de principes concernant la "référence aux normes", valable pour l'ISO et la CEI
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="25" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/65552.html?browse=tc" title="IWA 15:2015" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 15:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Spécification et méthode pour la détermination de performance des systèmes automatisés de manipulation de liquides
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/71.040.20.html">71.040.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="26" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/67844.html?browse=tc" title="IWA 16:2015" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 16:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Méthode(s) internationale(s) harmonisée(s) pour une quantification cohérente des émissions de CO2e par le transport de fret
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/55.180.99.html">55.180.99</a></li>
+                    
+                      <li><a href="/fr/ics/13.020.40.html">13.020.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="27" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/67340.html?browse=tc" title="ISO/IEC Guide 17:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 17:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Guide de rédaction des normes pour la prise en compte des besoins des micro, petites et moyennes entreprises
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="28" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/67508.html?browse=tc" title="IWA 17:2014" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 17:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      Informations et exigences d'intégrité et de sécurité relatives aux opérations pour la loterie et l'organisation de jeux
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/35.030.html">35.030</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="29" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19728.html?browse=tc" title="ISO Guide 18:1978" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 18:1978</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Plan de norme d'analyse chimique
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/71.040.40.html">71.040.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="30" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/67913.html?browse=tc" title="IWA 18:2016" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 18:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Cadre de travail pour les services de santé et de soins communautaires à vie intégrés dans les sociétés âgées
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/11.020.10.html">11.020.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="31" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/69354.html?browse=tc" title="IWA 19:2017" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 19:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Principes directeurs pour la gestion durable des métaux de seconde fusion
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.020.20.html">13.020.20</a></li>
+                    
+                      <li><a href="/fr/ics/77.020.html">77.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="32" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/69535.html?browse=tc" title="IWA 20:2017" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 20:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Compréhension et application de l'irrigation goutte à goutte pour l'agriculture durable
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/65.060.35.html">65.060.35</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="33" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19730.html?browse=tc" title="ISO/IEC Guide 21:1981" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 21:1981</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Adoption des Normes internationales dans les normes nationales
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="34" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/30223.html?browse=tc" title="ISO/IEC Guide 21:1999" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 21:1999</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Adoption de Normes internationales en tant que normes régionales ou nationales
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="35" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/39799.html?browse=tc" title="ISO/IEC Guide 21-1:2005" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 21-1:2005</a>
+  </div>
+
+  <div class="entry-summary">
+      Adoption, sur les plans régional et national, de Normes internationales et d'autres documents internationaux à caractère normatif -- Partie 1: Adoption de Normes internationales
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="36" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/39800.html?browse=tc" title="ISO/IEC Guide 21-2:2005" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 21-2:2005</a>
+  </div>
+
+  <div class="entry-summary">
+      Adoption, sur les plans régional et national, de Normes internationales et d'autres documents internationaux à caractère normatif -- Partie 2: Adoption de documents internationaux autres que les Normes internationales
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="37" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/70603.html?browse=tc" title="IWA 23:2016" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 23:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Interopérabilité des dispositifs microfluidiques -- Lignes directrices relatives aux valeurs du pas et à la classification initiale des dispositifs
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/71.040.10.html">71.040.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="38" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/70604.html?browse=tc" title="IWA 24:2016" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 24:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes d'assainissement non collectifs -- Exigences de performance et de sécurité générale pour la conception et les essais
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.020.20.html">13.020.20</a></li>
+                    
+                      <li><a href="/fr/ics/91.140.70.html">91.140.70</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="39" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19735.html?browse=tc" title="ISO Guide 26:1981" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 26:1981</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Justification des propositions pour l'établissement de normes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="40" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/72669.html?browse=tc" title="IWA 26:2017" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 26:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Utilisation de la norme ISO 26000:2010 dans les systèmes de management
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.100.70.html">03.100.70</a></li>
+                    
+                      <li><a href="/fr/ics/03.100.02.html">03.100.02</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="41" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/72643.html?browse=tc" title="IWA 27:2017" ><span class="glyphicon glyphicon-ok-circle"></span>IWA 27:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Principes directeurs et cadre de travail pour l'économie du partage
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.040.03.html">01.040.03</a></li>
+                    
+                      <li><a href="/fr/ics/03.080.01.html">03.080.01</a></li>
+                    
+                      <li><a href="/fr/ics/35.020.html">35.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="42" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/73400.html?browse=tc" title="IWA 28" ><span class="glyphicon glyphicon-record"></span>IWA 28</a>&nbsp;<span class='text-warning small'>[Projet]</span>
+  </div>
+
+  <div class="entry-summary">
+      Unités de traitement de matières de vidange -- Unités de récupération préfabriquées et autonomes en énergie pour des ressources à l'échelle locale -- Sécurité et performances
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.00">60.00</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.030.20.html">13.030.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="43" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19743.html?browse=tc" title="ISO/IEC Guide 37:1983" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 37:1983</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Instructions d'emploi pour les produits présentant un intérêt pour les consommateurs
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/03.080.30.html">03.080.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="44" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19753.html?browse=tc" title="ISO Guide 47:1986" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 47:1986</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Présentation des traductions des publications de l'ISO
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="45" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19756.html?browse=tc" title="ISO/IEC Guide 50:1987" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 50:1987</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      La sécurité des enfants et les normes -- Principes directeurs
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/97.190.html">97.190</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="46" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/32941.html?browse=tc" title="ISO/IEC Guide 50:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 50:2002</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Aspects liés à la sécurité -- Principes directeurs pour la sécurité des enfants
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/97.190.html">97.190</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="47" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19757.html?browse=tc" title="ISO/IEC Guide 51:1990" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 51:1990</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Principes directeurs pour inclure dans les normes les aspects liés à la sécurité
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="48" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/32893.html?browse=tc" title="ISO/IEC Guide 51:1999" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 51:1999</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Aspects liés à la sécurité -- Principes directeurs pour les inclure dans les normes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="49" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/19758.html?browse=tc" title="ISO/IEC Guide 52:1990" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 52:1990</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Glossaire de termes relatifs au feu et de leurs définitions
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/21.220.01.html">21.220.01</a></li>
+                    
+                      <li><a href="/fr/ics/13.220.01.html">13.220.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="50" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/23390.html?browse=tc" title="ISO/IEC Guide 59:1994" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 59:1994</a>
+  </div>
+
+  <div class="entry-summary">
+      Code de bonne pratique pour la normalisation
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="51" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/71917.html?browse=tc" title="ISO/IEC WD Guide 59" ><span class="glyphicon glyphicon-record"></span>ISO/IEC WD Guide 59</a>&nbsp;<span class='text-warning small'>[Projet]</span>
+  </div>
+
+  <div class="entry-summary">
+      Code de bonne pratique pour la normalisation
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#20.20">20.20</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="52" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/67944.html?browse=tc" title="ISO/IEC CD Guide 63" ><span class="glyphicon glyphicon-record"></span>ISO/IEC CD Guide 63</a>&nbsp;<span class='text-warning small'>[Projet]</span>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour l'élaboration des aspects de sécurité et leur incorporation dans des Normes internationales relatives aux dispositifs médicaux
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#30.00">30.00</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/11.040.01.html">11.040.01</a></li>
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="53" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/25915.html?browse=tc" title="ISO/IEC Guide 63:1999" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 63:1999</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour l'élaboration des aspects de sécurité et leur incorporation dans des Normes internationales relatives aux dispositifs médicaux
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/11.020.html">11.020</a></li>
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="54" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/50729.html?browse=tc" title="ISO/IEC Guide 63:2012" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 63:2012</a>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour l'élaboration des aspects de sécurité et leur incorporation dans des Normes internationales relatives aux dispositifs médicaux
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/11.020.01.html">11.020.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="55" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/26276.html?browse=tc" title="ISO Guide 64:1997" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 64:1997</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour l'introduction des aspects environnementaux dans les normes de produit
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.020.01.html">13.020.01</a></li>
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="56" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/41352.html?browse=tc" title="ISO Guide 64:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO Guide 64:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour traiter les questions environnementales dans les normes de produit
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.020.01.html">13.020.01</a></li>
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="57" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/31383.html?browse=tc" title="ISO Guide 69:1999" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 69:1999</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Système des codes d'étape harmonisés (Édition 2) -- Principes et directives d'utilisation
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="58" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/33987.html?browse=tc" title="ISO/IEC Guide 71:2001" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 71:2001</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Principes directeurs pour les normalisateurs afin de répondre aux besoins des personnes âgées et de celles ayant des incapacités
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/11.180.01.html">11.180.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="59" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/57385.html?browse=tc" title="ISO/IEC Guide 71:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 71:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour l'intégration de l'accessibilité dans les normes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.180.html">13.180</a></li>
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/11.180.01.html">11.180.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="60" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/34142.html?browse=tc" title="ISO Guide 72:2001" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 72:2001</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices pour la justification et l'élaboration de normes de systèmes de management
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/03.100.01.html">03.100.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="61" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/44651.html?browse=tc" title="ISO Guide 73:2009" ><span class="glyphicon glyphicon-ok-circle"></span>ISO Guide 73:2009</a>
+  </div>
+
+  <div class="entry-summary">
+      Management du risque -- Vocabulaire
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.040.03.html">01.040.03</a></li>
+                    
+                      <li><a href="/fr/ics/03.100.01.html">03.100.01</a></li>
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="62" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/34998.html?browse=tc" title="ISO/IEC Guide 73:2002" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 73:2002</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Management du risque -- Vocabulaire -- Lignes directrices pour l'utilisation dans les normes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.040.03.html">01.040.03</a></li>
+                    
+                      <li><a href="/fr/ics/03.100.01.html">03.100.01</a></li>
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="63" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/39033.html?browse=tc" title="ISO/IEC Guide 75:2006" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 75:2006</a>
+  </div>
+
+  <div class="entry-summary">
+      Principes stratégiques pour la future normalisation IEC et ISO en automatisation industrielle
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/25.040.01.html">25.040.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="64" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/44065.html?browse=tc" title="ISO/IEC Guide 77-1:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 77-1:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour la spécification des classes et des propriétés du produit -- Partie 1: Avantages fondamentaux
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/35.240.50.html">35.240.50</a></li>
+                    
+                      <li><a href="/fr/ics/25.040.40.html">25.040.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="65" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/44070.html?browse=tc" title="ISO/IEC Guide 77-2:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 77-2:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour la spécification des classes et des propriétés du produit -- Partie 2: Principes techniques et directives
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/35.240.50.html">35.240.50</a></li>
+                    
+                      <li><a href="/fr/ics/25.040.40.html">25.040.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="66" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/44071.html?browse=tc" title="ISO/IEC Guide 77-3:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 77-3:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour la spécification des classes et des propriétés du produit -- Partie 3: Expérience acquise
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/35.240.50.html">35.240.50</a></li>
+                    
+                      <li><a href="/fr/ics/25.040.40.html">25.040.40</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="67" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/43921.html?browse=tc" title="ISO Guide 78:2008" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 78:2008</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Sécurité des machines -- Règles pour l'élaboration et la présentation des normes de sécurité
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/13.110.html">13.110</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="68" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/57206.html?browse=tc" title="ISO Guide 78:2012" ><span class="glyphicon glyphicon-ok-circle"></span>ISO Guide 78:2012</a>
+  </div>
+
+  <div class="entry-summary">
+      Sécurité des machines -- Règles pour l'élaboration et la présentation des normes de sécurité
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/13.110.html">13.110</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="69" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/57775.html?browse=tc" title="ISO Guide 82:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO Guide 82:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices pour la prise en compte de la durabilité dans les normes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.120.html">01.120</a></li>
+                    
+                      <li><a href="/fr/ics/13.020.01.html">13.020.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="70" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/72496.html?browse=tc" title="ISO/AWI Guide 84" ><span class="glyphicon glyphicon-record"></span>ISO/AWI Guide 84</a>&nbsp;<span class='text-warning small'>[Projet]</span>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices pour la prise en compte des changements climatiques dans les normes
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#20.00">20.00</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="71" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/45315.html?browse=tc" title="ISO/IEC Guide 98:1993" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/IEC Guide 98:1993</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Guide pour l'expression de l'incertitude de mesure (GUM)
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="72" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/46383.html?browse=tc" title="ISO/IEC Guide 98-1:2009" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 98-1:2009</a>
+  </div>
+
+  <div class="entry-summary">
+      Incertitude de mesure -- Partie 1: Introduction à l'expression de l'incertitude de mesure
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="73" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/67642.html?browse=tc" title="ISO/IEC CD Guide 98-3" ><span class="glyphicon glyphicon-record"></span>ISO/IEC CD Guide 98-3</a>&nbsp;<span class='text-warning small'>[Projet]</span>
+  </div>
+
+  <div class="entry-summary">
+      Évaluation des données de mesure -- Partie 3: Guide pour l'incertitude de mesure (GUM)
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#30.60">30.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="74" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/50461.html?browse=tc" title="ISO/IEC Guide 98-3:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 98-3:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Incertitude de mesure -- Partie 3: Guide pour l'expression de l'incertitude de mesure (GUM:1995)
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="75" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/50462.html?browse=tc" title="ISO/IEC Guide 98-3:2008/Suppl 1:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 98-3:2008/Suppl 1:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Propagation de distributions par une méthode de Monte Carlo
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="76" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/54350.html?browse=tc" title="ISO/IEC Guide 98-3:2008/Suppl 1:2008/Cor 1:2009" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 98-3:2008/Suppl 1:2008/Cor 1:2009</a>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="77" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/50463.html?browse=tc" title="ISO/IEC Guide 98-3:2008/Suppl 2:2011" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 98-3:2008/Suppl 2:2011</a>
+  </div>
+
+  <div class="entry-summary">
+      Extension à un nombre quelconque de grandeurs de sortie
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="78" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/50465.html?browse=tc" title="ISO/IEC Guide 98-4:2012" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 98-4:2012</a>
+  </div>
+
+  <div class="entry-summary">
+      Incertitude de mesure -- Partie 4: Rôle de l'incertitude de mesure dans l'évaluation de la conformité
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="79" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/68374.html?browse=tc" title="ISO/IEC CD Guide 98-5" ><span class="glyphicon glyphicon-record"></span>ISO/IEC CD Guide 98-5</a>&nbsp;<span class='text-warning small'>[Projet]</span>
+  </div>
+
+  <div class="entry-summary">
+      Évaluation des données d'incertitude de mesure -- Partie 5: Exemples d'évaluation de l'incertitude
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#30.60">30.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="80" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/45321.html?browse=tc" title="ISO Guide 99:1993" ><span class="glyphicon glyphicon-ban-circle"></span>ISO Guide 99:1993</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Vocabulaire international des termes fondamentaux et généraux de métrologie (VIM)
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                      <li><a href="/fr/ics/01.040.17.html">01.040.17</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="81" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/45324.html?browse=tc" title="ISO/IEC Guide 99:2007" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC Guide 99:2007</a>
+  </div>
+
+  <div class="entry-summary">
+      Vocabulaire international de métrologie -- Concepts fondamentaux et généraux et termes associés (VIM)
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/17.020.html">17.020</a></li>
+                    
+                      <li><a href="/fr/ics/01.040.17.html">01.040.17</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="82" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/4255.html?browse=tc" title="ISO 314:1981" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 314:1981</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Minerais de manganèse -- Dosage du dioxyde de carbone -- Méthode gravimétrique
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/73.060.20.html">73.060.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="83" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/4258.html?browse=tc" title="ISO 316:1982" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 316:1982</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Minerais de manganèse -- Dosage du cobalt -- Méthode photométrique au sel nitroso-R
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/73.060.20.html">73.060.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="84" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/4633.html?browse=tc" title="ISO 553:1981" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 553:1981</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Minerais de manganèse -- Dosage du vanadium -- Méthode titrimétrique et méthode photométrique à l'état de phospho-vanado-tungstate
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/73.060.20.html">73.060.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="85" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/4635.html?browse=tc" title="ISO 554:1976" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 554:1976</a>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères normales de conditionnement et/ou d'essai -- Spécifications
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/19.020.html">19.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="86" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/4646.html?browse=tc" title="ISO 558:1980" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 558:1980</a>
+  </div>
+
+  <div class="entry-summary">
+      Conditionnement et essais -- Atmosphères normales -- Définitions
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/19.020.html">19.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="87" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/4741.html?browse=tc" title="ISO 621:1981" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 621:1981</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Minerais de manganèse -- Dosage du fer métallique (teneur en fer métallique inférieure ou égale à 2 %) -- Méthode photométrique à l'acide sulfosalicylique
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/73.060.20.html">73.060.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="88" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/8404.html?browse=tc" title="ISO 3205:1976" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 3205:1976</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Températures préférentielles d'essai
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/19.020.html">19.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="89" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/10139.html?browse=tc" title="ISO 4294:1984" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4294:1984</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Minerais et concentrés de manganèse -- Dosage du cuivre -- Méthodes spectrométriques avec et sans extraction
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/73.060.20.html">73.060.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="90" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/10659.html?browse=tc" title="ISO 4677-1:1985" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4677-1:1985</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères de conditionnement et d'essai -- Détermination de l'humidité relative -- Partie 1: Méthode utilisant un psychromètre à aspiration
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/19.020.html">19.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="91" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/10660.html?browse=tc" title="ISO 4677-2:1985" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 4677-2:1985</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères de conditionnement et d'essai -- Détermination de l'humidité relative -- Partie 2: Méthode utilisant un psychromètre fronde
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/19.020.html">19.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="92" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/13570.html?browse=tc" title="ISO/TR 7003:1990" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/TR 7003:1990</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Format unifié pour la désignation des métaux
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/77.080.01.html">77.080.01</a></li>
+                    
+                      <li><a href="/fr/ics/77.120.01.html">77.120.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="93" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/17907.html?browse=tc" title="ISO 9994:1989" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 9994:1989</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Briquets -- Spécifications de sécurité
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/65.160.html">65.160</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="94" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/45967.html?browse=tc" title="ISO 10377:2013" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10377:2013</a>
+  </div>
+
+  <div class="entry-summary">
+      Sécurité des produits de consommation -- Lignes directrices pour les fournisseurs
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.080.30.html">03.080.30</a></li>
+                    
+                      <li><a href="/fr/ics/13.120.html">13.120</a></li>
+                    
+                      <li><a href="/fr/ics/97.020.html">97.020</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="95" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/45968.html?browse=tc" title="ISO 10393:2013" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 10393:2013</a>
+  </div>
+
+  <div class="entry-summary">
+      Rappel de produits de consommation -- Lignes directrices pour les fournisseurs
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.120.html">13.120</a></li>
+                    
+                      <li><a href="/fr/ics/03.080.30.html">03.080.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="96" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/57748.html?browse=tc" title="ISO/TS 10674:2011" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/TS 10674:2011</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Services d'estimation -- Évaluation de la solvabilité des entités non listées
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.080.20.html">03.080.20</a></li>
+                    
+                      <li><a href="/fr/ics/03.060.html">03.060</a></li>
+                    
+                      <li><a href="/fr/ics/03.100.20.html">03.100.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="97" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/52528.html?browse=tc" title="ISO 13065:2015" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 13065:2015</a>
+  </div>
+
+  <div class="entry-summary">
+      Critères de durabilité pour la bioénergie
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.020.99.html">13.020.99</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="98" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/36208.html?browse=tc" title="ISO 13602-2:2006" ><span class="glyphicon glyphicon-ban-circle"></span>ISO 13602-2:2006</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes d'énergie technique -- Méthodes d'analyse -- Partie 2: Pondération et agrégation des produits énergie
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/27.010.html">27.010</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="99" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/54775.html?browse=tc" title="ISO 14452:2012" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 14452:2012</a>
+  </div>
+
+  <div class="entry-summary">
+      Facturation de services en réseau -- Exigences
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.080.30.html">03.080.30</a></li>
+                    
+                      <li><a href="/fr/ics/35.240.99.html">35.240.99</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="100" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/57959.html?browse=tc" title="ISO 16923:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 16923:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Stations-service de gaz naturel -- Stations GNC pour le ravitaillement de véhicules
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/75.200.html">75.200</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="101" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/57960.html?browse=tc" title="ISO 16924:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 16924:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Stations-service de gaz naturel -- Stations GNL pour le ravitaillement de véhicules
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/75.200.html">75.200</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="102" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/64739.html?browse=tc" title="ISO 18295-1:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 18295-1:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Centres de contact clients -- Partie 1: Exigences relatives aux centres de contact clients
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.080.30.html">03.080.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="103" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/64740.html?browse=tc" title="ISO 18295-2:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 18295-2:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Centres de contact clients -- Partie 2: Exigences relatives aux donneurs d'ordre faisant appel aux services de centres de contact clients
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.080.30.html">03.080.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="wChecked">
+                  <td data-sort="104" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/31923.html?browse=tc" title="ISO/PAS 18873:1999" ><span class="glyphicon glyphicon-ban-circle"></span>ISO/PAS 18873:1999</a>&nbsp;<span class='text-danger small'>[Annulée]</span>
+  </div>
+
+  <div class="entry-summary">
+      Protocole international sur le contrôle du dopage
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#95.99">95.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/11.100.30.html">11.100.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="105" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/54552.html?browse=tc" title="ISO 20121:2012" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 20121:2012</a>
+  </div>
+
+  <div class="entry-summary">
+      Systèmes de management responsable appliqués à l'activité événementielle -- Exigences et recommandations de mise en oeuvre
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.93">90.93</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.100.70.html">03.100.70</a></li>
+                    
+                      <li><a href="/fr/ics/13.020.20.html">13.020.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="106" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/68820.html?browse=tc" title="ISO 20245:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 20245:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Échanges transfrontaliers de marchandises d'occasion
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.080.30.html">03.080.30</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="107" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/63026.html?browse=tc" title="ISO 20400:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 20400:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Achats responsables -- Lignes directrices
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/13.020.20.html">13.020.20</a></li>
+                    
+                      <li><a href="/fr/ics/03.100.10.html">03.100.10</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="108" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/63501.html?browse=tc" title="ISO 20700:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 20700:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices relatives aux services de conseil en management
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.100.01.html">03.100.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="109" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/43909.html?browse=tc" title="ISO 25639-1:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 25639-1:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Terminologie du secteur des foires, salons et congrès ou manifestations commerciales -- Partie 1: Vocabulaire
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/01.040.03.html">01.040.03</a></li>
+                    
+                      <li><a href="/fr/ics/03.100.01.html">03.100.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="110" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/43910.html?browse=tc" title="ISO 25639-2:2008" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 25639-2:2008</a>
+  </div>
+
+  <div class="entry-summary">
+      Terminologie du secteur des foires, salons et congrès ou manifestations commerciales -- Partie 2: Méthodes de comptage à des fins statistiques
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.100.01.html">03.100.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="111" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/42546.html?browse=tc" title="ISO 26000:2010" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 26000:2010</a>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices relatives à la responsabilité sociétale
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.60">90.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.100.02.html">03.100.02</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="112" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/56269.html?browse=tc" title="ISO 37500:2014" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 37500:2014</a>
+  </div>
+
+  <div class="entry-summary">
+      Lignes directrices relatives à l'externalisation
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/03.080.01.html">03.080.01</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="113" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/51367.html?browse=tc" title="ISO/IEC 80079-34:2011" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC 80079-34:2011</a>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères explosives -- Partie 34: Application des systèmes de qualité pour la fabrication d'équipements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#90.92">90.92</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/29.260.20.html">29.260.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="114" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/70293.html?browse=tc" title="ISO/IEC DIS 80079-34" ><span class="glyphicon glyphicon-record"></span>ISO/IEC DIS 80079-34</a>&nbsp;<span class='text-warning small'>[Projet]</span>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères explosives -- Partie 34: Application des systèmes de qualité pour la fabrication d'équipements
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#40.60">40.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/29.260.20.html">29.260.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="115" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/56550.html?browse=tc" title="ISO 80079-36:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 80079-36:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères explosives -- Partie 36: Appareils non électriques destinés à être utilisés en atmosphères explosives -- Méthodologie et exigences
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/29.260.20.html">29.260.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="116" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/56553.html?browse=tc" title="ISO 80079-37:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO 80079-37:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères explosives -- Partie 37: Appareils non électriques destinés à être utilisés en atmosphères explosives -- Mode de protection non électrique par sécurité de construction "c", par contrôle de la source d'inflammation "b", par immersion dans un liquide "k"
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/29.260.20.html">29.260.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="117" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/57471.html?browse=tc" title="ISO/IEC 80079-38:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC 80079-38:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères explosives -- Partie 38: Appareils et composants destinés à être utilisés dans les mines souterraines grisouteuses
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/29.260.20.html">29.260.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="uChecked || uChecked == null">
+                  <td data-sort="118" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/69557.html?browse=tc" title="ISO/IEC NP 80079-41" ><span class="glyphicon glyphicon-record"></span>ISO/IEC NP 80079-41</a>&nbsp;<span class='text-warning small'>[Projet]</span>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères explosives -- Partie 41: Titre manque
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#10.99">10.99</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="119" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/69556.html?browse=tc" title="ISO/IEC 80079-20-1:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC 80079-20-1:2017</a>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères explosives -- Partie 20-1: Caractéristiques des produits pour le classement des gaz et des vapeurs -- Méthodes et données d'essai
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/29.260.20.html">29.260.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="120" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/66564.html?browse=tc" title="ISO/IEC 80079-20-2:2016" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC 80079-20-2:2016</a>
+  </div>
+
+  <div class="entry-summary">
+      Atmosphères explosives -- Partie 20-2: Caractéristiques des produits -- Méthodes d’essai des poussières combustibles
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/29.260.20.html">29.260.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr ng-show="pChecked || pChecked == null">
+                  <td data-sort="121" data-title="Norme et/ou projet">
+                    
+<div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/standard/73486.html?browse=tc" title="ISO/IEC 80079-20-2:2016/Cor 1:2017" ><span class="glyphicon glyphicon-ok-circle"></span>ISO/IEC 80079-20-2:2016/Cor 1:2017</a>
+  </div>
+
+</div>
+                  </td>
+                  <td data-title="Stade">
+                    <a href="/fr/home/developing-standards/resources/stage-codes.html#60.60">60.60</a>
+                  </td>
+                  <td data-title="ICS">
+                    <ul class="list-unstyled">
+                    
+                      <li><a href="/fr/ics/29.260.20.html">29.260.20</a></li>
+                    
+                    </ul>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+            
+            <p ng-show="nbResults == 0" class="text-center">
+              Aucun résultat n'a été trouvé
+            </p>
+          </div>
+        
+    </div>
+  </div>
+</div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/store.html">
+                Store
+              </a>
+            
+        </li>
+      
+        <li>
+          
+<a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a>
+
+        </li>
+      
+        <li>
+          
+              <a href="/fr/standards-catalogue/browse-by-tc.html">
+                Explorer par TC
+              </a>
+            
+        </li>
+      <li>ISO/TMBG</li>
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren inPath firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+
+<!--[if IE 8]>
+<html lang="fr" class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html lang="fr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="pubdate" content="20170316">
+    
+
+    <title>CIE - Commission internationale de l&#039;éclairage</title>
+    
+
+    <!-- start favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/modules/isoorg-template/img/iso/favicon/red/apple-touch-icon-152x152-precomposed.png">
+    <link rel="shortcut icon" href="/modules/isoorg-template/img/iso/favicon/red/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee">
+    <meta name="msapplication-TileImage" content="/modules/isoorg-template/img/iso/favicon/red/mstile-144x144.png">
+    <!-- end favicons -->
+
+    
+
+  
+<script type="text/javascript">
+var contextJsParameters={contextPath:"",lang:"fr",uilang:"fr",siteUuid:"439146f8-677e-4dde-b6c6-b692b7534f52",wcag:false,ckeCfg:""}; var CKEDITOR_BASEPATH="/modules/ckeditor/javascript/"; var scayt_custom_params=new Array(); scayt_custom_params['sLang']='fr_FR';
+</script>
+<link id="staticAssetCSS0" rel="stylesheet" href="/modules/isoorg-template/css/wood.min.css?1513872404709" media="screen,print,handheld" type="text/css"/>
+<link id="staticAssetCSS1" rel="stylesheet" href="/modules/assets/css/languageSwitchingLinks.css?1506502194543" media="screen" type="text/css"/>
+<script id="staticAssetJavascript0" type="text/javascript" src="/modules/isoorg-template/javascript/wood.min.js?1513872404709"></script>
+<script id="staticAssetJavascript1" type="text/javascript" src="/modules/isoorg-template/javascript/custom.js?1513872404709"></script>
+
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/ie9.wood.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/modules/isoorg-template/css/lte-ie9.min.css" media="screen" />
+      <![endif]-->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-2696651-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+      </script>
+    
+
+  <script type="text/javascript">
+    $(document).on("submit", "#navMenu-searchNav", function(e) {
+      e.preventDefault();
+      var val = $(this).find("input.search-input").val();
+      // Get rid of "."
+      val = val.replace(/^\.$/, "");
+      // Get rid of ".."
+      val = val.replace(/^\.\.$/, "");
+      // Get rid of every "%"
+      val = val.replace(/%/g, "");
+      val = val.trim();
+      // We need to encode the keyword twice as ngRoute (AngularJS) does not support route params containing urlencoded slashes
+//      val = encodeURIComponent(encodeURIComponent(val));
+      // We need to re-encode te keyword twice as Jahia rewrites the URL (url.base, searchPagePath...) and automatically decodes the whole URL
+//      val = encodeURIComponent(encodeURIComponent(val));
+//      location.replace("/cms/render/live/fr/sites/isoorg/search/x/query/" + val);
+      if (val !== '') {
+        location.replace("/cms/render/live/fr/sites/isoorg/search.html?q=" + val);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      // datatable-meetings initialization
+      $('table#datatable-meetings').DataTable({
+        "destroy": true,
+        "paging": false,
+        "info": false,
+        "searching": false,
+        "columns": [
+          null,
+          null,
+          null,
+          null,
+          { "orderable": false } /* cannot sort by note */
+        ]
+      });
+
+      // Tooltip initialization
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+
+      // Popover initialization
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+
+    });
+
+  </script>
+
+
+</head>
+  <body class="theme-red">
+    <!-- Header ISO.ORG -->
+    <header class="header header-iso container" role="banner">
+      <div class="rubber"></div>
+      <div class="topbar topbar-light">
+        <div class="topbar-content">
+          
+
+<ul id="lang-switcher">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">français <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/committee/55238.html">English</a></li><li><a href="/ru/committee/55238.html">русский</a></li>
+    </ul>
+  </li>
+</ul><div class="clear"></div>
+          <ul class="toplinks">
+            <li>
+              <a class="shopping-cart-link" href="/webstore/shoppingbasket?memberId=ISO&guilang=fr">
+                <div class="shopping-cart-badge">
+                  <span class="glyphicon glyphicon-shopping-cart" id="shoppingItems"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-container header-img header-img-iso header-short">
+        <nav class="navbar" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo isologo" href="/fr/home.html" title="ISO"></a>
+            <div class="isologo-print"><img src="/modules/isoorg-template/img/iso/iso-logo-print.gif" alt="Logo ISO pour impression"/></div>
+            <div class="header-title clearfix">
+              <p class="title-medium title-thin">Organisation internationale de normalisation</p>
+              <p class="title-small title-red text-right hidden-xs">Quand le monde s’accorde</p>
+            </div>
+          </div>
+          <!-- NAVIGATION -->
+          <nav class="nav-container collapse navbar-collapse nav-3levels"id="offcanvas-menu">
+
+
+<form id="navMenu-searchNav" class="navbar-form navbar-right" role="search">
+  <div class="input-group">
+    <input type="text" class="form-control search-input" placeholder="Rechercher">
+    <span class="input-group-btn">
+      <button class="btn btn-default search-submit" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+</form><ul class="nav navbar-nav nav-level1 verticaline nocaret"><li class="hasChildren dropdown firstInLevel"><a href="/fr/standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/benefits-of-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/street-pedestrian-crosswalk.jpg/thumbnails/800' alt='Piétons traversant une route sur un passage piéton'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/benefits-of-standards.html' class="dropdown-toggle" role="button" aria-expanded="false">Avantages</a></h4>
+<p>Vous souhaitez en savoir plus  sur le rôle des normes dans les produits et services que vous utilisez? Vous trouverez ici les informations recherchées.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/iso-and-smes.html" class="dropdown-toggle" role="button" aria-expanded="false">PME</a></li><li class="noChildren"><a href="/fr/benefits-of-standards-the-iso-materials.html" class="dropdown-toggle" role="button" aria-expanded="false">En savoir plus</a></li><li class="noChildren"><a href="/fr/iso-and-consumers.html" class="dropdown-toggle" role="button" aria-expanded="false">Consommateurs</a></li><li class="noChildren lastInLevel"><a href="/fr/iso-and-policy-makers.html" class="dropdown-toggle" role="button" aria-expanded="false">L’ISO et les organismes de réglementation</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/standards-in-action.html" class="dropdown-toggle" role="button" aria-expanded="false">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Les normes les plus connues</a></li><li class="hasChildren dropdown hover lastInLevel"><a href="/fr/conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/microscope.jpg/thumbnails/800' alt='Scientist placing a slide beneath an optical microscope'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/conformity-assessment.html' class="dropdown-toggle" role="button" aria-expanded="false">Certification & conformité</a></h4>
+<p>Un processus qui sert à démontrer que votre produit, service, ou système répond aux exigences d’une norme.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/certification.html" class="dropdown-toggle" role="button" aria-expanded="false">Certification</a></li><li class="noChildren"><a href="/fr/casco.html" class="dropdown-toggle" role="button" aria-expanded="false">CASCO</a></li><li class="noChildren"><a href="/fr/the-iso-survey.html" class="dropdown-toggle" role="button" aria-expanded="false">L'Étude ISO</a></li><li class="noChildren lastInLevel"><a href="/fr/resources-for-conformity-assessment.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown"><a href="/fr/about-us.html" class="dropdown-toggle" role="button" aria-expanded="false">L'ISO</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover firstInLevel"><a href="/fr/what-we-do.html" class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/business-seminar.jpg/thumbnails/800' alt='Back view of people in a meeting, looking at a presentation on a screen.'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/what-we-do.html' class="dropdown-toggle" role="button" aria-expanded="false">Nos activités</a></h4>
+<p>Découvrez comment nous élaborons et publions des Normes internationales en mobilisant plus de 160 membres et plus de 45 000 experts.</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/developing-standards.html"  class="dropdown-toggle" role="button" aria-expanded="false">Elaboration des normes</a></li><li class="noChildren"><a href="/fr/research-and-education.html" class="dropdown-toggle" role="button" aria-expanded="false">Recherche</a></li><li class="noChildren"><a href="/fr/capacity-building.html" class="dropdown-toggle" role="button" aria-expanded="false">Renforcement des capacités</a></li><li class="noChildren lastInLevel"><a href="/fr/education-about-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Enseignement sur les normes</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li><li class="noChildren"><a href="/fr/structure.html" class="dropdown-toggle" role="button" aria-expanded="false">Structure</a></li><li class="noChildren"><a href="/fr/members.html" class="dropdown-toggle" role="button" aria-expanded="false">Membres</a></li><li class="hasChildren dropdown hover"><a href="/fr/news_index.html" class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a><div class='dropdown-menu nav-panel' role='menu'>
+  <div class='panel-image'>
+    <img src='/files/live/sites/isoorg/files/_noindex/All%20about%20ISO-News_calendar-close-up%20No%20year.jpg/thumbnails/800' alt='Months and dates shown on a calendar whilst turning the pages with shallow depth of field'>
+    <div class='fade-gray'></div>
+  </div>
+  <div class='panel-teaser'>
+<h4><a href='/fr/news_index.html' class="dropdown-toggle" role="button" aria-expanded="false">Actualités</a></h4>
+<p>Restez informé des dernières nouveautés en matière de normalisation ou parcourez nos riches archives</p>
+  </div>
+<ul class="nav navbar-nav"><li class="noChildren firstInLevel"><a href="/fr/news_archive.html" class="dropdown-toggle" role="button" aria-expanded="false">Archives</a></li><li class="noChildren"><a href="/fr/isofocus.html" class="dropdown-toggle" role="button" aria-expanded="false">Magazine ISOfocus</a></li><li class="noChildren"><a href="/fr/events.html" class="dropdown-toggle" role="button" aria-expanded="false">Manifestations et réunions</a></li><li class="noChildren lastInLevel"><a href="/fr/media-kit.html" class="dropdown-toggle" role="button" aria-expanded="false">Dossier médias</a></li></ul><!-- close of ul level --></div><!-- close of panel --></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown inPath open"><a href="/fr/developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Participer</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="hasChildren dropdown hover inPath firstInLevel"><a href="/fr/who-develops-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Qui élabore les normes</a><ul class="nav navbar-nav nav-level3 dropdown-menu verticaline verticaline-dark"><li class="noChildren inPath active firstInLevel"><a href="/fr/technical-committees.html" class="dropdown-toggle" role="button" aria-expanded="false">Comités techniques</a></li><li class="noChildren"><a href="/fr/other-bodies-developing-standards.html" class="dropdown-toggle" role="button" aria-expanded="false">Autres organismes</a></li><li class="noChildren lastInLevel"><a href="/fr/organizations-in-cooperation-with-iso.html" class="dropdown-toggle" role="button" aria-expanded="false">Organisations en coopération</a></li></ul><!-- close of ul level --></li><li class="noChildren"><a href="/fr/deliverables-all.html" class="dropdown-toggle" role="button" aria-expanded="false">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html" class="dropdown-toggle" role="button" aria-expanded="false">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html" class="dropdown-toggle" role="button" aria-expanded="false">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren dropdown lastInLevel"><a href="/fr/store.html" class="dropdown-toggle" role="button" aria-expanded="false">Store</a><ul class="nav navbar-nav nav-level2 dropdown-menu verticaline verticaline-dark"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html"  class="dropdown-toggle" role="button" aria-expanded="false">Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html" class="dropdown-toggle" role="button" aria-expanded="false">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><button type="button" class="offcanvas-toggle" data-toggle="offcanvas">  <span class="glyphicon glyphicon-menu-hamburger"></span></button><div class="clear"></div>
+        </nav>
+      </div>
+    </header>
+    
+
+<div class="container main">
+  <div class="row row-top row-light">
+    <div class="col-md-12">
+    <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/developing-standards.html">
+                Participer
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/who-develops-standards.html">
+                Qui élabore les normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/technical-committees.html">
+                Comités techniques
+              </a>
+            
+        </li>
+      <li>CIE</li>
+  </ol>
+
+</div>
+      <div class="page-header heading-condensed">
+        <h1>
+          <strong>CIE</strong>
+          
+        </h1>
+        <h2>Commission internationale de l'éclairage</h2>
+      </div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="col-md-7">
+      
+
+<h3>Informations</h3>
+<ul class="refine">
+  
+  <li>
+    
+    <div itemscope itemtype="http://schema.org/Person">
+      <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Secrétaire</span>:</div>
+      <div class="entry-name entry-block" itemprop="name"><a href="mailto:kathryn.nield@cie.co.at">Ms Kathryn Nield</a></div>
+    </div>
+  </li>
+  
+  <li>
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Responsable de programmes techniques ISO <span class="glyphicon glyphicon-info-sign text-muted" data-toggle="popover" data-trigger="click hover" data-placement="top" data-html="true" data-content="<small>Le responsable ISO de programmes techniques (TPM) est le point de contact principal du Secrétariat central de l'ISO pour les comités techniques. Il/elle supervise les programmes de travail d'un portefeuille de comités dans des secteurs connexes et fournit au leadership de ces comités des conseils, du soutien et de la formation. L'identification, l’élaboration et la progression de nouvelles possibilités de normalisation dans le cadre de son domaine d'action fait aussi partie du rôle, comme la promotion de la marque ISO au sein de son/ses secteur(s).</small>" data-original-title="Responsable de programmes techniques ISO (TPM)"></span></span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:sauvage@iso.org">M Stéphane Sauvage</a></div>
+      </div>
+    
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="entry-title entry-block"><span class="glyphicon glyphicon-user"></span><span class="role" itemprop="jobTitle">Responsable de programmes éditoriaux ISO <span class="glyphicon glyphicon-info-sign text-muted" data-toggle="popover" data-trigger="click hover" data-placement="top" data-html="true" data-content="<small>Le responsable ISO de programmes éditoriaux (EPM) est le point de contact principal du Secrétariat central de l'ISO pour les questions liées à la rédaction ou à la revue de normes. Les EPMs sont responsables de la gestion générale de l’élaboration éditoriale des projets appartenant à des comités qui leur sont assignés et ils veillent à maintenir le plus haut degré de qualité de ces documents, à les publier en temps opportun et à suivre les règles et politiques de rédaction de l’ISO.</small>" data-original-title="Responsable ISO de programmes éditoriaux (EPM)"></span></span>:</div>
+        <div class="entry-name entry-block" itemprop="name"><a href="mailto:reid@iso.org">Mr David Reid</a></div>
+      </div>
+    
+  </li>
+  
+  <li>
+    Date de création: 1992
+  </li>
+  
+</ul>
+
+
+  <h3>Domaine des travaux</h3>
+  
+      <p><p>La Commission internationale de l'éclairage (CIE) est une organisation qui se  donne pour but la coopération internationale et l'échange d'informations entre  les pays membres sur toutes les questions relatives à l'art et à la science de  l'éclairage. <p>La CIE a pour objectifs <ul> <li>de constituer un centre d'étude international pour toute matière relevant de la  science, de la technologie et de l'art de la lumière et de l'éclairage, et pour  l'échange d'informations dans ces domaines entre pays; <li>d'élaborer des normes et des méthodes de base pour la métrologie dans les domaines de la lumière et de l'éclairage; <li>de donner des directives pour l'application des principes et des méthodes d'élaboration de normes internationales et nationales dans les domaines de la  lumière et de l'éclairage ; <li>de préparer et publier des normes, rapports et autres textes, concernant  toutes matières relatives à la science, la technologie et l'art dans les domaines  de la lumière et de l'éclairage; <li>de maintenir une liaison et une collaboration technique avec les autres  organisations internationales concernées par des sujets relatifs à la science, la  technologie, la normalisation et l'art dans les domaines de la lumière et de l'éclairage. </ul> </p> <p>Dans ce but, les domaines de la lumière et de l'éclairage  comprennent des sujets fondamentaux, tels que la vision, la  photométrie et la calorimétrie, le rayonnement naturel et le  rayonnement provoqué par l'homme dans les domaines de  l'ultraviolet, visible et de l'infrarouge du spectre, et des domaines  d'application concernant tous les usages de l'éclairage intérieur et  extérieur, y compris les effets esthétiques et l'impact sur  I'environnement, ainsi que les moyens de production et de contrôle  de la lumière et du rayonnement. <p>Les normes établies par la CIE sont des recueils concis de  caractéristiques, concernant la lumière et l'éclairage, pour lesquelles  l'harmonisation internationale implique une définition unique pour  chacune d'elles. Ainsi, les normes CIE constituent des sources  primaires de données, acceptées internationalement, qui peuvent  être introduites sans modification dans des systèmes universels de normes. <p>Pour l'élaboration de certaines normes dans le domaine de la  lumière et de l'éclairage, l'ISO a établi des relations de travil avec la  Commission internationale de l'éclairage, qui a été reconnue par le  Conseil de l'ISO comme étant une organisme international à activités  normatives. <p>Pour de plus amples informations sur la CIE, se reporter  au <a href="http://www.cie.co.at/">site Web de la CIE</a>.</p> </p>
+    
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      
+
+<div class="well">
+  <h3>Liens utiles</h3>
+  <ul class="refine">
+    
+    <li>
+      <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+        <div class="entry-name entry-title">
+          <a href="/fr/contents/data/committee/05/52/55238/x/catalogue/p/0/u/1/w/0/d/0" title="CIE Work programme" itemprop="url"><span class="glyphicon glyphicon-link"></span><span itemprop="name">Programme technique</span></a>
+        </div>
+        <div class="entry-summary" itemprop="description">Projets de travail et nouveaux projets préliminaires</div>
+      </div>
+    </li>
+    
+    <li>
+      <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+        <div class="entry-name entry-title">
+          <a href="http://www.iso.org/bp" title="Business plan" target="_blank" itemprop="url"><span class="glyphicon glyphicon-new-window"></span><span itemprop="name">Plans d'action</span></a>
+        </div>
+        <div class="entry-summary" itemprop="description">Plans d'action pour examen public</div>
+      </div>
+    </li>
+    
+      <li>
+        <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+          <div class="entry-name entry-title">
+            <a href="http://isotc.iso.org/livelink/livelink?func=ll&objAction=browse&objId=8927086" title="Working area" target="_blank" itemprop="url"><span class="glyphicon glyphicon-new-window"></span><span itemprop="name">Espace de travail</span></a>
+          </div>
+          <div class="entry-summary" itemprop="description">sur ISOTC et le dossier "Public information"</div>
+        </div>
+      </li>
+    
+      <li>
+        <div itemscope itemtype="http://schema.org/WebPage" class="hentry">
+          <div class="entry-name entry-title">
+            <a href="https://login.iso.org" title="Applications électroniques ISO" itemprop="url"><span class="glyphicon glyphicon-new-window"></span><span itemprop="name">Applications électroniques ISO</span></a>
+          </div>
+          <div class="entry-summary" itemprop="description">Outils TI pour l'élaboration des normes</div>
+        </div>
+      </li>
+    <li><div class="clearfix">
+
+  <div class="entry-name entry-title">
+    <a href="/fr/committee/4418564.html" title="ISO/TC 274" ><span class="glyphicon glyphicon-education"></span>ISO/TC 274</a>
+  </div>
+
+  <div class="entry-summary">
+      Lumière et éclairage
+  </div>
+
+</div></li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+  
+
+<div class="row row-middle text-center">
+  
+    <div class="col-md-3 col-sm-6">
+      <div class="well">
+        <div class="statistic">
+          <span class="number small"><a href="/fr/contents/data/committee/05/52/55238/x/catalogue/p/1/u/0/w/0/d/0">13</a></span>
+          <h4>Normes ISO publiées<span class="small">&nbsp;*</span></h4>
+          
+              <p>sous la responsabilité directe du&nbsp;CIE</p>
+            
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3 col-sm-6">
+      <div class="well">
+        <div class="statistic">
+          <span class="number small"><a href="/fr/contents/data/committee/05/52/55238/x/catalogue/p/0/u/1/w/0/d/0">5</a></span>
+          <h4>Projets de normes ISO<span class="small">&nbsp;*</span></h4>
+          
+              <p>sous la responsabilité directe du&nbsp;CIE</p>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="clearfix visible-sm"></div>
+  
+    <div class="col-md-12"><p class="text-muted small align-left">* ce nombre inclut les mises à jour</p></div>
+  
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <!-- Nav tabs -->
+    
+    <ul class="nav nav-tabs" role="tablist">
+      
+        <li role="presentation" class="active"><a href="#liaisons" aria-controls="liaisons" role="tab" data-toggle="tab"><h3>Liaisons</h3></a></li>
+      
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      
+      <div role="tabpanel" class="tab-pane active" id="liaisons">
+        
+          <div class="row row-top">
+            <div class="col-md-12">
+              <h5>Comités en liaison vers le&nbsp;CIE</h5>
+              <p class="help-block">Les Comités ci-dessous peuvent accéder aux documents du&nbsp;CIE :</p>
+              <table id="datatable-LIA_I_R_CC" class="table table-striped responsive-table">
+                <thead>
+                <tr>
+                  <th style="width:250px;">Référence</th>
+                  <th>Titre</th>
+                  <th style="width:110px;">ISO/CEI</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 028" data-title="Référence"><a href="/fr/committee/45314.html">ISO/IEC JTC 1/SC 28</a></td>
+                      
+                    <td data-title="Titre">Équipements de bureau</td>
+                    <td data-title="ISO/CEI">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/IEC JTC 001/~SC 029" data-title="Référence"><a href="/fr/committee/45316.html">ISO/IEC JTC 1/SC 29</a></td>
+                      
+                    <td data-title="Titre">Codage du son, de l'image, de l'information multimédia et hypermédia</td>
+                    <td data-title="ISO/CEI">ISO/IEC</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 006" data-title="Référence"><a href="/fr/committee/45674.html">ISO/TC 6</a></td>
+                      
+                    <td data-title="Titre">Papiers, cartons et pâtes</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 006/~SC 002" data-title="Référence"><a href="/fr/committee/45694.html">ISO/TC 6/SC 2</a></td>
+                      
+                    <td data-title="Titre">Méthodes d'essais et spécifications de qualité des papiers et cartons</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 012" data-title="Référence"><a href="/fr/committee/46202.html">ISO/TC 12</a></td>
+                      
+                    <td data-title="Titre">Grandeurs et unités</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 022/~SC 035" data-title="Référence"><a href="/fr/committee/5383897.html">ISO/TC 22/SC 35</a></td>
+                      
+                    <td data-title="Titre">Éclairage et visibilité</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 022/~SC 038" data-title="Référence"><a href="/fr/committee/5384008.html">ISO/TC 22/SC 38</a></td>
+                      
+                    <td data-title="Titre">Motocycles et cyclomoteurs</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 035/~SC 009" data-title="Référence"><a href="/fr/committee/47996.html">ISO/TC 35/SC 9</a></td>
+                      
+                    <td data-title="Titre">Méthodes générales d'essais des peintures et vernis</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 036" data-title="Référence"><a href="/fr/committee/48090.html">ISO/TC 36</a></td>
+                      
+                    <td data-title="Titre">Cinématographie</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 042" data-title="Référence"><a href="/fr/committee/48420.html">ISO/TC 42</a></td>
+                      
+                    <td data-title="Titre">Photographie</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 061/~SC 006" data-title="Référence"><a href="/fr/committee/49352.html">ISO/TC 61/SC 6</a></td>
+                      
+                    <td data-title="Titre">Vieillissement et résistance aux agents chimiques et environnants</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 094" data-title="Référence"><a href="/fr/committee/50580.html">ISO/TC 94</a></td>
+                      
+                    <td data-title="Titre">Sécurité individuelle -- Equipement de protection individuelle</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 130" data-title="Référence"><a href="/fr/committee/52214.html">ISO/TC 130</a></td>
+                      
+                    <td data-title="Titre">Technologie graphique</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 145" data-title="Référence"><a href="/fr/committee/52662.html">ISO/TC 145</a></td>
+                      
+                    <td data-title="Titre">Symboles graphiques et pictogrammes</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 145/~SC 001" data-title="Référence"><a href="/fr/committee/52682.html">ISO/TC 145/SC 1</a></td>
+                      
+                    <td data-title="Titre">Symboles pour l'information du public (pictogrammes)</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 145/~SC 002" data-title="Référence"><a href="/fr/committee/52692.html">ISO/TC 145/SC 2</a></td>
+                      
+                    <td data-title="Titre">Identification de sécurité, signaux, formes, symboles et couleurs</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 159" data-title="Référence"><a href="/fr/committee/53348.html">ISO/TC 159</a></td>
+                      
+                    <td data-title="Titre">Ergonomie</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 159/~SC 004" data-title="Référence"><a href="/fr/committee/53372.html">ISO/TC 159/SC 4</a></td>
+                      
+                    <td data-title="Titre">Ergonomie de l'interaction homme/système</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 159/~SC 005" data-title="Référence"><a href="/fr/committee/53390.html">ISO/TC 159/SC 5</a></td>
+                      
+                    <td data-title="Titre">Ergonomie de l'environnement physique</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 160/~SC 002" data-title="Référence"><a href="/fr/committee/53422.html">ISO/TC 160/SC 2</a></td>
+                      
+                    <td data-title="Titre">Utilisation</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 163" data-title="Référence"><a href="/fr/committee/53476.html">ISO/TC 163</a></td>
+                      
+                    <td data-title="Titre">Performance thermique et utilisation de l'énergie en environnement bâti</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 163/~SC 002" data-title="Référence"><a href="/fr/committee/53512.html">ISO/TC 163/SC 2</a></td>
+                      
+                    <td data-title="Titre">Méthodes de calcul</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 180/~SC 001" data-title="Référence"><a href="/fr/committee/54024.html">ISO/TC 180/SC 1</a></td>
+                      
+                    <td data-title="Titre">Climat - Mesure et données</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 205" data-title="Référence"><a href="/fr/committee/54740.html">ISO/TC 205</a></td>
+                      
+                    <td data-title="Titre">Conception de l'environnement intérieur des bâtiments</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 217" data-title="Référence"><a href="/fr/committee/54974.html">ISO/TC 217</a></td>
+                      
+                    <td data-title="Titre">Cosmétiques</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                  <tr>
+                    
+                        <td data-sort="ISO/TC 274" data-title="Référence"><a href="/fr/committee/4418564.html">ISO/TC 274</a></td>
+                      
+                    <td data-title="Titre">Lumière et éclairage</td>
+                    <td data-title="ISO/CEI">ISO</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div><div class="clear"></div>
+    <div class="main container breadcrumb-container theme-red">
+      <div class="row">
+        <div class="col-sm-8 hidden-xxs">
+          <!-- BREADCRUMB -->
+          <div class="breadcrumb-container small">
+  
+  <ol class="breadcrumb">
+    
+      <li><a href="/fr/home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+    
+        <li>
+          
+              <a href="/fr/developing-standards.html">
+                Participer
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/who-develops-standards.html">
+                Qui élabore les normes
+              </a>
+            
+        </li>
+      
+        <li>
+          
+              <a href="/fr/technical-committees.html">
+                Comités techniques
+              </a>
+            
+        </li>
+      <li>CIE</li>
+  </ol>
+
+</div><div class="clear"></div>
+        </div>
+        <div class="col-sm-4 hidden-print">
+          <p class="text-right">
+            <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseSitemap" target="_self" aria-expanded="false"
+               aria-controls="collapseSitemap">Plan du site</a>
+          </p>
+        </div>
+      </div>
+      <div class="collapse border-top" id="collapseSitemap">
+        <div class="row">
+          <!-- SITEMAP -->
+          <nav class="sitemap-footer clearfix small"><ul class="nav-level1 list-inline-4 clearfix"><li class="hasChildren hover firstInLevel"><a href="/fr/standards.html">Normes</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/benefits-of-standards.html">Avantages</a></li><li class="noChildren"><a href="/fr/standards-in-action.html">Normes en action</a></li><li class="noChildren"><a href="/fr/popular-standards.html">Les normes les plus connues</a></li><li class="noChildren lastInLevel"><a href="/fr/conformity-assessment.html">Certification & conformité</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover"><a href="/fr/about-us.html">L'ISO</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/what-we-do.html">Nos activités</a></li><li class="noChildren"><a href="/fr/structure.html">Structure</a></li><li class="noChildren"><a href="/fr/members.html">Membres</a></li><li class="noChildren"><a href="/fr/news_index.html">Actualités</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover inPath"><a href="/fr/developing-standards.html">Participer</a><ul class="nav-level2 list-unstyled"><li class="noChildren inPath firstInLevel"><a href="/fr/who-develops-standards.html">Qui élabore les normes</a></li><li class="noChildren"><a href="/fr/deliverables-all.html">Référentiels</a></li><li class="noChildren"><a href="/fr/get-involved.html">Pourquoi s’engager ?</a></li><li class="noChildren lastInLevel"><a href="/fr/resources.html">Ressources</a></li></ul><!-- close of ul level --></li><li class="hasChildren hover lastInLevel"><a href="/fr/store.html">Store</a><ul class="nav-level2 list-unstyled"><li class="noChildren firstInLevel"><a href="/fr/standards-catalogue/browse-by-ics.html" >Catalogue de normes</a></li><li class="noChildren lastInLevel"><a href="/fr/publication-list.html">Publications et produits</a></li></ul><!-- close of ul level --></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo" class="footer-iso container">
+      <div class="content">
+        <div class="footer-links center-block">
+          <!-- FOOTER LINKS -->
+          <nav ><ul class="list-inline clearfix verticaline nav-level1"><li class="noChildren firstInLevel"><a href="/fr/iso-name-and-logo.html">Nom et logo de l'ISO</a></li><li class="noChildren"><a href="/fr/privacy-and-copyright.html">Confidentialité et droit d'auteur</a></li><li class="noChildren"><a href="/fr/sitemap.html">Plan du site</a></li><li class="noChildren"><a href="/fr/working-with-iso.html" >Emploi</a></li><li class="noChildren"><a href="/fr/frequently-asked-questions-faqs.html">FAQ</a></li><li class="noChildren lastInLevel"><a href="/fr/contact-iso.html">Contacter l'ISO</a></li></ul><!-- close of ul level --></nav><div class="clear"></div>
+        </div>
+        <div class="footer-social ss-icon clearfix">
+          <ul itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://www.iso.org">
+            <li><a itemprop="sameAs" href="https://www.facebook.com/isostandards" title="Facebook"></a></li>
+            <li><a itemprop="sameAs" href="https://twitter.com/isostandards" title="Twitter"></a></li>
+            <li class="lastcol"><a itemprop="sameAs" href="https://plus.google.com/+iso" title="Google+"></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/user/PlanetISO" title="YouTube"></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/company/iso-international-organization-for-standardization" title="Linkedin"></a></li>
+            <li class="lastcol"><a href="https://www.flickr.com/photos/isostandards" title="Flickr"></a></li>
+          </ul>
+        </div>
+        <p class="text-small">Nous nous engageons à ce que notre site Web soit accessible à tous. Pour toute question ou suggestion concernant l'accessibilité du site, <a href="mailto:webmaster@iso.org?subject=Accessibility" style="white-space: nowrap">contactez-nous</a>.</p>
+        <small><a href="#copyright" target="_self" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCopyright">© Tous droits réservés</a> <span id="copyright" class="collapse">Le matériel publié sur ISO.org est sujet aux mêmes conditions en matière de droits d’auteur que les publications de l’ISO et son emploi est conditionné par l’acceptation, par l’utilisateur, des conditions de l’ISO en matière de droits d’auteur régissant les publications de l’ISO. Toute utilisation du matériel concerné, y compris sa reproduction intégrale ou partielle vers un autre site Internet, requiert l’autorisation écrite de l’ISO. Toute demande à cet effet doit être adressée à <a href="mailto:copyright@iso.org">copyright@iso.org</a>.</span></small>
+      </div>
+    </footer>
+
+    
+
+
+  </body>
+</html>
