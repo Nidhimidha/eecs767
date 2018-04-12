@@ -114,19 +114,10 @@ print( """
 		<div id="results">
 """ % cgi.escape(query))
 
-results = [
-	[ "doc1", "link", "rank", "summary" ],
-	[ "doc2", "link", "rank", "summary" ],
-	[ "doc3", "link", "rank", "summary" ],
-	[ "doc4", "link", "rank", "summary" ],
-	[ "doc5", "link", "rank", "summary" ],
-	]
-
 i = 0
-#while i < len(results):
 
 while i < len(res):
-	k = next(iter(res[0]))
+	k = next(iter(res[i]))
 	print( """
 		<p>
 			<p class="title">%s</p>
@@ -134,7 +125,7 @@ while i < len(res):
 			<p class="rank">Ranking: %s</p>
 			<p class="summary">%s</p>
 		</p>
-	""" % (k, res[0][k][2], ran[i], 'unknown'))
+	""" % (k, res[i][k][2], ran[i], 'unknown'))
 	i += 1
 	if i < len(res):
 		print( """

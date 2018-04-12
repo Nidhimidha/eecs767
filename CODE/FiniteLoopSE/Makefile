@@ -106,13 +106,13 @@ query: src/query.py src/ingest.py $(OUTPATH)processingOutput.db
 	$(PYTHON) src/query.py 
 
 ## Prepare for web
-webprep: src/query.py $(OUTPATH)processingOutput.db search.html $(CGIDIR)/search.cgi
+webprep: src/ingest.py src/query.py $(OUTPATH)processingOutput.db search.html $(CGIDIR)/search.cgi
 	## Copy the latest source to the local cgi-bin
 	cp src/query.py src/ingest.py $(CGIDIR)
 
 	## Copy the data into the public_html area
 	cp search.html $(WEBDIR)
-	cp $(CGIDIR)/* $(WEBDIR)/$(CGIDIR)
+	cp -R $(CGIDIR)/* $(WEBDIR)/$(CGIDIR)
 	chmod 744 $(WEBDIR)/$(CGIDIR)/search.cgi
 	chmod 744 $(WEBDIR)/$(CGIDIR)/*.py
 	chmod 744 $(WEBDIR)/$(CGIDIR)/*.db
