@@ -8,7 +8,7 @@ import io
 import fileinput
 import string
 import urllib #required to open html documents
-import urllib2 #required in python 2.7
+#import urllib2 #required in python 2.7
 import re #required to remove html tags vie regex
 import codecs #required to open html files
 import nltk #requires python 3.5 or python 2.7 to install
@@ -120,7 +120,9 @@ def func_tokenize(raw_input):
         try:
             raw_input = (raw_input.decode('unicode_escape').encode('ascii','ignore')) ##
         except:
-            print ('Error removing unicode characters from line var', sys.exc_info()[0], sys.exc_info()[1])
+	    #print ('Error removing unicode characters from line var', sys.exc_info()[0], sys.exc_info()[1])
+            pass
+	    
         try:
             #line = tags.sub(' ',str(raw_input)) #remove html tags ##python 3 code
             line = re.sub(tags,' ',str(raw_input)) #remove html tags
@@ -167,7 +169,7 @@ class IndexValues(object):
         self.terms=terms #dictionary to store terms and their frequency
         self.proximity=proximity # dictionary to store term location within documents
         self.download_manifest=download_manifest#this should be a dictionary stored in an external .db file
-	self.num_docs=num_docs
+        self.num_docs=num_docs
 
     # This function parses documents to generate term frequency and term proximity
     # This function calls the parsing document function
@@ -188,14 +190,14 @@ class IndexValues(object):
     #@timing #comment out to remove timing
     def func_parse_title(self,page,filename):
         #print ('Parsing title for document'+ str(filename))
-	try:
-		match = re.search(r'(<title>)(.*?)(<)',page) #regex to match title and tags as separate capture groups
-		title = match.group(2)	#regex to return the string between tags
-		#print ('printing title')
-		#print (title)
-		self.title_map[filename]=[title] #store title in the title_map dictionary
-	except:
-		print('Error parsing title of document', sys.exc_info()[0], sys.exc_info()[1])
+        try:
+            match = re.search(r'(<title>)(.*?)(<)',page) #regex to match title and tags as separate capture groups
+            title = match.group(2)	#regex to return the string between tags
+            #print ('printing title')
+            #print (title)
+            self.title_map[filename]=[title] #store title in the title_map dictionary
+        except:
+            print('Error parsing title of document', sys.exc_info()[0], sys.exc_info()[1])
         #terms=getattr(index_data,terms)
             
     #@timing #comment out to remove timing
@@ -265,12 +267,12 @@ class IndexValues(object):
                     proximity_out_put_file.write(json.dumps(self.proximity))
             except:
                 print ('Error printing data to doc_key file', sys.exc_info()[0], sys.exc_info()[1])
-	    try:
+            try:
                 with open('title_map.txt','w') as title_map_out_put_file:
                     title_map_out_put_file.write(json.dumps(self.title_map))
             except:
                 print ('Error printing data to title_map file', sys.exc_info()[0], sys.exc_info()[1]) 
-	    try:
+            try:
                 with open('num_docs.txt','w') as num_docs_out_put_file:
                     num_docs_out_put_file.write(json.dumps(self.num_docs))
             except:
@@ -285,12 +287,12 @@ class IndexValues(object):
         try:           
             print ('Exporting data to shelf .db file')
             try:   
-                d = shelve.open('OUTPUT/ingestOutput.db')
+                d = shelve.open('OUTPUT/ingestOutput')
                 d['index'] = self.terms
                 d['doc_key'] = self.doc_key
                 d['proximity'] = self.proximity ## may be wrong without []
-		d['title_map']=self.title_map 
-		d['num_docs']=self.num_docs
+                d['title_map']=self.title_map 
+                d['num_docs']=self.num_docs
                 d.close()   
             except:
                 print ('Error exporting data via shelve', sys.exc_info()[0], sys.exc_info()[1]) 
@@ -303,7 +305,8 @@ class IndexValues(object):
             #with open(path+"download_manifest.txt", "r") as download_manifest_file:
                 #manifest=download_manifest_file.readline() 
                 #file_url=
-                download_shelf_file = shelve.open(path+'download_manifest.db')
+                #download_shelf_file = shelve.open(path+'download_manifest.db')#python 2
+                download_shelf_file = shelve.open(path+'download_manifest')#python 3
                 self.download_manifest = download_shelf_file['manifest']                
         except:
             print ('Error opening download manifest', sys.exc_info()[0], sys.exc_info()[1])      
@@ -318,12 +321,13 @@ class IndexValues(object):
             documents_in_directory = os.listdir(path)
             #print (documents_in_directory) ##Debugging
             #data = []
-	    document_id=0
+            document_id=0
             #doc_key={}#create dictionary to store document information
             for document, filename in enumerate(documents_in_directory):
                 #def func_open_document(doc_key
                 print(filename)#debugging
-                if not (filename.startswith('.') or filename.endswith('.db')):# added exclusion for .db file to prevent parsing the manifest file 
+                #if not (filename.startswith('.') or filename.endswith('.db')):# added exclusion for .db file to prevent parsing the manifest file 		
+                if filename.endswith('.htm'):#only open.htm files.  This will ignore data files
                         #------------------
                         #---------------- need to fix tests for manifest file which doesnt exist yet
                         try:
@@ -335,13 +339,13 @@ class IndexValues(object):
                             print ('Error appednding document info to doc_key', sys.exc_info()[0], sys.exc_info()[1])
                         try:
                             print ('Caching document '+ str(document_id))
-   			    page = urllib2.urlopen(file_format+path+filename).read()##linux path
-                            #page = urllib2.urlopen(file_format+path+filename).read()##windows path
-			    document_id+=1
+   			    #page = urllib2.urlopen(file_format+path+filename).read()##python 2 version
+                            page = urllib.request.urlopen(file_format+path+filename).read().decode('utf-8')#python 3 version
+                            document_id+=1
                         except:
                             print ('Error using urllib to open file', sys.exc_info()[0], sys.exc_info()[1])
                         print ('Parsing title and tags from '+str(filename))  
-			self.func_parse_title(page,filename)
+                        self.func_parse_title(page,filename)
                         line = func_tokenize(page) #remove HTML tags from the document
                         try:
                             self.data.append(line)
