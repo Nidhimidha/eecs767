@@ -4,6 +4,7 @@ import os
 import time
 import sys
 import time
+import math
 from query import *
 
 #from http import cookies 
@@ -26,35 +27,54 @@ if ver.major != 3 or ver.minor != 5:
                 </center></body></html>
         """)
 else:
+        numresults = 10                         # Number of results per page
+
         ## Parse the incoming query
         form = cgi.FieldStorage()
-        query = form.getvalue("query", "")
-        relID = form.getvalue("did", "")
-        queryVector = form.getvalue("que", "")
+        query = form.getvalue("query", "")      # The current query
+        relID = form.getvalue("did", "")        # The relevant doc ID
+        queryVector = form.getvalue("que", "")  # The current query vector
+        page = form.getvalue("page", 0)         # The current page
 
+        page = int(page)
+
+        ## If page coming in, number is human not index - need to fix
+        if page > 0:
+                page -= 1
+        
         ## Let's see how long it takes...
         t0 = time.time()
 
-        ## Build the query
-        queryInstance = similarity('processingOutput.db')
-        #tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
-        tokenizedQuery = queryInstance.tokenizeQuery(query)
-        normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
+        ## Only work on the query if we're passed something
+        if query != "":
+                ## Build the query
+                queryInstance = similarity('processingOutput.db')
+                #tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
+                tokenizedQuery = queryInstance.tokenizeQuery(query)
+                normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
 
-        ## Search corpus
-        queryInstance.similarity(normalizedQuery)
-        queryInstance.proximity(tokenizedQuery)
+                ## Search corpus
+                queryInstance.similarity(normalizedQuery)
+                queryInstance.proximity(tokenizedQuery)
 
         ## How did we do on timing
         t1 = time.time()
         exe = str(float("{0:.3f}".format(t1-t0))) + " sec"
         
         ## Get the results
-        ans = queryInstance.rankedOutput # results and rank
-        que = queryInstance.queryVector  # query vector
-        ques = ':'.join(map(str,que))    # query vector as a string
-        res = ans[0]                     # results
-        ran = ans[1]                     # ranks
+        if query != "":
+                ans = queryInstance.rankedOutput # results and rank
+                que = queryInstance.queryVector  # query vector
+                ques = ':'.join(map(str,que))    # query vector as a string
+                res = ans[0]                     # results
+                ran = ans[1]                     # ranks
+        else:
+                res = []
+                ans = []
+
+        ## Figure out the page count
+        i = page * numresults
+        stop = i + numresults
 
         print("Content-type: text/html")
         print()
@@ -64,7 +84,7 @@ else:
                 <title>FiniteLoop Squad Search</title>
                 <style>
                         body {
-                                font: normal 10px/.75 helvetica;
+                                font: normal 12px/.75 helvetica;
                         }
                         #header {
                                 position: fixed;
@@ -90,12 +110,38 @@ else:
                                 height: 25px;
                                 text-align: center;
                         }
-                        #search input {
+                        #search input[type=text] {
                                 width: 200px;
+                        }
+                        input[type=submit] {
+                                background: none;
+                                border: none;
+                                font-size: xx-small;
+                                padding: 0;
+                                margin: 0;
+                                display: inline;
+                                color: blue;
+                                text-decoration: underline;
+                        }
+                        #search input[type=submit] {
+                                padding:2px 5px; 
+                                background:#ccc; 
+                                border:0 none;
+                                cursor:pointer;
+                                -webkit-border-radius: 5px;
+                                border-radius: 5px; 
+                                color: black;
+                                text-decoration: none;
+                        }
+                        input[name=page] {
+                                border: none;
+                                font-size: 12px;
+                                color: blue;
+                                text-decoration: underline;
                         }
                         #results {
                                 position: absolute;
-                                top: 125px;
+                                top: 135px;
                                 left: 0;
                                 width: 100%;
                                 background: #eee;
@@ -133,49 +179,51 @@ else:
                                 <a href="../index.html"><h1>FiniteLoop Squad 
                                 Search</h1></a>
                         </div>
-                                <form method="post" action="cgi-bin/search.cgi">
-                                        <input type="text" name="query" />
-                                </form>
-""")
-        
+        """)
         print( """
                         <div id="search">
                                 <form method="post" action="search.cgi">
                                         <input type="text" name="query" value="%s"/>
+                                        <input type="submit" name="submit" value="Go"/>
                                 </form>
                                 <p>Found %s results (%s)</p>
+                                <p>Showing page %s of %s page(s)</p>
                         </div>
                         <div id="results">
-        """ % (cgi.escape(query), len(res), exe))
-
-        i = 0
+        """ % (cgi.escape(query), len(res), exe, page+1, math.ceil(len(res)/numresults)))
 
         # k and (res[i]) = result filename
         # relURL = link w/ doc id and query vector parameters
         # res[i][k][2] = result link
         # ran[i] = result rank
         # ??? = result title
-        while i < len(res):
+        while i < len(res) and i < stop:
                 ## Get the filename
                 k = next(iter(res[i]))
 
-                ## Build the relevance link
-                relURL = 'search.cgi?'
-                relURL += 'did='+str(res[i][k][0])+'&'
-                relURL += 'que='+str(ques)+'&'
-                relURL += 'query='+query
+                ## Can't use the URI as the query vector is too large...
+                ## going to post as form
+                ## Each entry is a tiny form
+                print( """
+                        <form method="post" action="search.cgi">
+                                <input type="hidden" name="query" value="%s" />
+                                <input type="hidden" name="que" value="%s" />
+                """ % (query, str(ques)))
+
+                relURL = """
+                        <input type='hidden' name='did' value='%s'/>
+                """ % str(res[i][k][0])
+
                 print( """
                         <p>
-                                <p class="title">%s
-                                        <a href="%s">
-                                                <i><small>More Like This</small></i>
-                                        </a>
-                                </p>
+                                <p class="title">%s. %s %s
+                                (<input type="submit" name="rel" value="More Like This" />)</p>
                                 <p class="link"><a href="#">%s</a></p>
                                 <p class="rank">Ranking: %s</p>
                                 <p class="summary">%s</p>
                         </p>
-                """ % (k, relURL, res[i][k][2], ran[i], 'unknown'))
+                        </form>
+                """ % (i+1, k, relURL, res[i][k][2], ran[i], 'unknown'))
                 
                 i += 1
                 if i < len(res):
@@ -185,7 +233,32 @@ else:
                                 </p>
                         """)
 
+        p = 1
+        link = '<p align="center"> Page: '
+
+        ## Make sure we're passing back to the same page
         print( """
+                
+                <form method="post" action="search.cgi">
+                        <input type="hidden" name="query" value="%s" />
+        """ % (query))
+
+        while p <= math.ceil(len(res)/numresults):
+                if p-1 != page:
+                        #link += "<a href='" + relURL + "&page=" + str(p) + "'>"+str(p)+"</a> "
+                        link += "<input type='submit' name='page' value='" + str(p) + "'/>\n"
+                else:
+                        link += " " + str(p) + "\n "
+                p += 1
+
+        ## If no query - no pages...
+        if query != "":
+                print( link+"</p>\n</form>" )
+
+        print( """
+                        <br /><br /><br /><br />
+                        <br /><br /><br /><br />
+                        <br /><br /><br /><br />
                         </div>
                         <div id="footer">
                                 <p>Spring 2018 &middot;
