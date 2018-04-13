@@ -60,24 +60,11 @@ import re
 class similarity:
 
     def __init__(self, infile):
-        try:
-                proc = shelve.open(infile)
-        except:
-                x = infile.replace(".db", '')
-                proc = shelve.open(x)
-                pass
+        proc = shelve.open(infile)
         self.docVector = proc['docVector']
         self.doc_key = proc['doc_key']
         self.proxVector = proc['proxVector']
         self.termIndex = proc['termIndex']
-        #print("self.docVector")
-        #print(self.docVector)
-        #print("self.doc_key")
-        #print(self.doc_key)
-        #print("self.proxVector")
-        #print(self.proxVector)
-        #print("self.termIndex")
-        #print(self.termIndex)
         proc.close()
         self.result = []
         self.weightedQuery = []
@@ -86,9 +73,10 @@ class similarity:
         return func_tokenize(query)
 
     def findWholeWord(self, word, query):
-        pattern = re.compile(r'\b({0})\b'.format(word), flags=re.IGNORECASE)
+        #pattern = re.compile(r'\b({0})\b'.format(word), flags=re.IGNORECASE)
         for x in query:
-                if pattern.search(x):
+                if word.lower() in x.lower():
+                #if pattern.search(x):
                     return True
 
 
@@ -98,7 +86,7 @@ class similarity:
 
         for k in self.termIndex:
             if self.findWholeWord(k,query):
-                idf = self.termIndex[k][0]
+                        idf = self.termIndex[k][0]
             else:
                 idf = 0
 
@@ -155,7 +143,6 @@ class similarity:
             count = 0
             for i in range(len(query)):
                 for term in self.termIndex:
-                    #print term, "::", query[i]
                     if query[i] == term:
                         self.index1 = self.termIndex[term][1]
                         count = count + 1
@@ -163,27 +150,28 @@ class similarity:
                         if query[i+1] == term:
                             self.index2 = self.termIndex[term][1]
 
-                #print query[i], "::", self.index1
-                #print query[i+1], "::", self.index2
+                ## index1 and/or index2 may not have been set
+                try:
+                        val1 = str(self.proxVector[k][self.index1]).replace("[", "").replace("]", "")
+                        val2 = str(self.proxVector[k][self.index2]).replace("[", "").replace("]", "")
+                except:
+                        # didn't happen = give default def
+                        val1 = None
+                        val2 = None
+                        pass
 
-                val1 = str(self.proxVector[k][self.index1]).replace("[", "").replace("]", "")
-                val2 = str(self.proxVector[k][self.index2]).replace("[", "").replace("]", "")
                 if val1 and val2:
                         if not val1.__contains__(",") and not val2.__contains__(","):
                             value = int(val1) - int(val2)
-                            #print "Gap between is",value
                             self.result.append(abs(value))
 
                 for term in self.termIndex:
                     if query[i] == term:
                         count = count + 1
-                #print k, "::", count
 
     def writeOutput(self, outFile):
         out = shelve.open(outFile)
-        #print(self.rankedOutput)
         out['rankedOutput'] = self.rankedOutput
-        #print(self.queryVector)
         out['queryVector'] = self.queryVector
         out.close()
 
@@ -195,19 +183,11 @@ class similarity:
             ranks.append(m)
 
         self.sliced.append(ranks)
-        #print("self.sliced")
-        #print(self.sliced)
         return self.sliced
 
 
     def relevanceFeedback(self,relevantDoc):
-        x = 'OUTPUT/queryOutput.db'
-        try:
-                query = shelve.open(x)
-        except:
-                y = x.replace('.db', '')
-                query = shelve.open(y)
-                pass
+        query = shelve.open('OUTPUT/queryOutput')
         self.queryVector = query['queryVector']
         query.close()
         a = 0.5
@@ -220,14 +200,14 @@ class similarity:
         updatedQuery = [i * a for i in self.queryVector]
         newQ = [sum(x) for x in zip(updatedQuery, newReleVec)]
         self.similarity(newQ)
-        self.writeOutput('OUTPUT/queryOutput.db')
+        self.writeOutput('OUTPUT/queryOutput')
         return self.showResult()
 
 
 def main():
     queryInstance = similarity('OUTPUT/processingOutput.db')
     # TODO: get the query from cgi
-    tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
+    tokenizedQuery = queryInstance.tokenizeQuery(["truck", "arriv"])
     normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
     queryInstance.similarity(normalizedQuery)
     queryInstance.proximity(tokenizedQuery)
@@ -236,7 +216,7 @@ def main():
     #queryInstance.similarity(normalizedQuery)
     #queryInstance.proximity(["truck", "arriv"])
     queryInstance.showResult()
-    queryInstance.writeOutput('OUTPUT/queryOutput.db')
+    queryInstance.writeOutput('OUTPUT/queryOutput')
 
     # TODO: get the relevant doc from cgi
     newResult = queryInstance.relevanceFeedback('D2')

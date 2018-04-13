@@ -9,7 +9,7 @@ import io
 import fileinput
 import string
 import urllib #required to open html documents
-import urllib2 #required in python 2.7
+#import urllib2 #required in python 2.7
 import re #required to remove html tags vie regex
 import codecs #required to open html files
 import nltk #requires python 3.5 or python 2.7 to install
@@ -70,7 +70,12 @@ url='https://www.iso.org/standards.html'
 #cached_doc_path ='C:\Users\b589b426\Documents\_student\EECS_767\Project\cached_docs'
 
 #this is the relative path to the directory where pages will be downloaded to
-cached_doc_path = 'cached_docs/'
+
+cached_doc_path = 'cached_docs/'#python 2 version
+
+if(len(sys.argv)>1):
+        cached_doc_path = sys.argv[1]
+
 #--------End --Variables ---------------------------------------------------
 #---------------------------------------------------------------------------
 
@@ -135,7 +140,8 @@ class WebCrawler(object):
         # open the URL
                 try:
                         
-                        page = urllib2.urlopen(passed_url).read()
+                        #page = urllib2.urlopen(passed_url).read()# python 2 version
+                        page = urllib.request.urlopen(passed_url).read().decode('utf-8')#python 3
                 except:
                         print ('Error using urllib to read webpage at url', sys.exc_info()[0], sys.exc_info()[1])
                         return None
@@ -145,27 +151,42 @@ class WebCrawler(object):
                         #remove prefix of url from url field e.g. http:// or the url_seed
                         #this is necessary to shorten the length of the file name
                         try:
-                                #tags = re.compile('(http://)',re.DOTALL)
-                                tags = re.compile(url_seed,re.DOTALL)          
+                                #tags = re.compile(url_seed,re.DOTALL)   #python 2
+                                url_seed_regex=re.compile(url_seed,re.DOTALL) #python 3
                         except:
                                 print ('Error in regex', sys.exc_info()[0], sys.exc_info()[1])
                         try:
-                                stripped_url = re.sub(tags,'',str(passed_url)) #remove html tags
+                                #stripped_url = re.sub(tags,'',str(passed_url)) #python 2remove html tags
+                                stripped_url=url_seed_regex.sub('',str(passed_url))
                         except:
                                 print ('Error stripping prefix with regex', sys.exc_info()[0], sys.exc_info()[1])
                 
                         #remove punctuation from url to allow for writing to file in windows systems
                         try:
                                 #stripped_url = stripped_url.translate(None, url_seed)
-                                stripped_url = stripped_url.translate(None, string.punctuation)
+                                #stripped_url = stripped_url.translate(None, string.punctuation)#python 2
+                                tr=str.maketrans('','',string.punctuation)#python 3
+                                stripped_url=stripped_url.translate(tr)#python 3
                         except:
                                 print ('Error removing punctuation from url', sys.exc_info()[0], sys.exc_info()[1])
-                
+                        try:
+                                encoding_regex=re.search(r'(charset=")(.*?)(")',page)#search page for encoding
+                                encoding=encoding_regex.group(2)#store encoding into encoding variable
+                                #ewubba
+                        except:
+                                print ('Error parsing document encoding', sys.exc_info()[0], sys.exc_info()[1])
                         try:
                                 filename = str(cached_doc_path+stripped_url+'.htm')
                                 #print('filename used to write file')
                                 #print (filename)##for debugging
-                                f= open(filename, "w")
+                                f= open(filename, "w", encoding="utf-8")#required to open page with specific encoding in python 3
+##                                if encoding:
+##                                        print ('page encoding is ' +str(encoding))
+##                                        #f.write(page)#python 2
+##                                        #f.write(page).encode('"'+str(encoding)+'"')#python 3
+##                                        f.write(page)
+##                                else:
+##                                        f.write(page)
                                 f.write(page)
                                 f.close
                         except:
@@ -200,7 +221,7 @@ class WebCrawler(object):
                         print ('Error writing webpage to local file', sys.exc_info()[0], sys.exc_info()[1])
                 return page
         
-        #@timing #comment out to remove timing        
+        #@timing #comment out to remove timing
         def func_export_download_manifest_with_shelve(self):              
                 print ('Exporting manifest to shelf .db file')
                 try:   
@@ -214,7 +235,8 @@ class WebCrawler(object):
         def func_get_robots_txt(self):
                 try:
                         robo_url=str(url_seed+'robots.txt')
-                        robots = urllib2.urlopen(robo_url).read()
+                        robots = urllib.request.urlopen(robo_url).read()
+                        #robots = urllib2.urlopen(robo_url).read()
                         robots=robots.split()#splitwords into array
                         print ('printing robots')
                         print (robots)
@@ -237,7 +259,7 @@ class WebCrawler(object):
                     
                                 hyperlink_match = re.compile('(href=".*?")',re.DOTALL)#how to tell if a link
                                 #hyperlink_match = re.compile('(?:href=")(.*?)(?:".*?)',re.DOTALL)#how to tell if a link
-                                hyperlink_ignore = re.compile('(.*?.css.*?)|(.*?javascript.*?)|(.*?#.*?)|(.*?mailto.*?)|(.*?.pps)|(.*?.xps)|(.*?.pub)|(.*?.docb)|(.*?.dotm)|(.*?.dotx)|(.*?.docm)|(.*?.xlsx)|(.*?.xls)|(.*?.xlm)|(.*?.xlt)|(.*?.xltx)|(.*?.doc)|(.*?.docx)|(.*?.ppt)|(.*?.pptx)|(.*?.jpg)|(.*?.png)|(.*?.amp)|(.*?.bmp)|(.*?.mp3)|(.*?.mp4)|(.*?.avi)|(.*?.gif)|(.*?.pdf)',re.DOTALL)#links to ignore, such as .css
+                                hyperlink_ignore = re.compile('(/files/live/sites/isoorg/files/_noindex.*?)|(.*?/fr/search/.*?)|(.*?/ru/search/.*?)|(.*?/search/.*?)|(.*?/advanced-search/.*?)|(.*?/fr/advanced-search/.*?)|(.*?/ru/advanced-search/.*?)|(.*?/em.*?)|(.*?.css.*?)|(.*?javascript.*?)|(.*?#.*?)|(.*?mailto.*?)|(.*?.pps)|(.*?.xps)|(.*?.pub)|(.*?.docb)|(.*?.dotm)|(.*?.dotx)|(.*?.docm)|(.*?.xlsx)|(.*?.xls)|(.*?.xlm)|(.*?.xlt)|(.*?.xltx)|(.*?.doc)|(.*?.docx)|(.*?.ppt)|(.*?.pptx)|(.*?.jpg)|(.*?.png)|(.*?.amp)|(.*?.bmp)|(.*?.mp3)|(.*?.mp4)|(.*?.avi)|(.*?.gif)|(.*?.rss)|(.*?.pdf)',re.IGNORECASE)#links to ignore, such as .css
                                 #hyperlink_clean = re.compile('(href=")|(".*?$)|(>.*?)|(<.*?)|(.*?\s+.*?)',re.DOTALL)
                                 hyperlink_clean = re.compile('(href=")|(".*?$)',re.DOTALL)#sanitize href and root links
                                 for word in words:
@@ -247,7 +269,8 @@ class WebCrawler(object):
                                                         if hyperlink_match.match(word): #check that the word contains "hfref=
                                                                 try:
                                                                         if not hyperlink_ignore.match(word): #check list of hrefs to ignore such as .css or javascript
-                                                                                word = re.sub(hyperlink_clean,'',str(word))
+                                                                                #word = re.sub(hyperlink_clean,'',str(word))#python 2
+                                                                                word = hyperlink_clean.sub('',str(word))#python 3
                                                                                 try:     
                                                                                         if 'http://' in word: #check to see if the link is an absolute link
                                                                                                 if url_seed in word:#used to limit search to same website
@@ -315,7 +338,7 @@ class WebCrawler(object):
 def main():
         print ("Welcome to the EECS767 web crawling program!")
         crawler=WebCrawler([],[],{})
-        #crawler.func_get_robots_txt()
+        #crawler.func_get_robots_txt() ## robots.txt is hard coded into the ignore_urls within the func_find_urls_on_page function
         
         crawler.func_find_urls_on_page(crawler.func_download_page(url))
         print ('queue of urls to download:')

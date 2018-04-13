@@ -57,7 +57,7 @@ path = ('/home/splunk/Documents/EECS_767/Project/cached_docs/')
 #path =('C:\\Users\\b589b426\\Documents\\_student\\EECS_767\\Project\\test\\')
 
 if(len(sys.argv)>1):
-        path=sys.argv[1]
+	path=sys.argv[1]
 
 #-------------------------------------------------------------------------------
 #
@@ -120,8 +120,9 @@ def func_tokenize(raw_input):
         try:
             raw_input = (raw_input.decode('unicode_escape').encode('ascii','ignore')) ##
         except:
+	    #print ('Error removing unicode characters from line var', sys.exc_info()[0], sys.exc_info()[1])
             pass
-            #print ('Error removing unicode characters from line var', sys.exc_info()[0], sys.exc_info()[1])
+	    
         try:
             #line = tags.sub(' ',str(raw_input)) #remove html tags ##python 3 code
             line = re.sub(tags,' ',str(raw_input)) #remove html tags
@@ -190,13 +191,13 @@ class IndexValues(object):
     def func_parse_title(self,page,filename):
         #print ('Parsing title for document'+ str(filename))
         try:
-                match = re.search(r'(<title>)(.*?)(<)',page) #regex to match title and tags as separate capture groups
-                title = match.group(2)  #regex to return the string between tags
-                #print ('printing title')
-                #print (title)
-                self.title_map[filename]=[title] #store title in the title_map dictionary
+            match = re.search(r'(<title>)(.*?)(<)',page) #regex to match title and tags as separate capture groups
+            title = match.group(2)	#regex to return the string between tags
+            #print ('printing title')
+            #print (title)
+            self.title_map[filename]=[title] #store title in the title_map dictionary
         except:
-                print('Error parsing title of document', sys.exc_info()[0], sys.exc_info()[1])
+            print('Error parsing title of document', sys.exc_info()[0], sys.exc_info()[1])
         #terms=getattr(index_data,terms)
             
     #@timing #comment out to remove timing
@@ -304,7 +305,8 @@ class IndexValues(object):
             #with open(path+"download_manifest.txt", "r") as download_manifest_file:
                 #manifest=download_manifest_file.readline() 
                 #file_url=
-                download_shelf_file = shelve.open(path+'download_manifest.db')
+                #download_shelf_file = shelve.open(path+'download_manifest.db')#python 2
+                download_shelf_file = shelve.open(path+'download_manifest')#python 3
                 self.download_manifest = download_shelf_file['manifest']                
         except:
             print ('Error opening download manifest', sys.exc_info()[0], sys.exc_info()[1])      
@@ -324,7 +326,8 @@ class IndexValues(object):
             for document, filename in enumerate(documents_in_directory):
                 #def func_open_document(doc_key
                 print(filename)#debugging
-                if not (filename.startswith('.') or filename.endswith('.db')):# added exclusion for .db file to prevent parsing the manifest file 
+                #if not (filename.startswith('.') or filename.endswith('.db')):# added exclusion for .db file to prevent parsing the manifest file 		
+                if filename.endswith('.htm'):#only open.htm files.  This will ignore data files
                         #------------------
                         #---------------- need to fix tests for manifest file which doesnt exist yet
                         try:
@@ -336,9 +339,8 @@ class IndexValues(object):
                             print ('Error appednding document info to doc_key', sys.exc_info()[0], sys.exc_info()[1])
                         try:
                             print ('Caching document '+ str(document_id))
-                            #page = urllib2.urlopen(file_format+path+filename).read()##linux path
-                            page = urllib.request.urlopen(file_format+path+filename).read()##linux path
-                            #page = urllib2.urlopen(file_format+path+filename).read()##windows path
+   			    #page = urllib2.urlopen(file_format+path+filename).read()##python 2 version
+                            page = urllib.request.urlopen(file_format+path+filename).read().decode('utf-8')#python 3 version
                             document_id+=1
                         except:
                             print ('Error using urllib to open file', sys.exc_info()[0], sys.exc_info()[1])
@@ -369,4 +371,4 @@ def main():
     index_data.func_export_data_via_shelve()
     print ('Program complete!')
 if __name__ == "__main__":    
-        main()
+	main()

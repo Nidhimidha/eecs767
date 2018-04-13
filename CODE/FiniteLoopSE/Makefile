@@ -13,8 +13,9 @@ CGIDIR=cgi-bin
 DURATION=1m
 
 ## The base path variable in ingest.py
-#INGPATH=$(LOC)/INPUT/cached_docs/
-INGPATH=$(LOC)/INPUT/control/
+INGPATH=$(LOC)/INPUT/cached_docs/
+#INGPATH=$(LOC)/INPUT/docsnew/
+#INGPATH=$(LOC)/INPUT/control/
 OUTPATH=$(LOC)/OUTPUT/
 
 .DEFAULT: help
@@ -69,7 +70,7 @@ prepenv:
 crawl: src/web_crawler.py $(INGPATH)
 	## It will claim failure... but only because I've killed it with the
 	## timeout
-	timeout $(DURATION) $(PYTHON) src/web_crawler.py
+	timeout $(DURATION) $(PYTHON) src/web_crawler.py $(INGPATH)
 
 ## Ingest the data - prepare for the processing module
 ingest: src/ingest.py $(INGPATH) $(OUTPATH)
