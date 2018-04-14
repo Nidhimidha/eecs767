@@ -13,8 +13,11 @@ CGIDIR=cgi-bin
 DURATION=1m
 
 ## The base path variable in ingest.py
-INGPATH=$(LOC)/INPUT/cached_docs/
+## Deployed System
+INGPATH=$(LOC)/INPUT/cached_docs/ 
+## Provided dataset - be sure to unzip INPUT/docsnew.zip
 #INGPATH=$(LOC)/INPUT/docsnew/
+## Control dataset based on class quiz (control group)
 #INGPATH=$(LOC)/INPUT/control/
 OUTPATH=$(LOC)/OUTPUT/
 
@@ -65,6 +68,9 @@ prepenv:
 		from nltk.stem.porter import *; \
 		from nltk.corpus import stopwords; \
 		from collections import defaultdict;"
+	mkdir INPUT
+	mkdir INPUT/cached_docs
+	mkdir OUTPUT
 		
 ## Keep in mind - the crawler will run for the DURATION specified above...
 crawl: src/web_crawler.py $(INGPATH)
