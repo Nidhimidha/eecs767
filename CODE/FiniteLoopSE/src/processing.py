@@ -31,6 +31,7 @@ class genVSMArray:
         #@timing ## Uncomment to see discrete timing
         def __init__(self, inFile):
                 ## Pull in the data structure(s) from ingest
+                print("    Ingesting ", inFile)
                 try:
                         ingest = shelve.open(inFile)
                 except:
@@ -41,6 +42,8 @@ class genVSMArray:
                 self.index = ingest['index']
                 self.doc_key = ingest['doc_key']
                 self.proximity = ingest['proximity']
+                self.numdocs = ingest['num_docs']
+                self.titles = ingest['title_map']
                 ingest.close()
 
                 ## Sort the index and proximity (need to match)
@@ -97,6 +100,7 @@ class genVSMArray:
         ## Create tf-idf weight
         #@timing ## Uncomment to see discrete timing
         def genTFIDF(self):
+                print("    Generating Vector Space Model")
                 ## - First create the df for each term
                 ## Loop through index and construct Vector Space Model
                 for i in range(len(self.index)):
@@ -136,6 +140,7 @@ class genVSMArray:
         ## Normalize the vectors using docLength - establish unit vectors
         #@timing ## Uncomment to see discrete timing
         def normalizeVectors(self):
+                print("    Normalizing Vectors")
                 ## Now finish length of Di (docLength)
                 self.docLength = [float("{0:.3f}".format(sqrt(x))) 
                         for x in self.docLength]
@@ -153,6 +158,7 @@ class genVSMArray:
 
         ## Create the proximity and term index
         def genProx(self):
+                print("    Modifying proximity and term index")
                 ## Go through each document
                 for d in range(len(self.doc_key)):
                         #doc = self.doc_key[d].keys()[0]
@@ -178,6 +184,7 @@ class genVSMArray:
 
         #@timing ## Uncomment to see discrete timing
         def writeOutput(self, outFile):
+                print("    Writing output file: ", outFile)
                 ## Write the Document Vector Space Model (docVector) and
                 ## the Document Keystone (doc_key) out to the output file
                 out = shelve.open(outFile)
@@ -185,6 +192,7 @@ class genVSMArray:
                 out['doc_key'] = self.doc_key
                 out['proxVector'] = self.proxVector
                 out['termIndex'] = self.termIndex
+                out['title_map'] = self.titles
                 out.close()
 
 ##-----------------------------------------------------------------##
@@ -192,6 +200,7 @@ class genVSMArray:
 ##-----------------------------------------------------------------##
 @timing
 def main():
+        print("Processing")
         ## Execution as an object - result is VSM array
         simpleVSM = genVSMArray(inFile)
         simpleVSM.genTFIDF()

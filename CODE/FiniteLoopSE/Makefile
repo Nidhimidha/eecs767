@@ -68,7 +68,6 @@ prepenv:
 		from nltk.stem.porter import *; \
 		from nltk.corpus import stopwords; \
 		from collections import defaultdict;"
-	mkdir INPUT
 	mkdir INPUT/cached_docs
 	mkdir OUTPUT
 		
