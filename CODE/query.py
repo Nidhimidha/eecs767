@@ -154,9 +154,14 @@ class similarity:
                     if i != (len(query)-1):
                         if query[i+1] == term:
                             self.index2 = self.termIndex[term][1]
-
-                val1 = str(self.proxVector[k][self.index1]).replace("[", "").replace("]", "")
-                val2 = str(self.proxVector[k][self.index2]).replace("[", "").replace("]", "")
+                try:
+                        val1 = str(self.proxVector[k][self.index1]).replace("[", "").replace("]", "")
+                        val2 = str(self.proxVector[k][self.index2]).replace("[", "").replace("]", "")
+                except:
+                        val1 = None
+                        val2 = None
+                        pass
+                    
                 if val1 and val2:
                         if not val1.__contains__(",") and not val2.__contains__(","):
                             value = int(val1) - int(val2)
