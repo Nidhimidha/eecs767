@@ -72,14 +72,18 @@ class genVSMArray:
                 ## to
                 ## [ { doc_name : [doc_id, loc, url] }, ...
                 ## Using the doc id as the index into the array
-                tempDocs = [{}]*len(self.doc_key)
+                ## Length of array based on numdocs from ingest
+                #tempDocs = [{}]*len(self.doc_key)
+                tempDocs = [{}]*self.numdocs
                 for x in self.doc_key:
                         tempDocs[self.doc_key[x][0]] = { x : self.doc_key[x] }
                 self.doc_key = tempDocs
 
                 ## Initialize docVector Array (for storing VSM)
+                ## Length of array based on numdocs from ingest
                 self.docVector = [ [0]*len(self.index) for _ 
-                        in range(len(self.doc_key)) ]
+                        in range(self.numdocs) ]
+                        #in range(len(self.doc_key)) ]
                 #self.docVector = [ [0]*len(self.index[0]) for _ 
                 #        in range(len(self.doc_key[0])) ]
 
@@ -160,7 +164,9 @@ class genVSMArray:
         def genProx(self):
                 print("    Modifying proximity and term index")
                 ## Go through each document
-                for d in range(len(self.doc_key)):
+                ## Use numdocs 
+                #for d in range(len(self.doc_key)):
+                for d in range(self.numdocs):
                         #doc = self.doc_key[d].keys()[0]
                         ## Go through each term
                         for t in range(len(self.prox)):
