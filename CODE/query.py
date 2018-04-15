@@ -68,6 +68,8 @@ class similarity:
         proc.close()
         self.result = []
         self.weightedQuery = []
+        self.rankedOutput = []
+        self.queryVector=[]
 
     def tokenizeQuery(self, query):
         return func_tokenize(query)
@@ -82,20 +84,23 @@ class similarity:
     def normalizeQuery(self, query):
 
         self.weightedQuery = [0] * len(self.termIndex)
-
+        flag = False
         for k in self.termIndex:
             if self.findWholeWord(k,query):
                         idf = self.termIndex[k][0]
+                        flag = True
             else:
                 idf = 0
 
             self.weightedQuery[self.termIndex[k][1]] = idf
-        sumOfSquares = 0
-        for i in range(len(self.weightedQuery)):
-            sumOfSquares += self.weightedQuery[i] * self.weightedQuery[i]
-        length = sqrt(sumOfSquares)
-        self.queryVector = [float("{0:.4f}".format(self.weightedQuery[i] / length))
-                       for i in range(len(self.weightedQuery))]
+        if flag:
+            sumOfSquares = 0
+            for i in range(len(self.weightedQuery)):
+                sumOfSquares += self.weightedQuery[i] * self.weightedQuery[i]
+            length = sqrt(sumOfSquares)
+            self.queryVector = [float("{0:.4f}".format(self.weightedQuery[i] / length))
+                           for i in range(len(self.weightedQuery))]
+
         return self.queryVector
 
     def vectorlength(self, vec):
@@ -135,6 +140,7 @@ class similarity:
         similarityVector.reverse()
         self.rankedOutput.append(docIndices)
         self.rankedOutput.append(similarityVector)
+        self.rankedOutput = [self.rankedOutput[i][0:10] for i in range(len(self.rankedOutput))]
 
     def proximity(self, query):
 
