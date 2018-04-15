@@ -52,10 +52,13 @@ else:
                 #tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
                 tokenizedQuery = queryInstance.tokenizeQuery(query)
                 normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
-
-                ## Search corpus
-                queryInstance.similarity(normalizedQuery)
-                queryInstance.proximity(tokenizedQuery)
+                ## If at least one term from query found in corpus
+                if normalizedQuery:
+                        ## Search corpus
+                        queryInstance.similarity(normalizedQuery)
+                        queryInstance.proximity(tokenizedQuery)      
+                queryInstance.writeOutput('queryOutput')
+                        
 
         ## How did we do on timing
         t1 = time.time()
