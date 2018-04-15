@@ -1,5 +1,7 @@
+#!/usr/bin/python
 import shelve
 import os
+import sys
 
 outDir = 'OUTPUT'
 
@@ -8,18 +10,17 @@ for i in os.listdir(outDir):
         if i.endswith('.db'):
                 files.append(os.path.join(outDir, i))
 
+if(len(sys.argv)>1):
+        files = []
+        files.append(sys.argv[1])
+
 for i in range(len(files)):
-        try:
-                ingest = shelve.open(files[i])
-        except:
-                x = files[i].replace('.db','')
-                ingest = shelve.open(x)
-                pass
-        print ("##----------------------------------------------------------##")
-        print ("Contents of ", files[i])
+        ingest = shelve.open(files[i])
+        print "##----------------------------------------------------------##"
+        print "Contents of ", files[i]
         for x in ingest:
-                print(x)
-                print("---------------------")
-                print(ingest[x])
-                print()
+                print x
+                "---------------------"
+                print ingest[x]
+                print
         ingest.close()
