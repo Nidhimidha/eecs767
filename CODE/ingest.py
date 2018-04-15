@@ -46,7 +46,10 @@ file_format='file://' #linux format
 
 #path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/') ##Blake's MAC
 #path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/cached_docs/') ##Blake's MAC
-path = ('/home/splunk/Documents/EECS_767/Project/cached_docs/')
+
+#path = ('/home/splunk/Documents/EECS_767/Project/cached_docs/')
+path = ('/home/splunk/Documents/EECS_767/Project/test_docs/')
+
 #path = ('/home/splunk/Documents/EECS_767/Project/_medium_doc_sample/')
 #path = ('/home/splunk/Documents/EECS_767/Project/_large_doc_sample/')
 
@@ -327,7 +330,7 @@ class IndexValues(object):
                 #def func_open_document(doc_key
                 print(filename)#debugging
                 #if not (filename.startswith('.') or filename.endswith('.db')):# added exclusion for .db file to prevent parsing the manifest file 		
-                if filename.endswith('.htm'):#only open.htm files.  This will ignore data files
+                if (filename.endswith('.htm') or filename.endswith('.txt')):#only open.htm files.  This will ignore data files
                         #------------------
                         #---------------- need to fix tests for manifest file which doesnt exist yet
                         try:
