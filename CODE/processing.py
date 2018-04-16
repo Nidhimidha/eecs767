@@ -5,6 +5,7 @@ from functools import wraps     ## For Timing
 
 inFile = 'OUTPUT/ingestOutput.db'
 outFile = 'OUTPUT/processingOutput'
+artFile = 'OUTPUT/processingArtifacts'
 
 ##-------------------------------------------------------------------------##
 ## TIMING - DIAGNOSTICS
@@ -98,8 +99,9 @@ class genVSMArray:
                 self.proxVector = [ []*len(self.index) for _
                         in range(len(self.doc_key)) ]
 
-                ## Initialize the termIndex
+                ## Initialize the termIndex and termVector
                 self.termIndex = {}
+                self.termDict = {}
 
         ## Create tf-idf weight
         #@timing ## Uncomment to see discrete timing
@@ -160,6 +162,20 @@ class genVSMArray:
                                 self.docVector[x][y] = float("{0:.3f}".format(
                                         self.docVector[x][y]))
 
+        ## Create a term dictionary - must be after genProx (for termIndex) 
+        def genTermDict(self):
+                print("    Creating term vector dictionary")
+                ## Go through the termIndex and create the dictionary
+                for k in self.termIndex:
+                        wi = self.termIndex[k][1]
+                        termWeights = []
+                        for i in range(len(self.docVector)):
+                                termWeights.append(self.docVector[i][wi])
+
+                        ## Save the array
+                        self.termDict[k] = termWeights
+
+
         ## Create the proximity and term index
         def genProx(self):
                 print("    Modifying proximity and term index")
@@ -194,12 +210,18 @@ class genVSMArray:
                 ## Write the Document Vector Space Model (docVector) and
                 ## the Document Keystone (doc_key) out to the output file
                 out = shelve.open(outFile)
-                out['docVector'] = self.docVector
                 out['doc_key'] = self.doc_key
+                out['termDict'] = self.termDict
                 out['proxVector'] = self.proxVector
                 out['termIndex'] = self.termIndex
                 out['title_map'] = self.titles
                 out.close()
+                
+                print("    Writing out artifacts: ", artFile)
+                art = shelve.open(artFile)
+                art['docVector'] = self.docVector
+                art.close()
+
 
 ##-----------------------------------------------------------------##
 ## Our 'MAIN' method - fun fun... ;)
@@ -212,6 +234,7 @@ def main():
         simpleVSM.genTFIDF()
         simpleVSM.normalizeVectors()
         simpleVSM.genProx()
+        simpleVSM.genTermDict()
         simpleVSM.writeOutput(outFile)
 
 ##-----------------------------------------------------------------##

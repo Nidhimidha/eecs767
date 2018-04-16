@@ -14,11 +14,11 @@ DURATION=1m
 
 ## The base path variable in ingest.py
 ## Deployed System
-INGPATH=$(LOC)/INPUT/cached_docs/
+#INGPATH=$(LOC)/INPUT/cached_docs/
 ## Provided dataset - be sure to unzip INPUT/docsnew.zip
 #INGPATH=$(LOC)/INPUT/docsnew/
 ## Control dataset based on class quiz (control group)
-#INGPATH=$(LOC)/INPUT/control/
+INGPATH=$(LOC)/INPUT/control/
 OUTPATH=$(LOC)/OUTPUT/
 
 .DEFAULT: help
@@ -102,6 +102,11 @@ process: src/processing.py $(OUTPATH)ingestOutput.db
 	## Make sure processingOutput has .db too
 	if [ -f $(OUTPATH)processingOutput ]; then \
 		mv $(OUTPATH)processingOutput $(OUTPATH)processingOutput.db; \
+	fi
+	
+	## Make sure processingArtifacts has .db too
+	if [ -f $(OUTPATH)processingArtifacts ]; then \
+		mv $(OUTPATH)processingArtifacts $(OUTPATH)processingArtifacts.db; \
 	fi
 	
 	## Copy processingOutput.db to the local cgi-bin directory
