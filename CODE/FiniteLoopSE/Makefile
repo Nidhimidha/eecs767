@@ -14,7 +14,7 @@ DURATION=1m
 
 ## The base path variable in ingest.py
 ## Deployed System
-INGPATH=$(LOC)/INPUT/cached_docs/ 
+INGPATH=$(LOC)/INPUT/cached_docs/
 ## Provided dataset - be sure to unzip INPUT/docsnew.zip
 #INGPATH=$(LOC)/INPUT/docsnew/
 ## Control dataset based on class quiz (control group)

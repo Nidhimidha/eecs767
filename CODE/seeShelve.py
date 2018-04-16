@@ -16,11 +16,11 @@ if(len(sys.argv)>1):
 
 for i in range(len(files)):
         ingest = shelve.open(files[i])
-        print "##----------------------------------------------------------##"
-        print "Contents of ", files[i]
+        print("##----------------------------------------------------------##")
+        print("Contents of ", files[i])
         for x in ingest:
-                print x
-                "---------------------"
-                print ingest[x]
-                print
+                print(x)
+                print("---------------------")
+                print(ingest[x])
+                print()
         ingest.close()
