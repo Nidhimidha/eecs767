@@ -48,7 +48,7 @@ else:
         ## Only work on the query if we're passed something
         if query != "":
                 ## Build the query
-                queryInstance = similarity('processingOutput.db')
+                queryInstance = similarity('processingOutput.db','processingArtifacts.db')
                 #tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
                 tokenizedQuery = queryInstance.tokenizeQuery(query)
                 normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
