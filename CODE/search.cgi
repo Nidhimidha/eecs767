@@ -56,7 +56,7 @@ else:
                 if normalizedQuery:
                         ## Search corpus
                         queryInstance.similarity(normalizedQuery)
-                        queryInstance.proximity(tokenizedQuery)      
+                        queryInstance.proximity()      
                 queryInstance.writeOutput('queryOutput')
                         
 
