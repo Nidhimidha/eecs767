@@ -77,6 +77,7 @@ class similarity:
         self.proxVector = proc1['proxVector']
         self.termIndex = proc1['termIndex']
         self.termDict = proc1['termDict']
+        self.titles = proc1['title_map']
         proc1.close()
         proc2 = shelve.open(infile2)
         self.docVector = proc2['docVector']
