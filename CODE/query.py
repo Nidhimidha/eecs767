@@ -71,7 +71,7 @@ def timing(f):
 
 class similarity:
 
-     def __init__(self, infile1,infile2):
+    def __init__(self, infile1,infile2):
         proc1 = shelve.open(infile1)
         self.doc_key = proc1['doc_key']
         self.proxVector = proc1['proxVector']
