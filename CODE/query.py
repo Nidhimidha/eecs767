@@ -86,6 +86,7 @@ class similarity:
         self.rankedOutput = []
         self.queryVector=[]
         self.queryList=[]
+        self.termList=[]
 
     def tokenizeQuery(self, query):
         return func_tokenize(query)
@@ -107,6 +108,7 @@ class similarity:
                         flag = True
                         for l in range(len(self.termDict[k])):
                             if self.termDict[k][l] != 0:
+                                self.termList.append(k)
                                 self.queryList.append(l)
             else:
                 idf = 0
@@ -149,7 +151,7 @@ class similarity:
 
         if self.docVector:
             for i in range(len(self.queryList)):
-                similarityVector.append(float("{0:.2f}".format(self.similarityDistance(normalizedQuery, self.docVector[i]))))
+                similarityVector.append(float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i]))))
             indexList = sorted(range(len(similarityVector)), key=lambda k: similarityVector[k])
 
         for i in indexList:
@@ -162,30 +164,33 @@ class similarity:
         self.rankedOutput.append(similarityVector)
 
     #@timing
-    def proximity(self, query):
+    def proximity(self):
 
-        for k in range(len(self.proxVector)):
-            count = 0
-            for i in range(len(query)):
-                for term in self.termIndex:
-                    if query[i] == term:
-                        self.index1 = self.termIndex[term][1]
-                        count = count + 1
-                    if i != (len(query)-1):
-                        if query[i+1] == term:
-                            self.index2 = self.termIndex[term][1]
+        index1=0
+        index2=0
+        count=0
 
-                try:
-                    val1 = str(self.proxVector[k][self.index1]).replace("[", "").replace("]", "")
-                    val2 = str(self.proxVector[k][self.index2]).replace("[", "").replace("]", "")
-                except:
-                    val1 = None
-                    val2 = None
-                    pass
-                if val1 and val2:
-                        if not val1.__contains__(",") and not val2.__contains__(","):
-                            value = int(val1) - int(val2)
-                            self.result.append(abs(value))
+        for i in self.termList:
+            if not index1:
+                index1 = self.termIndex[i][1]
+                count = count + 1
+            else:
+                index2 = self.termIndex[i][1]
+
+        for k in self.queryList:
+            try:
+                val1 = str(self.proxVector[k][index1]).replace("[", "").replace("]", "")
+                val2 = str(self.proxVector[k][index2]).replace("[", "").replace("]", "")
+            except:
+                val1 = None
+                val2 = None
+                pass
+            
+            if val1 and val2:
+                if not val1.__contains__(",") and not val2.__contains__(","):
+                    value = int(val1) - int(val2)
+                    self.result.append(abs(value))
+                    
 
     def writeOutput(self, outFile):
         out = shelve.open(outFile)
@@ -228,7 +233,7 @@ def main():
     tokenizedQuery = queryInstance.tokenizeQuery(["truck", "arriv"])
     normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
     queryInstance.similarity(normalizedQuery)
-    queryInstance.proximity(tokenizedQuery)
+    queryInstance.proximity()
 
     #normalizedQuery = queryInstance.normalizeQuery(["truck", "arriv"])
     #queryInstance.similarity(normalizedQuery)
