@@ -36,6 +36,8 @@ else:
         queryVector = form.getvalue("que", "")  # The current query vector
         page = form.getvalue("page", 0)         # The current page
 
+        query = "protocol"
+
         page = int(page)
 
         ## If page coming in, number is human not index - need to fix
@@ -49,14 +51,13 @@ else:
         if query != "":
                 ## Build the query
                 queryInstance = similarity('processingOutput.db','processingArtifacts.db')
-                #tokenizedQuery = queryInstance.tokenizeQuery("truck arrived of")
                 tokenizedQuery = queryInstance.tokenizeQuery(query)
                 normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
                 ## If at least one term from query found in corpus
                 if normalizedQuery:
                         ## Search corpus
                         queryInstance.similarity(normalizedQuery)
-                        queryInstance.proximity(tokenizedQuery)      
+                        queryInstance.proximity()      
                 queryInstance.writeOutput('queryOutput')
                         
 
@@ -67,10 +68,14 @@ else:
         ## Get the results
         if query != "":
                 ans = queryInstance.rankedOutput # results and rank
-                que = queryInstance.queryVector  # query vector
-                ques = ':'.join(map(str,que))    # query vector as a string
-                res = ans[0]                     # results
-                ran = ans[1]                     # ranks
+                if len(ans) == 2:
+                        que = queryInstance.queryVector  # query vector
+                        ques = ':'.join(map(str,que))    # query vector as a string
+                        res = ans[0]                     # results
+                        ran = ans[1]                     # ranks
+                else:
+                        res = []
+                        ans = []
         else:
                 res = []
                 ans = []
@@ -94,7 +99,7 @@ else:
                                 top: 0px;
                                 left: 0px;
                                 width: 100%;
-                                height: 50px;
+                                height: 40px;
                                 background: steelblue;
                         }
                         #header h1 {
@@ -152,6 +157,14 @@ else:
                         #results p {
                                 padding-left: 10px;
                         }
+                        #paging {
+                                position: fixed;
+                                background: #fff;
+                                left: 0px;
+                                bottom: 30px;
+                                width: 100%;
+                                height: 30px;
+                        }
                         .blank {
                                 background-color: #fff;
                         }
@@ -171,7 +184,7 @@ else:
                                 bottom: 0px;
                                 left: 0px;
                                 width: 100%;
-                                height: 50px;
+                                height: 30px;
                                 color: white;
                                 text-align: center;
                                 background: steelblue;
@@ -189,11 +202,21 @@ else:
                                         <input type="text" name="query" value="%s"/>
                                         <input type="submit" name="submit" value="Go"/>
                                 </form>
+        """ % (cgi.escape(query)))
+
+        if len(res) > 0:
+                print( """
                                 <p>Found %s results (%s)</p>
                                 <p>Showing page %s of %s page(s)</p>
                         </div>
                         <div id="results">
-        """ % (cgi.escape(query), len(res), exe, page+1, math.ceil(len(res)/numresults)))
+                """ % (len(res), exe, page+1, math.ceil(len(res)/numresults)))
+        else:
+                print( """
+                                <p>Took %s to find no results</p>
+                        </div>
+                        <div id="results">
+                """ % (exe))
 
         # k and (res[i]) = result filename
         # relURL = link w/ doc id and query vector parameters
@@ -217,51 +240,49 @@ else:
                         <input type='hidden' name='did' value='%s'/>
                 """ % str(res[i][k][0])
 
+                ## The title is the TITLE from title_map
+                ## The link is the URL from title_map
                 print( """
                         <p>
-                                <p class="title">%s. %s %s
+                                <p class="title">%s. <a href="%s">%s</a> %s
                                 (<input type="submit" name="rel" value="More Like This" />)</p>
-                                <p class="link"><a href="#">%s</a></p>
                                 <p class="rank">Ranking: %s</p>
                                 <p class="summary">%s</p>
                         </p>
                         </form>
-                """ % (i+1, k, relURL, res[i][k][2], ran[i], 'unknown'))
+                """ % (i+1, res[i][k][2], queryInstance.titles[k][0], relURL, ran[i], 'unknown'))
                 
                 i += 1
                 if i < len(res):
                         print( """
                                 <p class="blank">
-                                &nbsp;
+                                        <br /><br /><br />
+                                        <br /><br /><br />
                                 </p>
                         """)
 
-        p = 1
-        link = '<p align="center"> Page: '
+        if len(res) > 0:
+                p = 1
+                link = '<p align="center"> Page: '
 
-        ## Make sure we're passing back to the same page
-        print( """
-                
-                <form method="post" action="search.cgi">
-                        <input type="hidden" name="query" value="%s" />
-        """ % (query))
+                ## Make sure we're passing back to the same page
+                print( """
+                        </div>
+                        <div id="paging">
+                        <form method="post" action="search.cgi">
+                                <input type="hidden" name="query" value="%s" />
+                """ % (query))
+        
+                while p <= math.ceil(len(res)/numresults):
+                        if p-1 != page:
+                                link += "<input type='submit' name='page' value='" + str(p) + "'/>\n"
+                        else:
+                                link += " " + str(p) + "\n "
+                        p += 1
 
-        while p <= math.ceil(len(res)/numresults):
-                if p-1 != page:
-                        #link += "<a href='" + relURL + "&page=" + str(p) + "'>"+str(p)+"</a> "
-                        link += "<input type='submit' name='page' value='" + str(p) + "'/>\n"
-                else:
-                        link += " " + str(p) + "\n "
-                p += 1
-
-        ## If no query - no pages...
-        if query != "":
                 print( link+"</p>\n</form>" )
-
+        
         print( """
-                        <br /><br /><br /><br />
-                        <br /><br /><br /><br />
-                        <br /><br /><br /><br />
                         </div>
                         <div id="footer">
                                 <p>Spring 2018 &middot;

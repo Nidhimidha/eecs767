@@ -47,8 +47,9 @@ file_format='file://' #linux format
 #path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/docsnew/') ##Blake's MAC
 #path = ('/Users/blakebryant/Documents/_KU_Student/EECS_767_Info_Retrieval/project/cached_docs/') ##Blake's MAC
 
-#path = ('/home/splunk/Documents/EECS_767/Project/cached_docs/')
-path = ('/home/splunk/Documents/EECS_767/Project/test_docs/')
+path = ('/home/splunk/Documents/EECS_767/Project/cached_docs/')
+#path = ('/home/splunk/Documents/EECS_767/Project/test_docs/')
+#path = ('/home/splunk/Documents/EECS_767/Project/docsnew/')
 
 #path = ('/home/splunk/Documents/EECS_767/Project/_medium_doc_sample/')
 #path = ('/home/splunk/Documents/EECS_767/Project/_large_doc_sample/')
@@ -96,7 +97,10 @@ def func_get_directory_name():
 #@timing #comment out to remove timing
 def func_tokenize(raw_input):
     try:
-        stop_words = set(stopwords.words('english'))
+        #stop_words = set(stopwords.words('english'))
+        new_words_list=stopwords.words('english')
+        new_words_list.append('home')# adding home to stop words list because it is in every document
+        stop_words = set(new_words_list)
     except:
         print ('Error creating stop words.  Please verify the stopwords were imported prior to running this program')
         print ('Run the following commands in a python shell to download the stop words')
@@ -108,8 +112,12 @@ def func_tokenize(raw_input):
             #tags = re.compile('(b\')((<script.*?>).*?(</script>))|((<style.*?>).*?(</style>))|(<.*?>)|(<.*?/>)|(</.*?>)|(&\w+;)|(html)|(\\\\n)|(\\\\x\w\w)',re.DOTALL) #works at removing style tags
             #tags = re.compile('(<script>.*?</script>)|(<noscript>.*?</noscript>)|(<!--.*?-->)|(<.*?>)|(<.*?>\w)',re.DOTALL)
             #tags = re.compile('(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)|(<.*?>)|((\\u[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ]+)*)',re.DOTALL)
-            tags = re.compile('(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)',re.DOTALL)
-
+            #tags = re.compile('(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)',re.DOTALL)
+            #tags = re.compile('(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)|([\\u2000-\\u2100])|(\\u00f8)|(\\u00b0)|([\\u0500-\\u0600])|([\\u5000-\\u6000])',re.DOTALL)
+            tags = re.compile('(^<.*?>)|(^<!.*?>)|(^<script>.*?</script>)|(^<noscript>.*?</noscript>)|([\\u0080-\\uFFEF])',re.DOTALL)
+            #tags = re.compile(r'(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)|(\\u\d*[\s|\w*])',re.DOTALL)
+            #tags = re.compile(r'(<!.*?>)|(<script>.*?</script>)|(<noscript>.*?</noscript>)|([^\\u0200-\\uFFFF])',re.DOTALL)##attempt to remove unicode
+            reg_numbers = re.compile(r'(\s\d+\s)')
         except:
             print ('Error in regex', sys.exc_info()[0], sys.exc_info()[1])
  
@@ -138,11 +146,13 @@ def func_tokenize(raw_input):
             #right_num_spaces=" "*256
             punctuation =re.compile('['+string.punctuation+']')
             line= re.sub(punctuation,' ',line)#remove punctuation with regex but replace with a space to preserve words
+            #line = re.sub(reg_numbers,'',line)#remove numbers from string
             line=line.lower().split()#convert to lowercase and split into words
            
             
         except:
-            print ('Error Changing case, removing punctuation and spliting', sys.exc_info()[0], sys.exc_info()[1])               
+            print ('Error Changing case, removing punctuation and spliting', sys.exc_info()[0], sys.exc_info()[1])  
+                     
         try:
             line=[word for word in line if word not in stop_words] #remove stop words from raw line
         except:
@@ -370,7 +380,7 @@ def main():
     index_data.func_read_download_manifest(path)
     index_data.func_open_files(path)   
     index_data.func_create_index() 
-    #index_data.func_json_out()#May be useful for debugging
+    index_data.func_json_out()#May be useful for debugging
     index_data.func_export_data_via_shelve()
     print ('Program complete!')
 if __name__ == "__main__":    
