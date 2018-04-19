@@ -92,11 +92,15 @@ class genVSMArray:
                         self.prox.append( { x: self.proximity[x] } )
 
                 ## Initialize proxVector Array (for storing proximity)
-                self.proxVector = [ []*len(self.index) for _
-                        in range(len(self.doc_key)) ]
+                self.proxVector = {}
+                #self.proxVector = [ []*len(self.index) for _
+                #        in range(len(self.doc_key)) ]
 
                 ## Initialize the termIndex, termDict
                 self.termIndex = {}
+                for i in range(len(self.mypk)):
+                        self.termIndex[self.mypk[i]] = [i]
+
                 self.termDict = {}
 
         ## Create tf-idf weight
@@ -118,7 +122,9 @@ class genVSMArray:
                         idf = log10(len(self.index[i][word]) / float(df))
                         
                         # Store the term IDF
-                        self.termIndex[word] = [float("{0:.3f}".format(idf))]
+                        #self.termIndex[word] = [float("{0:.3f}".format(idf))]
+                        self.termIndex[word].insert(0,
+                                float("{0:.3f}".format(idf)))
 
                         # Calculate tf-idf weights (not normalized)
                         # |Wi| = sqrt(sum(squared(idf)))
@@ -158,7 +164,9 @@ class genVSMArray:
         ## Create a term dictionary - must be after genProx (for termIndex) 
         def genTermDict(self):
                 print("    Creating term vector dictionary")
+
                 ## Go through the termIndex and create the dictionary
+                print("        Building Dictionary")
                 for k in self.termIndex:
                         wi = self.termIndex[k][1]
                         termWeights = []
@@ -170,33 +178,44 @@ class genVSMArray:
                         self.termDict[k] = termWeights
 
 
-        ## Create the proximity and term index
+        ## Create the proximity
         def genProx(self):
-                print("    Modifying proximity and term index")
+                print("    Modifying proximity")
+
+                for t in range(len(self.prox)):
+                        term = self.mypk[t]
+                        
+                        ## Initialize document dictionary for term
+                        self.proxVector[term] = {}
+
+                        ## Go through each tuple
+                        for mytuple in self.prox[t][term]:
+                                ## First value is the doc (key)
+                                ## Second value is a prox
+                                if mytuple[0] not in self.proxVector[term]:
+                                        ## Initialize key
+                                        self.proxVector[term][mytuple[0]] = []
+
+                                self.proxVector[term][mytuple[0]].append(mytuple[1])
+
                 ## Go through each document
-                ## Use numdocs 
-                #for d in range(len(self.doc_key)):
-                for d in range(self.numdocs):
-                        #doc = self.doc_key[d].keys()[0]
-                        ## Go through each term
-                        for t in range(len(self.prox)):
-                                #term = self.prox[t].keys()[0]
-                                term = self.mypk[t]
-
-                                ## Initialize term array
-                                self.proxVector[d].append([])
-
-                                ## Build term index if first pass
-                                if d < 1:
-                                        self.termIndex[term].append(t)
-
-                                ## Go through each tuple
-                                for mytuple in self.prox[t][term]:
-                                        ## if tuple[0] = d, then append prox
-                                        ## for this word
-                                        #if mytuple[0] == doc:
-                                        if mytuple[0] == d:
-                                                self.proxVector[d][t].append(mytuple[1])
+#                for d in range(self.numdocs):
+#                        ## Go through each term
+#                        for t in range(len(self.prox)):
+#                                term = self.mypk[t]
+#
+#                                ## Initialize term array
+#                                self.proxVector[d].append([])
+#
+#                                ## Build term index if first pass
+#                                if d < 1:
+#                                        print(term,"::",t)
+#                                        self.termIndex[term].append(t)
+#
+#                                ## Go through each tuple
+#                                for mytuple in self.prox[t][term]:
+#                                        if mytuple[0] == d:
+#                                                self.proxVector[d][t].append(mytuple[1])
 
         #@timing ## Uncomment to see discrete timing
         def writeOutput(self, outFile):
@@ -206,7 +225,7 @@ class genVSMArray:
                 out = shelve.open(outFile)
                 out['doc_key'] = self.doc_key
                 out['termDict'] = self.termDict
-                out['proxVector'] = self.proxVector
+                out['proxDict'] = self.proxVector
                 out['termIDF'] = self.termIndex
                 out['title_map'] = self.titles
                 out.close()
