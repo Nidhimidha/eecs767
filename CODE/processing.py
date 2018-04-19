@@ -31,8 +31,10 @@ class genVSMArray:
         ## Sorts the index
         #@timing ## Uncomment to see discrete timing
         def __init__(self, inFile):
+                print("    Initializing Processing")
+
                 ## Pull in the data structure(s) from ingest
-                print("    Ingesting ", inFile)
+                print("        Ingesting ", inFile)
                 try:
                         ingest = shelve.open(inFile)
                 except:
@@ -40,6 +42,7 @@ class genVSMArray:
                         ingest = shelve.open(x)
                         pass
 
+                ## Data from ingest
                 self.index = ingest['index']
                 self.doc_key = ingest['doc_key']
                 self.proximity = ingest['proximity']
@@ -52,19 +55,15 @@ class genVSMArray:
                 ## { term : [counts], ...
                 ## to
                 ## [ {term : [counts] }, ...
-                #mylist = sorted(self.index.iterkeys())
+                ## In order to sort
+                print("        Sorting Index")
                 self.mylist = [key for key in sorted(self.index.keys())]
                 tempIndex = []
                 for x in self.mylist:
                         tempIndex.append( { x : self.index[x] } )
                 self.index = tempIndex
 
-                #self.index.sort(key=lambda k: k.keys())
-                #sorted(self.index.iterkeys())
-
                 ## Initialize docLength Array (for normalizing weights)
-                #w = self.index[0].keys()[0]
-                #w = self.index.keys()[0]
                 w = self.mylist[0]
                 self.docLength = [0]*len(self.index[0][w])
                 
@@ -74,7 +73,7 @@ class genVSMArray:
                 ## [ { doc_name : [doc_id, loc, url] }, ...
                 ## Using the doc id as the index into the array
                 ## Length of array based on numdocs from ingest
-                #tempDocs = [{}]*len(self.doc_key)
+                print("        Sorting doc_key")
                 tempDocs = [{}]*self.numdocs
                 for x in self.doc_key:
                         tempDocs[self.doc_key[x][0]] = { x : self.doc_key[x] }
@@ -84,22 +83,19 @@ class genVSMArray:
                 ## Length of array based on numdocs from ingest
                 self.docVector = [ [0]*len(self.index) for _ 
                         in range(self.numdocs) ]
-                        #in range(len(self.doc_key)) ]
-                #self.docVector = [ [0]*len(self.index[0]) for _ 
-                #        in range(len(self.doc_key[0])) ]
 
                 ## Restructure proximity and sort
+                print("        Sorting proximity")
                 self.prox = []
                 self.mypk = [key for key in sorted(self.proximity.keys())]
                 for x in self.mypk:
                         self.prox.append( { x: self.proximity[x] } )
-                #self.prox.sort(key = lambda k: k.keys()[0])
 
                 ## Initialize proxVector Array (for storing proximity)
                 self.proxVector = [ []*len(self.index) for _
                         in range(len(self.doc_key)) ]
 
-                ## Initialize the termIndex and termVector
+                ## Initialize the termIndex, termDict
                 self.termIndex = {}
                 self.termDict = {}
 
@@ -107,10 +103,11 @@ class genVSMArray:
         #@timing ## Uncomment to see discrete timing
         def genTFIDF(self):
                 print("    Generating Vector Space Model")
+
                 ## - First create the df for each term
                 ## Loop through index and construct Vector Space Model
+                print("        Looping through the index")
                 for i in range(len(self.index)):
-                        #word = self.index[i].keys()[0]
                         word = self.mylist[i]
 
                         # count non-zero indices in arrays
@@ -119,7 +116,10 @@ class genVSMArray:
                         # Calculate idf: log(n/df), where n is length 
                         # of array (# of docs)
                         idf = log10(len(self.index[i][word]) / float(df))
-                        self.termIndex[word] = [float("{0:.3f}".format(idf))]
+                        
+                        # Store the term IDF
+                        self.termIDF[word] = float("{0:.3f}".format(idf))
+                        #self.termIndex[word] = [float("{0:.3f}".format(idf))]
 
                         # Calculate tf-idf weights (not normalized)
                         # |Wi| = sqrt(sum(squared(idf)))
@@ -138,10 +138,10 @@ class genVSMArray:
                         for x in range(len(self.docLength)):
                             self.docLength[x] += l[x]
 
-                        # Place in dictionary (for now)
-                        #self.index[i]['df'] = df
-                        #self.index[i]['idf'] = "{0:.3f}".format(idf)
-                        #self.index[i]['w'] = w
+                print("        Creating Term Dictionary from VSM")
+                for i in range(len(self.docVector)): # Document
+                        for j in range(len(self.docVector[i])): # Term
+                                print(self.docVector[i][j])
 
         ## Normalize the vectors using docLength - establish unit vectors
         #@timing ## Uncomment to see discrete timing

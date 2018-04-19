@@ -380,7 +380,7 @@ def main():
     index_data.func_read_download_manifest(path)
     index_data.func_open_files(path)   
     index_data.func_create_index() 
-    index_data.func_json_out()#May be useful for debugging
+    #index_data.func_json_out()#May be useful for debugging
     index_data.func_export_data_via_shelve()
     print ('Program complete!')
 if __name__ == "__main__":    
