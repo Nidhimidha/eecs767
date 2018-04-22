@@ -4,6 +4,18 @@ from math import log10, sqrt
 import ingest
 from ingest import *
 import re
+import time
+from functools import wraps
+from operator import itemgetter
+import collections
+
+#
+# Python EECS 767 Query Processing
+# Author: Nidhi Midha
+# KU Student ID: 2924365
+# Date started: 2/11/2018
+# Date finished: xx/xx/xxxx
+#
 
 
 ## INPUT
@@ -63,66 +75,68 @@ def timing(f):
         t0 = time.time()
         exe = f(*args, **kwargs)
         t1 = time.time()
-        print ("\t%s Execution Time (sec): %s" %
-               (f.__name__, str(t1 - t0)))
+        print("\t%s Execution Time (sec): %s" %
+              (f.__name__, str(t1 - t0)))
         return exe
 
     return ft
 
+
 class similarity:
 
-    def __init__(self, infile1,infile2):
+    def __init__(self, infile1, infile2):
         proc1 = shelve.open(infile1)
         self.doc_key = proc1['doc_key']
-        self.proxVector = proc1['proxVector']
-        self.termIndex = proc1['termIndex']
+        self.proxVector = proc1['proxDict']
+        self.termIndex = proc1['termIDF']
         self.termDict = proc1['termDict']
         self.titles = proc1['title_map']
         proc1.close()
         proc2 = shelve.open(infile2)
         self.docVector = proc2['docVector']
         proc2.close()
-        self.result = []
         self.weightedQuery = []
         self.rankedOutput = []
-        self.queryVector=[]
-        self.queryList=[]
-        self.termList=[]
+        self.queryVector = []
+        self.queryList = []
+        self.termList = []
+        self.proxRankedOutput = []
 
     def tokenizeQuery(self, query):
         return func_tokenize(query)
 
     def findWholeWord(self, word, query):
-      for x in query:
-        result = re.findall('\\b' + word + '\\b', x, flags=re.IGNORECASE)
-        if len(result) > 0:
-            return True
+        for x in query:
+            result = re.findall('\\b' + word + '\\b', x, flags=re.IGNORECASE)
+            if len(result) > 0:
+                return True
 
-    #@timing
+    # @timing
     def normalizeQuery(self, query):
 
         self.weightedQuery = [0] * len(self.termIndex)
         flag = False
         for k in self.termIndex:
-            if self.findWholeWord(k,query):
-                        idf = self.termIndex[k][0]
-                        flag = True
-                        for l in range(len(self.termDict[k])):
-                            if self.termDict[k][l] != 0:
-                                self.termList.append(k)
-                                self.queryList.append(l)
+            if self.findWholeWord(k, query):
+                idf = self.termIndex[k][0]
+                flag = True
+                for l in range(len(self.termDict[k])):
+                    self.termList.append(k)
+                    self.queryList.append(self.termDict[k][l][0])
             else:
                 idf = 0
 
             self.weightedQuery[self.termIndex[k][1]] = idf
-        self.queryList=list(set(self.queryList))
+        self.queryList = list(set(self.queryList))
+        self.termList = list(set(self.termList))
+
         if flag:
             sumOfSquares = 0
             for i in range(len(self.weightedQuery)):
                 sumOfSquares += self.weightedQuery[i] * self.weightedQuery[i]
             length = sqrt(sumOfSquares)
             self.queryVector = [float("{0:.4f}".format(self.weightedQuery[i] / length))
-                           for i in range(len(self.weightedQuery))]
+                                for i in range(len(self.weightedQuery))]
 
         return self.queryVector
 
@@ -139,7 +153,7 @@ class similarity:
         sim = sim / (self.vectorlength(w1) * self.vectorlength(w2))
         return sim
 
-    #@timing
+    # @timing
     def similarity(self, normalizedQuery):
         indexList = []
         docIndices = []
@@ -152,7 +166,8 @@ class similarity:
 
         if self.docVector:
             for i in range(len(self.queryList)):
-                similarityVector.append(float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i]))))
+                similarityVector.append(
+                    float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i]))))
             indexList = sorted(range(len(similarityVector)), key=lambda k: similarityVector[k])
 
         for i in indexList:
@@ -163,42 +178,61 @@ class similarity:
         similarityVector.reverse()
         self.rankedOutput.append(docIndices)
         self.rankedOutput.append(similarityVector)
+        # self.rankedOutput = [self.rankedOutput[i][0:20] for i in range(len(self.rankedOutput))]
 
-    #@timing
+    # @timing
     def proximity(self):
+        documentIndices = []
+        self.proxArray = {}
+        for i in range(len(self.queryList)):
+            self.proxArray[self.queryList[i]] = {"count": 1, "proximity": 1000}
 
-        index1=0
-        index2=0
-        count=0
+        for n, k in enumerate(self.termList[:-1]):
+            for i in self.proxVector[self.termList[n]]:
+                for j in self.proxVector[self.termList[n + 1]]:
 
-        for i in self.termList:
-            if not index1:
-                index1 = self.termIndex[i][1]
-                count = count + 1
-            else:
-                index2 = self.termIndex[i][1]
+                    if i == j:
+                        for l in range(len(self.proxVector[self.termList[n]][i])):
+                            for m in range(len(self.proxVector[self.termList[n + 1]][j])):
+                                count = 0
+                                value = int(self.proxVector[self.termList[n]][i][l]) - int(
+                                    self.proxVector[self.termList[n + 1]][j][m])
+                                count = self.proxArray[self.queryList[j]]["count"]
+                                count = count + 1
+                                self.proxArray[self.queryList[j]]["count"] = count
+                                self.proxArray[self.queryList[j]]["proximity"] = abs(value)
+                                break
 
-        for k in self.queryList:
-            try:
-                val1 = str(self.proxVector[k][index1]).replace("[", "").replace("]", "")
-                val2 = str(self.proxVector[k][index2]).replace("[", "").replace("]", "")
-            except:
-                val1 = None
-                val2 = None
-                pass
-            
-            if val1 and val2:
-                if not val1.__contains__(",") and not val2.__contains__(","):
-                    value = int(val1) - int(val2)
-                    self.result.append(abs(value))
-                    
+        newlist = collections.OrderedDict(sorted(self.proxArray.items(),
+                                                 key=lambda kv: (kv[1]['count'], -kv[1]['proximity']), reverse=True))
+
+        cosineVecIndices = []
+        for i in range(len(self.rankedOutput[0])):
+            cosineVecIndices.append([item[0] for item in list(self.rankedOutput[0][i].values())])
+
+        newSimilarityVector = []
+        for i in newlist.keys():
+            for j in cosineVecIndices:
+                val1 = str(j).replace("[", "").replace("]", "")
+                if i == int(val1):
+                    newSimilarityVector.append([cosineVecIndices.index(j), float("{0:.6f}".format(((float(
+                        self.rankedOutput[1][cosineVecIndices.index(j)])) * (float(
+                        list(newlist.values())[i]["count"]))) / (float(list(newlist.values())[i]["proximity"]))))])
+                    break
+        list1 = sorted(newSimilarityVector, key=itemgetter(1), reverse=True)
+
+        for i in range(len(list1)):
+            documentIndices.append(self.rankedOutput[0][list1[i][0]])
+
+        self.proxRankedOutput.append(documentIndices)
+        self.proxRankedOutput.append([i[1] for i in list1])
 
     def writeOutput(self, outFile):
         out = shelve.open(outFile)
         out['rankedOutput'] = self.rankedOutput
+        out['proxRankedOutput'] = self.proxRankedOutput
         out['queryVector'] = self.queryVector
         out.close()
-
 
     def showResult(self):
         ranks = []
@@ -209,9 +243,8 @@ class similarity:
         self.sliced.append(ranks)
         return self.sliced
 
-
-    def relevanceFeedback(self,relevantDoc):
-        query = shelve.open('OUTPUT/queryOutput')
+    def relevanceFeedback(self, infile, relevantDoc):
+        query = shelve.open(infile)
         self.queryVector = query['queryVector']
         query.close()
         a = 0.5
@@ -227,23 +260,26 @@ class similarity:
         self.writeOutput('OUTPUT/queryOutput')
         return self.showResult()
 
+
 @timing
 def main():
-    queryInstance = similarity('OUTPUT/processingOutput.db','OUTPUT/processingArtifacts.db')
+    queryInstance = similarity('OUTPUT/processingOutput.db', 'OUTPUT/processingArtifacts.db')
+    queryInstance = similarity()
     # TODO: get the query from cgi
     tokenizedQuery = queryInstance.tokenizeQuery(["truck", "arriv"])
     normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
     queryInstance.similarity(normalizedQuery)
     queryInstance.proximity()
 
-    #normalizedQuery = queryInstance.normalizeQuery(["truck", "arriv"])
-    #queryInstance.similarity(normalizedQuery)
-    #queryInstance.proximity(["truck", "arriv"])
+    # normalizedQuery = queryInstance.normalizeQuery(["truck", "arriv"])
+    # queryInstance.similarity(normalizedQuery)
+    # queryInstance.proximity(["truck", "arriv"])
     queryInstance.showResult()
     queryInstance.writeOutput('OUTPUT/queryOutput')
 
     # TODO: get the relevant doc from cgi
-    newResult = queryInstance.relevanceFeedback('D2')
+    newResult = queryInstance.relevanceFeedback('OUTPUT/queryOutput','D2')
+
 
 if __name__ == "__main__":
     main()
