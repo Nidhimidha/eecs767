@@ -47,7 +47,7 @@ except:
         pass
 
 ## Need to suck in the list of terms from processingOutput::termIndex
-query = list(ingest['termIndex'].keys())
+query = list(ingest['termDict'].keys())
 
 ## Need to get the document list from processingOutput::doc_key
 ## [ {doc name: [doc id, doc path, url]
