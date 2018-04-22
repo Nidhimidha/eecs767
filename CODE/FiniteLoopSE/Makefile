@@ -14,13 +14,13 @@ DURATION=1m
 
 ## The base path variable in ingest.py
 ## Deployed System
-#INGPATH=$(LOC)/INPUT/cached_docs/
+INGPATH=$(LOC)/INPUT/cached_docs/
 ## Provided dataset - be sure to unzip INPUT/docsnew.zip
 #INGPATH=$(LOC)/INPUT/docsnew/
 ## Control dataset based on class quiz (control group)
-INGPATH=$(LOC)/INPUT/control/
+#INGPATH=$(LOC)/INPUT/control/
 OUTPATH=$(LOC)/OUTPUT/
-OUTCACHE=$(OUTPATH)/CACHE/
+OUTCACHE=$(OUTPATH)CACHE/
 
 .DEFAULT: help
 help:
@@ -62,6 +62,7 @@ prepenv:
 		from collections import defaultdict;"
 	mkdir INPUT/cached_docs
 	mkdir OUTPUT
+	mkdir OUTPUT/CACHE
 		
 ## Keep in mind - the crawler will run for the DURATION specified above...
 crawl: src/web_crawler.py $(INGPATH)
@@ -109,7 +110,7 @@ html: src/html_summary.py $(OUTPATH)processingOutput.db $(INGPATH)
 	$(PYTHON) src/html_summary.py $(INGPATH) $(OUTPATH)processingOutput.db
 
 	## Copy processingOutput.db to the local cgi-bin directory
-	cp $(OUTPATH)htmlData.db $(CGIDIR)/
+	cp -R $(OUTCACHE) $(CGIDIR)/
 
 ## Test query
 query: src/query.py src/ingest.py $(OUTPATH)processingOutput.db

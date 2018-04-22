@@ -19,13 +19,13 @@ import shelve
 import time
 import sys
 from nltk.corpus import stopwords
+import threading
 
 print("Parsing HTML Files")
 
 inFile = 'OUTPUT/processingOutput.db'
 outDir = 'OUTPUT/CACHE'
 path = 'INPUT/control'
-htmlText = {}
 
 ## Since things can change - let's check to see if we were called as:
 ## html_summary.py <cache path> <processOutput.db>
@@ -76,17 +76,19 @@ ingest.close()
 ## Let's use this to make sure we have valide files to work on
 files = [ x for x in docList if isfile(join(path, x)) ]
 
-## Go through each document - we're going to do this the painful way
-## then go through each term and search
-## Should probably thread this process
-for c in range(len(files)):
-        ## Initialize htmlText for this document
-        htmlText[files[c]] = {}
+def parseMe(filename):
+        htmlText = {}
 
-        print("Looking at", join(path, files[c]))
+        ## Initialize htmlText for this document
+        #htmlText[files[c]] = {}
+        htmlText[filename] = {}
+
+        #print("Looking at", join(path, files[c]))
+        print("Looking at", join(path, filename))
 
         ## Read in the file and clean it up        
-        F = open(join(path, files[c]), 'r')
+        #F = open(join(path, files[c]), 'r')
+        F = open(join(path, filename), 'r')
         words = F.read()
         F.close()
 
@@ -126,23 +128,46 @@ for c in range(len(files)):
                         i = randint(0, len(found)-1)
 
                         ## Add it the dictionary
-                        htmlText[files[c]][query[y]] = found[i]
+                        #htmlText[files[c]][query[y]] = found[i]
+                        htmlText[filename][query[y]] = found[i]
         ## Now write out the cache file to the outDir using the filename
         ## of the original doc as the database filename
-        print("\tWriting output file", files[c]+'.db', 'to', outDir)
-        out = shelve.open(join(outDir, files[c]))
+        #print("\tWriting output file", files[c]+'.db', 'to', outDir)
+        print("\tWriting output file", filename+'.db', 'to', outDir)
+        #out = shelve.open(join(outDir, files[c]))
+        out = shelve.open(join(outDir, filename))
         out['htmlText'] = htmlText
         out.close()
         ## Reset htmlText for next document
-        htmlText = {}
+        #htmlText = {}
 
         ## Make sure we have a .db file
-        if isfile(join(outDir, files[c])):
+        #if isfile(join(outDir, files[c])):
+        if isfile(join(outDir, filename)):
                 ## Does not end in .db....
-                rename(join(outDir, files[c]), join(outDir, files[c]+'.db'))
+                #rename(join(outDir, files[c]), join(outDir, files[c]+'.db'))
+                rename(join(outDir, filename), join(outDir, filename+'.db'))
+
+## Go through each document - we're going to do this the painful way
+## then go through each term and search
+## Should probably thread this process
+threads = []
+for c in range(len(files)):
+        t = threading.Thread(target=parseMe, args=(files[c],))
+        threads.append(t)
+
+        #parseMe(files[c])
+
+## Start the threads
+for t in threads:
+        t.daemon = True
+        t.start()
+
+for t in threads:
+        t.join()
 
 t1 = time.time()
 
 print("Total Execution Time (sec): %s" % str(t1-t0))
-print("Processed %s files over %s words" % (len(files), len(query)))
+print("Processed %s files" % len(files))
 
