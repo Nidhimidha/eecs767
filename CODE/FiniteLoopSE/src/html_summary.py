@@ -18,11 +18,12 @@ from random import randint
 import shelve
 import time
 import sys
+from nltk.corpus import stopwords
 
 print("Parsing HTML Files")
 
 inFile = 'OUTPUT/processingOutput.db'
-outFile = 'OUTPUT/htmlData'
+outDir = 'OUTPUT/CACHE'
 path = 'INPUT/control'
 htmlText = {}
 
@@ -46,8 +47,17 @@ except:
         ingest = shelve.open(x)
         pass
 
+## Let's use the nltk stop words to prune this a bit
+nonwords = stopwords.words('english')
+stop = {}
+## Make it a dictionary for lookup
+for n in nonwords:
+        stop[n] = ''
+
 ## Need to suck in the list of terms from processingOutput::termIndex
-query = list(ingest['termDict'].keys())
+## Too slow
+#query = list(ingest['termIndex'].keys())
+## Get list from document itself
 
 ## Need to get the document list from processingOutput::doc_key
 ## [ {doc name: [doc id, doc path, url]
@@ -68,6 +78,7 @@ files = [ x for x in docList if isfile(join(path, x)) ]
 
 ## Go through each document - we're going to do this the painful way
 ## then go through each term and search
+## Should probably thread this process
 for c in range(len(files)):
         ## Initialize htmlText for this document
         htmlText[files[c]] = {}
@@ -83,8 +94,23 @@ for c in range(len(files)):
         words = re.sub('\s+',' ', words)
         words = re.sub('^.*<body .*?>', '', words, flags=re.I)
         words = re.sub('</body.*$', '', words, flags=re.I)
+        ## May need to do the same for <script to /script> tags
+        # words = re.sub('<script.*?/script>', '', words, flags=re.I)
         words = re.sub('<.*?>', '', words)
         words = re.sub('\s+',' ', words)
+        words = re.sub('&nbsp;', ' ', words, flags=re.I)
+        words = re.sub('[)(\*&\\/=>"\',\.:;@#]', ' ', words)
+
+        ## Create the query list based on the terms in the document
+        terms = {}
+        for t in words.split():
+                t = re.sub('\W', '', t)
+                ## If a stopword, blank it out
+                if t in stop:
+                        t = ''
+                if t != '':
+                        terms[t.lower()] = ''
+        query = list(terms.keys())
 
         ## Now look for all of the terms from the termIndex
         for y in range(len(query)):
@@ -101,30 +127,22 @@ for c in range(len(files)):
 
                         ## Add it the dictionary
                         htmlText[files[c]][query[y]] = found[i]
+        ## Now write out the cache file to the outDir using the filename
+        ## of the original doc as the database filename
+        print("\tWriting output file", files[c]+'.db', 'to', outDir)
+        out = shelve.open(join(outDir, files[c]))
+        out['htmlText'] = htmlText
+        out.close()
+        ## Reset htmlText for next document
+        htmlText = {}
 
-
-## Save the datastructure to our own db file
-print("\tWriting output file: ", outFile)
-out = shelve.open(outFile)
-out['htmlText'] = htmlText
-out.close()
-
-## Let's see if the shelve produced a .db file or not, if not - fix it
-if isfile(outFile):
-        ## Does not end in .db...
-        rename(outFile, outFile+'.db')
+        ## Make sure we have a .db file
+        if isfile(join(outDir, files[c])):
+                ## Does not end in .db....
+                rename(join(outDir, files[c]), join(outDir, files[c]+'.db'))
 
 t1 = time.time()
 
-print("Execution Time (sec): %s" % str(t1-t0))
-
-#        print("\tApplying bold")
-#        ## Make all of the query piece bold
-#        ## This will need to be done in search.cgi on the final listing
-#        for y in range(len(query)):
-#                bold = '<b>'+query[y]+'</b>'
-#                summary = re.sub(str(query[y]), str(bold), summary, flags=re.I)
-#
-#       print('\t\t', summary)
-
+print("Total Execution Time (sec): %s" % str(t1-t0))
+print("Processed %s files over %s words" % (len(files), len(query)))
 
