@@ -14,12 +14,13 @@ DURATION=1m
 
 ## The base path variable in ingest.py
 ## Deployed System
-INGPATH=$(LOC)/INPUT/cached_docs/
+#INGPATH=$(LOC)/INPUT/cached_docs/
 ## Provided dataset - be sure to unzip INPUT/docsnew.zip
 #INGPATH=$(LOC)/INPUT/docsnew/
 ## Control dataset based on class quiz (control group)
-#INGPATH=$(LOC)/INPUT/control/
+INGPATH=$(LOC)/INPUT/control/
 OUTPATH=$(LOC)/OUTPUT/
+OUTCACHE=$(OUTPATH)/CACHE/
 
 .DEFAULT: help
 help:
@@ -32,7 +33,7 @@ help:
 	@echo "make process"
 	@echo "		perform processing of corpus"
 	@echo "make html"
-	@echo "		create html text summaries"
+	@echo "		create html text summaries (saved at $(OUTCACHE)"
 	@echo "make query"
 	@echo "		run the query module - for testing purposes"
 	@echo "make webprep"
@@ -41,13 +42,10 @@ help:
 	@echo "make seedata"
 	@echo "		display the contents of the processed data"
 	@echo "make clean"
-	@echo "		removes:"
-	@echo "			$(WEBDIR)/search.html"
-	@echo "			$(WEBDIR)/$(CGIDIR)/search.cgi"
-	@echo "			$(WEBDIR)/$(CGIDIR)/query.py"
-	@echo "			$(WEBDIR)/$(CGIDIR)/ingest.py"
-	@echo "			$(WEBDIR)/$(CGIDIR)/processingOutput.db"
-	@echo "			$(WEBDIR)/$(CGIDIR)/__pycache__"
+	@echo "		removes copied falls from:"
+	@echo "			$(WEBDIR)"
+	@echo "			$(WEBDIR)/$(CGIDIR)"
+	@echo "			$(OUTCACHE)
 	@echo "			src/ingest.pyc"
 	@echo "			src/__pycache__"
 
@@ -121,6 +119,7 @@ query: src/query.py src/ingest.py $(OUTPATH)processingOutput.db
 webprep: src/ingest.py src/query.py $(OUTPATH)processingOutput.db search.html $(CGIDIR)/search.cgi
 	## Copy the latest source to the local cgi-bin
 	cp src/query.py src/ingest.py $(CGIDIR)
+	cp -R $(OUTCACHE) $(CGIDIR)
 
 	## Copy the data into the public_html area
 	cp search.html $(WEBDIR)
@@ -128,6 +127,7 @@ webprep: src/ingest.py src/query.py $(OUTPATH)processingOutput.db search.html $(
 	chmod 744 $(WEBDIR)/$(CGIDIR)/search.cgi
 	chmod 744 $(WEBDIR)/$(CGIDIR)/*.py
 	chmod 744 $(WEBDIR)/$(CGIDIR)/*.db
+	chmod -R 744 $(WEBDIR)/$(CGIDIR)/CACHE
 		
 ## Use seeShelve.py to see the contents of the shelve
 ## database files
@@ -143,6 +143,7 @@ clean: $(OUTPATH) $(WEBDIR) $(WEBDIR)/$(CGIDIR)
 	rm -f $(OUTPATH)/processingOutput.db
 	rm -f $(OUTPATH)/processingArtifacts.db
 	rm -f $(OUTPATH)/htmlData.db
+	rm -f $(OUTCACHE)/*.db
 	## Clean the web area
 	rm -f $(WEBDIR)/search.html 
 	rm -f $(WEBDIR)/$(CGIDIR)/search.cgi 
@@ -151,6 +152,7 @@ clean: $(OUTPATH) $(WEBDIR) $(WEBDIR)/$(CGIDIR)
 	rm -f $(WEBDIR)/$(CGIDIR)/processingOutput.db 
 	rm -f $(WEBDIR)/$(CGIDIR)/htmlData.db 
 	rm -rf $(WEBDIR)/$(CGIDIR)/__pycache__ 
+	rm -rf $(WEBDIR)/$(CGIDIR)/CACHE
 	## Clean our own house
 	rm -f $(CGIDIR)/query.py 
 	rm -f $(CGIDIR)/ingest.py 
@@ -158,5 +160,6 @@ clean: $(OUTPATH) $(WEBDIR) $(WEBDIR)/$(CGIDIR)
 	rm -f $(CGIDIR)/processingOutput.db 
 	rm -f $(CGIDIR)/htmlData.db
 	rm -rf $(CGIDIR)/__pycache__ 
+	rm -rf $(OUTCACHE)/*.db
 	rm -f src/ingest.pyc 
 	rm -rf src/__pycache__ 
