@@ -135,7 +135,7 @@ class similarity:
             for i in range(len(self.weightedQuery)):
                 sumOfSquares += self.weightedQuery[i] * self.weightedQuery[i]
             length = sqrt(sumOfSquares)
-            self.queryVector = [float("{0:.4f}".format(self.weightedQuery[i] / length))
+            self.queryVector = [float("{0:.6f}".format(self.weightedQuery[i] / length))
                                 for i in range(len(self.weightedQuery))]
 
         return self.queryVector
@@ -264,7 +264,6 @@ class similarity:
 @timing
 def main():
     queryInstance = similarity('OUTPUT/processingOutput.db', 'OUTPUT/processingArtifacts.db')
-    queryInstance = similarity()
     # TODO: get the query from cgi
     tokenizedQuery = queryInstance.tokenizeQuery(["truck", "arriv"])
     normalizedQuery = queryInstance.normalizeQuery(tokenizedQuery)
