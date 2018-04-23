@@ -170,10 +170,15 @@ class similarity:
                     float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i]))))
             indexList = sorted(range(len(similarityVector)), key=lambda k: similarityVector[k])
 
+        if self.docVector:
+            for i in self.queryList:
+                similarityVector.append(
+                    float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i]))))
+                similarityIndices.append([i,float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i])))])
+            indexList = sorted(similarityIndices, key=itemgetter(1), reverse=True)
         for i in indexList:
-            docIndices.append(self.doc_key[i])
+            docIndices.append(self.doc_key[i[0]])
 
-        docIndices.reverse()
         similarityVector.sort()
         similarityVector.reverse()
         self.rankedOutput.append(docIndices)
