@@ -7,6 +7,10 @@ import time
 import math
 from query import *
 
+## Configs
+numresults = 10         # Number of results per page
+cachedir = 'CACHE'      # relative directory where summary cache files are located
+
 ## Establish the page
 print('Content-Type: text/html\r\n\r\n')
 
@@ -164,8 +168,6 @@ else:
                                 </form>
         """ % (cgi.escape(query), doProxy))
 
-        numresults = 10                         # Number of results per page
-
         ## If page coming in, number is human not index - need to fix
         if page > 0:
                 page -= 1
@@ -235,22 +237,45 @@ else:
         # res[i][k][2] = result link
         # ran[i] = result rank
         # ??? = result title
+        titles = queryInstance.titles
+
         while i < len(res) and i < stop:
                 ## Need the filename
                 resFname = k = next(iter(res[i]))
 
-                ## Need the URL from the title_map
-                pURL = '#'
+                ## Need the URL from the doc_key
+                pURL = res[i][resFname][2]
 
                 ## Need the page title from title_map
-                ptitle = 'TITLE'
+                if bool(titles): # returns true if the title_map is not empty
+                        ptitle = titles[resFname][0]
+                else:
+                        ptitle = resFname # Title = filename...
 
                 ## Need the summary - hopefully this won't kill us
                 ## use the resFname(.db) to look up query in dictionary for summary text
                 psum = ''
-                for x in query:
-                        psum += "SUMMARY &middot; "
-                psum = psum[:-10]
+                if os.path.isfile(os.path.join(cachedir, resFname+'.db')):
+                        ## Open the file
+                        S = shelve.open(os.path.join(cachedir, resFname+'.db'))
+                        sums = S['htmlText'][resFname]
+                        ## Close the shelve file
+                        S.close()
+                        
+                        ## Go through and pull each query term's summary, 
+                        ##if it exists and concatenate
+                        for x in query:
+                                if x in sums:
+                                        psum += sums[x] + ' &middot; '
+                        if psum == '':
+                                ## No exact matches, grab first sum
+                                psum = sums[list(sums.keys())[0]] + ' &middot; '
+
+                        ## Remove trailing middot
+                        psum = psum[:-10]
+
+                else:
+                        psum = '<i>Details Unavailable</i>'
 
                 ## Need the rank
                 rank = ran[i]
