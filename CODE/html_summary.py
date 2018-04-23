@@ -151,20 +151,31 @@ def parseMe(filename):
 ## Go through each document - we're going to do this the painful way
 ## then go through each term and search
 ## Should probably thread this process
-threads = []
+#threads = []
 for c in range(len(files)):
-        t = threading.Thread(target=parseMe, args=(files[c],))
-        threads.append(t)
+        ## Make sure that we haven't cached this file already
+        ftest = join(outDir, files[c]+'.db')
+        if isfile(join(outDir, files[c]+'.db')):
+                print('Skipping %s, as the file has already been cached' %
+                         files[c])
+        else:
+                st0 = time.time()
+                parseMe(files[c])
+                st1 = time.time()
+                print("Completed processing of %s in %s sec" %
+                        (files[c], str(st1-st0)))
 
-        #parseMe(files[c])
+#        t = threading.Thread(target=parseMe, args=(files[c],))
+#        threads.append(t)
+
 
 ## Start the threads
-for t in threads:
-        t.daemon = True
-        t.start()
+#for t in threads:
+#        t.daemon = True
+#        t.start()
 
-for t in threads:
-        t.join()
+#for t in threads:
+#        t.join()
 
 t1 = time.time()
 
