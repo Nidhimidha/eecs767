@@ -177,7 +177,7 @@ else:
 
         ## FIXME: Just for now so we can run cmd line for debugging
         if query == "":
-                query = 'silver'
+                query = 'silver truck'
 
         ## Only work on the query if we're passed something
         if query != "":
@@ -200,7 +200,11 @@ else:
         
         ## Get the results
         if query != "":
-                ans = queryInstance.rankedOutput # results and rank
+                if doProxy:
+                        ans = queryInstance.proxRankedOutput
+                else:
+                        ans = queryInstance.rankedOutput # results and rank
+
                 if len(ans) == 2:
                         que = queryInstance.queryVector  # query vector
                         ques = ':'.join(map(str,que))    # query vector as a string
@@ -232,11 +236,6 @@ else:
                         <div id="results">
                 """ % (exe))
 
-        # k and (res[i]) = result filename
-        # relURL = link w/ doc id and query vector parameters
-        # res[i][k][2] = result link
-        # ran[i] = result rank
-        # ??? = result title
         titles = queryInstance.titles
 
         while i < len(res) and i < stop:
@@ -253,7 +252,8 @@ else:
                         ptitle = resFname # Title = filename...
 
                 ## Need the summary - hopefully this won't kill us
-                ## use the resFname(.db) to look up query in dictionary for summary text
+                ## use the resFname(.db) to look up query in dictionary 
+                ## for summary text
                 psum = ''
                 if os.path.isfile(os.path.join(cachedir, resFname+'.db')):
                         ## Open the file
@@ -264,7 +264,7 @@ else:
                         
                         ## Go through and pull each query term's summary, 
                         ##if it exists and concatenate
-                        for x in query:
+                        for x in query.split():
                                 if x in sums:
                                         psum += sums[x] + ' &middot; '
                         if psum == '':
@@ -274,6 +274,10 @@ else:
                         ## Remove trailing middot
                         psum = psum[:-10]
 
+                        for x in query.split():
+                                bold = '<b>'+x+'</b>'
+                                bold.upper()
+                                psum = re.sub(x, str(bold), psum, flags=re.I)
                 else:
                         psum = '<i>Details Unavailable</i>'
 
