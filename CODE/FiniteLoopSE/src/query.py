@@ -106,8 +106,7 @@ class similarity:
         return func_tokenize(query)
 
     def findWholeWord(self, word, query):
-        for x in query:
-            result = re.findall('\\b' + word + '\\b', x, flags=re.IGNORECASE)
+            result = re.findall('\\b' + word + '\\b', query, flags=re.IGNORECASE)
             if len(result) > 0:
                 return True
 
@@ -116,26 +115,25 @@ class similarity:
 
         self.weightedQuery = [0] * len(self.termIndex)
         flag = False
-        for k in self.termIndex:
-            if self.findWholeWord(k, query):
-                idf = self.termIndex[k][0]
-                flag = True
-                for l in range(len(self.termDict[k])):
-                    self.termList.append(k)
-                    self.queryList.append(self.termDict[k][l][0])
-            else:
-                idf = 0
-
-            self.weightedQuery[self.termIndex[k][1]] = idf
+        for x in query:
+            for k in self.termIndex:
+                if self.findWholeWord(k, x):
+                    idf = self.termIndex[k][0]
+                    flag = True
+                    for l in range(len(self.termDict[k])):
+                        if x not in self.termList:
+                            self.termList.append(x)
+                            self.queryList.append(self.termDict[k][l][0])
+                else:
+                    idf = 0
+                self.weightedQuery[self.termIndex[k][1]] = idf
         self.queryList = list(set(self.queryList))
-        self.termList = list(set(self.termList))
-
         if flag:
             sumOfSquares = 0
             for i in range(len(self.weightedQuery)):
                 sumOfSquares += self.weightedQuery[i] * self.weightedQuery[i]
             length = sqrt(sumOfSquares)
-            self.queryVector = [float("{0:.6f}".format(self.weightedQuery[i] / length))
+            self.queryVector = [float("{0:.4f}".format(self.weightedQuery[i] / length))
                                 for i in range(len(self.weightedQuery))]
 
         return self.queryVector
@@ -170,10 +168,15 @@ class similarity:
                     float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i]))))
             indexList = sorted(range(len(similarityVector)), key=lambda k: similarityVector[k])
 
+        if self.docVector:
+            for i in self.queryList:
+                similarityVector.append(
+                    float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i]))))
+                similarityIndices.append([i,float("{0:.4f}".format(self.similarityDistance(normalizedQuery, self.docVector[i])))])
+            indexList = sorted(similarityIndices, key=itemgetter(1), reverse=True)
         for i in indexList:
-            docIndices.append(self.doc_key[i])
+            docIndices.append(self.doc_key[i[0]])
 
-        docIndices.reverse()
         similarityVector.sort()
         similarityVector.reverse()
         self.rankedOutput.append(docIndices)
@@ -184,49 +187,53 @@ class similarity:
     def proximity(self):
         documentIndices = []
         self.proxArray = {}
-        for i in range(len(self.queryList)):
-            self.proxArray[self.queryList[i]] = {"count": 1, "proximity": 1000}
 
-        for n, k in enumerate(self.termList[:-1]):
-            for i in self.proxVector[self.termList[n]]:
-                for j in self.proxVector[self.termList[n + 1]]:
+        if (len(self.termList) == 1):
+            self.proxRankedOutput = self.rankedOutput
+        else:
+            for i in range(len(self.queryList)):
+                self.proxArray[self.queryList[i]] = {"count": 1, "proximity": 1000}
 
-                    if i == j:
-                        for l in range(len(self.proxVector[self.termList[n]][i])):
-                            for m in range(len(self.proxVector[self.termList[n + 1]][j])):
-                                count = 0
-                                value = int(self.proxVector[self.termList[n]][i][l]) - int(
-                                    self.proxVector[self.termList[n + 1]][j][m])
-                                count = self.proxArray[self.queryList[j]]["count"]
-                                count = count + 1
-                                self.proxArray[self.queryList[j]]["count"] = count
-                                self.proxArray[self.queryList[j]]["proximity"] = abs(value)
-                                break
+            for n, k in enumerate(self.termList[:-1]):
+                for i in self.proxVector[self.termList[n]]:
+                    for j in self.proxVector[self.termList[n + 1]]:
 
-        newlist = collections.OrderedDict(sorted(self.proxArray.items(),
-                                                 key=lambda kv: (kv[1]['count'], -kv[1]['proximity']), reverse=True))
+                        if i == j:
+                            for l in range(len(self.proxVector[self.termList[n]][i])):
+                                for m in range(len(self.proxVector[self.termList[n + 1]][j])):
+                                    count = 0
+                                    value = int(self.proxVector[self.termList[n]][i][l]) - int(
+                                        self.proxVector[self.termList[n + 1]][j][m])
+                                    count = self.proxArray[j]["count"]
+                                    count = count + 1
+                                    self.proxArray[j]["count"] = count
+                                    self.proxArray[j]["proximity"] = abs(value)
+                                    break
 
-        cosineVecIndices = []
-        for i in range(len(self.rankedOutput[0])):
-            cosineVecIndices.append([item[0] for item in list(self.rankedOutput[0][i].values())])
+            newlist = collections.OrderedDict(sorted(self.proxArray.items(),
+                                                     key=lambda kv: (kv[1]['count'], -kv[1]['proximity']),
+                                                     reverse=True))
+            cosineVecIndices = []
+            for i in range(len(self.rankedOutput[0])):
+                cosineVecIndices.append([item[0] for item in list(self.rankedOutput[0][i].values())])
 
-        newSimilarityVector = []
-        for i in newlist.keys():
-            for j in cosineVecIndices:
-                val1 = str(j).replace("[", "").replace("]", "")
-                if i == int(val1):
-                    newSimilarityVector.append([cosineVecIndices.index(j), float("{0:.6f}".format(((float(
-                        self.rankedOutput[1][cosineVecIndices.index(j)])) * (float(
-                        list(newlist.values())[i]["count"]))) / (float(list(newlist.values())[i]["proximity"]))))])
-                    break
-        list1 = sorted(newSimilarityVector, key=itemgetter(1), reverse=True)
+            newSimilarityVector = []
+            for i in newlist.keys():
+                for j in cosineVecIndices:
+                    val1 = str(j).replace("[", "").replace("]", "")
+                    if i == int(val1):
+                        newSimilarityVector.append([cosineVecIndices.index(j), float("{0:.6f}".format(((float(
+                            self.rankedOutput[1][cosineVecIndices.index(j)])) * (float(newlist[i]["count"]))) / (float(
+                            newlist[i]["proximity"]))))])
+                        break
+            list1 = sorted(newSimilarityVector, key=itemgetter(1), reverse=True)
 
-        for i in range(len(list1)):
-            documentIndices.append(self.rankedOutput[0][list1[i][0]])
+            for i in range(len(list1)):
+                documentIndices.append(self.rankedOutput[0][list1[i][0]])
 
-        self.proxRankedOutput.append(documentIndices)
-        self.proxRankedOutput.append([i[1] for i in list1])
-
+            self.proxRankedOutput.append(documentIndices)
+            self.proxRankedOutput.append([i[1] for i in list1])
+            
     def writeOutput(self, outFile):
         out = shelve.open(outFile)
         out['rankedOutput'] = self.rankedOutput

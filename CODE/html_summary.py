@@ -19,20 +19,26 @@ import shelve
 import time
 import sys
 from nltk.corpus import stopwords
-import threading
+#import threading
 
 print("Parsing HTML Files")
 
 inFile = 'OUTPUT/processingOutput.db'
 outDir = 'OUTPUT/CACHE'
-path = 'INPUT/control'
+path = 'INPUT/cached_docs'
+offset = 1
+countpp = 10    # Count per process
 
 ## Since things can change - let's check to see if we were called as:
-## html_summary.py <cache path> <processOutput.db>
+## html_summary.py <input path> <processOutput.db> <offset>
 if(len(sys.argv)>1):
         path = sys.argv[1]
 if(len(sys.argv)>2):
         inFile = sys.argv[2]
+## Offset is to determine which set we are in
+## The number of sets is determined by the number of files / count per process
+if(len(sys.argv)>3):
+        offset = sys.argv[3]
 
 edge = 4        # Number of words on either side of term to retrieve
 
@@ -120,16 +126,18 @@ def parseMe(filename):
 
                 ## See if we can find it
                 match = '\w*\W*' * edge + query[y] + '\W*\w*' * edge
-                found = re.findall(match, words, re.I)
+                #found = re.findall(match, words, re.I)
+                m = re.search(match, words, re.IGNORECASE)
+                result = m.group(0) if m else ""
 
                 ## If we found the text, add it to the htmlText
-                if len(found) > 0:
+                #if len(found) > 0:
                         ## Pick a random entry
-                        i = randint(0, len(found)-1)
+                #        i = randint(0, len(found)-1)
 
                         ## Add it the dictionary
-                        #htmlText[files[c]][query[y]] = found[i]
-                        htmlText[filename][query[y]] = found[i]
+                        #htmlText[filename][query[y]] = found[i]
+                htmlText[filename][query[y]] = result
         ## Now write out the cache file to the outDir using the filename
         ## of the original doc as the database filename
         #print("\tWriting output file", files[c]+'.db', 'to', outDir)
@@ -151,8 +159,29 @@ def parseMe(filename):
 ## Go through each document - we're going to do this the painful way
 ## then go through each term and search
 ## Should probably thread this process
-#threads = []
+## Tried threading - caused the machine to thrash
+## Executing in a manual multiprocessor method
+
+## offset - where we want to start
+## countpp - how many to run in the calling
+batch = len(files) / countpp
+bstart = (int(offset)-1) * countpp
+bend = bstart + countpp - 1
+
+print("%s Total files -> %s batches with %s files per batch" %
+        (len(files), str(len(files)/countpp), countpp))
+
+if bend >= len(files):
+        if bstart < len(files):
+                bend = len(files) - 1
+        else:
+                print("There are no batches in this range to work on")
+                quit()
+
+print("Working on files %s through %s" % (bstart, bend))
+
 for c in range(len(files)):
+        print( "Working on index:", c)
         ## Make sure that we haven't cached this file already
         ftest = join(outDir, files[c]+'.db')
         if isfile(join(outDir, files[c]+'.db')):
@@ -164,18 +193,6 @@ for c in range(len(files)):
                 st1 = time.time()
                 print("Completed processing of %s in %s sec" %
                         (files[c], str(st1-st0)))
-
-#        t = threading.Thread(target=parseMe, args=(files[c],))
-#        threads.append(t)
-
-
-## Start the threads
-#for t in threads:
-#        t.daemon = True
-#        t.start()
-
-#for t in threads:
-#        t.join()
 
 t1 = time.time()
 
