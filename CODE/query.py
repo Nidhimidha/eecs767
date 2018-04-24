@@ -106,8 +106,7 @@ class similarity:
         return func_tokenize(query)
 
     def findWholeWord(self, word, query):
-        for x in query:
-            result = re.findall('\\b' + word + '\\b', x, flags=re.IGNORECASE)
+            result = re.findall('\\b' + word + '\\b', query, flags=re.IGNORECASE)
             if len(result) > 0:
                 return True
 
@@ -116,26 +115,25 @@ class similarity:
 
         self.weightedQuery = [0] * len(self.termIndex)
         flag = False
-        for k in self.termIndex:
-            if self.findWholeWord(k, query):
-                idf = self.termIndex[k][0]
-                flag = True
-                for l in range(len(self.termDict[k])):
-                    self.termList.append(k)
-                    self.queryList.append(self.termDict[k][l][0])
-            else:
-                idf = 0
-
-            self.weightedQuery[self.termIndex[k][1]] = idf
+        for x in query:
+            for k in self.termIndex:
+                if self.findWholeWord(k, x):
+                    idf = self.termIndex[k][0]
+                    flag = True
+                    for l in range(len(self.termDict[k])):
+                        if x not in self.termList:
+                            self.termList.append(x)
+                            self.queryList.append(self.termDict[k][l][0])
+                else:
+                    idf = 0
+                self.weightedQuery[self.termIndex[k][1]] = idf
         self.queryList = list(set(self.queryList))
-        self.termList = list(set(self.termList))
-
         if flag:
             sumOfSquares = 0
             for i in range(len(self.weightedQuery)):
                 sumOfSquares += self.weightedQuery[i] * self.weightedQuery[i]
             length = sqrt(sumOfSquares)
-            self.queryVector = [float("{0:.6f}".format(self.weightedQuery[i] / length))
+            self.queryVector = [float("{0:.4f}".format(self.weightedQuery[i] / length))
                                 for i in range(len(self.weightedQuery))]
 
         return self.queryVector
