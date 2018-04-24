@@ -1,22 +1,21 @@
-Parsing terms for document_id166
-Exporting data to shelf .db file
-Program complete!
-	main Execution Time (sec): 40.96454977989197
 
-Processing
-    Ingesting  OUTPUT/ingestOutput.db
-    Generating Vector Space Model
-    Normalizing Vectors
-    Modifying proximity and term index
-    Creating term vector dictionary
-    Writing output file:  OUTPUT/processingOutput
-    Writing out artifacts:  OUTPUT/processingArtifacts
-	main Execution Time (sec): 41.58707809448242
+--------------------------------------
+Control Group - 4 files
+Ingest
+        main Execution Time (sec): 0.07905054092407227
+Process
+        main Execution Time (sec): 0.08531951904296875
 
+--------------------------------------
+10 min crawl - 166 files
+Ingest
+        main Execution Time (sec): 44.71164917945862
+Process
+        main Execution Time (sec): 17.472136735916138
 
-
-Parsing terms for document_id1728
-Exporting data to shelf .db file
-Program complete!
-	main Execution Time (sec): 295.90843200683594
-
+--------------------------------------
+30 min crawl - 553 files
+Ingest
+        main Execution Time (sec): 86.65824770927429
+Process
+        main Execution Time (sec): 94.1054756641388        
