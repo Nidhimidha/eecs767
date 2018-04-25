@@ -177,7 +177,7 @@ else:
 
         ## FIXME: Just for now so we can run cmd line for debugging
         if query == "":
-                query = 'silver truck'
+                query = 'standard'
 
         ## Only work on the query if we're passed something
         if query != "":
@@ -266,13 +266,17 @@ else:
                         ##if it exists and concatenate
                         for x in query.split():
                                 if x in sums:
-                                        psum += sums[x] + ' &middot; '
+                                        psum += sums[x] + ' ... '
                         if psum == '':
                                 ## No exact matches, grab first sum
-                                psum = sums[list(sums.keys())[0]] + ' &middot; '
+                                psum = sums[list(sums.keys())[0]] + ' ... '
 
                         ## Remove trailing middot
-                        psum = psum[:-10]
+                        ##psum = psum[:-4]
+
+                        ## Let's make sure that there is no encoding that will break
+                        ## us (before making the terms bold
+                        cgi.escape(psum).encode('ascii', 'xmlcharrefreplace')
 
                         for x in query.split():
                                 bold = '<b>'+x+'</b>'

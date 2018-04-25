@@ -104,6 +104,7 @@ process: src/processing.py $(OUTPATH)ingestOutput.db
 	
 	## Copy processingOutput.db to the local cgi-bin directory
 	cp $(OUTPATH)processingOutput.db $(CGIDIR)/
+	cp $(OUTPATH)processingArtifacts.db $(CGIDIR)/
 
 ## Prepare html summaries
 html: src/html_summary.py $(OUTPATH)processingOutput.db $(INGPATH)
