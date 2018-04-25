@@ -7,6 +7,8 @@ import time
 import math
 from query import *
 
+import html.parser
+
 ## Configs
 numresults = 10         # Number of results per page
 cachedir = 'CACHE'      # relative directory where summary cache files are located
@@ -20,7 +22,7 @@ print('Content-Type: text/html\r\n\r\n')
 ver = sys.version_info
 if ver.major != 3 or ver.minor != 5:
         print("""
-                <html><head><title>Error 500 :(</title></head><body>
+                <html lang="en"><head><title>Error 500 :(</title></head><body>
                 <br /><br /><br /><br />
                 <center><h1>HTTP/1.1 500 Internal Server Error</h1>
                 <br /><br /><br /><br />
@@ -47,8 +49,7 @@ else:
 
         print("""
 
-        <html>
-                <meta charset="utf-8" />
+        <html lang="us">
                 <title>FiniteLoop Squad Search</title>
                 <style>
                         body {
@@ -241,7 +242,6 @@ else:
         while i < len(res) and i < stop:
                 ## Need the filename
                 resFname = k = next(iter(res[i]))
-
                 ## Need the URL from the doc_key
                 pURL = res[i][resFname][2]
 
@@ -256,17 +256,25 @@ else:
                 ## for summary text
                 psum = ''
                 if os.path.isfile(os.path.join(cachedir, resFname+'.db')):
+                        sums = {}
+
                         ## Open the file
-                        S = shelve.open(os.path.join(cachedir, resFname+'.db'))
-                        sums = S['htmlText'][resFname]
-                        ## Close the shelve file
-                        S.close()
-                        
+                        try:
+                                S = shelve.open(os.path.join(cachedir, resFname+'.db'))
+                                sums = S['htmlText'][resFname]
+                                ## Close the shelve file
+                                S.close()
+                        except:
+                                pass
+
                         ## Go through and pull each query term's summary, 
                         ##if it exists and concatenate
                         for x in query.split():
-                                if x in sums:
-                                        psum += sums[x] + ' ... '
+                                try:
+                                        if x in sums:
+                                                psum += sums[x] + ' ... '
+                                except:
+                                        pass
                         if psum == '':
                                 ## No exact matches, grab first sum
                                 psum = sums[list(sums.keys())[0]] + ' ... '
@@ -276,7 +284,7 @@ else:
 
                         ## Let's make sure that there is no encoding that will break
                         ## us (before making the terms bold
-                        cgi.escape(psum).encode('ascii', 'xmlcharrefreplace')
+                        psum = psum.encode('ascii', 'xmlcharrefreplace').decode('utf-8')
 
                         for x in query.split():
                                 bold = '<b>'+x+'</b>'
@@ -287,7 +295,7 @@ else:
 
                 ## Need the rank
                 rank = ran[i]
-
+                
                 ## Can't use the URI as the query vector is too large...
                 ## going to post as form
                 ## Each entry is a tiny form
