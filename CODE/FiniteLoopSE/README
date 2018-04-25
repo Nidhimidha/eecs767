@@ -1,0 +1,14 @@
+Steps taken to install:
+
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ make prepenv 
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ cd INPUT/
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ tar -zxvf ~/public_html/data/cached_docs-20180417-10m.tar.gz 
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ cd cached_docs/
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ mv cached_docs/download_manifest cached_docs/download_manifest.db
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ cd ../OUTPUT
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ tar -zxvf ~/public_html/data/CACHE-10m.tar.gz 
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ cd ..
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ make ingest
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ make process
+terrapin@cycle3:~/EECS767/FiniteLoopSE$ make webprep 
+
