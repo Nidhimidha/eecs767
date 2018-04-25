@@ -282,10 +282,6 @@ else:
                         ## Remove trailing middot
                         ##psum = psum[:-4]
 
-                        ## Let's make sure that there is no encoding that will break
-                        ## us (before making the terms bold
-                        psum = psum.encode('ascii', 'xmlcharrefreplace').decode('utf-8')
-
                         for x in query.split():
                                 bold = '<b>'+x+'</b>'
                                 bold.upper()
@@ -310,6 +306,11 @@ else:
                 relURL = """
                         <input type='hidden' name='did' value='%s'/>
                 """ % str(pdocID)
+
+                ## Let's make sure that there is no encoding that will break
+                ## us (before making the terms bold
+                ptitle = ptitle.encode('ascii', 'xmlcharrefreplace').decode('utf-8')
+                psum = psum.encode('ascii', 'xmlcharrefreplace').decode('utf-8')
 
                 print( """
                         <p>
