@@ -54,6 +54,7 @@ else:
                 <style>
                         body {
                                 font: normal 12px/.75 helvetica;
+                                min-height: 900px;
                         }
                         #header {
                                 position: fixed;
