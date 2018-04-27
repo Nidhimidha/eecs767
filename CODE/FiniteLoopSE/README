@@ -1,14 +1,116 @@
-Steps taken to install:
+##--------------------------##
+## FiniteLoop Search Engine ##
+##--------------------------##
 
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ make prepenv 
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ cd INPUT/
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ tar -zxvf ~/public_html/data/cached_docs-20180417-10m.tar.gz 
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ cd cached_docs/
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ mv cached_docs/download_manifest cached_docs/download_manifest.db
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ cd ../OUTPUT
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ tar -zxvf ~/public_html/data/CACHE-10m.tar.gz 
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ cd ..
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ make ingest
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ make process
-terrapin@cycle3:~/EECS767/FiniteLoopSE$ make webprep 
+This is the source code that make up the FiniteLoop Search Engine. The
+contents of this distribution are:
+        The INPUT folder is the cache location for documents to be ingest
+        and processed. The control folder contains the control document
+        group, based on the TF-IDF quiz for EECS 767, Information
+        Retrieval (Spring 2018). The cached_docs folder is where the niche
+        crawler stores the seen web pages, this folder is created by the
+        Makefile if it doesn't exist (via `make prepenv`)
+        -----------------------------------
+        INPUT
+                cached_docs
+                control
+                        test1.txt
+                        test2.txt
+                        test3.txt
+                        test4.txt
+        The OUTPUT folder is the location where the ingest (pre-processing)
+        and procesing modules store the shelve data for inter-module data
+        sharing. The CACHE folder is the location where the text summary
+        data is stored - one database file per cached document. Both of
+        these directories are created by the Makefile if they don't exist
+        (via `make prepenv`)
+        -----------------------------------
+        OUTPUT
+                CACHE
+        The cgi-bin comes with the search.cgi script, which provides the
+        HMI for user interaction via a browser, hosted on a webserver. The
+        Makefile copies all of the relevant folders and files into this
+        directory in preparation for web serving. The folder is subsequently
+        copied to the users public_html/cgi-bin directory and permissions
+        are set accordingly - Makefile is currently tailored for the EECS
+        people.eecs.ku.edu server (via `make webprep`). Invokes the query
+        module.
+        -----------------------------------
+        cgi-bin
+                search.cgi
+        The src folder contains the source code for the FiniteLoop Search
+        Engine. Each with its own purpose
+        -----------------------------------
+        src
+                html_summary.py - reads contents of folder and creates summary
+                        text files
+                processing.py   - python script to process ingest.py file output
+                runhtml.sh      - wrapping process to fork separate instances
+                        of the htm_summary.py script in order to optimize
+                        summary file geneation on a single machine
+                web_crawler.py  - python script to perfom niche crawler - 
+                        configured to crawl iso.org
+                ingest.py	- python script to pre-process control and
+                        and cached documents
+                query.py	- python script to perform queries against
+                        the processing output database files (invoked by
+                        the search script)
+                seeShelve.py    - python script to expose the contents of 
+                        shelve database files
+                updateDB.py     - python script for re-writing shelve file
+                        used in the event that there is an error in reading
+        Makefile        - File used to install this distribution
+        README          - This file
+        search.html     - Entry HTML page - copied to public_html (via 
+                `make webprep`
 
+##------------##
+## To INSTALL ##
+##------------##
+## Prepare the distro and environment
+FiniteLoopSE$ make prepenv
+        
+## Can either crawl
+FiniteLoopSE$ make crawl
+## Or use pre-crawled data, available at:
+##  https://people.eecs.ku.edu/~terrapin/data/cached_docs-20180417-10m.tar.gz
+##  https://people.eecs.ku.edu/~terrapin/data/cached_docs-20180417-30min.tar.gz
+##  https://people.eecs.ku.edu/~terrapin/data/cached_docs-20180413-90m.tar.gz
+FiniteLoopSE$ cd INPUT
+FiniteLoopSE$ tar -zxvf cached_docs-20180417-10m.tar.gz
+
+## Ingest the documents
+FiniteLoopSE$ make ingest
+
+## Process the documents
+FiniteLoopSE$ make process
+
+## Can either create summary cache files
+FiniteLoopSE$ make html
+## Or use pre-cached data, available at:
+##  https://people.eecs.ku.edu/~terrapin/data/CACHE-10m.tar.gz		 
+##  https://people.eecs.ku.edu/~terrapin/data/CACHE-30min.tar.gz		 
+##Transfer to web area
+FiniteLoopSE$ make webprep
+
+## In the event that URLs are not being rendered, or an erro in reading the
+## download_manifest file by ingest.py (make ingest), it may be necessary
+## to 'clean up' the database files
+FiniteLoopSE$ python3 src/updateDB.py origFile newFile
+
+## Helper Functions
+## To see the contents of the OUTPUT directory shelve files
+FiniteLoopSE$ make seedata
+## To see a specific file
+FiniteLoopSE$ python3 src/seeShelve.py fileName
+
+## To clean up the directories (including public_html) from the installation
+## of the search engine (uninstall)
+make clean
+
+## To run the query module as a standalone (outputs results in 
+## OUTPUT/query(.db))
+make query
+## To run search.cgi module independent of a browser
+python3 cgi-bin/search.cgi 
+## (expects that make webprep or similar functions have occurred)
